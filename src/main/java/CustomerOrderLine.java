@@ -31,4 +31,38 @@ public class CustomerOrderLine {
 
 	public CustomerOrderLine(int customerOrder, int productID, int quantity, String orderLinePrice) {
 	}
+
+	public int getCustomerOrder() {
+		return customerOrder;
+	}
+
+	public void setCustomerOrder(int customerOrder) {
+		this.customerOrder = customerOrder;
+	}
+
+	public int getProductID() {
+		return productID;
+	}
+
+	public void setProductID(int productID) {
+		this.productID = productID;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public String getOrderLinePrice() {
+		return orderLinePrice;
+	}
+
+	public void setOrderLinePrice(String orderLinePrice) {
+		this.orderLinePrice = orderLinePrice;
+	}
+	
+	
 }
