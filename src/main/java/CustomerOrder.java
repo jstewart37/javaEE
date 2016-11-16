@@ -11,7 +11,7 @@ public class CustomerOrder {
 	private int idCustomerOrder;
 
 	@Column(name = "Customerstatus", nullable = false, length = 45)
-	@Size(max = 225)
+	@Size(max = 45)
 	@NotNull
 	private String status;
 
@@ -28,12 +28,20 @@ public class CustomerOrder {
 	private String dateStampPlaced;
 
 	@Column(name = "addressId", nullable = false)
+	@NotNull 
 	private Address Address;
 
-	private int billingAddress;
-	private int cardNumber;
+	@Column(name = "billingAddress", nullable = false)
+	@NotNull 
+	private Address billingAddress;
+	
+	@Column(name = "cardNumber", nullable = false)
+	@Size(max = 45)
+	@NotNull 
+	private CardDetails CardDetails;
+	
+	@Column(name = "dateTimeRecieved")
 	private String dateTimeRecieved; // the date the customer receives order
-
 	// method
 
 	public CustomerOrder() {
@@ -48,5 +56,5 @@ public class CustomerOrder {
 			int addressId, int billingAddress, int cardNumber) {
 	}
 
-	// DB to entities
+	// Foreign Keys
 }
