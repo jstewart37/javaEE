@@ -22,7 +22,7 @@ public class SupplyOrder {
 	@ManyToOne
 	@JoinColumn(name="idSupplier", nullable=false)
 	@NotNull
-	private Supplier supplierid;
+	private Supplier idSupplier;
 	
 	// getters and setters
 	
@@ -57,6 +57,9 @@ public class SupplyOrder {
 	public void setDateTimeRecieved(String dateTimeRecieved) {
 		this.dateTimeRecieved = dateTimeRecieved;
 	}
-		
+	
+	public long getIdSupplier() {
+		return idSupplier.getIdSupplier();
+	}
 	
 }
