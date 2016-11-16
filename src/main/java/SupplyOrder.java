@@ -22,7 +22,7 @@ public class SupplyOrder {
 	@ManyToOne
 	@JoinColumn(name="idSupplier", nullable=false)
 	@NotNull
-	private String supplierid;
+	private Supplier supplierid;
 	
 	// getters and setters
 	
