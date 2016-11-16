@@ -54,8 +54,7 @@ public class Product {
 	private String status;
 	
 	
-	@Column (nullable=false)
-	@NotNull
+	@Column (length = 45)
 	private String imgPath;
 	
 	
