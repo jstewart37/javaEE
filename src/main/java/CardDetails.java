@@ -2,11 +2,13 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@IdClass(Address.class)
 @Entity
 @Table(name = "Card Details")
 public class CardDetails {
 
-	@Column(name = "Customer ID", nullable = false, unique = true)
+	@OneToMany
+	@JoinColumn(name = "Customer ID", nullable = false, unique = true)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String customerID;
 
@@ -31,7 +33,9 @@ public class CardDetails {
 	@NotNull
 	private String cardNumber;
 
-	@Column(name = "Billing Address", nullable = false, length = 255)
+	@Id
+	@OneToOne
+	@JoinColumn(name = "Billing Address", nullable = false)
 	@Size(max = 255)
 	@NotNull
 	private Address billingAddress;
