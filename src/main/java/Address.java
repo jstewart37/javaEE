@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "addresses")
-@Embeddable
+
 public class Address {
 
 	// variables
