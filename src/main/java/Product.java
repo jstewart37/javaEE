@@ -15,19 +15,10 @@ public class Product {
 
 	@Id
 	@Column(name="idProduct", nullable =false, unique=true)
-	GeneratedValue (strategy=GenerationType.IDENTITY)
-
-	private int idProduct;
-
-	@Column(nullable = false, length = 225)
-	@Size(max = 225)
-
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idProduct;
 
-	@Column(nullable = false, length = 225)
-	@Size(max = 225)
-
+	@Column(nullable = false)
 	@NotNull
 	private String name;
 
