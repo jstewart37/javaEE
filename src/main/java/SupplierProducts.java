@@ -1,22 +1,34 @@
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "Supplier Products")
 public class SupplierProducts {
-	
-	//constructors
+
+	// constructors
 	public SupplierProducts() {
-		
+
 	}
-	
-	//getters and setters
-	
-	public int getProductId(){
+
+	// foreign keys
+
+	@ManyToOne
+	@JoinColumn(name = "Supplier", nullable = false)
+	@NotNull
+	private Suppler idSupplier;
+
+	@ManyToOne
+	@JoinColumn(name = "Product", nullable = false)
+	@NotNull
+	private Product idProduct;
+
+	// getters and setters
+
+	public int getProductId() {
 		return Product.idProduct;
 	}
-	
-	public int getSupplierId(){
+
+	public int getSupplierId() {
 		return Supplier.idSupplier;
 	}
 
