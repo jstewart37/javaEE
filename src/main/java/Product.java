@@ -16,7 +16,7 @@ public class Product {
 	@Id
 	@Column(name="idProduct", nullable =false, unique=true)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idProduct;
+	private long idProduct;
 	
 	
 	@Column(nullable=false, length=225)
@@ -71,12 +71,12 @@ public class Product {
 	
 	//TODO getters & setters
 
-	public int getIdProduct() {
+	public long getIdProduct() {
 		return idProduct;
 	}
 
 
-	public void setIdProduct(int idProduct) {
+	public void setIdProduct(long idProduct) {
 		this.idProduct = idProduct;
 	}
 
