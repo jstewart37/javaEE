@@ -1,10 +1,16 @@
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 @Entity
 @Table (name="Product")
 public class Product {
 
-	@idProduct
+	@Id
 	@Column(name="idProduct", nullable =false, unique=true)
-	GeneratedValue(stategy=GenerationType.IDENTITY)
+	GeneratedValue (strategy=GenerationType.IDENTITY)
 	private int idProduct;
 	
 	
