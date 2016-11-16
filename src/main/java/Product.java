@@ -3,34 +3,72 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+
 
 @Entity
 @Table (name="Product")
 public class Product {
-
+	
 	@Id
 	@Column(name="idProduct", nullable =false, unique=true)
 	GeneratedValue (strategy=GenerationType.IDENTITY)
 	private int idProduct;
 	
 	
-	
+	@Column(nullable=false, length=225)
+	@Size(max=225)
+	@NotNull
 	private String name;
+	
+	
+	@Column (nullable=false)
+	@NotNull
 	private String description;
+	
+	
+	@Column (nullable=false)
+	@NotNull
 	private String colour;
+	
+	
+	@Column (nullable=false)
+	@NotNull
 	private int stockLevel;
+	
+	
+	@Column (nullable=false)
+	@NotNull
 	private double sellPrice;
+	
+	@Column (nullable=false)
+	@NotNull
 	private double buyPrice;
+	
+	
+	@Column (nullable=false)
+	@NotNull
 	private String status;
+	
+	
+	@Column (nullable=false)
+	@NotNull
 	private String imgPath;
 	
 	
-	//TODO constructors
 	
+	//TODO constructors
 	public Product (String name, String description, String colour,
 			int stockLevel, double sellPrice, double buyPrice, 
 			String status, String imgPath){}
 
+	
+	
+	
+	
+	//TODO getters & setters
 
 	public int getIdProduct() {
 		return idProduct;
@@ -124,5 +162,5 @@ public class Product {
 	
 	
 	
-	//TODO getters & setters
+	
 }
