@@ -24,10 +24,10 @@ public class Address {
 	
 	
 	@OneToMany
-	@JoinColumn(name = "customer_id", nullable = false) @NotNull private long customerID;
+	@JoinColumn(name = "customer_id", nullable = false) @NotNull private Customer customer;
 	
 	@OneToMany
-	@JoinColumn(name = "supplier_id", nullable = false) @NotNull private long supplierID;
+	@JoinColumn(name = "supplier_id", nullable = false) @NotNull private Supplier supplier;
 	
 	// private customer_id FOREIGN KEYS
 	// private supplier_id FOREIGN KEYS
