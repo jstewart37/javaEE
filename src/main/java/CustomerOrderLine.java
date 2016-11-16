@@ -2,27 +2,32 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@IdClass(Product.class)
 @Entity
-@Table(name="customerOrderLine")
+@Table(name = "customerOrderLine")
 public class CustomerOrderLine {
 
-	@Column(name = "Customer Order", nullable = false, length=255)
-	@Size(max=255)
+	@Id
+	@ManyToOne
+	@Column(name = "Customer Order", nullable = false, length = 255)
+	@Size(max = 255)
 	@NotNull
 	private int customerOrder;
-	
-	@Column(name = "Product ID", nullable = false, length=255)
-	@Size(max=255)
+
+	@Id
+	@ManyToOne
+	@Column(name = "Product ID", nullable = false, length = 255)
+	@Size(max = 255)
 	@NotNull
 	private int productID;
-	
-	@Column(name = "Quantity", nullable = false, length=255)
-	@Size(max=255)
+
+	@Column(name = "Quantity", nullable = false, length = 255)
+	@Size(max = 255)
 	@NotNull
 	private int quantity;
-	
-	@Column(name = "Order Line Prices", nullable = false, length=255)
-	@Size(max=255)
+
+	@Column(name = "Order Line Prices", nullable = false, length = 255)
+	@Size(max = 255)
 	@NotNull
 	private String orderLinePrice;
 
@@ -63,6 +68,5 @@ public class CustomerOrderLine {
 	public void setOrderLinePrice(String orderLinePrice) {
 		this.orderLinePrice = orderLinePrice;
 	}
-	
-	
+
 }
