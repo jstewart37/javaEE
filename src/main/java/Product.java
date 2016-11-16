@@ -8,28 +8,26 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-
+@Embeddable
 @Entity
 @Table(name = "Product")
 public class Product {
 
 	@Id
 	@Column(name="idProduct", nullable =false, unique=true)
-<<<<<<< HEAD
 	GeneratedValue (strategy=GenerationType.IDENTITY)
 
 	private int idProduct;
 
 	@Column(nullable = false, length = 225)
 	@Size(max = 225)
-=======
+
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idProduct;
-	
-	
-	@Column(nullable=false, length=225)
-	@Size(max=225)
->>>>>>> 393d4d2f5a2053a9553d54c3a188a820797b2a75
+
+	@Column(nullable = false, length = 225)
+	@Size(max = 225)
+
 	@NotNull
 	private String name;
 
@@ -72,12 +70,11 @@ public class Product {
 		return idProduct;
 	}
 
-<<<<<<< HEAD
 	public void setIdProduct(int idProduct) {
-=======
-
+		
+	}
 	public void setIdProduct(long idProduct) {
->>>>>>> 393d4d2f5a2053a9553d54c3a188a820797b2a75
+
 		this.idProduct = idProduct;
 	}
 

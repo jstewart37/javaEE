@@ -13,11 +13,11 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "addresses")
-
+@Embeddable
 public class Address {
 
 	// variables
-<<<<<<< HEAD
+
 	@Id
 	@Column(name = "id_Address", nullable = false, unique = true)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,7 +42,7 @@ public class Address {
 	@NotNull
 	private String city;
 
-=======
+
 	@Id @Column(name ="id_Address", nullable = false, unique = true) @GeneratedValue(strategy = GenerationType.IDENTITY)private long idAddress;
 	@Column(name ="address_Line_1", nullable = false, length = 100)@Size(max=100) @NotNull private String addressLine1;
 	@Column(name ="address_Line_2", length = 100) @Size(max=100) private String addressLine2;
@@ -57,7 +57,7 @@ public class Address {
 	@OneToMany
 	@JoinColumn(name = "supplier_id", nullable = false) @NotNull private long supplierID;
 	
->>>>>>> 393d4d2f5a2053a9553d54c3a188a820797b2a75
+
 	// private customer_id FOREIGN KEYS
 	// private supplier_id FOREIGN KEYS
 
