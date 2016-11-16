@@ -1,5 +1,6 @@
 import javax.persistence.*;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "Supply Order Line")
@@ -16,14 +17,23 @@ public class SupplyOrderLine {
 	@NotNull
 	private Double supplyOrderLinePrice;
 
-	
-	//constructor
+	// foreign keys
+	@ManyToOne
+	@JoinColumn(name = "Supply Order", nullable = false)
+	@NotNull
+	private SupplyOrder idSupplyOrder;
+
+	@ManyToOne
+	@JoinColumn(name = "Product", nullable = false)
+	@NotNull
+	private Product idProduct;
+
+	// constructor
 	public SupplyOrderLine(int quantity, Double supplyOrderLinePrice) {
 
 	}
 
-	
-	//getters and setters
+	// getters and setters
 	public int getQuantity() {
 		return quantity;
 	}
@@ -39,17 +49,14 @@ public class SupplyOrderLine {
 	public void setSupplyOrderLinePrice(Double supplyOrderLinePrice) {
 		this.supplyOrderLinePrice = supplyOrderLinePrice;
 	}
-	
-	public int getIdProduct() {
-		return Product.idProduct;
-	}
-	
-	public int getSupplyOrderId(){
-		return SupplyOrder.idSupplyOrder;
-	}
-	
-	
 
-	
-	
+	public long getIdProduct() {
+		return idProduct.getIdProduct();
+
+	}
+
+	public long getSupplyOrderId() {
+		return idSupplyOrder.getIdSupplyOrder();
+	}
+
 }

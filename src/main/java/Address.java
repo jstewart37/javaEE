@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -15,6 +17,7 @@ import javax.validation.constraints.Size;
 public class Address {
 
 	// variables
+<<<<<<< HEAD
 	@Id
 	@Column(name = "id_Address", nullable = false, unique = true)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,6 +42,22 @@ public class Address {
 	@NotNull
 	private String city;
 
+=======
+	@Id @Column(name ="id_Address", nullable = false, unique = true) @GeneratedValue(strategy = GenerationType.IDENTITY)private long idAddress;
+	@Column(name ="address_Line_1", nullable = false, length = 100)@Size(max=100) @NotNull private String addressLine1;
+	@Column(name ="address_Line_2", length = 100) @Size(max=100) private String addressLine2;
+	@Column(name ="postcode", nullable = false, length = 10) @Size(max=10) @NotNull private String postCode;
+	@Column(name ="county", nullable = false, length = 100) @Size(max=100) @NotNull private String county;
+	@Column(name ="city", nullable = false, length = 100) @Size(max=100) @NotNull private String city;
+	
+	
+	@OneToMany
+	@JoinColumn(name = "customer_id", nullable = false) @NotNull private long customerID;
+	
+	@OneToMany
+	@JoinColumn(name = "supplier_id", nullable = false) @NotNull private long supplierID;
+	
+>>>>>>> 393d4d2f5a2053a9553d54c3a188a820797b2a75
 	// private customer_id FOREIGN KEYS
 	// private supplier_id FOREIGN KEYS
 
