@@ -5,6 +5,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -13,9 +14,16 @@ public class Supplier {
 
 	// variables
 	@Id @Column (name = "id_Supplier", nullable = false, unique = true) @GeneratedValue(strategy = GenerationType.IDENTITY) private long idSupplier;
+	
 	@Column(name ="supplier_name", nullable = false, length = 100) @Size(max = 100) @NotNull private String supplierName;
-	@Column(name ="supplier_phone", nullable = false, length = 20) @Size(max = 20) @NotNull private String supplierPhone;
-	@Column(name ="email", nullable = false, length = 100) @Size(max = 100) @NotNull private String email;
+	
+	@Column(name ="supplier_phone", nullable = false, length = 20) @Size(max = 20) @NotNull @Pattern(regexp="^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$",
+            message="{invalid.phonenumber}")private String supplierPhone;
+	
+	@Column(name ="email", nullable = false, length = 100) @Size(max = 100) @NotNull  @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\."
+	        +"[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@"
+	        +"(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?",
+	             message="{invalid.email}") private String email;
 
 	
 	// constructors
