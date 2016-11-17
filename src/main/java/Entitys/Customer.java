@@ -4,7 +4,7 @@ import javax.validation.constraints.*;
 
 @NamedQueries({
 @NamedQuery(name="findByEmail", query="SELECT c FROM customer c WHERE c.email=:email"),
-@NamedQuery(name="searchByItem", query="SELECT * FROM product p WHERE p.product LIKE %:search%"),
+@NamedQuery(name="searchByItem", query="SELECT * FROM product p WHERE p.product LIKE :search"),
 })
 
 @Entity
