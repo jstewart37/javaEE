@@ -24,7 +24,7 @@ public class TestData {
 		addresses = new ArrayList<>();
 		
 		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "12345678912"));
-		customers.add(new Customer(1, "mr", "Tom", "Mr.T*m@M/vie.com", "1912"));
+		customers.add(new Customer(1, "mr", "Andy", "Mr.Andy@M/vie.com", "1912"));
 		
 		customerOrderLine.add(new CustomerOrderLine(8, 10, 8, 24.89));
 		
