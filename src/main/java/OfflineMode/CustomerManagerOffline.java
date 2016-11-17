@@ -7,15 +7,19 @@ import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import EntityManagers.CustomerManager;
+import Entitys.Author;
 import Entitys.Customer;
 import Entitys.TestData;
+
+
 
 @Stateless
 @Default
 public class CustomerManagerOffline implements CustomerManager {
 	@Inject
 	private TestData testData;
-
+	
+	@Author(author="Ben")
 	@Override
 	public Customer findByEmail(String email) {
 		for (Customer customer : testData.getCustomers())

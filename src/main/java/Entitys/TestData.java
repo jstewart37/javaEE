@@ -15,11 +15,15 @@ public class TestData {
 	private List<CustomerOrderLine> customerOrderLine;
 	private List<Supplier> suppliers;
 	private List<Address> addresses;
+<<<<<<< HEAD
 
 	
 
 	private List<Product> products;
 
+=======
+	private List<Product> products;
+>>>>>>> de37ab4aa1ca444a2f5e0a0bd13e5c84706e0fcd
 
 	@PostConstruct
 	private void setupData() {
