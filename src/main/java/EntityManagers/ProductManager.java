@@ -7,9 +7,11 @@ public interface ProductManager {
 //////////////////////////QUERY STUBS/////////////////////////////////
 	
 	public Product findProductbyName(String name);
-	
-	
-	
+	public Product findByID (int ID);
+	public Product findByDescription (String Description);
+	public Product findByStatus (String Status);
+	public Product findByColour (String Colour);
+	public Product findByPorouseware (String isPorous);
 	
 ///////////////////////////////CRUD///////////////////////////////////
 	
@@ -19,7 +21,7 @@ public interface ProductManager {
 	
 //Read Methods 
 	public Product displayProductInformation(Product Product);
-	public Product findByID (int ID);
+	
 
 
 //Update Methods 
