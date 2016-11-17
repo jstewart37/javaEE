@@ -13,8 +13,4 @@ public interface AddressManager {
 	public Address readAddress(Address address);
 	public Address updateAddress(Address address);
 	
-	
-	
-	
-	
 }
