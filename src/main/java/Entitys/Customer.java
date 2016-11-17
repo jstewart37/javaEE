@@ -1,3 +1,4 @@
+package Entitys;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
