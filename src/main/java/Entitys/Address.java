@@ -1,3 +1,4 @@
+package Entitys;
 import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
