@@ -53,7 +53,7 @@ public class Customer {
 	private String password;
 	
 	@Column(nullable = false, length = 100)
-	@Size(min = 3, max = 25)
+	@Size(min = 3, max = 50)
 	@NotNull
 	private String search;
 	
