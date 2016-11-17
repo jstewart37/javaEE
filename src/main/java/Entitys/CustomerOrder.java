@@ -58,11 +58,11 @@ public class CustomerOrder {
 	}
 
 	// Constructors
-	public CustomerOrder(long idCustomerOrder, String status, CardDetails cardDetails, long customerID, String dateStampPlaced,
+	public CustomerOrder(long idCustomerOrder, String status, long customerID, String dateStampPlaced,
 			Address addressId, Address billingAddress, int cardNumber, String dateTimeRecieved) {
 	}
 
-	public CustomerOrder(long idCustomerOrder, String status, CardDetails cardDetails, long customerID, String dateStampPlaced,
+	public CustomerOrder(long idCustomerOrder, String status, long customerID, String dateStampPlaced,
 			Address addressId, Address billingAddress, int cardNumber) {
 	}
 
@@ -79,16 +79,6 @@ public class CustomerOrder {
 		this.dateTimeRecieved = dateTimeRecieved;
 	}
 	
-	
-	//Named Queries
-	
-	
-	
-	
-	
-	
-	
-
 	// getters and setters
 
 	public long getIdCustomerOrder() {
