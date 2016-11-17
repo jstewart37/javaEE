@@ -47,25 +47,36 @@ public class ProductManagerOffline implements ProductManager {
 
 	@Override
 	public Product findByStatus(String Status) {
-		// TODO Auto-generated method stub
+		List<Product> products = testData.getProducts();
+		for (Product products3 : products)
+			if(products3.getStatus().equalsIgnoreCase(Status))
+				return products3;
 		return null;
 	}
 
 	@Override
 	public Product findByColour(String Colour) {
-		// TODO Auto-generated method stub
+		List<Product> products = testData.getProducts();
+		for (Product products4 : products)
+			if(products4.getColour().equalsIgnoreCase(Colour))
+				return products4;
 		return null;
 	}
 
 	@Override
 	public Product findByPorouseware(String isPorous) {
-		// TODO Auto-generated method stub
+		List<Product> products = testData.getProducts();
+		for (Product products5 : products)
+			if(products5.getIsPorousware().equalsIgnoreCase(isPorous))
+				return products5;
 		return null;
 	}
 
 	@Override
 	public Product addProduct(Product Product) {
-		// TODO Auto-generated method stub
+		List<Product> products = testData.getProducts();
+		for (Product products6 : products)
+			if(products6.geta)
 		return null;
 	}
 
