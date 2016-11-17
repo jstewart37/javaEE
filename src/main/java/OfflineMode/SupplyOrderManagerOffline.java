@@ -1,5 +1,7 @@
 package OfflineMode;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
@@ -16,8 +18,11 @@ public class SupplyOrderManagerOffline implements SupplyOrderManager {
 
 	@Override
 	public SupplyOrder createNewSupplyOrder(SupplyOrder supplyorder) {
-		// TODO Auto-generated method stub
-		return null;
+		List<SupplyOrder> supplyorderlist = testData.getSupplyorderlist();
+		supplyorder.setIdSupplyOrder(supplyorderlist.size() + 1);
+		supplyorderlist.add(supplyorder);
+		testData.setSupplyorderlist(supplyorderlist);
+		return supplyorder;
 	}
 
 	@Override
