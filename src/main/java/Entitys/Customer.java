@@ -1,3 +1,79 @@
+/* this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+ this bullshit doesnt fucking work.
+*/
+
+
+
 package Entitys;
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -22,7 +98,7 @@ public class Customer {
 	@Size(min = 2, max = 225)
 	@NotNull
 	private String title;
-	
+	// this bullshit doesnt fucking work.
 	@Column(nullable = false, length = 100)
 	@Size(min = 3, max = 25)
 	@NotNull
