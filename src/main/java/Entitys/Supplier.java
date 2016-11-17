@@ -13,8 +13,11 @@ import javax.validation.constraints.Size;
 
 @NamedQueries({
 @NamedQuery(name="findByName", query="SELECT s FROM suppliers s WHERE s.supplier_name LIKE :supplierName"),
-@NamedQuery(name="findByEmail", query="SELECT s FROM suppliers a WHERE s.email LIKE :email"),
+@NamedQuery(name="findByEmail", query="SELECT s FROM suppliers s WHERE s.email LIKE :email"),
+@NamedQuery(name="findSupplierProducts", query="SELECT s.id_supplier,s.supplier_name, p.productID, p.productName FROM suppliers s JOIN Supplier Products sp ON s.id_supplier=sp.id_supplier JOIN PRODUCTS p ON sp.productID = p.idproduct"),
 })
+
+
 
 
 
