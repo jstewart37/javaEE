@@ -2,6 +2,8 @@ package Entitys;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
+
+
 @NamedQueries({
 @NamedQuery(name="findByEmail", query="SELECT c FROM customer c WHERE c.email=:email"),
 @NamedQuery(name="searchByItem", query="SELECT * FROM product p WHERE p.product LIKE :search"),
@@ -12,7 +14,7 @@ import javax.validation.constraints.*;
 public class Customer {
 
 	// variables
-
+	
 	@Id
 	@Column(name = "idCustomer", nullable = false, unique = true)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,6 +59,7 @@ public class Customer {
 	@NotNull
 	private String search;
 	
+	@Author(author="Ben")
 	// constructors
 	public Customer(long idCustomer, String title, String name, String email, String phone) {
 			this.title = title;

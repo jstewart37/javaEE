@@ -2,6 +2,7 @@ package Entitys;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
+
 @Entity
 @Table(name="supplyOrder")
 public class SupplyOrder {
@@ -13,6 +14,7 @@ public class SupplyOrder {
 	@Column(nullable=false, length=50)	@Size(min=8, max=225) @NotNull	private String dateTimePlaced;
 	@Column(nullable=false, length=50)	@Size(min=8, max=225) @NotNull	private String dateTimeRecieved;
 	
+	@Author(author="Ben")
 	// constructors
 	public SupplyOrder(long idSupplyOrder, String status, String dateTimePlaced, String dateTimeRecieved)
 	{

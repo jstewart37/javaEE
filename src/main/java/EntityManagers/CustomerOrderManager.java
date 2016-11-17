@@ -3,11 +3,14 @@ package EntityManagers;
 import java.util.List;
 
 import Entitys.Address;
+import Entitys.Author;
 import Entitys.CustomerOrder;
+
+
 
 public interface CustomerOrderManager {
 
-	
+	@Author(author="Ben")
 	//query
 	public List<CustomerOrder> CustomerOrdersForCustomer(int customerID);
 	public CustomerOrder CustomerOrderDetails(int customerOrderID);

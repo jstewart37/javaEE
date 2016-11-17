@@ -8,14 +8,13 @@ import javax.inject.Inject;
 import EntityManagers.SupplyOrderManager;
 import Entitys.*;
 
-
 @Stateless
 @Default
 public class SupplyOrderManagerOffline implements SupplyOrderManager {
 	@Inject
 	private TestData testData;
 	
-
+	@Author(author="Ben")
 	@Override
 	public SupplyOrder createNewSupplyOrder(SupplyOrder supplyorder) {
 		List<SupplyOrder> supplyorderlist = testData.getSupplyorderlist();
