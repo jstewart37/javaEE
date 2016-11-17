@@ -7,11 +7,12 @@ import javax.annotation.PostConstruct;
 import javax.ejb.Startup;
 import javax.inject.Singleton;
 
+import EntityManagers.CustomerOrderManager;
 import Entitys.*;
 
 @Startup
 @Singleton
-public class CustomerOrderOffline {
+public class CustomerOrderOffline implements CustomerOrderManager {
 	
 	private List<Customer> customers;
 	private List<CustomerOrder> customerOrders;
@@ -24,6 +25,31 @@ public class CustomerOrderOffline {
 		customerOrders = new ArrayList<>();
 		customerOrderLine = new ArrayList<>();
 		products = new ArrayList<>();
+	}
+
+	@Override
+	public List<CustomerOrder> CustomerOrdersForCustomer(int customerID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CustomerOrder CustomerOrderDetails(int customerOrderID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void AddNewCustomerOrder(long idCustomerOrder, String status, long customerID, Address addressId,
+			Address billingAddress, int cardNumber) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void AddNewCustomerOrderLine(CustomerOrder customerOrder) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
