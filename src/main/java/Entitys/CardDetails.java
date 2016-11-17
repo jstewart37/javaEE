@@ -5,7 +5,8 @@ import javax.validation.constraints.Size;
 
 @IdClass(Address.class)
 @Entity
-@Table(name = "Card Details")
+@Table(name = "CardDetails")
+@NamedQuery(name="customerCardDetails", query="SELECT * FROM CardDetails WHERE nameOnCard=:nameOnCard")
 public class CardDetails {
 
 	@OneToMany
