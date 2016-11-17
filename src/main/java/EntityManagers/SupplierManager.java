@@ -13,8 +13,8 @@ public interface SupplierManager {
 		
 	//CRUD based stubs
 	public Supplier createNewSupplier(Supplier supplier);
-	public Supplier readAddress(Supplier supplier);
-	public Supplier updateAddress(Supplier supplier);
+	public Supplier readSupplier(Supplier supplier);
+	public Supplier updateSupplier(Supplier supplier);
 	
 	
 }
