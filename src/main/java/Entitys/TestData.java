@@ -29,8 +29,8 @@ public class TestData {
 		
 		suppliers.add(new Supplier(1, "Daves GGGGGGGGGGGGGGGGGGnomes", "07984682330", "dg@gnomies.com"));
 		suppliers.add(new Supplier(2, "Sophies Rude Ass Garden Supplies", "07984643", "sg@rudegardensupplies.com"));
-		
-		
+		addresses.add(new Address(1, "65 Anchorage Quay", "eccles", "M27 641", "Greater Manchester", "Manchester"));
+		addresses.add(new Address(1, "1 Someplace", "M64 813", "Greater Manchester", "Manchester"));
 		
 	}
 
@@ -57,6 +57,10 @@ public class TestData {
 	public void setSuppliers(List<Supplier> suppliers2) {
 		this.suppliers = suppliers2;
 		
+	}
+
+	public List<Address> getAddresses() {
+		return addresses;
 	}
 
 	
