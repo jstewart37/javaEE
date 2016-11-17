@@ -20,7 +20,7 @@ public class TestData {
 		customers = new ArrayList<>();
 		
 		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "12345678912"));
-		customers.add(new Customer(1, "mr", "Tom", "Mr.T*m@M/vie.com", "1912"));
+		customers.add(new Customer(2, "mr", "Andy", "Mr.Andy@M/vie.com", "1912"));
 		
 		supplyorderlist.add(new SupplyOrder(1, "Arrived", "2002-02-13 14:37:12", "2008-06-11 11:27:38"));
 		
