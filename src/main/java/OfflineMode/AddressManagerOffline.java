@@ -1,3 +1,5 @@
+
+
 package OfflineMode;
 
 import java.util.List;
@@ -8,16 +10,21 @@ import javax.inject.Inject;
 
 import EntityManagers.AddressManager;
 import Entitys.Address;
+import Entitys.Author;
 import Entitys.Supplier;
 import Entitys.TestData;
+
 
 @Stateless
 @Default
 public class AddressManagerOffline implements AddressManager {
+	
+	
 
 	@Inject
 	private TestData testData;
 	
+	@Author(author="Alex")
 	
 	@Override
 	public Address findAddressByPostcode(String postcode) {

@@ -1,3 +1,5 @@
+@Author(author="Alex")
+
 package Entitys;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
