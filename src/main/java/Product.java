@@ -4,13 +4,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
 
 @Embeddable
 @Entity
 @Table(name = "Product")
+
+//Named Queries
+	@NamedQuery(name="findByProductID", 
+			query="Select s FROM idProduct s WHERE s.idProduct=1")
 public class Product {
 
 	@Id
@@ -133,4 +138,11 @@ public class Product {
 		this.imgPath = imgPath;
 	}
 
+	
+	
+	
+
+	
+	
+	
 }
