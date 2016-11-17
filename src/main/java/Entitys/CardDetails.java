@@ -30,7 +30,7 @@ public class CardDetails {
 	private String nameOnCard;
 
 	@Id
-	@Column(name = "cardNumber", nullable = false, length = 16)
+	@Column(name = "Card Number", nullable = false, length = 16, unique=true)
 	@Size(max = 16)
 	@NotNull
 	private String cardNumber;

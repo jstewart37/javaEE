@@ -9,9 +9,9 @@ import javax.validation.constraints.Size;
 public class LoginIMS {
 
 	@Id
-	@Column(name = "usernameID", nullable = false, unique = true)
+	@Column(name = "username", nullable = false, unique = true)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long usernameID;
+	private String username;
 	@Column(name = "password", nullable = false, length = 100)
 	@Size(max = 100)
 	@NotNull

@@ -8,7 +8,7 @@ import javax.validation.constraints.*;
 })
 
 @Entity
-@Table(name = "customers")
+@Table(name="customer")
 public class Customer {
 
 	// variables
@@ -59,7 +59,10 @@ public class Customer {
 	
 	// constructors
 	public Customer(long idCustomer, String title, String name, String email, String phone) {
-
+			this.title = title;
+			this.name = name;
+			this.email = email;
+			this.phone = phone;
 	}
 
 	// getters and setters
