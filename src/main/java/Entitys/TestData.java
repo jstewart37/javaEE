@@ -13,12 +13,14 @@ public class TestData {
 	private List<SupplyOrder> supplyorderlist;
 	private List<Customer> customers;
 	private List<Supplier> suppliers;
+	private List<Address> addresses;
 
 	@PostConstruct
 	private void setupData() {
 		suppliers = new ArrayList<>();
 		supplyorderlist = new ArrayList<>();
 		customers = new ArrayList<>();
+		addresses = new ArrayList<>();
 		
 		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "12345678912"));
 		customers.add(new Customer(1, "mr", "Tom", "Mr.T*m@M/vie.com", "1912"));
@@ -27,6 +29,8 @@ public class TestData {
 		
 		suppliers.add(new Supplier(1, "Daves GGGGGGGGGGGGGGGGGGnomes", "07984682330", "dg@gnomies.com"));
 		suppliers.add(new Supplier(2, "Sophies Rude Ass Garden Supplies", "07984643", "sg@rudegardensupplies.com"));
+		
+		
 		
 	}
 
