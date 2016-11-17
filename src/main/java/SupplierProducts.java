@@ -3,8 +3,12 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "Supplier Products")
-public class SupplierProducts {
-
+@NamedQueries({
+	@NamedQuery(name="ProductName", query="Select P.name, S.supplierName from Product P join SupplierProducts SP on P.idProduct = SP.idProduct join Supplier S on SP.supplierId = S.idSupplier")
+})
+	public class SupplierProducts {
+	
+	
 	// constructors
 	public SupplierProducts() {
 
