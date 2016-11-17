@@ -20,6 +20,7 @@ public class TestData {
 		customers = new ArrayList<>();
 		
 		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "12345678912"));
+		customers.add(new Customer(1, "mr", "Tom", "Mr.T*m@M/vie.com", "1912"));
 	}
 
 	public List<Customer> getCustomers() {
