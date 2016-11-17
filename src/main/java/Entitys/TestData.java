@@ -18,6 +18,17 @@ public class TestData {
 
 		products = new ArrayList<>();
 		customers = new ArrayList<>();
+		
+		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "12345678912"));
 	}
 
+	public List<Customer> getCustomers() {
+		return customers;
+	}
+
+	public void setCustomers(List<Customer> customers) {
+		this.customers = customers;
+	}
+
+	
 }
