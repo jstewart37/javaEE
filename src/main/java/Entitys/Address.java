@@ -33,6 +33,13 @@ public class Address {
 	@Column(name ="city", nullable = false, length = 100) @Size(max=100) @NotNull private String city;
 	
 	
+	VERAAAAAAA
+	@Column(name="jam")
+	dhd7e4h48ftrj
+	srfgiuw4y5tiohbwergt
+	45hfg845t
+	
+	
 	@OneToMany
 	@JoinColumn(name = "customer_id", nullable = false) @NotNull private Customer customer;
 	

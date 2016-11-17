@@ -20,4 +20,8 @@ public class TestData {
 		customers = new ArrayList<>();
 	}
 
+	public List<Product> getProducts() {
+		return products;
+	}
+
 }
