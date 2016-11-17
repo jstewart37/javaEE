@@ -1,5 +1,11 @@
+package Entitys;
 import javax.persistence.*;
 import javax.validation.constraints.*;
+
+@NamedQueries({
+@NamedQuery(name="findByEmail", query="SELECT c FROM customer c WHERE c.email=:email"),
+@NamedQuery(name="searchByItem", query="SELECT * FROM product p WHERE p.product LIKE :search"),
+})
 
 @Entity
 @Table(name = "customers")
@@ -45,6 +51,11 @@ public class Customer {
 	@Size(min = 8)
 	@NotNull
 	private String password;
+	
+	@Column(nullable = false, length = 100)
+	@Size(min = 3, max = 25)
+	@NotNull
+	private String search;
 	
 	// constructors
 	public Customer(long idCustomer, String title, String name, String email, String phone) {

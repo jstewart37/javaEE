@@ -1,11 +1,15 @@
+package Entitys;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "CustomerOrder")
 @NamedQueries({
-@NamedQuery(name="CustomerOrdersOverview", query="Select CO.idCustomerOrder from CustomerOrders CO join Customers C on CO.customerId = C.idcustomer where CO.customerId=:customerID "), 
-@NamedQuery(name="CustomerOrderDetails", query="Select CO.idCustomerOrder,P.name from CustomerOrders CO join Customers C on CO.customerId = C.idcustomer where CO.customerId=:customerID ") 
+@NamedQuery(name="CustomerOrdersOverview", query="Select CO.idCustomerOrder from CustomerOrders CO join Customers C on CO.CustomerId = C.idCustomer where CO.customerId=:customerId "), 
+@NamedQuery(name="CustomerOrderDetails", query="Select CO.idCustomerOrder,P.name "
+		+ "from CustomerOrders CO join CustomerOrderLine COL on CO.idCustomerOrder = COL.idCustomerOrder "
+		+ "join products p on COL.productID = p.idProduct "
+		+ "where CO.customerId=:customerID ") 
 })
 public class CustomerOrder {
 

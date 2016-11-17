@@ -1,15 +1,27 @@
+package Entitys;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+@NamedQueries({
+@NamedQuery(name="findByName", query="SELECT s FROM suppliers s WHERE s.supplier_name LIKE %:supplierName%"),
+@NamedQuery(name="findByEmail", query="SELECT s FROM suppliers a WHERE s.email LIKE %:email%"),
+})
+
+
+
+
+
 @Entity
-@Table
+@Table (name = "suppliers")
 public class Supplier {
 
 	// variables
