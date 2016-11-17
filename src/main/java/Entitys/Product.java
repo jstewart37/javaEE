@@ -36,7 +36,12 @@ public class Product {
 	@Column(nullable = false)
 	@NotNull
 	private double buyPrice;
+	
+	@Column(nullable = false)
+	@NotNull
+	private String isPorousware;
 
+	
 	@Column(nullable = false)
 	@NotNull
 	private String status;
@@ -120,6 +125,16 @@ public class Product {
 		this.status = status;
 	}
 
+	
+	public String getIsPorousware() {
+		return isPorousware;
+	}
+
+	public void setIsPorousware(String isPorousware) {
+		this.isPorousware = isPorousware;
+	}
+
+	
 	public String getImgPath() {
 		return imgPath;
 	}

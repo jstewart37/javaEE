@@ -5,6 +5,9 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "Supply Order Line")
+@NamedQueries({
+	@NamedQuery(name="ProductNamePrice", query="SELECT so.*, p.name from Product p join SupplyOrderLine so on p.idProduct = so.productId")
+})
 public class SupplyOrderLine {
 
 	// variables
