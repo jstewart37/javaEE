@@ -35,6 +35,8 @@ public class Address {
 	@Column(name ="city", nullable = false, length = 100) @Size(max=100) @NotNull private String city;
 	
 	
+
+	
 	@OneToMany
 	@JoinColumn(name = "customer_id", nullable = false) @NotNull private Customer customer;
 	

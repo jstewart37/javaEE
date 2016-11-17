@@ -15,7 +15,11 @@ public class TestData {
 	private List<CustomerOrderLine> customerOrderLine;
 	private List<Supplier> suppliers;
 	private List<Address> addresses;
+<<<<<<< HEAD
 	
+=======
+	private List<Product> products;
+>>>>>>> 8e79279158d22df944209b35603faa6a9d0c2728
 
 	@PostConstruct
 	private void setupData() {
@@ -25,7 +29,7 @@ public class TestData {
 		addresses = new ArrayList<>();
 		
 		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "12345678912"));
-		customers.add(new Customer(1, "mr", "Tom", "Mr.T*m@M/vie.com", "1912"));
+		customers.add(new Customer(1, "mr", "Andy", "Mr.Andy@M/vie.com", "1912"));
 		
 		customerOrderLine.add(new CustomerOrderLine(8, 10, 8, 24.89));
 		
@@ -63,9 +67,14 @@ public class TestData {
 		
 	}
 
-	public List<Address> getAddresses() {
-		return addresses;
+	public List<Product> getProducts() {
+		return products;
 	}
 
+	public List<Address> getAddresses() {
+		return addresses;
 	
+
+}
+
 }
