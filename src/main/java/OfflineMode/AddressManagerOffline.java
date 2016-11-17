@@ -1,11 +1,14 @@
 package OfflineMode;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import EntityManagers.AddressManager;
 import Entitys.Address;
+import Entitys.Supplier;
 import Entitys.TestData;
 
 @Stateless
@@ -48,8 +51,13 @@ public class AddressManagerOffline implements AddressManager {
 
 	@Override
 	public Address updateAddress(Address address) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Address> addresses = testData.getAddresses();
+		for(Address a : addresses){
+			if(a.getCity() == "Manchester"){
+				a.setCity("Swansea");
+			}
+		}
+		return address;
 	}
 
 }

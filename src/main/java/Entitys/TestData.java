@@ -15,6 +15,7 @@ public class TestData {
 	private List<CustomerOrderLine> customerOrderLine;
 	private List<Supplier> suppliers;
 	private List<Address> addresses;
+	private List<Product> products;
 
 	@PostConstruct
 	private void setupData() {
@@ -32,8 +33,8 @@ public class TestData {
 		
 		suppliers.add(new Supplier(1, "Daves GGGGGGGGGGGGGGGGGGnomes", "07984682330", "dg@gnomies.com"));
 		suppliers.add(new Supplier(2, "Sophies Rude Ass Garden Supplies", "07984643", "sg@rudegardensupplies.com"));
-		
-		
+		addresses.add(new Address(1, "65 Anchorage Quay", "eccles", "M27 641", "Greater Manchester", "Manchester"));
+		addresses.add(new Address(1, "1 Someplace", "M64 813", "Greater Manchester", "Manchester"));
 		
 	}
 
@@ -62,5 +63,14 @@ public class TestData {
 		
 	}
 
+	public List<Product> getProducts() {
+		return products;
+	}
+
+	public List<Address> getAddresses() {
+		return addresses;
 	
+
+}
+
 }
