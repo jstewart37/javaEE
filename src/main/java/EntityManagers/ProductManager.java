@@ -4,6 +4,15 @@ import Entitys.Product;
 
 public interface ProductManager {
 	
+//////////////////////////QUERY STUBS/////////////////////////////////
+	
+	public Product findProductbyName(String name);
+	
+	
+	
+	
+///////////////////////////////CRUD///////////////////////////////////
+	
 //Create Methods 
 	public Product addProduct(Product Product);
 	
