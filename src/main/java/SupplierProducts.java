@@ -15,7 +15,7 @@ public class SupplierProducts {
 	@ManyToOne
 	@JoinColumn(name = "Supplier", nullable = false)
 	@NotNull
-	private Suppler idSupplier;
+	private Supplier idSupplier;
 
 	@ManyToOne
 	@JoinColumn(name = "Product", nullable = false)
@@ -24,12 +24,12 @@ public class SupplierProducts {
 
 	// getters and setters
 
-	public int getProductId() {
-		return Product.idProduct;
+	public long getProductId() {
+		return idProduct.getIdProduct();
 	}
 
-	public int getSupplierId() {
-		return Supplier.idSupplier;
+	public long getSupplierId() {
+		return idSupplier.getIdSupplier();
 	}
 
 }
