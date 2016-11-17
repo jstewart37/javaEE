@@ -1,6 +1,5 @@
 package EntityManagers;
 
-import Entitys.Address;
 import Entitys.Supplier;
 
 public interface SupplierManager {
