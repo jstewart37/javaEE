@@ -9,8 +9,8 @@ public interface CustomerManager {
 	public Customer searchByItem(String search);
 
 	// CRUD stubs
-	public Customer createEmail(Customer customer);
-	public Customer createTitle(Customer customer);
-	public Customer createName(Customer customer);
-	public Customer createPhone(Customer customer);
+	public Customer createNewCustomer(Customer customer);
+	public Customer readCustomer(Customer customer);
+	public Customer updateCustomer(Customer customer);
+
 }
