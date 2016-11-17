@@ -3,7 +3,6 @@ package EntityManagers;
 import java.util.List;
 
 import Entitys.Address;
-import Entitys.CardDetails;
 import Entitys.CustomerOrder;
 
 public interface CustomerOrderManager {

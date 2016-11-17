@@ -12,6 +12,7 @@ public class TestData {
 
 	private List<SupplyOrder> supplyorderlist;
 	private List<Customer> customers;
+	private List<CustomerOrderLine> customerOrderLine;
 	private List<Supplier> suppliers;
 	private List<Address> addresses;
 
@@ -24,6 +25,8 @@ public class TestData {
 		
 		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "12345678912"));
 		customers.add(new Customer(1, "mr", "Tom", "Mr.T*m@M/vie.com", "1912"));
+		
+		customerOrderLine.add(new CustomerOrderLine(8, 10, 8, 24.89));
 		
 		supplyorderlist.add(new SupplyOrder(1, "Arrived", "2002-02-13 14:37:12", "2008-06-11 11:27:38"));
 		
