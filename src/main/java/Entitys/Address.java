@@ -15,9 +15,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @NamedQueries({
-@NamedQuery(name="findAddressByPostcode", query="SELECT a FROM addresses a WHERE a.postcode LIKE %:postcode%"),
-@NamedQuery(name="findAddressByCounty", query="SELECT a FROM addresses a WHERE a.county LIKE %:county%"),
-@NamedQuery(name="findAddressByPostcodeAndNumber", query="SELECT a FROM addresses a WHERE a.postcode=:postcode AND a.address_line_1 LIKE %:addressLine1%")
+@NamedQuery(name="findAddressByPostcode", query="SELECT a FROM addresses a WHERE a.postcode LIKE :postcode"),
+@NamedQuery(name="findAddressByCounty", query="SELECT a FROM addresses a WHERE a.county LIKE :county"),
+@NamedQuery(name="findAddressByPostcodeAndNumber", query="SELECT a FROM addresses a WHERE a.postcode=:postcode AND a.address_line_1 LIKE :addressLine1")
 })
 
 @Entity
