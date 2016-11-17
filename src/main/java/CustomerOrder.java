@@ -3,6 +3,10 @@ import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "CustomerOrder")
+@NamedQueries({
+@NamedQuery(name="CustomerOrdersOverview", query="Select CO.idCustomerOrder from CustomerOrders CO join Customers C on CO.customerId = C.idcustomer where CO.customerId=:customerID "), 
+@NamedQuery(name="CustomerOrderDetails", query="Select CO.idCustomerOrder,P.name from CustomerOrders CO join Customers C on CO.customerId = C.idcustomer where CO.customerId=:customerID ") 
+})
 public class CustomerOrder {
 
 	@Id
@@ -44,6 +48,8 @@ public class CustomerOrder {
 	private String dateTimeRecieved; // the date the customer receives order
 	// method
 
+	
+	
 	public CustomerOrder() {
 	}
 
@@ -68,6 +74,16 @@ public class CustomerOrder {
 		CardDetails = cardDetails;
 		this.dateTimeRecieved = dateTimeRecieved;
 	}
+	
+	
+	//Named Queries
+	
+	
+	
+	
+	
+	
+	
 
 	// getters and setters
 
