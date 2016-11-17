@@ -45,15 +45,9 @@ public class Product {
 	@Column(nullable = false)
 	@NotNull
 	private String status;
-<<<<<<< HEAD
-	
-	
-	@Column (length = 45)
-=======
 
-	@Column(nullable = false)
+	@Column(nullable = false, length = 45)
 	@NotNull
->>>>>>> 75b0dee90fde5d13ba488d643726fd85f2ee0eca
 	private String imgPath;
 
 	// TODO constructors
