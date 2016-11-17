@@ -12,8 +12,8 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @NamedQueries({
-@NamedQuery(name="findByName", query="SELECT s FROM suppliers s WHERE s.supplier_name LIKE %:supplierName%"),
-@NamedQuery(name="findByEmail", query="SELECT s FROM suppliers a WHERE s.email LIKE %:email%"),
+@NamedQuery(name="findByName", query="SELECT s FROM suppliers s WHERE s.supplier_name LIKE :supplierName"),
+@NamedQuery(name="findByEmail", query="SELECT s FROM suppliers a WHERE s.email LIKE :email"),
 })
 
 
