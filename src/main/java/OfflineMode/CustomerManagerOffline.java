@@ -47,8 +47,13 @@ public class CustomerManagerOffline implements CustomerManager {
 
 	@Override
 	public Customer updateCustomer(Customer customer) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Customer> customers = testData.getCustomers();
+		for(Customer c : customers){
+			if(c.getName() == "Andy"){
+				c.setName("Paul");
+			}
+		}
+		return customer;
 	}
 
 }
