@@ -30,12 +30,12 @@ public class CustomerOrderLine {
 	@Column(name = "Order Line Prices", nullable = false, length = 255)
 	@Size(max = 255)
 	@NotNull
-	private String orderLinePrice;
+	private double orderLinePrice;
 
 	public void customerOrderLine() {
 	}
 
-	public CustomerOrderLine(int customerOrder, int productID, int quantity, String orderLinePrice) {
+	public CustomerOrderLine(int customerOrder, int productID, int quantity, double orderLinePrice) {
 	}
 
 	public int getCustomerOrder() {
@@ -62,11 +62,11 @@ public class CustomerOrderLine {
 		this.quantity = quantity;
 	}
 
-	public String getOrderLinePrice() {
+	public double getOrderLinePrice() {
 		return orderLinePrice;
 	}
 
-	public void setOrderLinePrice(String orderLinePrice) {
+	public void setOrderLinePrice(double orderLinePrice) {
 		this.orderLinePrice = orderLinePrice;
 	}
 

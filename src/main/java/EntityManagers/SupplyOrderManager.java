@@ -2,7 +2,7 @@ package EntityManagers;
 
 import Entitys.SupplyOrder;
 
-public interface SupplyOrderMananger {
+public interface SupplyOrderManager {
 	
 	// CRUD stubs
 	public SupplyOrder createNewSupplyOrder(SupplyOrder supplyorder);
