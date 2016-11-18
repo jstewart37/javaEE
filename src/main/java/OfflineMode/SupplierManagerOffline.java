@@ -51,8 +51,14 @@ public class SupplierManagerOffline implements SupplierManager{
 
 	@Override
 	public Supplier readSupplier(Supplier supplier) {
-
-		return null;
+		List<Supplier> suppliers = testData.getSuppliers();
+		for(Supplier s : suppliers){
+			if(s.getSupplierName() == ""){
+					return supplier;
+			}
+		}
+		return supplier;
+	
 	}
 
 	@Override

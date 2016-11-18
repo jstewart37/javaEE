@@ -71,8 +71,11 @@ public class TestData {
 
 	public List<Address> getAddresses() {
 		return addresses;
+	}
 	
-
-}
+	public void setAddresses(List<Address> address) {
+		this.addresses = address;
+		
+	}
 
 }

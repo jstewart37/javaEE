@@ -46,14 +46,17 @@ public class AddressManagerOffline implements AddressManager {
 
 	@Override
 	public Address createNewAddress(Address address) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Address> addresses = testData.getAddresses();
+		addresses.add(address);
+		testData.setAddresses(addresses);	
+		return address;
+		
 	}
 
 	@Override
 	public Address readAddress(Address address) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Address> addresses = testData.getAddresses();
+		return address;
 	}
 
 	@Override
