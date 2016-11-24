@@ -35,6 +35,8 @@ public class Address {
 	// private supplier_id FOREIGN KEYS
 
 	// constructors
+	public Address(){};
+	
 	public Address(long idAddress, String addressLine1, String addressLine2, String postCode, String County,
 			String city) {
 	}
