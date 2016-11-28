@@ -17,6 +17,8 @@ public class TestData {
 	private List<Address> addresses;
 	private List<Product> products;
 
+
+
 	@PostConstruct
 	private void setupData() {
 		suppliers = new ArrayList<>();
@@ -53,7 +55,7 @@ public class TestData {
 	public void setCustomers(List<Customer> customers) {
 		this.customers = customers;
 	}
-
+	@Author(author="Alex")
 	public List<Supplier> getSuppliers() {
 		return suppliers;
 	}
@@ -69,8 +71,11 @@ public class TestData {
 
 	public List<Address> getAddresses() {
 		return addresses;
+	}
 	
-
-}
+	public void setAddresses(List<Address> address) {
+		this.addresses = address;
+		
+	}
 
 }

@@ -1,6 +1,6 @@
 package Entitys;
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "Supplier Products")

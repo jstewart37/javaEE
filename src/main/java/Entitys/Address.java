@@ -1,17 +1,6 @@
 package Entitys;
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.persistence.*;
+import javax.validation.constraints.*;
 
 @NamedQueries({
 @NamedQuery(name="findAddressByPostcode", query="SELECT a FROM addresses a WHERE a.postcode LIKE :postcode"),
@@ -46,13 +35,15 @@ public class Address {
 	// private supplier_id FOREIGN KEYS
 
 	// constructors
+	public Address(){};
+	
 	public Address(long idAddress, String addressLine1, String addressLine2, String postCode, String County,
 			String city) {
 	}
 
 	public Address(long idAddress, String addressLine1, String postCode, String County, String city) {
 	}
-
+	@Author(author="Alex")
 	// getters & setters
 	public long getIdAddress() {
 		return idAddress;
