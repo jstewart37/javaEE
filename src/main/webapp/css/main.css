@@ -1,31 +1,310 @@
-/*
+/* Mask for background, by default is not display */
+#mask {
+    display: none;
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 999;
+}
+
+/* You can customize to your needs  */
+.login-popup {
+    display: none;
+    padding: 10px;
+    border: 2px solid #ddd;
+    float: left;
+    font-size: 1.2em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 99999;
+    box-shadow: 0px 0px 20px #999;
+    /* CSS3 */
+        -moz-box-shadow: 0px 0px 20px #999;
+    /* Firefox */
+        -webkit-box-shadow: 0px 0px 20px #999;
+    /* Safari, Chrome */
+	border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    /* Firefox */
+        -webkit-border-radius: 3px;
+    /* Safari, Chrome */;
+}
+
+img.btn_close {
+    Position the close button
+	float: right;
+    margin: -28px -28px 0 0;
+}
+
+fieldset {
+    border: none;
+}
+
+form.signin .textbox label {
+    display: block;
+    padding-bottom: 7px;
+}
+
+form.signin .textbox span {
+    display: block;
+}
+
+form.signin p, form.signin span {
+    color: #999;
+    font-size: 11px;
+    line-height: 18px;
+}
+
+form.signin .textbox input {
+    background: #666666;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #000;
+    border-right: 1px solid #333;
+    border-top: 1px solid #000;
+    color: #fff;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font: 13px Arial, Helvetica, sans-serif;
+    padding: 6px 6px 4px;
+    width: 200px;
+}
+
+form.signin input:-moz-placeholder {
+    color: #bbb;
+    text-shadow: 0 0 2px #000;
+}
+
+form.signin input::-webkit-input-placeholder {
+    color: #bbb;
+    text-shadow: 0 0 2px #000;
+}
+
+.button {
+    background: -moz-linear-gradient(center top, #f3f3f3, #dddddd);
+    background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#dddddd));
+    background: -o-linear-gradient(top, #f3f3f3, #dddddd);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#f3f3f3', EndColorStr='#dddddd');
+    border-color: #000;
+    border-width: 1px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 6px 4px;
+    margin-top: 10px;
+    font: 12px;
+    width: 214px;
+}
+
+.button:hover {
+    background: #ddd;
+}
 
 
-    Template Name   : Capture
-    Template Author : pixelhint.com
-    Author Email    : contact@pixelhint.com
-    License         : pixelhint.com/license
-    
-    
-    *****************************************
-    
-    
-    - Header
-    - Hero section
-    - Featured on seaction
-    - About section
-    - App features section
-    - Testimonials section
-    - Subscription section
-    - Footer
-    - Responsive CSS
-    
-
-*/
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Search Field */
+
+.sbx-custom {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 51px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.sbx-custom__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.sbx-custom__input {
+  display: inline-block;
+  -webkit-transition: box-shadow .4s ease, background .4s ease;
+  transition: box-shadow .4s ease, background .4s ease;
+  border: 0;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 2px #CCCCCC;
+  background: #FFFFFF;
+  padding: 0;
+  padding-right: 41px;
+  padding-left: 51px;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  white-space: normal;
+  font-size: inherit;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.sbx-custom__input::-webkit-search-decoration, .sbx-custom__input::-webkit-search-cancel-button, .sbx-custom__input::-webkit-search-results-button, .sbx-custom__input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.sbx-custom__input:hover {
+  box-shadow: inset 0 0 0 2px #b3b3b3;
+}
+
+.sbx-custom__input:focus, .sbx-custom__input:active {
+  outline: 0;
+  box-shadow: inset 0 0 0 2px #41C27D;
+  background: #FFFFFF;
+}
+
+.sbx-custom__input::-webkit-input-placeholder {
+  color: #BBBBBB;
+}
+
+.sbx-custom__input::-moz-placeholder {
+  color: #BBBBBB;
+}
+
+.sbx-custom__input:-ms-input-placeholder {
+  color: #BBBBBB;
+}
+
+.sbx-custom__input::placeholder {
+  color: #BBBBBB;
+}
+
+.sbx-custom__submit {
+  position: absolute;
+  top: 0;
+  right: inherit;
+  left: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 25px 0 0 25px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0;
+  width: 51px;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  font-size: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.sbx-custom__submit::before {
+  display: inline-block;
+  margin-right: -4px;
+  height: 100%;
+  vertical-align: middle;
+  content: '';
+}
+
+.sbx-custom__submit:hover, .sbx-custom__submit:active {
+  cursor: pointer;
+}
+
+.sbx-custom__submit:focus {
+  outline: 0;
+}
+
+.sbx-custom__submit svg {
+  width: 31px;
+  height: 31px;
+  vertical-align: middle;
+  fill: #41c27d;
+}
+
+.sbx-custom__reset {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  margin: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.sbx-custom__reset:focus {
+  outline: 0;
+}
+
+.sbx-custom__reset svg {
+  display: block;
+  margin: 4px;
+  width: 19px;
+  height: 19px;
+}
+
+.sbx-custom__input:valid ~ .sbx-custom__reset {
+  display: block;
+  -webkit-animation-name: sbx-reset-in;
+          animation-name: sbx-reset-in;
+  -webkit-animation-duration: .15s;
+          animation-duration: .15s;
+}
+
+@-webkit-keyframes sbx-reset-in {
+  0% {
+    -webkit-transform: translate3d(-20%, 0, 0);
+            transform: translate3d(-20%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes sbx-reset-in {
+  0% {
+    -webkit-transform: translate3d(-20%, 0, 0);
+            transform: translate3d(-20%, 0, 0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
 
 
 
@@ -67,11 +346,6 @@
     font-style: normal;
 
 }
-
-
-
-
-
 
 
 
@@ -232,8 +506,35 @@ header .social li:first-child{
 	word-break: break-word;
 }
 
+.captiongnome{
+	position: absolute;
+	max-width: 550px;
+	margin-left: 80px;
+	top: 50%;
+	transform:translate(0,-50%);
+	-webkit-transform:translate(0,-50%);
+	-moz-transform:translate(0,-50%);
+	-o-transform:translate(0,-50%);
+}
+
+.captiongnome h1{
+	color: #FFF;
+	font-family: "open_bold", Helvetica, Arial, sans-serif;
+	font-size: 34px;
+	font-weight: bold;
+	word-break: break-word;
+}
+
 .hero .caption p{
 	color: #6d6c6c;
+	font-family: "open_regular", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 30px;
+	margin: 15px 0 35px 0;
+}
+
+.hero .captiongnome p{
+	color: #FFF;
 	font-family: "open_regular", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 30px;
@@ -248,57 +549,21 @@ a.app_store_btn{
 	display: inline-block;
 	text-decoration: none;
 	padding: 15px 40px;
-	border: 2px solid #525252;
+	border: 2px solid #FFF;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 	margin: 20px 20px 10px 0;
 
-	color: #525252;
+	color: #FFF;
 	font-family: "open_semibold", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 }
-
-.play_icon,
-.android_icon,
-.iphone_icon{
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	vertical-align: middle;
-	margin-right: 20px;
-	margin-bottom: 3px;
-}
-
-.play_icon{
-	background: url('../img/play.png') no-repeat;
-}
-
-.iphone_icon{
-	background: url('../img/iphone_app.png') no-repeat;
-}
-
-.android_icon{
-	background: url('../img/android_app.png') no-repeat;
-}
-
 
 a.app_store_btn:hover,
 a.app_store_btn:focus{
 	border-color: #41c27d;
 	color: #41c27d!important;
-}
-
-a.app_store_btn:hover .play_icon{
-	background: url('../img/play_hover.png') no-repeat;
-}
-
-a.app_store_btn:hover .iphone_icon{
-	background: url('../img/iphone_app_hover.png') no-repeat;
-}
-
-a.app_store_btn:hover .android_icon{
-	background: url('../img/android_app_hover.png') no-repeat;
 }
 
 a.app_link{
@@ -768,14 +1033,14 @@ footer .app_platform li:first-child{
 
 footer .copyright{
 	margin-top: 60px;
-	color: #757171;
+	color: #FFF;
 	font-family: "open_regular", Helvetica, Arial, sans-serif;
 	font-size: 12px;
 	letter-spacing: .5px;
 }
 
 footer .copyright a{
-	color: #565555;
+	color: #FFF;
 }
 
 
