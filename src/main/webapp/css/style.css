@@ -1,0 +1,164 @@
+
+ul.share-buttons li{
+	display: inline;
+}
+
+ul.share-buttons img{
+  width: 32px;
+}
+
+html {
+background-color: #999999;
+}
+body {
+background-color: #FFFFFF;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+}
+
+#wrapper{
+	padding: 10px;
+}
+
+.content {
+padding: 0px 5px 10px 5px;
+}
+nav{
+background-color: #00004d;
+color: #FFFFFF;
+}
+nav a:link {
+color: #ffffff;
+}
+nav a:visited {
+color: #ffffff;
+}
+
+nav {
+background-color:
+#00004d;
+color: #FFFFFF;
+padding:
+0px 0px 0px 0px;
+width: 100%;
+display: table;
+}
+nav ol {
+padding:
+0px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+}
+nav li {
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+float: left;
+width: 33%;
+}
+
+
+nav li:hover {
+background-color: #3333ff;
+}
+nav a:link {
+color: #ffffff;
+text-decoration: none;
+}
+nav a:visited {
+color: #ffffff; }
+
+nav ul{
+	padding-bottom: 10px
+}
+
+nav form{
+	    text-align: center;
+}
+
+#searchterm {
+	min-height: 30px;
+		min-width: 80%;
+}
+
+form {
+                width:500px;
+                margin:auto auto;
+				padding-bottom: 10px;
+				padding-top: 20px;
+}
+.search {
+                padding:8px 15px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+}
+.button {
+                position:relative;
+                padding:6px 15px;
+                left:-8px;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
+}
+.button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
+}
+
+
+
+#subnav{
+	float: right;
+	position: relative;;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body { 
+  font-family: 'Open Sans', sans-serif;
+  color: #666;
+}
+
+/* STRUCTURE */
+
+#left {
+	width: 294px;
+	margin-top: 10px;
+	float: left;
+	padding: 5px 15px;
+	background: #f8f8f8;
+	height: 100%;
+	
+}
+
+#middle {
+	width: 294px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+	margin-top: 10px;
+	height: 100%;
+}
+
+#sidebar {
+	width: 270px;
+	padding: 5px 15px;
+	float: left;
+	background: #f0efef;
+	margin-top: 10px;
+	height: 100%;
+}
+footer {
+	clear: both;
+	padding: 0 15px;
+}
+
+header, #content, #middle, #sidebar {
+	margin-bottom: 5px;
+}
+
+#pagewrap, header,#left, #content, #middle, #sidebar, footer {
+	border: solid 1px #ccc;
+}
+
+
