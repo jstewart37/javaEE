@@ -16,7 +16,6 @@
 .login-popup {
     display: none;
     padding: 10px;
-    border: 2px solid #ddd;
     float: left;
     font-size: 1.2em;
     position: fixed;
@@ -108,28 +107,6 @@ form.signin input::-webkit-input-placeholder {
 .button:hover {
     background: #ddd;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Search Field */
 
@@ -240,7 +217,7 @@ form.signin input::-webkit-input-placeholder {
   width: 31px;
   height: 31px;
   vertical-align: middle;
-  fill: #41c27d;
+  fill: #41C27D;
 }
 
 .sbx-custom__reset {

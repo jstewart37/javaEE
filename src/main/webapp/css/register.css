@@ -10,7 +10,7 @@ body {
   color: #384047;
 }
 
-form {
+.reg {
   max-width: 300px;
   margin: 10px auto;
   padding: 10px 20px;
@@ -28,11 +28,6 @@ input[type="password"],
 input[type="date"],
 input[type="datetime"],
 input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
 textarea,
 select {
   background: rgba(255,255,255,0.1);
@@ -109,7 +104,7 @@ label.light {
 
 @media screen and (min-width: 480px) {
 
-  form {
+  .reg {
     max-width: 480px;
   }
 
