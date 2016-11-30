@@ -485,7 +485,7 @@ header .social li:first-child{
 
 .captiongnome{
 	position: absolute;
-	max-width: 550px;
+	max-width: 650px;
 	margin-left: 80px;
 	top: 50%;
 	transform:translate(0,-50%);
