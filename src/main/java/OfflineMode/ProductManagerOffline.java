@@ -75,8 +75,8 @@ public class ProductManagerOffline implements ProductManager {
 	@Override
 	public Product addProduct(Product Product) {
 		List<Product> products = testData.getProducts();
-		for (Product products6 : products)
-			if(products6.geta)
+		// for (Product products6 : products)
+		//	if(products6.geta)
 		return null;
 	}
 
