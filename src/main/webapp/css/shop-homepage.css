@@ -6,7 +6,272 @@
 
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background-color: #41C27D;
 }
+
+.navbar{
+	 background-color: #black;
+}
+.container{
+	font-weight:bold;
+	 colour: white;
+}
+.navbar-collapse{
+	font-weight:bold;
+	 colour: white;
+}
+
+
+
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 20px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    border-radius: 25px;
+}
+
+input[type=text]:focus {
+    width: 100%;
+
+}
+
+
+
+.login{
+	position: right;
+	
+}
+
+.Nextpage{
+	float:left;
+	
+}
+
+.Nextpage{
+	float:right;
+	
+}
+
+.basket{
+	height: 15%;
+	width: 15%;
+}
+.row{
+		padding: 16px;
+	    background-color: white;
+	    	border-radius: 25px;
+	
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #2c8756;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+ 
+    cursor: pointer;
+    align: centre;
+	position: relative;
+	
+	border-radius: 25px;
+    
+  
+}
+
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	
+    display: inline-block;
+	position: relative;
+    border-radius: 25px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #5d7a5e;
+    min-width: 20px;
+    max-width:100%;
+    overflow: auto;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 25px;
+}
+
+/* Links inside the dropdown */
+.dropdown-menu>li>a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-menu a:hover {
+	background-color: #F4F7F8;
+	color: #5d7a5e;
+	font-weight: bold;
+
+	
+
+}
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: inline;
+    background-color: #2c8756;
+    color:white;
+    border-radius: 25px;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #2c8756;
+    color:white;
+    text-shadow: white;
+}
+
+.personals{
+	position:relative;
+
+		left:65%;
+
+	
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"]:checked + label {
+	 background-image: url('http://vignette1.wikia.nocookie.net/herebemonsters/images/1/11/Gnome-Hat-Sprite.png/revision/latest?cb=20140328070207');
+
+}
+
+
+
+.control-group {
+	width: 100%;
+
+	padding: 30px;
+	left: 50%;
+    margin-right: -50%;
+	text-align:centre;
+	background: #2c8756;
+	box-shadow: 0 2px 2px rgba(0,0,0,.7);
+    border-radius: 25px;
+    color:white;
+}
+.control__indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background: #e6e6e6;
+}
+
+.control--radio .control__indicator {
+	border-radius: 50%;
+}
+.control {
+	font-size: 18px;
+	position: relative;
+	display: inline;
+	margin-bottom: 15px;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+/* Hover and focus states */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+	background: #ccc;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+	background: #2aa1c0;
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+	background: #0e647d;
+}
+
+/* Disabled state */
+.control input:disabled ~ .control__indicator {
+	pointer-events: none;
+	opacity: .6;
+	background: #e6e6e6;
+}
+
+/* Check mark */
+.control__indicator:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+	display: block;
+}
+
+/* Checkbox tick */
+.control--checkbox .control__indicator:after {
+	top: 4px;
+	left: 8px;
+	width: 3px;
+	height: 8px;
+	transform: rotate(45deg);
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+}
+
+/* Disabled tick colour */
+.control--checkbox input:disabled ~ .control__indicator:after {
+	border-color: #7b7b7b;
+}
+
+/* Radio button inner circle */
+.control--radio .control__indicator:after {
+	top: 7px;
+	left: 7px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: #fff;
+}
+
+/* Disabled circle colour */
+.control--radio input:disabled ~ .control__indicator:after {
+	background: #7b7b7b;
+}
+
+
+
+
 
 .slide-image {
     width: 100%;
