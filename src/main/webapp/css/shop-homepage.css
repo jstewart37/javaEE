@@ -99,6 +99,7 @@ input[type=text]:focus {
     display: inline-block;
 	position: relative;
     border-radius: 25px;
+
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -111,7 +112,7 @@ input[type=text]:focus {
     max-width:100%;
     overflow: auto;
 
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
     border-radius: 25px;
 }
 
@@ -120,6 +121,7 @@ input[type=text]:focus {
     color: white;
     text-decoration: none;
     display: block;
+
 }
 
 /* Change color of dropdown links on hover */
