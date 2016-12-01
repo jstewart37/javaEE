@@ -290,12 +290,12 @@ input[type="checkbox"]:checked + label {
     border-radius: 4px;
 }
 
-.pricecaption {
+.captionprice {
     height: 130px;
     overflow: hidden;
 }
 
-.caption h4 {
+.captionprice h4 {
     white-space: nowrap;
 }
 
