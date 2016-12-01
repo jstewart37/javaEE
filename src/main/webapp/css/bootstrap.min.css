@@ -1383,9 +1383,8 @@ img {
 .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive,
 	.thumbnail a>img, .thumbnail>img {
 	display: block;
-	
-	height: 200;
-	width: 300;
+	max-width: 100%;
+	height: auto
 }
 
 .img-rounded {
