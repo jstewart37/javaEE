@@ -69,10 +69,11 @@ input[type=text]:focus {
 	height: 15%;
 	width: 15%;
 }
-.row{
-		padding: 16px;
+.cataloguerow{
+		padding: 20px 20px 20px 20px;
+		margin: 0 0 50px 0;
 	    background-color: #41C27D;
-	    	border-radius: 25px;
+	    border-radius: 25px;
 	
 }
 
@@ -289,12 +290,12 @@ input[type="checkbox"]:checked + label {
     border-radius: 4px;
 }
 
-.caption {
+.captionprice {
     height: 130px;
     overflow: hidden;
 }
 
-.caption h4 {
+.captionprice h4 {
     white-space: nowrap;
 }
 
@@ -315,8 +316,4 @@ input[type="checkbox"]:checked + label {
 .thumbnail .caption-full {
     padding: 9px;
     color: #333;
-}
-
-footer {
-    margin: 50px 0;
 }
