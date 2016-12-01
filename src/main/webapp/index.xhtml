@@ -160,24 +160,27 @@
 						<div id="map" style="width: 60%; height: 300px"></div>
 
 						<script>
-							function myMap() {
-								var myCenter = new google.maps.LatLng(53.4744,
-										-2.2865);
-								var mapCanvas = document.getElementById("map");
-								var mapOptions = {
-									center : myCenter,
-									zoom : 16
+							function initMap() {
+								var uluru = {
+									lat : 53.4744,
+									lng : -2.2865
 								};
-								var map = new google.maps.Map(mapCanvas,
-										mapOptions);
-								var marker = new google.maps.Marker({
-									position : myCenter
+								var map = new google.maps.Map(document
+										.getElementById('map'), {
+									zoom : 17,
+									center : uluru
 								});
-								marker.setMap(map);
+								var marker = new google.maps.Marker({
+									position : uluru,
+									map : map
+								});
 							}
 						</script>
 
-						<script	src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+						<script
+							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClpYc16nhcJvL-Wb4C_JElCGt_gu2OMQo&amp;callback=initMap">
+							
+						</script>
 					</div>
 				</div>
 			</div>
