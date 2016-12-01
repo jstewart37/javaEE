@@ -2,314 +2,256 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-	template="templates/main.xhtml">
+	template="templates/alex.xhtml">
 	<meta charset="utf-8" />
 	<ui:define name="pagetitle">Catalogue</ui:define>
-
-
-
-<head>
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="Alex" content="">
-
-</head>
-
-<ui:define name="maincontent">
-	
-	<!-- Page Content -->
-	<div class="container">
-
-		<div class="search">
-			<form>
-				<input class="searchBar" type="text" name="search"
-					placeholder="Search..">
+	<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="Alex" content="" />
+	</head>
+	<ui:define name="maincontent">
+		<!-- Page Content -->
+		<div class="container">
+			<div class="search">
+				<form>
+					<input class="searchBar" type="text" name="search"
+						placeholder="Search.." />
+				</form>
+			</div>
+			<div class="refine">
+				<div class="dropdown">
+					<button class="dropbtn btn-primary dropdown-toggle" type="button"
+						data-toggle="dropdown">
+						Categories <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Gnomes</a></li>
+						<li><a href="#">Garden Furniture</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+						<li><a href="#">Other</a></li>
+					</ul>
+				</div>
+				<div class="control-group">
+					<h1>Filter</h1>
+					<label class="control control--checkbox">£0 - £25 <input
+						type="checkbox" checked="checked" />
+						<div class="control__indicator"></div>
+					</label> <label class="control control--checkbox">£26-99 <input
+						type="checkbox" />
+						<div class="control__indicator"></div>
+					</label> <label class="control control--checkbox">£100+ <input
+						type="checkbox" />
+						<div class="control__indicator"></div>
+					</label> <label class="control control--checkbox">Porousware <input
+						type="checkbox" />
+						<div class="control__indicator"></div>
+					</label>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="col-sm-4 col-lg-4 col-md-4">
+					<div class="thumbnail">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" />
+						<div class="caption">
+							<h4 class="pull-right">$24.99</h4>
+							<h4>
+								<a href="#">Gnome</a>
+							</h4>
+							<p>Description -</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">15 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-lg-4 col-md-4">
+					<div class="thumbnail">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" />
+						<div class="caption">
+							<h4 class="pull-right">$64.99</h4>
+							<h4>
+								<a href="#">Second Product</a>
+							</h4>
+							<p>This is a short description. Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit.</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">12 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star-empty"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-lg-4 col-md-4">
+					<div class="thumbnail">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" />
+						<div class="caption">
+							<h4 class="pull-right">$74.99</h4>
+							<h4>
+								<a href="#">Third Product</a>
+							</h4>
+							<p>This is a short description. Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit.</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">31 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star-empty"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-lg-4 col-md-4">
+					<div class="thumbnail">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" />
+						<div class="caption">
+							<h4 class="pull-right">$84.99</h4>
+							<h4>
+								<a href="#">Fourth Product</a>
+							</h4>
+							<p>This is a short description. Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit.</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">6 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star-empty"></span> <span
+									class="glyphicon glyphicon-star-empty"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-lg-4 col-md-4">
+					<div class="thumbnail">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" />
+						<div class="caption">
+							<h4 class="pull-right">$94.99</h4>
+							<h4>
+								<a href="#">Fifth Product</a>
+							</h4>
+							<p>This is a short description. Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit.</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">18 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star-empty"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-lg-4 col-md-4">
+					<div class="thumbnail">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" />
+						<div class="caption">
+							<h4 class="pull-right">$94.99</h4>
+							<h4>
+								<a href="#">Fifth Product</a>
+							</h4>
+							<p>This is a short description. Lorem ipsum dolor sit amet,
+								consectetur adipiscing elit.</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">18 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star"></span> <span
+									class="glyphicon glyphicon-star-empty"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="Prevpage">
+					<p>previous page</p>
+				</div>
+				<div class="Nextpage">
+					<p>next page</p>
+				</div>
+			</div>
+		</div>
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		<div id="login-box" class="login-popup">
+			<a href="#" class="close"><img src="img/close_pop.png"
+				class="btn_close" title="Close Window" alt="Close" /></a>
+			<form class="reg" action="index.html" method="post">
+				<h1>Sign Up</h1>
+				<fieldset>
+					<legend>
+						<span class="number">Details</span>
+					</legend>
+					<label for="FirstName">First name:</label> <input type="text"
+						id="name" name="user_name" placeholder="What's your first name?" />
+						<label for="LastName">Last name:</label> <input
+						type="text" id="name" name="user_name"
+						placeholder="What's your last name?" /><label
+						for="mail">Email:</label> <input type="email" id="mail"
+						name="user_email" placeholder="What's your email address?" />
+						<label>Choose a password:</label> <input
+						type="password" placeholder="Password" id="password" /><input
+						type="password" placeholder="Confirm Password"
+						id="confirm_password" /><label>DOB:</label> <input
+						type="date" name="bday" min="1900-01-02" max="1999-01-02"/><br />
+					<label for="D.O.B" class="light"/>
+				</fieldset>
+				<button type="submit" class="pure-button pure-button-primary">SignUp</button>
 			</form>
 		</div>
-
-
-		<div class=refine>
-			<div class="dropdown">
-				<button class="dropbtn btn-primary dropdown-toggle" type="button"
-					data-toggle="dropdown">
-					Categories <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Gnomes</a></li>
-					<li><a href="#">Garden Furniture</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-					<li><a href="#">Other</a></li>
-				</ul>
-			</div>
-
-			<div class="control-group">
-				<h1>Filter</h1>
-				<label class="control control--checkbox">£0 - £25 <input
-					type="checkbox" checked="checked" />
-					<div class="control__indicator"></div>
-				</label> <label class="control control--checkbox">£26-99 <input
-					type="checkbox" />
-					<div class="control__indicator"></div>
-				</label> <label class="control control--checkbox">£100+ <input
-					type="checkbox" />
-					<div class="control__indicator"></div>
-				</label> <label class="control control--checkbox">Porousware <input
-					type="checkbox" />
-					<div class="control__indicator"></div>
-				</label>
-			</div>
-		</div>
-
-		<hr>
-
-		<div class="row">
-
-			<div class="col-sm-4 col-lg-4 col-md-4">
-				<div class="thumbnail">
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
-						alt="">
-					<div class="caption">
-						<h4 class="pull-right">$24.99</h4>
-						<h4>
-							<a href="#">Gnome</a>
-						</h4>
-						<p>Description -</p>
-					</div>
-					<div class="ratings">
-						<p class="pull-right">15 reviews</p>
-						<p>
-							<span class="glyphicon glyphicon-star"></span> <span
-								class="glyphicon glyphicon-star"></span> <span
-								class="glyphicon glyphicon-star"></span> <span
-								class="glyphicon glyphicon-star"></span> <span
-								class="glyphicon glyphicon-star"></span>
-						</p>
-					</div>
-				</div>
-			</div>
-		
-
-		<div class="col-sm-4 col-lg-4 col-md-4">
-			<div class="thumbnail">
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
-					alt="">
-
-				<div class="caption">
-					<h4 class="pull-right">$64.99</h4>
-					<h4>
-						<a href="#">Second Product</a>
-					</h4>
-					<p>This is a short description. Lorem ipsum dolor sit amet,
-						consectetur adipiscing elit.</p>
-				</div>
-				<div class="ratings">
-					<p class="pull-right">12 reviews</p>
-					<p>
-						<span class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star-empty"></span>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-sm-4 col-lg-4 col-md-4">
-			<div class="thumbnail">
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
-					alt="">
-				<div class="caption">
-					<h4 class="pull-right">$74.99</h4>
-					<h4>
-						<a href="#">Third Product</a>
-					</h4>
-					<p>This is a short description. Lorem ipsum dolor sit amet,
-						consectetur adipiscing elit.</p>
-				</div>
-				<div class="ratings">
-					<p class="pull-right">31 reviews</p>
-					<p>
-						<span class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star-empty"></span>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-sm-4 col-lg-4 col-md-4">
-			<div class="thumbnail">
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
-					alt="">
-				<div class="caption">
-					<h4 class="pull-right">$84.99</h4>
-					<h4>
-						<a href="#">Fourth Product</a>
-					</h4>
-					<p>This is a short description. Lorem ipsum dolor sit amet,
-						consectetur adipiscing elit.</p>
-				</div>
-				<div class="ratings">
-					<p class="pull-right">6 reviews</p>
-					<p>
-						<span class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star-empty"></span> <span
-							class="glyphicon glyphicon-star-empty"></span>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-sm-4 col-lg-4 col-md-4">
-			<div class="thumbnail">
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
-					alt="">
-				<div class="caption">
-					<h4 class="pull-right">$94.99</h4>
-					<h4>
-						<a href="#">Fifth Product</a>
-					</h4>
-					<p>This is a short description. Lorem ipsum dolor sit amet,
-						consectetur adipiscing elit.</p>
-				</div>
-				<div class="ratings">
-					<p class="pull-right">18 reviews</p>
-					<p>
-						<span class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star-empty"></span>
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-4 col-lg-4 col-md-4">
-			<div class="thumbnail">
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
-					alt="">
-				<div class="caption">
-					<h4 class="pull-right">$94.99</h4>
-					<h4>
-						<a href="#">Fifth Product</a>
-					</h4>
-					<p>This is a short description. Lorem ipsum dolor sit amet,
-						consectetur adipiscing elit.</p>
-				</div>
-				<div class="ratings">
-					<p class="pull-right">18 reviews</p>
-					<p>
-						<span class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star"></span> <span
-							class="glyphicon glyphicon-star-empty"></span>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="Prevpage">
-			<p>previous page</p>
-		</div>
-
-
-		<div class="Nextpage">
-			<p>next page</p>
-		</div>
-
-
-
-
-
-	</div>
-
-	</div>
-
-	</div>
-
-	</div>
-	<!-- /.container -->
-
-	<div class="container">
-
-		<hr>
-
-		<!-- Footer -->
-		<footer>
-			<div class="row">
-				<div class="col-lg-12">
-					<p>Copyright &copy; NBGardens</p>
-				</div>
-			</div>
-		</footer>
-
-	</div>
-	<!-- /.container -->
-
-	<!-- jQuery -->
-	<script src="js/jquery.js"></script>
-
-	<!-- Bootstrap Core JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
-
-<div id="login-box" class="login-popup">
-		<a href="#" class="close"><img src="img/close_pop.png"
-			class="btn_close" title="Close Window" alt="Close" /></a>
-		<form class="reg" action="index.html" method="post">
-			<h1>Sign Up</h1>
-			<fieldset>
-				<legend>
-					<span class="number">Details</span>
-				</legend>
-				<label for="FirstName">First name:</label> <input type="text"
-					id="name" name="user_name" placeholder="What's your first name?"
-					autofocus> <label for="LastName">Last name:</label> <input
-					type="text" id="name" name="user_name"
-					placeholder="What's your last name?" autofocus> <label
-					for="mail">Email:</label> <input type="email" id="mail"
-					name="user_email" placeholder="What's your email address?"
-					autofocus> <label>Choose a password:</label> <input
-					type="password" placeholder="Password" id="password" required>
-				<input type="password" placeholder="Confirm Password"
-					id="confirm_password" required> <label>DOB:</label> <input
-					type="date" name="bday" min="1900-01-02" max="1999-01-02"><br>
-				<label for="D.O.B" class="light"></label>
-			</fieldset>
-			<button type="submit" class="pure-button pure-button-primary">SignUp</button>
-		</form>
-	</div>
-
-
-</body>
-
-</html>
-</ui:define>
+			</ui:define>
 </ui:composition>
