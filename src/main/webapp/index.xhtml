@@ -7,62 +7,14 @@
 	<ui:define name="pagetitle">NBGardens Home</ui:define>
 	<head>
 
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-<link rel="stylesheet" type="text/css" href="css/owl.transitions.css" />
-<link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
-<link rel="stylesheet" type="text/css" href="css/animate.css" />
-<link rel="stylesheet" type="text/css" href="css/main.css" />
-<link rel="stylesheet" type="text/css" href="css/register.css" />
-
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/ajaxchimp.js"></script>
-<script type="text/javascript" src="js/scrollTo.js"></script>
-<script type="text/javascript" src="js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="js/wow.js"></script>
-<script type="text/javascript" src="js/parallax.js"></script>
-<script type="text/javascript" src="js/nicescroll.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-
-<script type="text/javascript"
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-
-<script type="text/javascript" src="js/loginform.js"></script>
-
 
 	</head>
 	<ui:define name="maincontent">
 
-		<!-- Page Content -->
-		<div class="container">
-			<div class="logo pull-left animated wow fadeInLeft">
-				<img src="img/logo.png" class="logosizing" alt="" title="" />
-			</div>
 
-
-			<nav class="pull-left">
-				<ul class="list-unstyled">
-					<li class="animated wow fadeInLeft" data-wow-delay="0s"><a
-						href="#">Home</a></li>
-					<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a
-						href="#about">About Us</a></li>
-					<li class="animated wow fadeInLeft" data-wow-delay=".2s"><a
-						href="catalogue.html">Catalogue</a></li>
-					<li class="animated wow fadeInLeft" data-wow-delay=".3s"><a
-						href="#contact">Contact Us</a></li>
-				</ul>
-			</nav>
-
-			<div class="social pull-right">
-				<a href="#login-box" class="login-window">Login / Sign In</a>
-			</div>
-			<span class="burger_icon">menu</span>
-		</div>
-		</header>
-		<!--  End Header Section  -->
 
 		<!--  Hero Section  -->
 		<section class="hero" id="hero">
@@ -73,6 +25,10 @@
 					<p class="text-lowercase  animated wow fadeInLeft">Some
 						information here about the NB Gardens Catalogue</p>
 
+					<!-- 
+					
+					STYLING PROBLEM USING XHTML WITH SEARCH BAR
+					
 					<span> <svg style="display: none">
   <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-search-18"
 								viewBox="0 0 40 40">
@@ -93,7 +49,7 @@
 							<div role="search" class="sbx-custom__wrapper">
 								<input type="search" name="search"
 									placeholder="Search your website" autocomplete="off"
-									required="required" class="sbx-custom__input">
+									required="required" class="sbx-custom__input" />
 								<button type="submit" title="Submit your search query."
 									class="sbx-custom__submit">
 									<svg role="img" aria-label="Search">
@@ -118,13 +74,13 @@
 														'input').focus();
 											});
 						</script>
-					</span>
+					</span> -->
 
 				</div>
 			</div>
 		</section>
 		<!--  End Hero Section  -->
-
+		
 		<!--  App Features Section  -->
 		<section class="app_features" id="about">
 			<div class="container">
@@ -205,17 +161,17 @@
 				<fieldset>
 					<label for="FirstName">First name:</label> <input type="text"
 						id="name" name="user_name" placeholder="What's your first name?"
-						autofocus/> <label for="LastName">Last name:</label> <input
+						 /> <label for="LastName">Last name:</label> <input
 						type="text" id="name" name="user_name"
-						placeholder="What's your last name?" autofocus> <label
+						placeholder="What's your last name?" /><label
 						for="mail">Email:</label> <input type="email" id="mail"
 						name="user_email" placeholder="What's your email address?"
-						autofocus/> <label>Choose a password:</label> <input
-						type="password" placeholder="Password" id="password" required>
-					<input type="password" placeholder="Confirm Password"
-						id="confirm_password" required/> <label>DOB:</label> <input
-						type="date" name="bday" min="1900-01-02" max="1999-01-02"><br>
-					<label for="D.O.B" class="light"/>
+						 /> <label>Choose a password:</label> <input
+						type="password" placeholder="Password" id="password" /><input
+						type="password" placeholder="Confirm Password"
+						id="confirm_password" /> <label>DOB:</label> <input
+						type="date" name="bday" min="1900-01-02" max="1999-01-02" /><br />
+					<label for="D.O.B" class="light" />
 				</fieldset>
 				<button type="submit" class="pure-button pure-button-primary">SignUp</button>
 			</form>
