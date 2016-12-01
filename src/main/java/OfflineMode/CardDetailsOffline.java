@@ -12,9 +12,6 @@ import Entitys.TestData;
 @Default
 
 public class CardDetailsOffline implements CardDetailsManager {
-	@Inject
-	private TestData testData;
-
 	@Override
 	public CardDetails createNewCardDetails(CardDetails cardDetails) {
 		// TODO Auto-generated method stub

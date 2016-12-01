@@ -3,8 +3,8 @@ package Entitys;
 import java.util.*;
 
 import javax.annotation.PostConstruct;
+import javax.ejb.Singleton;
 import javax.ejb.Startup;
-import javax.inject.Singleton;
 
 @Startup
 @Singleton
@@ -25,7 +25,7 @@ public class TestData {
 		supplyorderlist = new ArrayList<>();
 		customers = new ArrayList<>();
 		addresses = new ArrayList<>();
-		
+		customerOrderLine = new ArrayList<CustomerOrderLine>();
 		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "12345678912"));
 		customers.add(new Customer(1, "mr", "Andy", "Mr.Andy@M/vie.com", "1912"));
 		
