@@ -772,6 +772,15 @@ a.app_link{
 	clear: both;
 }
 
+.frmcontact {
+	width: 45%;
+	float: left;
+}
+.frmcontactmap {
+	width: 45%;
+	margin: 0 0 0 80px;
+	float: left;
+}
 
 /*		Testimonials section 		*/
 
