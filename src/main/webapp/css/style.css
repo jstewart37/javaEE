@@ -217,6 +217,12 @@ footer {
 	padding: 0 15px;
 	margin-top: 10px;
 	padding-top:10px;
+	padding-bottom: 2px;
+}
+
+.share-buttons{
+	padding-left:0px;
+	margin-bottom:0px;
 }
 
 header, #content, #middle, #sidebar {
