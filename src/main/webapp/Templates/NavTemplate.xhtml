@@ -13,6 +13,9 @@
 <!--  Site Title  -->
 <title><ui:insert name="pageTitle" /></title>
 
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up" /></a>
+
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="css/shop-homepage.css" />
 <link rel="stylesheet" type="text/css" href="css/animate.css" />
@@ -33,12 +36,28 @@
 
 <script type="text/javascript" src="js/loginform.js"></script>
 
+<script type="text/javascript">
+//===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+</script>
 
 </head>
 
 <body>
 
 	<!--  Header Section  -->
+	<a name="top"></a>
 	<header>
 		<div class="container">
 			<div class="logo pull-left animated wow fadeInLeft">
@@ -67,6 +86,7 @@
 	</header>
 <ui:insert name="maincontent" />
 	<!--  Footer Section  -->
+	<a href="#top">Back To Top</a> 
 	<footer class="sub_box">
 		<p class="copyright animated wow fadeIn" data-wow-duration="2s">©
 			2015 - All Rights Reserved</p>
