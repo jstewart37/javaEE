@@ -1,5 +1,7 @@
 package EntityManagers;
 
+import java.util.List;
+
 import Entitys.Product;
 
 public interface ProductManager {
@@ -30,6 +32,8 @@ public interface ProductManager {
 
 //Delete Methods
 	public Product deleteProduct(Product Product);
+	public List<Product> findByNameLike(String name);
+	public List<Product> findByDescriptionLike(String description);
 	
 
 }

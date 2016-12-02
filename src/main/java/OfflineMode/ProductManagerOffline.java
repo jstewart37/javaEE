@@ -6,7 +6,6 @@ import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
-import org.hibernate.service.spi.InjectService;
 
 import EntityManagers.ProductManager;
 import Entitys.Product;
@@ -94,6 +93,18 @@ public class ProductManagerOffline implements ProductManager {
 
 	@Override
 	public Product deleteProduct(Product Product) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> findByNameLike(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> findByDescriptionLike(String description) {
 		// TODO Auto-generated method stub
 		return null;
 	}

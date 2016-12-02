@@ -4,8 +4,10 @@ import java.util.List;
 
 import javax.enterprise.context.
 
-RequestScoped;
+		RequestScoped;
 import javax.inject.*;
+
+import services.SearchService;
 
 @Named("search")
 @RequestScoped
@@ -17,24 +19,26 @@ public class SearchController {
 	@Inject
 	private SearchResultsController searchResults;
 	private String term;
-	
-	
-	public String search(){
-	List<Entitys.Product> results = searchService.searchBy(term);
-	if (results != null){ //added {
-		if (results.size() == 1) {selectedProduct.setProduct(results.get(0));
-		return "product";
-		} 
-		else {searchResults.setResults(results);
-		return "searchResults";}
-	return "browse";
-	}// end of 1st if
-	}
-	
-	public String getTerm() { 
-		return term; }
-	
-	public void setTerm(String term) {
-	this.term = term; }
-}
 
+	public String search() {
+		List<Entitys.Product> results = searchService.searchBy(term);
+		if (results != null) { // added {
+			if (results.size() == 1) {
+				selectedProduct.setProduct(results.get(0));
+				return "product";
+			} else {
+				searchResults.setResults(results);
+				return "searchResults";
+			}
+		}
+		return "browse";
+	}// end of 1st if
+
+	public String getTerm() {
+		return term;
+	}
+
+	public void setTerm(String term) {
+		this.term = term;
+	}
+}

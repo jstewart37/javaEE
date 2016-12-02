@@ -143,4 +143,9 @@ public class Product {
 		this.imgPath = imgPath;
 	}
 
+	public Object getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
