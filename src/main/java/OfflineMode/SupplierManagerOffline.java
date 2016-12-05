@@ -7,6 +7,7 @@ import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import EntityManagers.SupplierManager;
+import Entitys.Author;
 import Entitys.Supplier;
 import Entitys.TestData;
 
@@ -22,7 +23,7 @@ public class SupplierManagerOffline implements SupplierManager{
 
 	@Inject
 	private TestData testData;
-
+	@Author(author="Alex")
 	
 	
 	@Override

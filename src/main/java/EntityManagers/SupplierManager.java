@@ -1,9 +1,10 @@
 package EntityManagers;
 
+import Entitys.Author;
 import Entitys.Supplier;
 
 public interface SupplierManager {
-
+	@Author(author="Alex")
 	// query based stubs
 	public Supplier findSupplierName(String name);
 	public Supplier findSupplierByEmail(String email);

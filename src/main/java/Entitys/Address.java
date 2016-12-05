@@ -12,7 +12,7 @@ import javax.validation.constraints.*;
 @Table(name = "addresses")
 @Embeddable
 public class Address {
-
+	
 	// variables
 	@Id @Column(name ="id_Address", nullable = false, unique = true) @GeneratedValue(strategy = GenerationType.IDENTITY)private long idAddress;
 	@Column(name ="address_line_1", nullable = false, length = 100)@Size(max=100) @NotNull private String addressLine1;
@@ -34,7 +34,7 @@ public class Address {
 	// private customer_id FOREIGN KEYS
 	// private supplier_id FOREIGN KEYS
 
-	// constructors
+	@Author(author="Alex")// constructors
 	public Address(){};
 	
 	public Address(long idAddress, String addressLine1, String addressLine2, String postCode, String County,
