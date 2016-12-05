@@ -17,6 +17,9 @@
 
 
 		<!--  Hero Section  -->
+		<!-- Author: Ben-->
+		<!-- NB Gardens online catalogue branding -->
+		<!-- The idea was to put a search bar here to save the user having to go to the catalogue but there were issues with the XHTML that I did not have time to fix -->
 		<section class="hero" id="hero">
 			<div class="container">
 				<div class="captiongnome">
@@ -32,6 +35,8 @@
 		<!--  End Hero Section  -->
 
 		<!--  App Features Section  -->
+		<!-- Author: Ben -->
+		<!-- About the company section, splits into 6 'boxes' to allow for better responsive styling -->
 		<section class="app_features" id="about">
 			<div class="container">
 
@@ -93,6 +98,7 @@
 		<!--  Contact Section  -->
 		<!-- Author - Sophie -->
 		<!-- Applying a google map api, setting the size, zoom, location and marker tag to the map. -->
+		<!-- Creating input fields so the user can leave feedback through the website. -->
 		<section class="testimonials animated wow fadeIn" id="contact"
 			data-wow-duration="2s">
 			<div class="container">
@@ -101,19 +107,23 @@
 						Gardens</h1>
 					<div class="frmcontact">
 						<form>
+						<!-- Set input field id's and placeholders(what appears by default in the empty field) -->
 							<input type="text" id="input-name" placeholder="Name" /> <input
 								type="email" id="input-email" placeholder="Email address" /> <input
 								type="text" id="input-subject" placeholder="Subject" /><br />
 							<textarea name="message" id="input-message" placeholder="Message" />
+							<!-- button to submit the data that has been entered by the customer -->
 							<br /> <input type="submit" value="Submit" id="input-submit" />
 						</form>
 					</div>
 					<div class="frmcontactmap">
+					<!-- setting the dimensions that the map api displays on the page in the contact us section -->
 						<div id="map" style="width: 350px; height: 350px"></div>
 
 						<script>
 							function initMap() {
 								var uluru = {
+								
 									lat : 53.4744,
 									lng : -2.2865
 								};
@@ -130,6 +140,7 @@
 						</script>
 
 						<script
+				
 							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClpYc16nhcJvL-Wb4C_JElCGt_gu2OMQo&amp;callback=initMap">
 							
 						</script>
