@@ -91,6 +91,52 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 		</div>
 	</header>
 <ui:insert name="maincontent" />
+
+<div id="login-box" class="login-popup">
+			<a href="#" class="close"><img src="img/close_pop.png"
+				class="btn_close" title="Close Window" alt="Close" /></a>
+				<!-- Author: Dave -->
+			<form class="reg" action="index.html" method="post">
+				<!-- setting header to "sign up" -->
+				<h1>Sign Up</h1>
+				<fieldset>
+				<!-- creating fields with individual titles -->
+					<label for="FirstName">First name:</label> <input type="text"
+						id="name" name="user_name" placeholder="What's your first name?" />
+					<label for="LastName">Last name:</label> <input type="text"
+						id="name" name="user_name" placeholder="What's your last name?" /><label
+						for="mail">Email:</label> <input type="email" id="mail"
+						name="user_email" placeholder="What's your email address?" />
+					<label>Choose a password:</label> <input type="password"
+						placeholder="Password" id="password" /><input type="password"
+						placeholder="Confirm Password" id="confirm_password" /> <label>DOB:</label>
+					<input type="date" name="bday" min="1900-01-02" max="1999-01-02" /><br />
+					<label for="D.O.B" class="light" />
+				</fieldset>
+				<!-- creating button to sumbit sign up information -->
+				<button type="submit" class="pure-button pure-button-primary">SignUp</button>
+			</form>
+		</div>
+		
+		<div id="Signin-box" class="login-popup">
+			<a href="#" class="close"><img src="img/close_pop.png"
+				class="btn_close" title="Close Window" alt="Close" /></a>
+				<!-- Author: Dave -->
+			<form class="reg" action="index.html" method="post">
+				<!-- setting header to "sign up" -->
+				<h1>Kenny Log Ins</h1>
+				<fieldset>
+				<!-- creating fields with individual titles -->
+					<label for="mail">Email:</label> <input type="email" id="mail"
+						name="user_email" placeholder="What's your email address?" />
+					<label>Password:</label> <input type="password"
+						placeholder="Password" id="password" />
+				</fieldset>
+				<!-- creating button to sumbit sign up information -->
+				<button type="submit" class="pure-button pure-button-primary">LogIn</button>
+			</form>
+		</div>
+
 	<!--  Footer Section  -->
 
 	<footer class="sub_box">
