@@ -1,0 +1,25 @@
+.accountdetails {
+	max-width: 50%;
+    clear: left;
+    display:inline;
+     display: block;
+         border-style: solid;
+	}
+	
+.previousorders {
+	max-width: 50%;
+    clear: left;
+    display:inline;
+     display: block;
+         border-style: solid;
+	}
+	
+	.accountcontent {
+	min-width: 50%;
+	min-height: 50%;
+    clear: left;
+    display:inline;
+     display: block;
+         border-style: solid;
+     
+	}

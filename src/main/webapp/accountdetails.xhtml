@@ -1,0 +1,90 @@
+<!-- @Author(author="Jake_Stewart") -->
+
+
+<ui:composition xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="templates/NavTemplate.xhtml">
+	
+	<meta charset="utf-8" />
+	<ui:define name="pagetitle">Catalogue</ui:define>
+	<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="Jake" content="" />
+
+<ui:define name="Account Details">Account Details</ui:define>
+
+	</head>
+	<ui:define name="maincontent">
+		
+		<div class="container">
+		<div class="accountcontent">
+		<div class="accountdetails">
+		<table id="tableaccountdetails">
+		
+		<tr>
+		<td> Account Name: </td>
+		<td> <h:outputText value="#{customer.name}" /></td>
+		</tr>
+		
+		
+		  <tr>
+		    <th rowspan="5">Account Primary Address:</th>
+		    <td><h:outputText value="#{address.addressline1}" /></td>
+		  </tr>
+		  <tr>
+		    <td><h:outputText value="#{address.addressline2}" /></td>
+		  </tr>
+		  <tr>
+		    <td><h:outputText value="#{address.county}" /></td>
+		  </tr>
+		  <tr>
+		    <td><h:outputText value="#{address.city}" /></td>
+		  </tr>
+		  <tr>
+		    <td><h:outputText value="#{address.postcode}" /></td>
+		  </tr>
+		
+		<tr>
+		<td> other Info </td>
+		<td> Other Info</td>
+		</tr>
+		
+		
+		</table>
+
+		</div>
+		
+		<div class="previousorders">
+		
+		<table id="tableaccountorders">
+
+		  <tr>
+		    <th >Orders:</th>
+		    <td><h:outputText value="#{customerorder.ID}" /></td>
+		  </tr>
+		  <tr>
+		    <td><h:outputText value="#{customerorder.value}" /></td>
+		  </tr>
+		  <tr>
+		    <td><h:outputText value="#{address.dateStampPlaced}" /></td>
+		  </tr>
+		 	
+		</table>
+
+		</div>
+		
+		
+		
+		</div>
+	
+		
+		</div>
+		
+		
+			</ui:define>
+</ui:composition>
