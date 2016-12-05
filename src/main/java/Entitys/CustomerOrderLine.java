@@ -2,6 +2,10 @@ package Entitys;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
+/**
+ * @Author(author="Jake_Stewart")
+ */
+
 @IdClass(Product.class)
 @Entity
 @Table(name = "customerOrderLine")
