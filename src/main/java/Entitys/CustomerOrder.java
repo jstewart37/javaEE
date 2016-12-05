@@ -2,10 +2,16 @@ package Entitys;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
+/**
+ * @author Jake Stewart
+ *  **/
+
 @Entity
 @Table(name = "CustomerOrder")
 @NamedQueries({
-@NamedQuery(name="CustomerOrdersOverview", query="Select CO.idCustomerOrder from CustomerOrders CO join Customers C on CO.CustomerId = C.idCustomer where CO.customerId=:customerId "), 
+	//this query would be used in order to return the ID's of orders based on a specific customer ID
+@NamedQuery(name="CustomerOrdersOverview", query="Select CO.idCustomerOrder from CustomerOrders CO join Customers C on CO.CustomerId = C.idCustomer where CO.customerId=:customerId "),
+	//this query would return the order details for a specific order (based on a orderID) 
 @NamedQuery(name="CustomerOrderDetails", query="Select CO.idCustomerOrder,P.name "
 		+ "from CustomerOrders CO join CustomerOrderLine COL on CO.idCustomerOrder = COL.idCustomerOrder "
 		+ "join products p on COL.productID = p.idProduct "
@@ -51,11 +57,6 @@ public class CustomerOrder {
 	@Column(name = "dateTimeRecieved")
 	private String dateTimeRecieved; // the date the customer receives order
 	// method
-
-	
-	
-	public CustomerOrder() {
-	}
 
 	// Constructors
 	public CustomerOrder(long idCustomerOrder, String status, long customerID, String dateStampPlaced,

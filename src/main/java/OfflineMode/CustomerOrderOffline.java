@@ -10,6 +10,10 @@ import javax.inject.Singleton;
 import EntityManagers.CustomerOrderManager;
 import Entitys.*;
 
+/**
+ * @Author(author="Jake_Stewart")
+ */
+
 @Startup
 @Singleton
 public class CustomerOrderOffline implements CustomerOrderManager {
