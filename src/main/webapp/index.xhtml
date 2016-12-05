@@ -17,6 +17,9 @@
 
 
 		<!--  Hero Section  -->
+		<!-- Author: Ben-->
+		<!-- NB Gardens online catalogue branding -->
+		<!-- The idea was to put a search bar here to save the user having to go to the catalogue but there were issues with the XHTML that I did not have time to fix -->
 		<section class="hero" id="hero">
 			<div class="container">
 				<div class="captiongnome">
@@ -32,6 +35,8 @@
 		<!--  End Hero Section  -->
 
 		<!--  App Features Section  -->
+		<!-- Author: Ben -->
+		<!-- About the company section, splits into 6 'boxes' to allow for better responsive styling -->
 		<section class="app_features" id="about">
 			<div class="container">
 
@@ -118,7 +123,7 @@
 						<script>
 							function initMap() {
 								var uluru = {
-								}
+								
 									lat : 53.4744,
 									lng : -2.2865
 								};
@@ -143,32 +148,15 @@
 				</div>
 			</div>
 		</section>
-		<!--  End Contact Section  -->
+		
+		
+		
+		
 
-		<div id="login-box" class="login-popup">
-			<a href="#" class="close"><img src="img/close_pop.png"
-				class="btn_close" title="Close Window" alt="Close" /></a>
-				<!-- Author: Dave -->
-			<form class="reg" action="index.html" method="post">
-				<!-- setting header to "sign up" -->
-				<h1>Sign Up</h1>
-				<fieldset>
-				<!-- creating fields with individual titles -->
-					<label for="FirstName">First name:</label> <input type="text"
-						id="name" name="user_name" placeholder="What's your first name?" />
-					<label for="LastName">Last name:</label> <input type="text"
-						id="name" name="user_name" placeholder="What's your last name?" /><label
-						for="mail">Email:</label> <input type="email" id="mail"
-						name="user_email" placeholder="What's your email address?" />
-					<label>Choose a password:</label> <input type="password"
-						placeholder="Password" id="password" /><input type="password"
-						placeholder="Confirm Password" id="confirm_password" /> <label>DOB:</label>
-					<input type="date" name="bday" min="1900-01-02" max="1999-01-02" /><br />
-					<label for="D.O.B" class="light" />
-				</fieldset>
-				<!-- creating button to sumbit sign up information -->
-				<button type="submit" class="pure-button pure-button-primary">SignUp</button>
-			</form>
-		</div>
+
+
+		
+		<!--  End Contact Section  -->
+		
 	</ui:define>
 </ui:composition>
