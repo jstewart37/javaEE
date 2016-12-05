@@ -40,12 +40,19 @@ select {
   width: 100%;
   background-color: #e8eeef;
   color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-bottom: 30px;
   border-radius: 25px;
 }
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 
-
+}
 
 
 select {
