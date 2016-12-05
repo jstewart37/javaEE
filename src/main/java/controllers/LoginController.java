@@ -7,6 +7,8 @@ import javax.inject.Named;
 import Entitys.Customer;
 import services.LoginService;
 
+//@author Sophie
+
 @RequestScoped
 @Named(value = "login")
 public class LoginController {

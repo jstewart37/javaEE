@@ -5,7 +5,7 @@ import javax.inject.Inject;
 
 import EntityManagers.CustomerManager;
 import Entitys.Customer;
-
+//@author Sophie
 @Stateless
 public class LoginService {
 	@Inject
