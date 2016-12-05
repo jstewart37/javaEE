@@ -1,8 +1,10 @@
 package EntityManagers;
 import Entitys.Address;
+import Entitys.Author;
 
 
 public interface AddressManager {
+	@Author(author="Alex")
 	// query based stubs
 	public Address findAddressByPostcode(String postcode);
 	public Address findAddressByCounty(String county);

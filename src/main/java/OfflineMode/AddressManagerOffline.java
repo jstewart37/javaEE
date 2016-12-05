@@ -23,8 +23,8 @@ public class AddressManagerOffline implements AddressManager {
 
 	@Inject
 	private TestData testData;
-	
 	@Author(author="Alex")
+
 	
 	@Override
 	public Address findAddressByPostcode(String postcode) {

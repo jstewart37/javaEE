@@ -1,5 +1,7 @@
 package Entitys;
 
+
+
 import java.util.*;
 
 import javax.annotation.PostConstruct;
@@ -8,7 +10,7 @@ import javax.ejb.Startup;
 
 @Startup
 @Singleton
-public class TestData {
+public class TestData { //class was created by entire team, see comments/annotations for individuals
 
 	private List<SupplyOrder> supplyorderlist;
 	private List<Customer> customers;
@@ -33,7 +35,8 @@ public class TestData {
 		
 		supplyorderlist.add(new SupplyOrder(1, "Arrived", "2002-02-13 14:37:12", "2008-06-11 11:27:38"));
 		
-		suppliers.add(new Supplier(1, "Daves GGGGGGGGGGGGGGGGGGnomes", "07984682330", "dg@gnomies.com"));
+		//Alex's data
+		suppliers.add(new Supplier(1, "Daves GGGGGGGGGGGGGGGGGGnomes", "07984682330", "dg@gnomies.com")); 
 		suppliers.add(new Supplier(2, "Sophies Rude Ass Garden Supplies", "07984643", "sg@rudegardensupplies.com"));
 		addresses.add(new Address(1, "65 Anchorage Quay", "eccles", "M27 641", "Greater Manchester", "Manchester"));
 		addresses.add(new Address(1, "1 Someplace", "M64 813", "Greater Manchester", "Manchester"));
@@ -59,7 +62,7 @@ public class TestData {
 	public List<Supplier> getSuppliers() {
 		return suppliers;
 	}
-
+	@Author(author="Alex")
 	public void setSuppliers(List<Supplier> suppliers2) {
 		this.suppliers = suppliers2;
 		
@@ -68,11 +71,11 @@ public class TestData {
 	public List<Product> getProducts() {
 		return products;
 	}
-
+	@Author(author="Alex")
 	public List<Address> getAddresses() {
 		return addresses;
 	}
-	
+	@Author(author="Alex")
 	public void setAddresses(List<Address> address) {
 		this.addresses = address;
 		

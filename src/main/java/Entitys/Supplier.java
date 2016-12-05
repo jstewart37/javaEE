@@ -30,7 +30,7 @@ public class Supplier {
 	             message="{invalid.email}") private String email;
 
 	
-	// constructors
+	@Author(author="Alex")// constructors
 	public Supplier(long idSupplier,
 						String supplierName,
 						String supplierPhone,
