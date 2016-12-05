@@ -797,13 +797,14 @@ a.app_link{
 
 .frmcontact {
 	width: 45%;
+	margin: 0 80px 20px 0;
 	float: left;
 }
 .frmcontactmap {
 	width: 45%;
-	margin: 0 0 0 80px;
 	float: left;
 }
+
 
 /*		Testimonials section 		*/
 
