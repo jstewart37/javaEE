@@ -1,6 +1,7 @@
 package controllers;
 
 import javax.enterprise.context.RequestScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -44,7 +45,7 @@ public class LoginController {
 	}
 
 	public String logout() {
-		currentUser.setCustomer(null);
+		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
 		return "index";
 	}
 }
