@@ -33,6 +33,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 		addresses = new ArrayList<>();
 		products = new ArrayList<>();
 		customerOrderLine = new ArrayList<CustomerOrderLine>();
+		
+		//bens data
 		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "password","12345678912"));
 		customers.add(new Customer(2, "mr", "Andy", "Mr.Andy@M/vie.com", "twat","1912"));
 		
