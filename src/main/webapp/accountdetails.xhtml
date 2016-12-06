@@ -65,6 +65,7 @@
 		<div class="previousorders  pull-right">
 		
 		
+		<ui:repeat value="#{AccountDetailsController.Orders}" var="value">
 
 		<h:panelGroup layout="block" id="orderspanelgroup">
  		 <table id="tableaccountorders">
@@ -83,7 +84,8 @@
 		</table>
 		
 		</h:panelGroup>
-
+   
+		</ui:repeat>
 		</div>
 		
 		
