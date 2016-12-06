@@ -47,7 +47,7 @@ public class SearchService {
 			return null;
 		List<Product> productItems = new ArrayList<>();
 		results.forEach(product->{
-			productItems.add(productService.getProductItem(product, product.getId()));
+			productItems.add(productService.getProduct(product, product.getId()));
 		});
 		return productItems;
 	}

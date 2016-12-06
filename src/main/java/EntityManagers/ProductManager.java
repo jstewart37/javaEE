@@ -37,6 +37,7 @@ public interface ProductManager {
 	public List<Product> findByNameLike(String name);
 	public List<Product> findByDescriptionLike(String description);
 	public List<Product> findAll();
+	Product findByID(int ID);
 	
 
 }

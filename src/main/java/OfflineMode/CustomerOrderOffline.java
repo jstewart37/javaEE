@@ -31,11 +31,6 @@ public class CustomerOrderOffline implements CustomerOrderManager {
 		products = new ArrayList<>();
 	}
 
-	@Override
-	public List<CustomerOrder> CustomerOrdersForCustomer(int customerID) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public CustomerOrder CustomerOrderDetails(int customerOrderID) {

@@ -59,6 +59,32 @@ public class Customer {
 	@NotNull
 	private String search;
 	
+	@Column(nullable = false, length = 100)
+	@Size(min = 3, max = 25)
+	@NotNull
+	private String AddressLine1;
+	
+	@Column(nullable = false, length = 100)
+	@Size(min = 3, max = 25)
+	@NotNull
+	private String AddressLine2;
+
+	
+	@Column(nullable = false, length = 100)
+	@Size(min = 3, max = 25)
+	@NotNull
+	private String county;
+	
+	@Column(nullable = false, length = 100)
+	@Size(min = 3, max = 25)
+	@NotNull
+	private String City;
+	
+	@Column(nullable = false, length = 100)
+	@Size(min = 3, max = 25)
+	@NotNull
+	private String PostCode;
+	
 	@Author(author="Ben")
 	// constructors
 	public Customer(long idCustomer, String title, String name, String email, String password ,String phone) {
@@ -68,6 +94,18 @@ public class Customer {
 			this.password = password;
 			this.phone = phone;
 	}
+	
+	@Author(author="Jake")
+	public Customer(String name, String email, String AddressLine1, String AddressLine2, String County, String City, String Postcode){
+		this.name = name;
+		this.email = email;
+		this.AddressLine1 = AddressLine1;
+		this.AddressLine2 = AddressLine2;
+		this.county = County;
+		this.City = City;
+		this.PostCode = Postcode;
+	}
+	
 
 	// getters and setters
 

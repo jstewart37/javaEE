@@ -23,34 +23,37 @@
 		
 		<div class="container">
 		<div class="accountcontent">
-		<div class="accountdetails">
+		<div class="accountdetails pull-left">
 		<table id="tableaccountdetails">
 		
 		<tr>
 		<td> Account Name: </td>
-		<td> <h:outputText value="#{customer.name}" /></td>
+		<td> <h:outputText value="#{AccountDetails.returnname}" /></td>
 		</tr>
-		
+		<tr>
+		<td> Email Address: </td>
+		<td> <h:outputText value="#{AccountDetails.email}" /></td>
+		</tr>
 		
 		  <tr>
 		    <th rowspan="5">Account Primary Address:</th>
-		    <td><h:outputText value="#{address.addressline1}" /></td>
+		    <td><h:outputText value="#{AccountDetails.addressline1}" /></td>
 		  </tr>
 		  <tr>
-		    <td><h:outputText value="#{address.addressline2}" /></td>
+		    <td><h:outputText value="#{AccountDetails.addressline2}" /></td>
 		  </tr>
 		  <tr>
-		    <td><h:outputText value="#{address.county}" /></td>
+		    <td><h:outputText value="#{AccountDetails.county}" /></td>
 		  </tr>
 		  <tr>
-		    <td><h:outputText value="#{address.city}" /></td>
+		    <td><h:outputText value="#{AccountDetails.city}" /></td>
 		  </tr>
 		  <tr>
-		    <td><h:outputText value="#{address.postcode}" /></td>
+		    <td><h:outputText value="#{AccountDetails.postcode}" /></td>
 		  </tr>
 		
 		<tr>
-		<td> other Info </td>
+		<td> Other Info: </td>
 		<td> Other Info</td>
 		</tr>
 		
@@ -59,13 +62,16 @@
 
 		</div>
 		
-		<div class="previousorders">
+		<div class="previousorders  pull-right">
 		
-		<table id="tableaccountorders">
+		
+
+		<h:panelGroup layout="block" id="orderspanelgroup">
+ 		 <table id="tableaccountorders">
 
 		  <tr>
 		    <th >Orders:</th>
-		    <td><h:outputText value="#{customerorder.ID}" /></td>
+		    <td><h:outputText value="#{AccountDetails.returnname}" /></td>
 		  </tr>
 		  <tr>
 		    <td><h:outputText value="#{customerorder.value}" /></td>
@@ -75,6 +81,8 @@
 		  </tr>
 		 	
 		</table>
+		
+		</h:panelGroup>
 
 		</div>
 		
@@ -84,7 +92,7 @@
 	
 		
 		</div>
-		
+				
 		
 			</ui:define>
 </ui:composition>

@@ -66,4 +66,9 @@ public class ProductService implements Serializable {
 		return items;
 	}
 
+	public Product getProduct(Product product, Object id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

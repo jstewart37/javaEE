@@ -1,6 +1,6 @@
 .accountdetails {
 	max-width: 50%;
-    clear: left;
+    clear: both;
     display:inline;
      display: block;
          border-style: solid;
@@ -12,14 +12,36 @@
     display:inline;
      display: block;
          border-style: solid;
+         float:left
 	}
 	
 	.accountcontent {
-	min-width: 50%;
+	width: 100%;
 	min-height: 50%;
     clear: left;
-    display:inline;
-     display: block;
+    display:inline-block;
          border-style: solid;
+         float:left;
+         padding: 10px;
+    margin:10px;
      
 	}
+	
+	.accountcontent div {
+	 width: 45%; 
+ 
+	 float: left; 
+	}
+	
+	#tableaccountdetails td{
+	padding-left: 5px;
+	
+	}
+	
+	
+	#tableaccountdetails tr,th{
+	word-wrap: break-word;
+	width: 25%;
+	padding:5px;
+	}
+	
