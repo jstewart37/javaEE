@@ -6,7 +6,6 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:jsf="http://xmlns.jcp.org/jsf"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge" />
@@ -15,40 +14,21 @@
 <!--  Site Title  -->
 <title><ui:insert name="pageTitle" /></title>
 
-<link
-	href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
-	rel="stylesheet" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
 <a href="javascript:" id="return-to-top"><i class="icon-chevron-up" /></a>
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 <link rel="stylesheet" type="text/css" href="css/shop-homepage.css" />
-<link rel="stylesheet" type="text/css" href="css/animate.css" />
 <link rel="stylesheet" type="text/css" href="css/main.css" />
 <link rel="stylesheet" type="text/css" href="css/register.css" />
 <link rel="stylesheet" type="text/css" href="css/account.css" />
 
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/loginform.js"></script>
-<script type="text/javascript" src="js/signinform.js"></script>
-
-<script type="text/javascript">
-	//===== Scroll to Top ==== 
-	$(window).scroll(function() {
-		if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
-			$('#return-to-top').fadeIn(200); // Fade in the arrow
-		} else {
-			$('#return-to-top').fadeOut(200); // Else fade out the arrow
-		}
-	});
-	$('#return-to-top').click(function() { // When arrow is clicked
-		$('body,html').animate({
-			scrollTop : 0
-		// Scroll to top of body
-		}, 500);
-	});
-</script>
+<script type="text/javascript" src="js/jquery.js" />
+<script type="text/javascript" src="js/main.js" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" />
+<script type="text/javascript" src="js/loginform.js" />
+<script type="text/javascript" src="js/signinform.js" />
+<script type="text/javascript" src="js/top.js" />
 
 </head>
 
@@ -58,42 +38,27 @@
 	<a name="top"></a>
 	<header>
 		<div class="container">
-			<div class="logo pull-left animated wow fadeInLeft">
-				<img src="img/logo.png" class="logosizing" alt="" title="" />
+			<div class="logo pull-left">
+				<a href="index.xhtml"><img src="img/logo.png" class="logosizing" title="NB Gardens" alt="Company Logo" /></a>
 			</div>
 
 
 			<nav class="pull-left">
 				<ul class="list-unstyled">
-					<li class="animated wow fadeInLeft" data-wow-delay="0s"><a
-						href="index.xhtml">Home</a></li>
-					<li class="animated wow fadeInLeft" data-wow-delay=".1s"><a
-						href="index.xhtml#about">About Us</a></li>
-					<li class="animated wow fadeInLeft" data-wow-delay=".2s"><a
-						href="catalogue.xhtml">Catalogue</a></li>
-					<li class="animated wow fadeInLeft" data-wow-delay=".3s"><a
-						href="index.xhtml#contact">Contact Us</a></li>
-
-					<li><h:outputLink styleClass="navbar-brand"
-							rendered="#{CurrentUser.loggedIn}" value="#">Log Out</h:outputLink>
-					</li>
-					<li><h:outputLink styleClass="navbar-brand"
-							rendered="#{!CurrentUser.loggedIn}" value="#login-box" class="login-window">Register</h:outputLink>
-					</li>
-					<li><h:outputLink styleClass="navbar-brand"
-							rendered="#{!CurrentUser.loggedIn}" value="#Signin-box" class="signin-window">Login</h:outputLink>
-					</li>
-
-
-					
-					<li class="animated wow fadeInLeft basket" data-wow-delay=".5s"><a
-						href="#"> <img src="img/basket.png"
-							style="width: 80px; height: 72px;" /></a></li>
+					<li><a href="index.xhtml">Home</a></li>
+					<li><a href="index.xhtml#about">About Us</a></li>
+					<li><a href="catalogue.xhtml">Catalogue</a></li>
+					<li><a href="index.xhtml#contact">Contact Us</a></li>
+					<li><h:outputLink styleClass="navbar-brand" rendered="#{!CurrentUser.loggedIn}" value="#">Log Out</h:outputLink></li>
+					<li><h:outputLink styleClass="navbar-brand" rendered="#{CurrentUser.loggedIn}" value="#login-box" class="login-window">Register</h:outputLink></li>
+					<li><h:outputLink styleClass="navbar-brand" rendered="#{CurrentUser.loggedIn}" value="#Signin-box" class="signin-window">Login</h:outputLink></li>
+					<li><a href="#"><img src="img/basket.png" style="width:50px;height:40px;" /></a></li>
 				</ul>
 			</nav>
 			<span class="burger_icon">menu</span>
 		</div>
 	</header>
+	
 	<ui:insert name="maincontent" />
 
 	<div id="login-box" class="login-popup">
@@ -118,7 +83,7 @@
 				<label for="D.O.B" class="light" />
 			</fieldset>
 			<!-- creating button to sumbit sign up information -->
-			<button type="submit" class="pure-button pure-button-primary">SignUp</button>
+			<button type="submit" class="pure-button pure-button-primary">Sign Up</button>
 		</form>
 	</div>
 
@@ -146,11 +111,11 @@
 		</h:form>
 	</div>
 
+
 	<!--  Footer Section  -->
 
 	<footer class="sub_box">
-		<p class="copyright animated wow fadeIn" data-wow-duration="2s">©
-			2015 - All Rights Reserved</p>
+		<p class="copyright" data-wow-duration="2s">&#169; 2015 - All Rights Reserved</p>
 	</footer>
 </body>
 </html>
