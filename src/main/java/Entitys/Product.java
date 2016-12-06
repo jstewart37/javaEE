@@ -52,8 +52,9 @@ public class Product {
 
 	//constructors
 	@Author(author = "alex")
-	public Product(String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice, double vbuyPrice,
-			String vstatus, String vimgPath) {
+	public Product(long vidProduct, String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice, double vbuyPrice,
+			String vstatus) {
+		this.idProduct = vidProduct;
 		this.name = vname;
 		this.description = vdescription;
 		this.colour= vcolour;
@@ -61,7 +62,7 @@ public class Product {
 		this.sellPrice= vsellPrice;
 		this.buyPrice= vbuyPrice;
 		this.status= vstatus;
-		this.imgPath= vimgPath;
+		
 		
 	}
 
@@ -148,14 +149,7 @@ public class Product {
 		this.isPorousware = isPorousware;
 	}
 
-	
-	public String getImgPath() {
-		return imgPath;
-	}
 
-	public void setImgPath(String imgPath) {
-		this.imgPath = imgPath;
-	}
 
 	public Object getId() {
 		// TODO Auto-generated method stub
