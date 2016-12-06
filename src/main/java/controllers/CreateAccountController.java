@@ -7,7 +7,6 @@ import javax.inject.Named;
 import services.CreateAccountService;
 
 //@Author Sophie
-
 @RequestScoped
 @Named(value = "register")
 public class CreateAccountController {
@@ -55,7 +54,7 @@ public class CreateAccountController {
 				registerUser.setCustomer(createAccountService.emailRegistered(email));
 			else
 				email = "Email is already registered";
-		return "catalogue";
+		return "login";
 	}
 
 	public String customerRegistered() {
