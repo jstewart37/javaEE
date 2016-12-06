@@ -25,7 +25,6 @@ body {
 
 
 
-
 input[type=text] {
     width: 130px;
     margin-top: 14px;
@@ -87,11 +86,14 @@ input[type=text]:focus {
     cursor: pointer;
     position: relative;
 	border:none;
-	border-radius: 25px;
-    
-  
+	border-radius: 25px;  
 }
-
+/* Dropdown Button */
+.dropbtncol {
+  
+	
+	
+}
 
 
 /* The container <div> - needed to position the dropdown content */
@@ -100,6 +102,15 @@ input[type=text]:focus {
     display: inline-block;
 	position: relative;
     border-radius: 25px;
+
+
+}
+.dropdowncol {
+	float:left;
+    display: inline-block;
+	position: relative;
+    border-radius: 25px;
+
 
 }
 
@@ -133,7 +144,36 @@ input[type=text]:focus {
 	
 
 }
+/* Dropdown Content (Hidden by Default) */
+.dropdown-menucol {
+    display: none;
+    position: absolute;
+    background-color: #5d7a5e;
+    top:0px;
+    min-width: 20px;
+    max-width:100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+    border-radius: 25px;
+}
 
+/* Links inside the dropdown */
+.dropdown-menucol>li>a {
+    color: white;
+    text-decoration: none;
+    display: block;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-menucol a:hover {
+	background-color: #F4F7F8;
+	color: #5d7a5e;
+	font-weight: bold;
+
+	
+
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-menu {
@@ -145,6 +185,20 @@ input[type=text]:focus {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
+    background-color: #2c8756;
+    color:white;
+    text-shadow: white;
+}
+/* Show the dropdown menu on hover */
+.dropdowncol:hover .dropdown-menu {
+    display: inline;
+    background-color: #2c8756;
+    color:white;
+    border-radius: 25px;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdowncol:hover .dropbtn {
     background-color: #2c8756;
     color:white;
     text-shadow: white;
