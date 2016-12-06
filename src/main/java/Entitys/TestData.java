@@ -31,9 +31,10 @@ public class TestData { //class was created by entire team, see comments/annotat
 		supplyorderlist = new ArrayList<>();
 		customers = new ArrayList<>();
 		addresses = new ArrayList<>();
+		products = new ArrayList<>();
 		customerOrderLine = new ArrayList<CustomerOrderLine>();
 		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "password","12345678912"));
-		customers.add(new Customer(1, "mr", "Andy", "Mr.Andy@M/vie.com", "twat","1912"));
+		customers.add(new Customer(2, "mr", "Andy", "Mr.Andy@M/vie.com", "twat","1912"));
 		
 		customerOrderLine.add(new CustomerOrderLine(8, 10, 8, 24.89));
 		
@@ -43,10 +44,24 @@ public class TestData { //class was created by entire team, see comments/annotat
 		suppliers.add(new Supplier(1, "Daves GGGGGGGGGGGGGGGGGGnomes", "07984682330", "dg@gnomies.com")); 
 		suppliers.add(new Supplier(2, "Sophies Rude Ass Garden Supplies", "07984643", "sg@rudegardensupplies.com"));
 		addresses.add(new Address(1, "65 Anchorage Quay", "eccles", "M27 641", "Greater Manchester", "Manchester"));
-		addresses.add(new Address(1, "1 Someplace", "M64 813", "Greater Manchester", "Manchester"));
+		addresses.add(new Address(2, "1 Someplace", "M64 813", "Greater Manchester", "Manchester"));
 		
 		//jakes data
 		customers.add(new Customer("John Smith","j.smith@gmail.com","111 Nowhere Lane","Kent","Kent","Kent","KP0 LO7"));
+		
+		
+		//Daves data
+		products.add(new Product(1, "Gandalf Gnome", "A Gandalf themed Gnome", "Grey", 25, 9.99, 5.99, "available"));
+		products.add(new Product(2, "Goku Gnome", "A gnome from the Saiyan race", "multi", 50, 9.99, 5.99, "available"));
+		products.add(new Product(3, "Colossal Gnome", "A humongous humanoid Gnome with no skin", "red", 15, 59.99, 25.99, "available"));
+		products.add(new Product(4, "Hulk Gnome", "You wont like him when hes angry", "Green", 45, 9.99, 5.99, "discontinued"));
+		products.add(new Product(5, "Darth Vader Gnome", "Biggest, baddest sith lord", "Black", 15, 9.99, 5.99, "available"));
+		products.add(new Product(6, "Rick Sanchez Gnome", "Wubbalubba dubb dubb", "White", 21, 9.99, 5.99, "available"));
+		products.add(new Product(7, "Red Gnome", "Gnome with red hat and clothing", "Red", 27, 9.99, 5.99, "discontinued"));
+		products.add(new Product(8, "Green Gnome", "Gnome with green hat and clothing", "Green", 56, 9.99, 5.99, "available"));
+		products.add(new Product(9, "Blue Gnome", "Gnome with blue hat and clothing", "Blue", 28, 9.99, 5.99, "available"));
+		products.add(new Product(10, "Santa Gnome", "St nicholas themed gnome", "Red", 46, 9.99, 5.99, "available"));
+		products.add(new Product(11, "Gnome Gnome", "Gnome Gnome Gnome Gnome Gnome Gnome", "Gnome", 35, 9.99, 5.99, "available"));
 		
 	}
 
