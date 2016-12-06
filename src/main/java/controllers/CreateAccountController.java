@@ -1,81 +1,42 @@
 package controllers;
 
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import services.CreateAccountService;
+
+
 @RequestScoped
-@Named(value = "createAccount")
-
+@Named(value = "registered")
 public class CreateAccountController {
+	@Inject private CurrentUser currentUser;
+	@Inject
+	private CreateAccountService createAccountService;
+	private String email = "";
 	
-	
-		
-		@Inject
-		private CreateAccountService createAccountService;
-		private String firstname ="";
-		private String surname = "";
-		private String email = "";
-		private String password = "";
-		private String confirmPassword = "";
-		private String dOB = "";
 
-		public String firstname() {
-			return firstname;
-		}
-		
-		public String surname() {
-			return surname;
-		}
-		public String getEmail() {
-			return email;
-		}
-
-		public String getPassword() {
-			return password;
-		}
-		
-		public String confirmPassword() {
-			return confirmPassword;
-		}
-		
-		public String dOB() {
-			return dOB;
-		}
-		
-		public void setFirstname(String firstname) {
-			this.firstname = firstname;
-		}
-		
-		public void setSurname(String surname) {
-			this.surname = surname;
-		}
-
-		public void setEmail(String email) {
-			this.email = email;
-		}
-
-		public void setPassword(String password) {
-			this.password = password;
-		}
-		
-		public void SetConfirmPassword(String confirmPassword) {
-			this.confirmPassword = confirmPassword;
-		}
-		
-		public void setDOB(String dOB) {
-			this.dOB = dOB;
-		}
-
-		public String login() {
-			if (!email.isEmpty() && !password.isEmpty())
-				if (createAccountService.validCreateAccount(firstname, surname, email, password ))
-					currentUser.setCustomer(loginService.loginUser(email));
-				else
-					password = "";
-			return "nbgardens";
-		}
-
-		public String logout() {
-			currentUser.setCustomer(null);
-			return "nbgardens";
-		}
+	public String getEmail() {
+		return email;
 	}
 
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String register() {
+		if (!email.isEmpty())
+			if (createAccountService.checkEmail(email))
+				currentUser.setCustomer(createAccountService.emailRegistered(email));
+			else
+				email = "Email is already registered";
+		return "login";
+	}
+
+	public String logout() {
+		currentUser.setCustomer(null);
+		return "index";
+	}
 }
