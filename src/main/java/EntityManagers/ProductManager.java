@@ -9,7 +9,7 @@ public interface ProductManager {
 //////////////////////////QUERY STUBS/////////////////////////////////
 	
 	public Product findProductbyName(String name);
-	public Product findByID (int ID);
+	public Product findByID (long id);
 	public Product findByDescription (String Description);
 	public Product findByStatus (String Status);
 	public Product findByColour (String Colour);
@@ -32,8 +32,11 @@ public interface ProductManager {
 
 //Delete Methods
 	public Product deleteProduct(Product Product);
+	
+	
 	public List<Product> findByNameLike(String name);
 	public List<Product> findByDescriptionLike(String description);
+	public List<Product> findAll();
 	
 
 }

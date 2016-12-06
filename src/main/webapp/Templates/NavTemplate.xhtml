@@ -49,10 +49,10 @@
 					<li><a href="index.xhtml#about">About Us</a></li>
 					<li><a href="catalogue.xhtml">Catalogue</a></li>
 					<li><a href="index.xhtml#contact">Contact Us</a></li>
-					<li><h:outputLink styleClass="navbar-brand" rendered="#{!CurrentUser.loggedIn}" value="#">Log Out</h:outputLink></li>
-					<li><h:outputLink styleClass="navbar-brand" rendered="#{CurrentUser.loggedIn}" value="#login-box" class="login-window">Register</h:outputLink></li>
-					<li><h:outputLink styleClass="navbar-brand" rendered="#{CurrentUser.loggedIn}" value="#Signin-box" class="signin-window">Login</h:outputLink></li>
-					<li><a href="#"><img src="img/basket.png" style="width:50px;height:40px;" /></a></li>
+					<li><h:outputLink styleClass="navbar-brand" rendered="#{CurrentUser.loggedIn}" value="#">Log Out</h:outputLink></li>
+					<li><h:outputLink styleClass="navbar-brand" rendered="#{!CurrentUser.loggedIn}" value="#login-box" class="login-window">Register</h:outputLink></li>
+					<li><h:outputLink styleClass="navbar-brand" rendered="#{!CurrentUser.loggedIn}" value="#Signin-box" class="signin-window">Login</h:outputLink></li>
+					<li><a href="basket.xhtml"><img src="img/basket.png" style="width:50px;height:40px;" /></a></li>
 				</ul>
 			</nav>
 			<span class="burger_icon">menu</span>
@@ -62,30 +62,44 @@
 	<ui:insert name="maincontent" />
 
 	<div id="login-box" class="login-popup">
-		<a href="#" class="close"><img src="img/close_pop.png"
-			class="btn_close" title="Close Window" alt="Close" /></a>
+		<a href="#" class="close"><img src="img/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
 		<!-- Author: Dave -->
-		<form class="reg" action="index.html" method="post">
-			<!-- setting header to "sign up" -->
-			<h1>Sign Up</h1>
-			<fieldset>
 				<!-- creating fields with individual titles -->
-				<label for="FirstName">First name:</label> <input type="text"
-					id="name" name="user_name" placeholder="What's your first name?" />
-				<label for="LastName">Last name:</label> <input type="text"
-					id="name" name="user_name" placeholder="What's your last name?" /><label
-					for="mail">Email:</label> <input type="email" id="mail"
-					name="user_email" placeholder="What's your email address?" /> <label>Choose
-					a password:</label> <input type="password" placeholder="Password"
-					id="password" /><input type="password"
-					placeholder="Confirm Password" id="confirm_password" /> <label>DOB:</label>
-				<input type="date" name="bday" min="1900-01-02" max="1999-01-02" /><br />
-				<label for="D.O.B" class="light" />
-			</fieldset>
-			<!-- creating button to sumbit sign up information -->
-			<button type="submit" class="pure-button pure-button-primary">Sign Up</button>
-		</form>
-	</div>
+				<h:form class="reg" rendered="#{!user.register}">
+				<h1>Sign Up</h1>
+			<fieldset>
+			<div class="form-group">
+				<h:inputText class="form-control" value="#{register.firstname}">
+					<f:passThroughAttribute name="type" value="firstname" />
+					<f:passThroughAttribute name="placeholder" value="What's your first name?" />
+					<f:passThroughAttribute name="alt" value="Enter firstname" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
+				<h:inputText class="form-control" value="#{register.surname}">
+					<f:passThroughAttribute name="type" value="surname" />
+					<f:passThroughAttribute name="placeholder" value="What's your surname?" />
+					<f:passThroughAttribute name="alt" value="Enter surname" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
+				<h:inputText class="form-control" value="#{register.email}">
+					<f:passThroughAttribute name="type" value="email" />
+					<f:passThroughAttribute name="placeholder" value="What's your email address?" />
+					<f:passThroughAttribute name="alt" value="Enter Email" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
+				<h:inputText class="form-control" value="#{register.password}">
+					<f:passThroughAttribute name="type" value="password" />
+					<f:passThroughAttribute name="placeholder" value="Choose a password" />
+					<f:passThroughAttribute name="alt" value="Enter Password" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
+				<h:commandButton type="submit" class="pure-button pure-button-primary" action="#{register.registerCustomer}" value="Register" />
+			</div>
+			<!-- Functionality added by Sophie -->
+		
+		</fieldset>
+		</h:form>
+			</div>
 
 	<div id="Signin-box" class="login-popup">
 		<a href="#" class="close"><img src="img/close_pop.png"
@@ -110,7 +124,7 @@
 			</div>
 		</h:form>
 	</div>
-
+			<!-- Functionality added by Sophie -->
 
 	<!--  Footer Section  -->
 

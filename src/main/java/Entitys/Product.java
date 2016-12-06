@@ -50,12 +50,26 @@ public class Product {
 	@NotNull
 	private String imgPath;
 
-	// TODO constructors
-	public Product(String name, String description, String colour, int stockLevel, double sellPrice, double buyPrice,
-			String status, String imgPath) {
+	//constructors
+	@Author(author = "alex")
+	public Product(String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice, double vbuyPrice,
+			String vstatus, String vimgPath) {
+		this.name = vname;
+		this.description = vdescription;
+		this.colour= vcolour;
+		this.stockLevel= vstockLevel;
+		this.sellPrice= vsellPrice;
+		this.buyPrice= vbuyPrice;
+		this.status= vstatus;
+		this.imgPath= vimgPath;
+		
 	}
 
-	// TODO getters & setters
+	//getters & setters
+
+	public Product(long id) {
+		this.idProduct = id;
+	}
 
 	public long getIdProduct() {
 		return idProduct;
@@ -146,6 +160,30 @@ public class Product {
 	public Object getId() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Author(author = "alex")
+	public void addProductInfo(String vname, String vdescription, String vcolour, double vsellPrice,
+			String vstatus) {
+		this.name = vname;
+		this.description = vdescription;
+		this.colour= vcolour;
+		this.sellPrice= vsellPrice;
+		this.status= vstatus;
+	}
+
+	@Author(author = "alex")
+	public void addStockInfo(String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice,
+			double vbuyPrice, String vstatus, String vimgPath) {
+		this.name = vname;
+		this.description = vdescription;
+		this.colour= vcolour;
+		this.stockLevel= vstockLevel;
+		this.sellPrice= vsellPrice;
+		this.buyPrice= vbuyPrice;
+		this.status= vstatus;
+		this.imgPath= vimgPath;
+		
 	}
 
 }

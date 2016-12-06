@@ -13,7 +13,9 @@ public class LoginService {
 
 	public boolean validLogin(String email, String password) {
 		Customer customer = customerManager.findByEmail(email.toLowerCase());
-		return customer.getPassword().equals(password);
+		if(customer==null)
+			return false;
+		return	true;
 	}
 
 	public Customer loginUser(String email) {

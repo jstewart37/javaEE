@@ -29,7 +29,7 @@ public class CurrentUser implements Serializable {
 	}
 	
 	public boolean isLoggedIn(){
-		return (customer==null)?true:false;
+		return (customer==null)?false:true;
 	}
 	
 }
