@@ -1,3 +1,8 @@
+/**
+ * @Author(author="Alex")
+ */
+
+
 package Entitys;
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -30,7 +35,7 @@ public class Supplier {
 	             message="{invalid.email}") private String email;
 
 	
-	@Author(author="Alex")// constructors
+	// constructors
 	public Supplier(long idSupplier,
 						String supplierName,
 						String supplierPhone,

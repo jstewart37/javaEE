@@ -1,3 +1,9 @@
+/**
+ * @Author(author="Alex")
+ */
+
+
+
 package Entitys;
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -34,7 +40,7 @@ public class Address {
 	// private customer_id FOREIGN KEYS
 	// private supplier_id FOREIGN KEYS
 
-	@Author(author="Alex")// constructors
+
 	public Address(){};
 	
 	public Address(long idAddress, String addressLine1, String addressLine2, String postCode, String County,

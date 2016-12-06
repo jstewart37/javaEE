@@ -1,3 +1,7 @@
+/**
+ * @Author(author="Alex")
+ */
+
 package EntityManagers;
 import Entitys.Address;
 import Entitys.Author;
