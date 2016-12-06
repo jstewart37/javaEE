@@ -15,7 +15,9 @@
 <!--  Site Title  -->
 <title><ui:insert name="pageTitle" /></title>
 
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+<link
+	href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+	rel="stylesheet" />
 <a href="javascript:" id="return-to-top"><i class="icon-chevron-up" /></a>
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -40,19 +42,20 @@
 <script type="text/javascript" src="js/signinform.js"></script>
 
 <script type="text/javascript">
-//===== Scroll to Top ==== 
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-        $('#return-to-top').fadeIn(200);    // Fade in the arrow
-    } else {
-        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-    }
-});
-$('#return-to-top').click(function() {      // When arrow is clicked
-    $('body,html').animate({
-        scrollTop : 0                       // Scroll to top of body
-    }, 500);
-});
+	//===== Scroll to Top ==== 
+	$(window).scroll(function() {
+		if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+			$('#return-to-top').fadeIn(200); // Fade in the arrow
+		} else {
+			$('#return-to-top').fadeOut(200); // Else fade out the arrow
+		}
+	});
+	$('#return-to-top').click(function() { // When arrow is clicked
+		$('body,html').animate({
+			scrollTop : 0
+		// Scroll to top of body
+		}, 500);
+	});
 </script>
 
 </head>
@@ -78,63 +81,78 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 						href="catalogue.xhtml">Catalogue</a></li>
 					<li class="animated wow fadeInLeft" data-wow-delay=".3s"><a
 						href="index.xhtml#contact">Contact Us</a></li>
-					<li class="animated wow fadeInLeft" data-wow-delay=".4s"><a
-						href="#login-box" class="login-window">Register</a></li>
-						<li class="animated wow fadeInLeft" data-wow-delay=".4s"><a
-						href="#Signin-box" class="signin-window">Kenny Log Ins</a></li>
+
+					<li><h:outputLink styleClass="navbar-brand"
+							rendered="#{!CurrentUser.loggedIn}" value="#">Log Out</h:outputLink>
+					</li>
+					<li><h:outputLink styleClass="navbar-brand"
+							rendered="#{CurrentUser.loggedIn}" value="#login-box" class="login-window">Register</h:outputLink>
+					</li>
+					<li><h:outputLink styleClass="navbar-brand"
+							rendered="#{CurrentUser.loggedIn}" value="#Signin-box" class="signin-window">Login</h:outputLink>
+					</li>
+
+
+					
 					<li class="animated wow fadeInLeft basket" data-wow-delay=".5s"><a
-						href="#"> <img src="img/basket.png" style="width:80px;height:72px;" /></a></li>
+						href="#"> <img src="img/basket.png"
+							style="width: 80px; height: 72px;" /></a></li>
 				</ul>
 			</nav>
 			<span class="burger_icon">menu</span>
 		</div>
 	</header>
-<ui:insert name="maincontent" />
+	<ui:insert name="maincontent" />
 
-<div id="login-box" class="login-popup">
-			<a href="#" class="close"><img src="img/close_pop.png"
-				class="btn_close" title="Close Window" alt="Close" /></a>
-				<!-- Author: Dave -->
-			<form class="reg" action="index.html" method="post">
-				<!-- setting header to "sign up" -->
-				<h1>Sign Up</h1>
-				<fieldset>
+	<div id="login-box" class="login-popup">
+		<a href="#" class="close"><img src="img/close_pop.png"
+			class="btn_close" title="Close Window" alt="Close" /></a>
+		<!-- Author: Dave -->
+		<form class="reg" action="index.html" method="post">
+			<!-- setting header to "sign up" -->
+			<h1>Sign Up</h1>
+			<fieldset>
 				<!-- creating fields with individual titles -->
-					<label for="FirstName">First name:</label> <input type="text"
-						id="name" name="user_name" placeholder="What's your first name?" />
-					<label for="LastName">Last name:</label> <input type="text"
-						id="name" name="user_name" placeholder="What's your last name?" /><label
-						for="mail">Email:</label> <input type="email" id="mail"
-						name="user_email" placeholder="What's your email address?" />
-					<label>Choose a password:</label> <input type="password"
-						placeholder="Password" id="password" /><input type="password"
-						placeholder="Confirm Password" id="confirm_password" /> <label>DOB:</label>
-					<input type="date" name="bday" min="1900-01-02" max="1999-01-02" /><br />
-					<label for="D.O.B" class="light" />
-				</fieldset>
-				<!-- creating button to sumbit sign up information -->
-				<button type="submit" class="pure-button pure-button-primary">SignUp</button>
-			</form>
-		</div>
-		
-		<div id="Signin-box" class="login-popup">
-			<a href="#" class="close"><img src="img/close_pop.png"
-				class="btn_close" title="Close Window" alt="Close" /></a>
-				<!-- Author: Dave -->
-			<form class="reg" action="index.html" method="post">
-				<!-- setting header to "sign up" -->
-				<h1>Kenny Log Ins</h1>
-				<fieldset>
-				<!-- creating fields with individual titles -->
-					<label for="mail">Email:</label> <input type="email" id="mail"
-						name="user_email" placeholder="What's your email address?" />
-					<label>Password:</label> <input type="password"
-						placeholder="Password" id="password" />
-				</fieldset>
-				<!-- creating button to sumbit sign up information -->
-				<button type="submit" class="pure-button pure-button-primary">LogIn</button>
-			</form>
-		</div>
+				<label for="FirstName">First name:</label> <input type="text"
+					id="name" name="user_name" placeholder="What's your first name?" />
+				<label for="LastName">Last name:</label> <input type="text"
+					id="name" name="user_name" placeholder="What's your last name?" /><label
+					for="mail">Email:</label> <input type="email" id="mail"
+					name="user_email" placeholder="What's your email address?" /> <label>Choose
+					a password:</label> <input type="password" placeholder="Password"
+					id="password" /><input type="password"
+					placeholder="Confirm Password" id="confirm_password" /> <label>DOB:</label>
+				<input type="date" name="bday" min="1900-01-02" max="1999-01-02" /><br />
+				<label for="D.O.B" class="light" />
+			</fieldset>
+			<!-- creating button to sumbit sign up information -->
+			<button type="submit" class="pure-button pure-button-primary">SignUp</button>
+		</form>
+	</div>
+
+	<div id="Signin-box" class="login-popup">
+		<a href="#" class="close"><img src="img/close_pop.png"
+			class="btn_close" title="Close Window" alt="Close" /></a>
+		<!-- Author: Dave -->
+		<h:form class="navbar-form navbar-right" rendered="#{!user.loggedIn}">
+			<div class="form-group">
+				<h:inputText class="form-control" value="#{login.email}">
+					<f:passThroughAttribute name="type" value="email" />
+					<f:passThroughAttribute name="placeholder" value="email..." />
+					<f:passThroughAttribute name="alt" value="Enter Email" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
+				<h:inputText class="form-control" value="#{login.password}">
+					<f:passThroughAttribute name="type" value="password" />
+					<f:passThroughAttribute name="placeholder" value="password..." />
+					<f:passThroughAttribute name="alt" value="Enter Password" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
+				<h:commandButton class="btn btn-success" action="#{login.login}"
+					value="Sign In" />
+			</div>
+		</h:form>
+	</div>
 
 	<!--  Footer Section  -->
 
@@ -142,5 +160,5 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 		<p class="copyright animated wow fadeIn" data-wow-duration="2s">©
 			2015 - All Rights Reserved</p>
 	</footer>
-	</body>
-	</html>
+</body>
+</html>

@@ -40,11 +40,11 @@ public class LoginController {
 				currentUser.setCustomer(loginService.loginUser(email));
 			else
 				password = "";
-		return "nbgardens";
+		return "catalogue";
 	}
 
 	public String logout() {
 		currentUser.setCustomer(null);
-		return "nbgardens";
+		return "index";
 	}
 }

@@ -32,8 +32,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 		customers = new ArrayList<>();
 		addresses = new ArrayList<>();
 		customerOrderLine = new ArrayList<CustomerOrderLine>();
-		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "12345678912"));
-		customers.add(new Customer(1, "mr", "Andy", "Mr.Andy@M/vie.com", "1912"));
+		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "password","12345678912"));
+		customers.add(new Customer(1, "mr", "Andy", "Mr.Andy@M/vie.com", "twat","1912"));
 		
 		customerOrderLine.add(new CustomerOrderLine(8, 10, 8, 24.89));
 		

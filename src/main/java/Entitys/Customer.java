@@ -61,10 +61,11 @@ public class Customer {
 	
 	@Author(author="Ben")
 	// constructors
-	public Customer(long idCustomer, String title, String name, String email, String phone) {
+	public Customer(long idCustomer, String title, String name, String email, String password ,String phone) {
 			this.title = title;
 			this.name = name;
 			this.email = email;
+			this.password = password;
 			this.phone = phone;
 	}
 

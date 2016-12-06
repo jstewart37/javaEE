@@ -18,7 +18,7 @@ import Entitys.Customer;
 @SessionScoped
 public class CurrentUser implements Serializable {
 
-	private Customer customer;
+	private Customer customer = null;
 
 	public Customer getCustomer() {
 		return customer;
@@ -28,5 +28,8 @@ public class CurrentUser implements Serializable {
 		this.customer = customer;
 	}
 	
+	public boolean isLoggedIn(){
+		return (customer==null)?true:false;
+	}
 	
 }
