@@ -15,7 +15,9 @@ public class CreateAccountService {
 
 	public boolean checkEmail(String email) {
 		Customer customer = customerManager.findByEmail(email.toLowerCase());
-		return customer.getEmail().equals(true);
+		if(customer==null)
+			return false;
+		return	true;
 	}
 
 	public Customer emailRegistered(String email) {
