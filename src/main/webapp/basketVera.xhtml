@@ -1,5 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+Default namespace: XHTML Library
+xmlns= “http://www.w3.org/1999/xhtml”
+f namespace: JSF Core Library
+xmlns:f= “http://xmlns.jcp.org/jsf/core”
+h namespace: JSF HTML Library
+xmlns:h= “http://xmlns.jcp.org/jsf/html”
+uinamespace: JSF FaceletsLibrary
+xmlns:ui= “http://jxmlns.jcp.org/jsf/facelets”
+>
 
 <head>
 	<meta charset="UTF-8">
@@ -9,13 +18,12 @@
 	<meta http-equiv="refresh" content="30">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<title> NB Gardens Your Basket</title>
+	<title> <!-- Your title goes here --></title>
 	
 	<style>
 	</style>
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<link href="css/basket.css" rel="stylesheet" type="text/css" />
 
+	<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 
@@ -24,7 +32,7 @@
 	
 		<header>  <h1>NB Gardens</h1>  </header>
   		
-  		<p>Your Basket</p> 
+  		<p><!-- Your header goes here --></p> 
 	</div>
 	
 	<nav> </nav>
@@ -38,7 +46,11 @@
       			<p>Hello</p>
     		</div>
     		
-    		
+    		<div class="col-sm-4">
+      			<h3>Product</h3>
+      			<p>This will be a picture</p>
+     			<p>Hello</p>
+    		</div>
     		
     		<div class="col-sm-4">
       		<h3>Description</h3> 
@@ -49,4 +61,4 @@
     	</div>
 	</div>
 	
-	<footer> Copyright</footer>
+	<footer> <p> Copyright </p> </footer>
