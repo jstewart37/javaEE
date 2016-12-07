@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.enterprise.context.
@@ -8,6 +9,8 @@ import javax.enterprise.context.
 import javax.inject.*;
 
 import services.SearchService;
+
+import Entitys.*;
 
 @Named("search")
 @RequestScoped
@@ -19,20 +22,18 @@ public class SearchController {
 	@Inject
 	private SearchResultsController searchResults;
 	private String term;
+	
+	List<Product> results = new ArrayList<>();
 
 	public String search() {
-		List<Entitys.Product> results = searchService.searchBy(term);
+		results = searchService.findByKeyword(term);
 		if (results != null) { // added {
-			if (results.size() == 1) {
-				selectedProduct.setProduct(results.get(0));
-				return "product";
-			} else {
-				searchResults.setResults(results);
-				return "searchResults";
+				return "catalogue";
 			}
+		return "catalogue";
 		}
-		return "browse";
-	}// end of 1st if
+		
+	// end of 1st if
 
 	public String getTerm() {
 		return term;
