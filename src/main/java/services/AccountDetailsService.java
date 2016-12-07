@@ -1,5 +1,6 @@
 package services;
 
+
 import java.util.ArrayList;
 
 /**
@@ -9,19 +10,48 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
+import javax.enterprise.context.*;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 import EntityManagers.*;
 import Entitys.*;
 
-@Stateless
+@SessionScoped
 public class AccountDetailsService {
+	
+	private CustomerManager customerManager;
 
-	public List<CustomerOrder> findByid(long id) {
-		List<CustomerOrder> results = new ArrayList<>();
-		results.addAll(CustomerOrderManager.CustomerOrdersForCustomer(id));
-		for(CustomerOrder co : CustomerOrderManager.CustomerOrdersForCustomer(id))
+	public  Customer findByemail(String Email) {
+		
+		Customer customer = customerManager.findByEmail(Email.toLowerCase());
 			
-		return results;
-		return results;
+		return customer;
+		
 	}	
-}
+	
+	@Named("message")
+	@RequestScoped
+	public class MessageController {
+		@Inject
+//		private MessageService messageService;
+		private String message = "";
+		
+	//	public String getLastMessage() {
+//			return messageService.findLast();
+		}
+	//	public String getMessage() {
+//			return message;
+//		}
+		public void setMessage(String message) {
+//			this.message = message;
+		}
+		
+		public String submitMessage(){
+//			if(!messageService.validateMessage(message))
+//				messageService.validateMessage("Please no rude words");
+			return "index";
+		}
+	}	
+	
+//}

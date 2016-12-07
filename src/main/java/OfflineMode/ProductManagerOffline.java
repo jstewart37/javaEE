@@ -116,7 +116,6 @@ public class ProductManagerOffline implements ProductManager {
 
 	@Override
 	public List<Product> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return testData.getProducts();
 	}
 }

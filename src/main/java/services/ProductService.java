@@ -62,19 +62,22 @@ public class ProductService implements Serializable {
 	public Product getProduct(Product product, Stock stock) {
 		Product Product = new Product(stock.getId());
 		if (product != null)
-			Product.addProductInfo(product.getName(), product.getDescription(), product.getColour(), product.getSellPrice(),
-					product.getImgPath());					
+			Product.addProductInfo(product.getName(), product.getDescription(), product.getColour(), product.getSellPrice(), null);					
 		if (stock != null)
 			Product.addStockInfo(product.getName(), product.getDescription(), product.getColour(), product.getStockLevel(), product.getSellPrice(),
-					product.getBuyPrice(),product.getStatus(), product.getImgPath());	
+					product.getBuyPrice(),product.getStatus(), null);	
 		return Product;
 	}
 
 	public List<Product> findAllActive() {
 		List<Product> items = new ArrayList<Product>();
+		try{
 		stockManager.findByActive().forEach(stock -> {
 			items.add(getProduct(stock.getId(), stock));
 		});
+		}catch (Exception e) {
+			System.out.println("NONE FOUND");
+		}
 		return items;
 	}
 

@@ -25,7 +25,7 @@ public class BrowseController implements Serializable {
 		setProduct(null);
 	}
 
-	public PaginationHelper getPagination() {
+	public PaginationHelper getPaginationHelper() {
 		if (pagenationHelper == null) {
 			pagenationHelper = new PaginationHelper(9) {
 				@Override
@@ -47,13 +47,13 @@ public class BrowseController implements Serializable {
 	}
 
 	public String next() {
-		getPagination().nextPage();
+		getPaginationHelper().nextPage();
 		recreateModel();
 		return "browse";
 	}
 
 	public String previous() {
-		getPagination().previousPage();
+		getPaginationHelper().previousPage();
 		recreateModel();
 		return "browse";
 	}

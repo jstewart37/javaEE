@@ -86,6 +86,20 @@
 		</h:panelGroup>
    
 		</ui:repeat>
+		
+		
+		<h1>Please Leave a message</h1>
+	<br />
+	<h:outputText value="#{message.lastMessage}" />
+	<br />
+	<hr />
+	<h:form>
+		<label>Enter a new message:</label>
+		<h:inputText value="#{message.message}" >
+			<f:passThroughAttribute name="placeholder" value="message..."/>
+		</h:inputText>
+		<h:commandButton value="Send Message" action="#{message.submitMessage}" />
+	</h:form>
 		</div>
 		
 		
