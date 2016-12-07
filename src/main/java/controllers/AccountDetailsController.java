@@ -42,7 +42,7 @@ public String getReturnname(){
 
 public ArrayList<CustomerOrder> ARCustomerOrders(){
 	ArrayList<CustomerOrder> COList = new ArrayList<CustomerOrder>();
-	COList.add( new CustomerOrder(1, "55", 1, "55", "55", "55", 1)); 
+//	COList.add( new CustomerOrder(1, "55", 1, "55", "55", "55", 1)); 
 //	COList.add("World");
 
 	return COList;
