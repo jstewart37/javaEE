@@ -1,7 +1,5 @@
 package controllers;
 
-import java.util.List;
-
 import javax.faces.model.DataModel;
 
 public abstract class PaginationHelper {
@@ -14,7 +12,7 @@ public abstract class PaginationHelper {
 
 	public abstract int getItemsCount();
 
-	public abstract List<?> createPageDataModel();
+	public abstract DataModel<?> createPageDataModel();
 
 	public int getPageSize() {
 		return pageSize;
