@@ -1,118 +1,108 @@
 package Entitys;
+
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
-
-
-@NamedQueries({
-@NamedQuery(name="findByEmail", query="SELECT c FROM customer c WHERE c.email=:email"),
-@NamedQuery(name="searchByItem", query="SELECT * FROM product p WHERE p.product LIKE :search"),
-})
+@NamedQueries({ @NamedQuery(name = "findByEmail", query = "SELECT c FROM customer c WHERE c.email=:email"),
+		@NamedQuery(name = "searchByItem", query = "SELECT * FROM product p WHERE p.product LIKE :search"), })
 
 @Entity
-@Table(name="customer")
+@Table(name = "customer")
 public class Customer {
 
 	// variables
-	
+
 	@Id
 	@Column(name = "idCustomer", nullable = false, unique = true)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idCustomer;
-	
+
 	@Column(nullable = false, length = 15)
 	@Size(min = 2, max = 225)
 	@NotNull
 	private String title;
-	
+
 	@Column(nullable = false, length = 100)
 	@Size(min = 3, max = 25)
 	@NotNull
 	private String name;
-	
+
 	@Column(nullable = false, length = 150)
 	@Size(max = 225)
 	@NotNull
 	@Pattern(regexp = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\." + "[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@"
 			+ "(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message = "{invalid.email}")
 	private String email;
-	
+
 	@Column(nullable = false, length = 20)
 	@Size(max = 225)
 	@NotNull
-	@Pattern(regexp="^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$",
-    message="{invalid.phonenumber}")
-	private String phone;	
-	
+	@Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{3})[- ]?(\\d{4})$", message = "{invalid.phonenumber}")
+	private String phone;
+
+	@Column(nullable = false, length = 20)
+	@Size(max = 225)
+	@NotNull
+	@Pattern(regexp = "^\\(?(\\d{3})\\)?[- ]?(\\d{44})[- ]?(\\d{4})$", message = "{invalid.dob}")
+	private String date;
+
 	@Column(name = "username", nullable = false)
 	@Size(min = 8)
 	@NotNull
 	private String username;
-	
+
 	@Column(name = "password", nullable = false)
 	@Size(min = 8)
 	@NotNull
 	private String password;
-	
+
 	@Column(nullable = false, length = 100)
 	@Size(min = 3, max = 50)
 	@NotNull
 	private String search;
-	
+
 	@Column(nullable = false, length = 100)
 	@Size(min = 3, max = 25)
 	@NotNull
 	private String AddressLine1;
-	
+
 	@Column(nullable = false, length = 100)
 	@Size(min = 3, max = 25)
 	@NotNull
 	private String AddressLine2;
 
-	
 	@Column(nullable = false, length = 100)
 	@Size(min = 3, max = 25)
 	@NotNull
 	private String county;
-	
+
 	@Column(nullable = false, length = 100)
 	@Size(min = 3, max = 25)
 	@NotNull
 	private String City;
-	
+
 	@Column(nullable = false, length = 100)
 	@Size(min = 3, max = 25)
 	@NotNull
 	private String PostCode;
-	
-	@Author(author="Ben")
+
+	@Author(author = "Ben")
 	// constructors
-	public Customer(long idCustomer, String title, String name, String email, String password ,String phone) {
-			this.title = title;
-			this.name = name;
-			this.email = email;
-			this.password = password;
-			this.phone = phone;
-	}
-	
-	@Author(author="Jake")
-	public Customer(String name, String email, String AddressLine1, String AddressLine2, String County, String City, String Postcode){
+	public Customer(long idCustomer, String title, String name, String email, String password, String phone,
+			String date) {
+		this.title = title;
 		this.name = name;
 		this.email = email;
-		this.AddressLine1 = AddressLine1;
-		this.AddressLine2 = AddressLine2;
-		this.county = County;
-		this.City = City;
-		this.PostCode = Postcode;
+		this.password = password;
+		this.phone = phone;
+		this.date = date;
 	}
-	
 
 	// getters and setters
 
 	public Customer() {
 		// TODO Auto-generated constructor stub
 	}
-
 
 	public long getIdCustomer() {
 		return idCustomer;
@@ -162,5 +152,11 @@ public class Customer {
 		this.password = password;
 	}
 
-	
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
 }

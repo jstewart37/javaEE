@@ -11,13 +11,16 @@ import java.util.List;
 
 import javax.ejb.Stateless;
 import javax.enterprise.context.*;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import EntityManagers.*;
 import Entitys.*;
 
-@SessionScoped
+
+@Stateless
+
 public class AccountDetailsService {
 	
 	private CustomerManager customerManager;

@@ -76,28 +76,37 @@
 					<f:passThroughAttribute name="alt" value="Enter firstname" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
+				<label>Surname</label>
 				<h:inputText class="form-control" value="#{register.surname}">
 					<f:passThroughAttribute name="type" value="surname" />
 					<f:passThroughAttribute name="placeholder" value="What's your surname?" />
 					<f:passThroughAttribute name="alt" value="Enter surname" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
+				<label>Email</label>
 				<h:inputText class="form-control" value="#{register.email}">
 					<f:passThroughAttribute name="type" value="email" />
 					<f:passThroughAttribute name="placeholder" value="What's your email address?" />
 					<f:passThroughAttribute name="alt" value="Enter Email" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
+				<label>Password</label>
 				<h:inputText class="form-control" value="#{register.password}">
 					<f:passThroughAttribute name="type" value="password" />
 					<f:passThroughAttribute name="placeholder" value="Choose a password" />
 					<f:passThroughAttribute name="alt" value="Enter Password" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
-<form>
-  <label>Date of Birth</label>
-  <input type="date" name="bday" max="2001-12-31" min="1900-12-31"/><br>
-  </br></form>
+				<label>Date of Birth</label>
+				<h:inputText class="form-control" value="#{register.date}">
+				<f:passThroughAttribute name="type" value="date" />
+				<f:passThroughAttribute name="placeholder" value="yyyy-mm-dd" />
+				<f:passThroughAttribute name="alt" value="Enter DOB" />
+				<f:passThroughAttribute name="required" value="required" />
+				
+				</h:inputText>
+				
+  
 				<h:commandButton type="submit" class="btn btn-success" action="#{register.registerCustomer}" value="Register" />
 			</div>
 			<!-- Functionality added by Sophie -->

@@ -5,6 +5,7 @@ import javax.inject.Inject;
 
 import EntityManagers.CustomerManager;
 import Entitys.Customer;
+
 //@author Sophie
 @Stateless
 public class LoginService {
@@ -13,9 +14,19 @@ public class LoginService {
 
 	public boolean validLogin(String email, String password) {
 		Customer customer = customerManager.findByEmail(email.toLowerCase());
-		if(customer==null)
-			return false;
-		return	true;
+		if (!(customer == null))	//if customer is not null.
+		{
+			if (customer.getPassword() == password)
+			{
+				return true;
+			}
+			else
+			{
+				return false; //password is incorrect
+			}
+		}
+		
+		return	false; // customer is null.
 	}
 
 	public Customer loginUser(String email) {
