@@ -52,4 +52,3 @@ public class SearchService {
 		});
 		return productItems;*/
 	}
-}

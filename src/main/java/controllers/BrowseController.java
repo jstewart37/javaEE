@@ -1,6 +1,7 @@
 package controllers;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.enterprise.context.ConversationScoped;
 import javax.faces.model.DataModel;
@@ -18,15 +19,13 @@ public class BrowseController implements Serializable {
 	@Inject
 	private ProductService productService;
 	private PaginationHelper pagenationHelper;
-	private DataModel<Product> products = null;
+	private List<Product> product = null;
 
 	private void recreateModel() {
-		products = null;
+		setProduct(null);
 	}
 
-	public DataModel<Product> getProducts() {
-		return (DataModel<Product>) getPagination().createPageDataModel();
-	}
+
 
 	public PaginationHelper getPagination() {
 		if (pagenationHelper == null) {
@@ -35,11 +34,11 @@ public class BrowseController implements Serializable {
 				public int getItemsCount() {
 					return productService.findAllActive().size();
 				}
+
 				@Override
 				public DataModel<Product> createPageDataModel() {
 					try {
-						return new ListDataModel<Product>(productService.findAllActive().subList(getPageFirstItem(),
-								getPageFirstItem() + getPageSize()));
+						return new ListDataModel<Product>(productService.findAllActive().subList(getPageFirstItem(),getPageFirstItem() + getPageSize()));
 					} catch (Exception e) {
 						return new ListDataModel<Product>(productService.findAllActive().subList(getPageFirstItem(), getItemsCount()));
 					}
@@ -59,6 +58,19 @@ public class BrowseController implements Serializable {
 		getPagination().previousPage();
 		recreateModel();
 		return "browse";
+	}
+
+
+
+	public List<Product> getProduct() {
+		product = productService.findAll();
+		return product;
+	}
+
+
+
+	public void setProduct(List<Product> product) {
+		this.product = product;
 	}
 
 }
