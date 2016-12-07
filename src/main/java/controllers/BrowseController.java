@@ -25,8 +25,6 @@ public class BrowseController implements Serializable {
 		setProduct(null);
 	}
 
-
-
 	public PaginationHelper getPagination() {
 		if (pagenationHelper == null) {
 			pagenationHelper = new PaginationHelper(9) {
