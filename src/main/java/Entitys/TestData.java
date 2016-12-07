@@ -26,7 +26,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 
 
 	@PostConstruct
-	private void setupData() {
+	public void setupData() {
 		suppliers = new ArrayList<>();
 		supplyorderlist = new ArrayList<>();
 		customers = new ArrayList<>();
