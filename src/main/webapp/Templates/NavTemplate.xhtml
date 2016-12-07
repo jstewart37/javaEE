@@ -52,7 +52,7 @@
 					<li><h:outputLink styleClass="navbar-brand" rendered="#{!CurrentUser.loggedIn}" action="#{login.logout}">Log Out</h:outputLink></li>
 					<li><h:outputLink styleClass="navbar-brand" rendered="#{CurrentUser.loggedIn}" value="#login-box" class="login-window">Register</h:outputLink></li>
 					<li><h:outputLink styleClass="navbar-brand" rendered="#{CurrentUser.loggedIn}" value="#Signin-box" class="signin-window">Login</h:outputLink></li>
-					<li><h:outputLink styleClass="navbar-brand" rendered="#{!CurrentUser.loggedIn}" value="basket.xhtml"><img src="img/basket.png" style="width:50px;height:40px;" /></h:outputLink></li>
+					<li><a href="basket.xhtml"><img src="img/basket.png" style="width:50px;height:40px;" /></a></li>
 				</ul>
 			</nav>
 			<span class="burger_icon">menu</span>
@@ -69,6 +69,7 @@
 				<h1>Register</h1>
 			<fieldset>
 			<div class="form-group">
+			<label>First Name</label>
 				<h:inputText class="form-control" value="#{register.firstname}">
 					<f:passThroughAttribute name="type" value="firstname" />
 					<f:passThroughAttribute name="placeholder" value="What's your first name?" />
@@ -93,6 +94,10 @@
 					<f:passThroughAttribute name="alt" value="Enter Password" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
+<form>
+  <label>Date of Birth</label>
+  <input type="date" name="bday" max="2001-12-31" min="1900-12-31"/><br>
+  </br></form>
 				<h:commandButton type="submit" class="btn btn-success" action="#{register.registerCustomer}" value="Register" />
 			</div>
 			<!-- Functionality added by Sophie -->

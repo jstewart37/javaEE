@@ -22,12 +22,12 @@
 		<div class="productTitle animated wow fadeInLeft">
 
 
-
+ 
 			<div class="productName animated wow fadeInLeft">
-				<h2>Gnome number 1</h2>
+				<h:outputText value="#{product.first}" style = ""/>
 			</div>
 			<div class="productPrice animated wow fadeInLeft">
-				<h2>££££££££££</h2>
+				<h:outputText value="#{product.price}" />
 			</div>
 
 			<div class="basketAdd animated wow fadeInLeft">
@@ -40,16 +40,16 @@
 		<div class="duo animated wow fadeInLeft">
 			<div class="row pull-left">
 				<div class="medium-6 columns">
-					<img class="thumbnail animated wow fadeInLeft" src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg" style = "width:650; height:350" />
+					<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:650; height:350" />
 					<div class="row small-up-4">
 						<div class="column">
-							<img class="thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg" style = "width:250; height:200" />
+							<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:250; height:200" />
 						</div>
 						<div class="column">
-							<img class="thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg" style = "width:250; height:200" />
+							<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:250; height:200" />
 						</div>
 						<div class="column">
-							<img class="thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg" style = "width:250; height:200" />
+							<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:250; height:200" />
 						</div>
 
 					</div>
@@ -57,10 +57,7 @@
 			</div>
 			<div class="row pull-left animated wow fadeInLeft">
 				<div class="medium-6 large-5 columns">
-					<p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus
-						vestibulum faucibus eget in metus. In pellentesque faucibus
-						vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla
-						facilisi. Duis aliquet egestas purus in.</p>
+					<h:outputText value="#{product.description}" />
 
 					<div class="row animated wow fadeInLeft">
 						<div class="small-3 columns animated wow fadeInLeft">

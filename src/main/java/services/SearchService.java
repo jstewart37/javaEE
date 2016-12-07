@@ -16,7 +16,8 @@ public class SearchService {
 	@Inject
 	private ProductService productService;
 	
-	@Deprecated
+	
+	
 	public List<Product> findByKeyword(String term) {
 		List<Product> results = new ArrayList<>();
 		results.addAll(searchByProductName(term));
@@ -34,7 +35,7 @@ public class SearchService {
 		return productRepository.findByDescriptionLike(description);
 	}
 
-	public List<Product> searchBy(String term) {
+	/*public List<Product> searchBy(String term) {
 		List<Product> results = new ArrayList<>();
 		if(term.matches("[0-9]")) {
 			Product result = productService.findProductById(term);
@@ -49,6 +50,5 @@ public class SearchService {
 		results.forEach(product->{
 			productItems.add(productService.getProduct(product, product.getId()));
 		});
-		return productItems;
+		return productItems;*/
 	}
-}

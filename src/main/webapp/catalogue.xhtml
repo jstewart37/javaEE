@@ -93,7 +93,8 @@
 						<div class="captionprice animated wow fadeInDown">
 							<h4 class="pull-right animated wow fadeInDown">$24.99</h4>
 							<h4>
-								<a href="#">Gnome</a>
+								<h:outputText value="#{products.name}" rendered="#{browse.products.rowCount==0}" />
+								
 							</h4>
 							<p>Description -</p>
 						</div>

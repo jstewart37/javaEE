@@ -53,7 +53,7 @@ public class Product {
 	//constructors
 	@Author(author = "alex")
 	public Product(long vidProduct, String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice, double vbuyPrice,
-			String vstatus) {
+			String vstatus, String path, String pw) {
 		this.idProduct = vidProduct;
 		this.name = vname;
 		this.description = vdescription;
@@ -62,6 +62,8 @@ public class Product {
 		this.sellPrice= vsellPrice;
 		this.buyPrice= vbuyPrice;
 		this.status= vstatus;
+		this.imgPath = path;
+		this.isPorousware = pw;
 		
 		
 	}
@@ -70,6 +72,11 @@ public class Product {
 
 	public Product(long id) {
 		this.idProduct = id;
+	}
+
+	public Product(int id, String name) {
+		idProduct = id;
+		this.name = name;
 	}
 
 	public long getIdProduct() {
@@ -178,6 +185,11 @@ public class Product {
 		this.status= vstatus;
 		this.imgPath= vimgPath;
 		
+	}
+
+	public String getImgPath() {
+		
+		return this.imgPath;
 	}
 
 }
