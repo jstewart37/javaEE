@@ -15,16 +15,16 @@
 		<div class="row">
 			<h:form>
 				<h:outputText escape="false" value="No Products Found"
-					rendered="#{browse.product.rowCount==0}" />
-				<h:panelGroup rendered="#{browse.product.rowCount>0}">
+					rendered="#{browse.paginationHelper.itemsCount==0}" />
+				<h:panelGroup rendered="#{browse.paginationHelper.itemsCount>0}">
 					<h:commandLink value="Previous" action="#{browse.previous}"
-						rendered="#{browse.pagination.hasPreviousPage}" />
+						rendered="#{browse.paginationHelper.hasPreviousPage}" />
 					<h:outputText
-						value="#{browse.pagination.pageFirstItem + 1}..#{browse.pagination.pageLastItem + 1}/#{browse.pagination.itemsCount}" />
+						value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
 					<h:commandLink value="Next" action="#{browse.next}"
-						rendered="#{browse.pagination.hasNextPage}" />
+						rendered="#{browse.paginationHelper.hasNextPage}" />
 					<div>
-						<ui:repeat var="product" value="#{browse.products}">
+						<ui:repeat var="product" value="#{browse.product}">
 							<div class="col-xs-12 col-md-4">
 								<h:commandLink action="#{products.select(product.id)}"
 									value="#{product.name}" />
@@ -37,11 +37,11 @@
 						</ui:repeat>
 					</div>
 					<h:commandLink value="Previous" action="#{browse.previous}"
-						rendered="#{browse.pagination.hasPreviousPage}" />
+						rendered="#{browse.paginationHelper.hasPreviousPage}" />
 					<h:outputText
-						value="#{browse.pagination.pageFirstItem + 1}..#{browse.pagination.pageLastItem + 1}/#{browse.pagination.itemsCount}" />
+						value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
 					<h:commandLink value="Next" action="#{browse.next}"
-						rendered="#{browse.pagination.hasNextPage}" />
+						rendered="#{browse.paginationHelper.hasNextPage}" />
 				</h:panelGroup>
 			</h:form>
 		</div>
