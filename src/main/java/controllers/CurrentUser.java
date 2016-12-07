@@ -14,7 +14,7 @@ import Entitys.Customer;
  * @author Sophie
  *
  */
-@Named(value="CurrentUser")
+@Named(value="currentUser")
 @SessionScoped
 public class CurrentUser implements Serializable {
 
