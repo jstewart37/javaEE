@@ -48,10 +48,6 @@ public class TestData { //class was created by entire team, see comments/annotat
 		addresses.add(new Address(1, "65 Anchorage Quay", "eccles", "M27 641", "Greater Manchester", "Manchester"));
 		addresses.add(new Address(2, "1 Someplace", "M64 813", "Greater Manchester", "Manchester"));
 		
-		//jakes data
-		customers.add(new Customer("John Smith","j.smith@gmail.com","111 Nowhere Lane","Kent","Kent","Kent","KP0 LO7"));
-		
-		
 		//Daves data
 		products.add(new Product(1, "Gandalf Gnome", "A Gandalf themed Gnome", "Grey", 25, 9.99, 5.99, "available", "img/gandalf.jpg" , "yes"));
 		products.add(new Product(2, "Goku Gnome", "A gnome from the Saiyan race", "multi", 50, 9.99, 5.99, "available", "img/goku.png", "yes"));
