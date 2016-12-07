@@ -27,7 +27,7 @@
 						<ui:repeat var="product" value="#{browse.product}">
 							<div class="col-xs-12 col-md-4">
 								<h:commandLink action="#{products.select(product.id)}"
-									value="#{product.name}" />
+									value="#{product.first}" />
 								<p>
 									<h:outputText value="#{product.description}" />
 								</p>
