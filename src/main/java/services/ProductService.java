@@ -28,8 +28,12 @@ public class ProductService implements Serializable {
 	}
 
 	public Product findProductById(long id) {
-		return productManager.findByID((int) id);
+		Product product = productManager.findByID((int) id);
+		if (product == null)
+			product = new Product(1, "something went wrong", "more went wrong", "invisible", 0, 0.0, 0.0, "available");
+		return product;
 	}
+
 
 	public List<Product> findAll() {
 		return productManager.findAll();

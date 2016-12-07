@@ -18,7 +18,7 @@ public class SearchController {
 	@Inject
 	private SearchService searchService;
 	@Inject
-	private SelectedProduct selectedProduct;
+	private ProductController selectedProduct;
 	@Inject
 	private SearchResultsController searchResults;
 	private String term;
