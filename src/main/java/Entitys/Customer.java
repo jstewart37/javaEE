@@ -101,7 +101,7 @@ public class Customer {
 	// getters and setters
 
 	public Customer() {
-		// TODO Auto-generated constructor stub
+			// TODO Auto-generated constructor stub
 	}
 
 	public long getIdCustomer() {
