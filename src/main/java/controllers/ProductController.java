@@ -60,5 +60,34 @@ public class ProductController implements Serializable{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public Product getProduct(int PID){
+		return product;
+	}
+	
+	public String getFirst(int PID) {
+		Product product = productService.findProductById(PID);
+		return product.getName();
+	}
+	
+	public String getDescription(int PID) {
+		Product product = productService.findProductById(PID);
+		return product.getDescription();
+	}
+	
+	public String getPrice(int PID){
+		Product product = productService.findProductById(PID);
+		StringBuilder sb = new StringBuilder();
+		sb.append("£");
+		sb.append(product.getSellPrice());
+		String productInfo = sb.toString();
+		return productInfo; 
+	}
+	
+	public String getImage(int PID){
+		Product product = productService.findProductById(PID);
+		return product.getImgPath();
+	}
+	
 
 }
