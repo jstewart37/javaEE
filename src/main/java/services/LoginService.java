@@ -16,7 +16,7 @@ public class LoginService {
 		Customer customer = customerManager.findByEmail(email.toLowerCase());
 		if (!(customer == null))	//if customer is not null.
 		{
-			if (customer.getPassword() == password)
+			if (customer.getPassword().equals(password))
 			{
 				return true;
 			}
@@ -29,7 +29,7 @@ public class LoginService {
 		return	false; // customer is null.
 	}
 
-	public Customer loginUser(String email) {
+	public Customer getEmail(String email) {
 		return customerManager.findByEmail(email.toLowerCase());
 	}
 }
