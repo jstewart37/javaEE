@@ -14,18 +14,19 @@ import services.LoginService;
 @Named(value = "login")
 public class LoginController {
 	
-	@Inject private CurrentUser currentUser;
+	@Inject 
+	private CurrentUser currentUser;
 	@Inject
 	private LoginService loginService;
 	private String email = "";
 	private String password = "";
 
 	public String getEmail() {
-		return this.email;
+		return email;
 	}
 
 	public String getPassword() {
-		return this.password;
+		return password;
 	}
 
 	public void setEmail(String email) {
@@ -37,13 +38,16 @@ public class LoginController {
 	}
 
 	public String login() {
-		if (!email.isEmpty() && !password.isEmpty())
-			if (loginService.validLogin(email, password))
-			{
+		if (!email.isEmpty() && !password.isEmpty()) {
+			System.out.println("email" + email);
+			if (loginService.validLogin(email, password)) {
+				System.out.println("valid!");
 				currentUser.setCustomer(loginService.getEmail(email));
 				return "catalogue";
 			}
-			return "index";
+		}
+		password = "";
+		return "index";
 		
 	}
 
