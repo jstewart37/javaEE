@@ -13,6 +13,7 @@ import services.LoginService;
 @RequestScoped
 @Named(value = "login")
 public class LoginController {
+	
 	@Inject private CurrentUser currentUser;
 	@Inject
 	private LoginService loginService;
@@ -38,10 +39,12 @@ public class LoginController {
 	public String login() {
 		if (!email.isEmpty() && !password.isEmpty())
 			if (loginService.validLogin(email, password))
-				currentUser.setCustomer(loginService.loginUser(email));
-			else
-				password = "";
-		return "catalogue";
+			{
+				currentUser.setCustomer(loginService.getEmail(email));
+				return "catalogue";
+			}
+			return "index";
+		
 	}
 
 	public String logout() {

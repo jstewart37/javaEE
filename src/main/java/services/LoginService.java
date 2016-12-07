@@ -29,7 +29,7 @@ public class LoginService {
 		return	false; // customer is null.
 	}
 
-	public Customer loginUser(String email) {
+	public Customer getEmail(String email) {
 		return customerManager.findByEmail(email.toLowerCase());
 	}
 }

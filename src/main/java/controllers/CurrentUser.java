@@ -5,6 +5,7 @@ package controllers;
 
 import java.io.Serializable;
 
+import javax.enterprise.context.ConversationScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
@@ -28,8 +29,9 @@ public class CurrentUser implements Serializable {
 		this.customer = customer;
 	}
 	
-	public boolean isLoggedIn(){
-		return (customer==null)?true:false;
+	public boolean isloggedIn(){
+		if (customer == null) return false;
+		return true;
 	}
 	
 	
