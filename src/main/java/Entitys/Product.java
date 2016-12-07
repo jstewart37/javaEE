@@ -72,6 +72,11 @@ public class Product {
 		this.idProduct = id;
 	}
 
+	public Product(int id, String name) {
+		idProduct = id;
+		this.name = name;
+	}
+
 	public long getIdProduct() {
 		return idProduct;
 	}
@@ -178,6 +183,11 @@ public class Product {
 		this.status= vstatus;
 		this.imgPath= vimgPath;
 		
+	}
+
+	public String getImgPath() {
+		
+		return this.imgPath;
 	}
 
 }
