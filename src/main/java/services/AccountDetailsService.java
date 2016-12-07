@@ -11,13 +11,16 @@ import java.util.List;
 
 import javax.ejb.Stateless;
 import javax.enterprise.context.*;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import EntityManagers.*;
 import Entitys.*;
 
-@SessionScoped
+
+@Stateless
+
 public class AccountDetailsService {
 	
 	private CustomerManager customerManager;
@@ -29,8 +32,8 @@ public class AccountDetailsService {
 		return customer;
 		
 	}	
-	
-	@Named("message")
+
+	/*@Named("message")
 	@RequestScoped
 	public class MessageController {
 		@Inject
@@ -51,7 +54,7 @@ public class AccountDetailsService {
 //			if(!messageService.validateMessage(message))
 //				messageService.validateMessage("Please no rude words");
 			return "index";
-		}
+		}*/
 	}	
 	
 //}
