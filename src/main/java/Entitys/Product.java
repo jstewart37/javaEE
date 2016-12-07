@@ -63,9 +63,7 @@ public class Product {
 		this.buyPrice= vbuyPrice;
 		this.status= vstatus;
 		this.imgPath = path;
-		this.isPorousware = pw;
-		
-		
+		this.isPorousware = pw;	
 	}
 
 	//getters & setters
