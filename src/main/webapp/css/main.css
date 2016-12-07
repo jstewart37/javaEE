@@ -126,18 +126,20 @@ margin: 0 10px 0 0;
 }
 .productName{
 	position:relative;
-	float:left
+	float:left;
+	font-size:2em;
 }
 .productPrice{
 	position:relative;
 	padding-left: 30%;
-	float:left
+	float:left;
+	font-size:2em;
 }
 .basketAdd{
 	position:relative;
 	float:left;
 	padding-left:76%;
-	top: -80px;
+	top: -57px;
 	
 }
 

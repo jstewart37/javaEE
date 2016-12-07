@@ -53,7 +53,7 @@ public class Product {
 	//constructors
 	@Author(author = "alex")
 	public Product(long vidProduct, String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice, double vbuyPrice,
-			String vstatus) {
+			String vstatus, String path, String pw) {
 		this.idProduct = vidProduct;
 		this.name = vname;
 		this.description = vdescription;
@@ -62,6 +62,8 @@ public class Product {
 		this.sellPrice= vsellPrice;
 		this.buyPrice= vbuyPrice;
 		this.status= vstatus;
+		this.imgPath = path;
+		this.isPorousware = pw;
 		
 		
 	}

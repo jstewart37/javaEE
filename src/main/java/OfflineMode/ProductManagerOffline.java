@@ -52,7 +52,6 @@ public class ProductManagerOffline implements ProductManager {
 				return products3;
 		return null;
 	}
-
 	@Override
 	public Product findByColour(String Colour) {
 		List<Product> products = testData.getProducts();

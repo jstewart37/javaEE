@@ -23,19 +23,28 @@ public class ProductController implements Serializable{
 		return product;
 	}
 	
-	public String getfirst() {
+	public String getFirst() {
 		Product product = productService.findProductById(1);
 		return product.getName();
 	}
 	
-	public String getprice(){
+	public String getDescription() {
+		Product product = productService.findProductById(1);
+		return product.getDescription();
+	}
+	
+	public String getPrice(){
 		Product product = productService.findProductById(1);
 		StringBuilder sb = new StringBuilder();
 		sb.append("£");
 		sb.append(product.getSellPrice());
 		String productInfo = sb.toString();
 		return productInfo; 
-		
+	}
+	
+	public String getImage(){
+		Product product = productService.findProductById(1);
+		return product.getImgPath();
 	}
 	
 	public void setProduct(Product product) {
