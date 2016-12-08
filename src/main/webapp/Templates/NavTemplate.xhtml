@@ -67,7 +67,6 @@
 				<!-- creating fields with individual titles -->
 				<h:form class="reg" rendered="#{!user.register}">
 				<h1>Register</h1>
-			<fieldset>
 			<div class="form-group">
 			<label>Title</label>
 				<h:selectOneMenu value="#{register.title}">
@@ -119,11 +118,10 @@
 				<f:passThroughAttribute name="required" value="required" />
 					<input type="range" min="31-12-1900" max="31-12-2002" />
 				</h:inputText>
-				<h:commandButton type="submit" class="btn btn-success" action="#{register.registerCustomer}" value="Register" />
+				<h:commandButton type="submit" class="regbtn" action="#{register.registerCustomer}" value="Register" />
 			</div>
 			<!-- Functionality added by Sophie -->
 		
-		</fieldset>
 		</h:form>
 			</div>
 
@@ -146,9 +144,7 @@
 					<f:passThroughAttribute name="alt" value="Enter Password" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
-				<h:commandButton class="btn btn-success" action="#{login.login}"
-					value="Login" />
-
+				<h:commandButton class="regbtn" action="#{login.login}"value="Login" />
 			</div>
 		</h:form>
 	</div>
