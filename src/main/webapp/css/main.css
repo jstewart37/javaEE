@@ -396,6 +396,18 @@ header .social li:first-child{
 	word-break: break-word;
 }
 
+.logoutbtn{
+ -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 4px;
+  background:#359663;
+  border: solid #41c27d 0px;
+  text-decoration: none;
+}
+
 .captiongnome{
 	position: absolute;
 	max-width: 650px;
