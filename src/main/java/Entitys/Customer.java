@@ -90,6 +90,7 @@ public class Customer {
 	// constructors
 	public Customer(long idCustomer, String title, String name, String email, String password, String phone,
 			String date) {
+		this.idCustomer = idCustomer;
 		this.title = title;
 		this.name = name;
 		this.email = email;

@@ -22,10 +22,14 @@ public class CurrentUser implements Serializable {
 	 * 
 	 */
 	public String getName(){
+		if (customer == null)
+			return "";
 		return customer.getName();
 	}
 	
 	public String getEmail(){
+		if (customer == null)
+			return "";
 		return customer.getEmail();
 	}
 	
@@ -35,17 +39,20 @@ public class CurrentUser implements Serializable {
 	private Customer customer = null;
 
 	public Customer getCustomer() {
+		if (customer == null)
+			return new Customer();
 		System.out.println(customer.getIdCustomer());
 		return customer;
 	}
 
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
+		System.out.println("signed in Customer " + customer.getEmail());
 	}
 	
 	public boolean isloggedIn(){
-		System.out.println(customer.getIdCustomer());
 		return (customer == null) ? false : true;
 	}
+	
 	
 }

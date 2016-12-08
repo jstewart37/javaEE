@@ -42,6 +42,7 @@ public class AccountDetailsController implements Serializable {
 	
 	public String getAddressLine1() {
 		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
+		if (address.getAddressLine1() == null) return "NO";	
 		return address.getAddressLine1();
 	}
 	
@@ -50,6 +51,7 @@ public class AccountDetailsController implements Serializable {
 	}
 	public String getAddressLine2() {
 		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
+		if (address == null) return "NO";
 		return address.getAddressLine2();
 	
 	}
@@ -58,6 +60,7 @@ public class AccountDetailsController implements Serializable {
 	}
 	public String getCounty() {
 		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
+		if (address == null) return "NO";
 		return address.getCounty();
 	}
 	public void setCounty(String county) {
@@ -65,6 +68,7 @@ public class AccountDetailsController implements Serializable {
 	}
 	public String getCity() {
 		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
+		if (address == null) return "NO";
 		return address.getCity();
 	}
 	public void setCity(String city) {
@@ -72,6 +76,7 @@ public class AccountDetailsController implements Serializable {
 	}
 	public String getPostcode() {
 		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
+		if (address == null) return "NO";
 		return address.getPostCode();
 	}
 	public void setPostcode(String postcode) {

@@ -6,7 +6,7 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	template="templates/NavTemplate.xhtml">
-	
+
 	<meta charset="utf-8" />
 	<ui:define name="pageTitle">Catalogue</ui:define>
 	<head>
@@ -20,95 +20,93 @@
 
 	</head>
 	<ui:define name="maincontent">
-		
+
 		<div class="container">
-		<div class="accountcontent">
-		<div class="accountdetails pull-left">
-		<table id="tableaccountdetails">
+			<div class="accountcontent">
+				<div class="accountdetails pull-left">
+					<table id="tableaccountdetails">
+
+						<tr>
+							<td>Account Name:</td>
+							<td><h:outputText value="#{usersession.name}" /></td>
+						</tr>
+						<tr>
+							<td>Email Address:</td>
+							<td><h:outputText value="#{usersession.email}" /></td>
+						</tr>
+
+						<tr>
+							<th rowspan="5">Account Primary Address:</th>
+							<td><h:outputText value="#{AccountDetails.addressLine1}" /></td>
+						</tr>
+						<tr>
+							<td><h:outputText value="#{AccountDetails.addressLine2}" /></td>
+						</tr>
+						<tr>
+							<td><h:outputText value="#{AccountDetails.county}" /></td>
+						</tr>
+						<tr>
+							<td><h:outputText value="#{AccountDetails.city}" /></td>
+						</tr>
+						<tr>
+							<td><h:outputText value="#{AccountDetails.postcode}" /></td>
+						</tr>
+
 		
-		<tr>
-		<td> Account Name: </td>
-		<td> <h:outputText value="#{usersession.name}" /></td>
-		</tr>
-		<tr>
-		<td> Email Address: </td>
-		<td> <h:outputText value="#{usersession.email}" /></td>
-		</tr>
-		
-		  <tr>
-		    <th rowspan="5">Account Primary Address:</th>
-		    <td><h:outputText value="#{AccountDetails.addressLine1}" /></td>
-		  </tr>
-		  <tr>
-		    <td><h:outputText value="#{AccountDetails.addressLine2}" /></td>
-		  </tr>
-		  <tr>
-		    <td><h:outputText value="#{AccountDetails.county}" /></td>
-		  </tr>
-		  <tr>
-		    <td><h:outputText value="#{AccountDetails.city}" /></td>
-		  </tr>
-		  <tr>
-		    <td><h:outputText value="#{AccountDetails.postcode}" /></td>
-		  </tr>
-		
-		<tr>
-		<td> Other Info: </td>
-		<td> Other Info</td>
-		</tr>
-		
-		
-		</table>
+
+
+					</table>
+
+				</div>
+
+				<div class="previousorders  pull-right">
+
+
+					<ui:repeat value="#{AccountDetailsController.Orders}" var="value">
+
+						<h:panelGroup layout="block" id="orderspanelgroup">
+							<table id="tableaccountorders">
+
+								<tr>
+									<th>Orders:</th>
+									<td><h:outputText value="#{AccountDetails.returnname}" /></td>
+								</tr>
+								<tr>
+									<td><h:outputText value="#{customerorder.value}" /></td>
+								</tr>
+								<tr>
+									<td><h:outputText value="#{address.dateStampPlaced}" /></td>
+								</tr>
+
+							</table>
+
+						</h:panelGroup>
+
+					</ui:repeat>
+
+
+					<h1>Please Leave a message</h1>
+					<br />
+					<h:outputText value="#{message.lastMessage}" />
+					<br />
+					<hr />
+					<h:form>
+						<label>Enter a new message:</label>
+						<h:inputText value="#{message.message}">
+							<f:passThroughAttribute name="placeholder" value="message..." />
+						</h:inputText>
+						<h:commandButton value="Send Message"
+							action="#{message.submitMessage}" />
+					</h:form>
+				</div>
+
+
+
+			</div>
+
 
 		</div>
-		
-		<div class="previousorders  pull-right">
-		
-		
-		<ui:repeat value="#{AccountDetailsController.Orders}" var="value">
 
-		<h:panelGroup layout="block" id="orderspanelgroup">
- 		 <table id="tableaccountorders">
 
-		  <tr>
-		    <th >Orders:</th>
-		    <td><h:outputText value="#{AccountDetails.returnname}" /></td>
-		  </tr>
-		  <tr>
-		    <td><h:outputText value="#{customerorder.value}" /></td>
-		  </tr>
-		  <tr>
-		    <td><h:outputText value="#{address.dateStampPlaced}" /></td>
-		  </tr>
-		 	
-		</table>
-		
-		</h:panelGroup>
-   
-		</ui:repeat>
-		
-		
-		<h1>Please Leave a message</h1>
-	<br />
-	<h:outputText value="#{message.lastMessage}" />
-	<br />
-	<hr />
-	<h:form>
-		<label>Enter a new message:</label>
-		<h:inputText value="#{message.message}" >
-			<f:passThroughAttribute name="placeholder" value="message..."/>
-		</h:inputText>
-		<h:commandButton value="Send Message" action="#{message.submitMessage}" />
-	</h:form>
-		</div>
-		
-		
-		
-		</div>
-	
-		
-		</div>
-				
-		
-			</ui:define>
+	</ui:define>
 </ui:composition>
