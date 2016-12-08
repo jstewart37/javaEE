@@ -2,6 +2,11 @@ package controllers;
 
 import javax.faces.model.DataModel;
 
+/**
+ * Used to allow Controllers to provide Pagination functionality.
+ * 
+ * @author James Thompson
+ */
 public abstract class PaginationHelper {
 	private int pageSize;
 	private int page;

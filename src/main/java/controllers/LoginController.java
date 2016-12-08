@@ -1,12 +1,9 @@
 package controllers;
 
 import javax.enterprise.context.RequestScoped;
-import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.servlet.http.HttpSession;
 
-import Entitys.Customer;
 import services.LoginService;
 
 //@author Sophie
@@ -50,8 +47,12 @@ public class LoginController {
 		
 	}
 
+
 	public String logout() {
 		currentUser.setCustomer(null);
 		return "index";
+
+	
+
 	}
 }

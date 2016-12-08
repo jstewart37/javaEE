@@ -49,7 +49,7 @@
 					<li><a href="index.xhtml#about">About Us</a></li>
 					<li><a href="catalogue.xhtml">Catalogue</a></li>
 					<li><a href="index.xhtml#contact">Contact Us</a></li>
-					<li><h:outputLink rendered="#{usersession.loggedIn}" action="#{login.logout}">Log Out</h:outputLink></li>
+					<li><h:form><h:commandButton class="logoutbtn" rendered="#{usersession.loggedIn}" action="#{login.logout}" value="Log Out" /></h:form></li>
 					<li><h:outputLink rendered="#{!usersession.loggedIn}" value="#login-box" class="login-window">Register</h:outputLink></li>
 					<li><h:outputLink rendered="#{!usersession.loggedIn}" value="#Signin-box" class="signin-window">Login</h:outputLink></li>
 					<li><a href="basket.xhtml"><img src="img/basket.png" style="width:50px;height:40px;" /></a></li>

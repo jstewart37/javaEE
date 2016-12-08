@@ -4,46 +4,34 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	template="templates/NavTemplate.xhtml">
 	<meta charset="utf-8" />
-	<ui:define name="pageTitle">Browse</ui:define>
+	<ui:define name="pagetitle">Catalogue</ui:define>
 	<ui:define name="maincontent">
-		<div>
+		<header class="jumbotron">
 			<h1>Catalogue</h1>
 			<p>Welcome to the NBGarden Online Catalogue!</p>
-			<p>Find a product you like? Add it to your wishlist so that its
-				easier to find when your filling out your next order!</p>
-		</div>
-		<div class="row">
+			<p>Find a product you like? Add it to your wishlist so that its easier to find when your filling out your next order!</p>
+		</header>
+		<article class="row">
 			<h:form>
-				<h:outputText escape="false" value="No Products Found"
-					rendered="#{browse.paginationHelper.itemsCount==0}" />
-				<h:panelGroup rendered="#{browse.paginationHelper.itemsCount>0}">
-					<h:commandLink value="Previous" action="#{browse.previous}"
-						rendered="#{browse.paginationHelper.hasPreviousPage}" />
-					<h:outputText
-						value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
-					<h:commandLink value="Next" action="#{browse.next}"
-						rendered="#{browse.paginationHelper.hasNextPage}" />
+				<h:outputText escape="false" value="No Products Found" rendered="#{browse.product.rowCount==0}" />
+				<h:panelGroup rendered="#{browse.product.rowCount>0}">
+					<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.paginationHelper.hasPreviousPage}" />
+					<h:outputText value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
+					<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.paginationHelper.hasNextPage}" />
 					<div>
 						<ui:repeat var="product" value="#{browse.product}">
-							<div class="col-xs-12 col-md-4">
-								<h:commandLink action="#{products.select(product.id)}"
-									value="#{product.first}" />
-								<p>
-									<h:outputText value="#{product.description}" />
-								</p>
-								<h:button action="#{wishlist.addToWishlist(product.id)}"
-									value="Add to Wishlist" />
-							</div>
+							<section class="col-xs-12 col-md-4">
+								<h:commandLink action="#{products.select(product.id)}" value="#{product.name}"/>
+								<p><h:outputText value="#{product.description}" /></p>
+								<h:commandButton class="btn btn-primary btn-block" action="#{wishlist.addToWishlist(product.id)}" value="Add to Wishlist" rendered="#{user.loggedIn}" />
+							</section>
 						</ui:repeat>
 					</div>
-					<h:commandLink value="Previous" action="#{browse.previous}"
-						rendered="#{browse.paginationHelper.hasPreviousPage}" />
-					<h:outputText
-						value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
-					<h:commandLink value="Next" action="#{browse.next}"
-						rendered="#{browse.paginationHelper.hasNextPage}" />
+					<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.paginationHelper.hasPreviousPage}" />
+					<h:outputText value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.pagination.pageLastItem + 1}/#{browse.pagination.itemsCount}" />
+					<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.paginationHelper.hasNextPage}" />
 				</h:panelGroup>
 			</h:form>
-		</div>
+		</article>
 	</ui:define>
 </ui:composition>

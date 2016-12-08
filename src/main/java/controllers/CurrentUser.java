@@ -21,10 +21,27 @@ public class CurrentUser implements Serializable {
 	/**
 	 * 
 	 */
+	public String getName(){
+		if (customer == null)
+			return "";
+		return customer.getName();
+	}
+	
+	public String getEmail(){
+		if (customer == null)
+			return "";
+		return customer.getEmail();
+	}
+	
+	
+	
 	private static final long serialVersionUID = -2133248137329753396L;
 	private Customer customer = null;
 
 	public Customer getCustomer() {
+		if (customer == null)
+			return new Customer();
+		System.out.println(customer.getIdCustomer());
 		return customer;
 	}
 
