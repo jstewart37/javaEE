@@ -91,7 +91,11 @@ public class CreateAccountController {
 		return "index";
 	}
 
-	public String customerRegistered() {
+	public String checkEmail() {
+		if (!email.isEmpty()&&!password.isEmpty())
+			createAccountService.checkEmail(email);
+	
+		System.out.println(createAccountService.checkEmail(email));
 	
 		return "index";
 	}
