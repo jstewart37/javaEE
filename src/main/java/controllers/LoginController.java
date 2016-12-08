@@ -48,14 +48,7 @@ public class LoginController {
 	}
 	
 	public String logout()  {
-		System.out.println("Logging out");
-	    currentUser.setCustomer(null);
-//	ExternalContext ectx = FacesContext.getCurrentInstance().getExternalContext();
-//    HttpServletResponse response = (HttpServletResponse)ectx.getResponse();
-//    HttpSession session = (HttpSession)ectx.getSession(false);
-//    session.invalidate();
-//    
-//    response.sendRedirect("index.xhtml");
+	currentUser.setCustomer(null);
     return "index";
 	}
 }
