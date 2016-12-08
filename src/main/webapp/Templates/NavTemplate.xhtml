@@ -70,6 +70,13 @@
 			<fieldset>
 			<div class="form-group">
 			<label>First Name</label>
+				<h:inputText class="form-control" value="#{register.title}">
+					<f:passThroughAttribute name="type" value="title" />
+					<f:passThroughAttribute name="placeholder" value="Mr, Mrs, Ms, Miss..." />
+					<f:passThroughAttribute name="alt" value="Enter your title" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
+			<label>First Name</label>
 				<h:inputText class="form-control" value="#{register.firstname}">
 					<f:passThroughAttribute name="type" value="firstname" />
 					<f:passThroughAttribute name="placeholder" value="What's your first name?" />
@@ -90,6 +97,13 @@
 					<f:passThroughAttribute name="alt" value="Enter Email" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
+				<label>Phone Number</label>
+				<h:inputText class="form-control" value="#{register.phone}">
+					<f:passThroughAttribute name="type" value="phone" />
+					<f:passThroughAttribute name="placeholder" value="What's your phone number?" />
+					<f:passThroughAttribute name="alt" value="Enter Phone Number" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
 				<label>Password</label>
 				<h:inputText class="form-control" value="#{register.password}">
 					<f:passThroughAttribute name="type" value="password" />
@@ -105,8 +119,6 @@
 				<f:passThroughAttribute name="required" value="required" />
 					<input type="range" min="31-12-1900" max="31-12-2002" />
 				</h:inputText>
-				
-  
 				<h:commandButton type="submit" class="btn btn-success" action="#{register.registerCustomer}" value="Register" />
 			</div>
 			<!-- Functionality added by Sophie -->

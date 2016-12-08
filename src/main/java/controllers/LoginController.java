@@ -4,6 +4,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.servlet.http.HttpSession;
 
 import Entitys.Customer;
 import services.LoginService;
@@ -52,7 +53,8 @@ public class LoginController {
 	}
 
 	public String logout() {
-		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
+		HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true);
+	    session.invalidate();
 		return "index";
 	}
 }
