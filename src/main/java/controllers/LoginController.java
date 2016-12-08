@@ -1,12 +1,9 @@
 package controllers;
 
 import javax.enterprise.context.RequestScoped;
-import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.servlet.http.HttpSession;
 
-import Entitys.Customer;
 import services.LoginService;
 
 //@author Sophie
@@ -49,10 +46,16 @@ public class LoginController {
 		return "index";
 		
 	}
-
-	public String logout() {
-		HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true);
-	    session.invalidate();
-		return "index";
+	
+	public String logout()  {
+		System.out.println("Logging out");
+	    currentUser.setCustomer(null);
+//	ExternalContext ectx = FacesContext.getCurrentInstance().getExternalContext();
+//    HttpServletResponse response = (HttpServletResponse)ectx.getResponse();
+//    HttpSession session = (HttpSession)ectx.getSession(false);
+//    session.invalidate();
+//    
+//    response.sendRedirect("index.xhtml");
+    return "index";
 	}
 }
