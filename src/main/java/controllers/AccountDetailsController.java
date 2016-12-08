@@ -1,6 +1,3 @@
-/**
- * 
- */
 package controllers;
 
 import java.io.Serializable;
@@ -8,11 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.enterprise.context.*;
+import javax.inject.Inject;
 import javax.inject.Named;
 
+import EntityManagers.AddressManager;
 import Entitys.*;
+import OfflineMode.AddressManagerOffline;
 import services.AccountDetailsService;
-
 
 /**
  * @author Jake_Stewart
@@ -22,68 +21,64 @@ import services.AccountDetailsService;
 @SessionScoped
 @Named("AccountDetails")
 public class AccountDetailsController implements Serializable {
-/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	@Inject
+	private CurrentUser user;
+	@Inject
+	private AddressManager addressManager;
+	
+	private Address address = null;
+	
+	
+	
 
-public String getReturnname(){
+	private String addressLine1 = "";
+	private String addressLine2 = "";
+	private String county = "";
+	private String city = "";
+	private String postcode = "";
 	
-	//String CustomerName = AccountDetailsService.searchBy(email);
+	
+	
+	
+	public String getAddressLine1() {
+		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
+		return address.getAddressLine1();
+	}
+	
+	public void setAddressLine1(String addressLine1) {
+		this.addressLine1 = addressLine1;
+	}
+	public String getAddressLine2() {
+		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
+		return address.getAddressLine2();
+	
+	}
+	public void setAddressLine2(String addressLine2) {
+		this.addressLine2 = addressLine2;
+	}
+	public String getCounty() {
+		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
+		return address.getCounty();
+	}
+	public void setCounty(String county) {
+		this.county = county;
+	}
+	public String getCity() {
+		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
+		return address.getCity();
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getPostcode() {
+		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
+		return address.getPostCode();
+	}
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
+	}
 
-	Customer c = new Customer();
+
 	
-	String CName = c.getName();
-	return "Jake Stewart"; //CName
-	//return CustomerName;
-	
+
 }
-
-
-public ArrayList<CustomerOrder> ARCustomerOrders(){
-	ArrayList<CustomerOrder> COList = new ArrayList<CustomerOrder>();
-//	COList.add( new CustomerOrder(1, "55", 1, "55", "55", "55", 1)); 
-//	COList.add("World");
-
-	return COList;
-}
-
-public ArrayList<CustomerOrder> orders(){
-	AccountDetailsController ac = new AccountDetailsController();
-	ArrayList<CustomerOrder> COList = ac.ARCustomerOrders();
-	return COList;
-	
-}
-
-public String getemail(){
-	
-	
-	
-	
-	return "jake.stewart@gmail.com";
-}  
-
-public String getaddressline1(){
-	return " 4 anchorage quay";
-}
-
-public String getaddressline2(){
-	return " Media City";
-}
-public String getcounty(){
-	return " greater Manchester";
-}
-
-public String getcity(){
-	return "salford";
-}
-
-public String getpostcode(){
-	return "M6 4PO";
-}
-
-
-}	
-	
-	
-

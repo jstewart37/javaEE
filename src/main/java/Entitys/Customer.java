@@ -114,6 +114,7 @@ public class Customer {
 	}
 
 	public long getIdCustomer() {
+		System.out.println(idCustomer);
 		return idCustomer;
 	}
 
