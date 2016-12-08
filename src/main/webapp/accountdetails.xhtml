@@ -28,19 +28,19 @@
 		
 		<tr>
 		<td> Account Name: </td>
-		<td> <h:outputText value="#{AccountDetails.returnname}" /></td>
+		<td> <h:outputText value="#{usersession.name}" /></td>
 		</tr>
 		<tr>
 		<td> Email Address: </td>
-		<td> <h:outputText value="#{AccountDetails.email}" /></td>
+		<td> <h:outputText value="#{usersession.email}" /></td>
 		</tr>
 		
 		  <tr>
 		    <th rowspan="5">Account Primary Address:</th>
-		    <td><h:outputText value="#{AccountDetails.addressline1}" /></td>
+		    <td><h:outputText value="#{AccountDetails.addressLine1}" /></td>
 		  </tr>
 		  <tr>
-		    <td><h:outputText value="#{AccountDetails.addressline2}" /></td>
+		    <td><h:outputText value="#{AccountDetails.addressLine2}" /></td>
 		  </tr>
 		  <tr>
 		    <td><h:outputText value="#{AccountDetails.county}" /></td>

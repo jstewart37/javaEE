@@ -42,12 +42,24 @@ public class Address {
 
 
 	public Address(){};
-	
-	public Address(long idAddress, String addressLine1, String addressLine2, String postCode, String County,
+
+	public Address(long idAddress, String addressLine1, String postCode, String county,
 			String city) {
+		this.idAddress = idAddress;
+		this.addressLine1 = addressLine1;
+		this.postCode = postCode;
+		this.county = county;
+		this.city = city;
 	}
 
-	public Address(long idAddress, String addressLine1, String postCode, String County, String city) {
+	public Address(long idAddress, String addressLine1, String addressLine2, String postCode, String county,
+			String city) {
+		this.idAddress = idAddress;
+		this.addressLine1 = addressLine1;
+		this.addressLine2 = addressLine2;
+		this.postCode = postCode;
+		this.county = county;
+		this.city = city;
 	}
 
 	// getters & setters

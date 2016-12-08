@@ -13,6 +13,7 @@ public interface AddressManager {
 	public Address findAddressByPostcode(String postcode);
 	public Address findAddressByCounty(String county);
 	public Address findAddressByPostcodeAndNumber(String postcode, String number);
+	public Address findAddressByID(long id);
 	
 	//CRUD based stubs
 	public Address createNewAddress(Address address);

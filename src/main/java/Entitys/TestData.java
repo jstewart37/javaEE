@@ -30,7 +30,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		suppliers = new ArrayList<>();
 		supplyorderlist = new ArrayList<>();
 		customers = new ArrayList<>();
-		addresses = new ArrayList<>();
+		addresses = new ArrayList<Address>();
 		products = new ArrayList<>();
 		customerOrderLine = new ArrayList<CustomerOrderLine>();
 		
@@ -45,6 +45,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		//Alex's data
 		suppliers.add(new Supplier(1, "Daves GGGGGGGGGGGGGGGGGGnomes", "07984682330", "dg@gnomies.com")); 
 		suppliers.add(new Supplier(2, "Sophies Rude Ass Garden Supplies", "07984643", "sg@rudegardensupplies.com"));
+		
 		addresses.add(new Address(1, "65 Anchorage Quay", "eccles", "M27 641", "Greater Manchester", "Manchester"));
 		addresses.add(new Address(2, "1 Someplace", "M64 813", "Greater Manchester", "Manchester"));
 		
