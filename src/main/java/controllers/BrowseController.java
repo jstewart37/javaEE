@@ -22,7 +22,7 @@ public class BrowseController implements Serializable {
 	private List<Product> product = null;
 
 	private void recreateModel() {
-		setProduct(null);
+		product = null;
 	}
 
 	public PaginationHelper getPaginationHelper() {
@@ -34,7 +34,7 @@ public class BrowseController implements Serializable {
 				}
 
 				@Override
-				public DataModel<Product> createPageDataModel() {
+				public ListDataModel<Product> createPageDataModel() {
 					try {
 						return new ListDataModel<Product>(productService.findAllActive().subList(getPageFirstItem(),getPageFirstItem() + getPageSize()));
 					} catch (Exception e) {
@@ -64,11 +64,10 @@ public class BrowseController implements Serializable {
 		product = productService.findAll();
 		return product;
 	}
-
-
-
-	public void setProduct(List<Product> product) {
-		this.product = product;
-	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Product> getDataModel() {
+		return (List<Product>) getPaginationHelper().createPageDataModel();
+}
 
 }

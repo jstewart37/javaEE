@@ -24,4 +24,5 @@ public interface StockManager {
 	 * @return
 	 */
 	public List<Stock> findByActive();
+
 }
