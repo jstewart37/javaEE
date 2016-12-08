@@ -40,9 +40,7 @@ public class LoginController {
 
 	public String login() {
 		if (!email.isEmpty() && !password.isEmpty()) {
-			System.out.println("email" + email);
 			if (loginService.validLogin(email, password)) {
-				System.out.println("valid!");
 				currentUser.setCustomer(loginService.getEmail(email));
 				return "catalogue";
 			}
