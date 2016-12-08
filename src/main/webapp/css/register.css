@@ -30,6 +30,8 @@ input[type="datetime"],
 input[type="email"],
 input[type="firstname"],
 input[type="surname"],
+input[type="title"],
+input[type="phone"],
 textarea,
 select {
   background: rgba(255,255,255,0.1);
@@ -45,11 +47,15 @@ select {
   margin-bottom: 30px;
   border-radius: 25px;
 }
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="email"]:focus,
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="firstname"],
+input[type="surname"],
+input[type="title"],
+input[type="phone"],
 textarea:focus,
 select:focus {
 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);

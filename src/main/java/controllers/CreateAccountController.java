@@ -84,7 +84,7 @@ public class CreateAccountController {
 
 	public String registerCustomer() {
 		if (!email.isEmpty()&&!password.isEmpty())
-			customerManager.createNewCustomer(new Customer(title, firstname.concat(surname), email, password, phone, date))
+			customerManager.createNewCustomer(new Customer(title, firstname.concat(surname), email, password, phone, date));
 			
 			else
 				email = "Email is already registered";
