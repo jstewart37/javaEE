@@ -49,7 +49,7 @@
 					<li><a href="index.xhtml#about">About Us</a></li>
 					<li><a href="catalogue.xhtml">Catalogue</a></li>
 					<li><a href="index.xhtml#contact">Contact Us</a></li>
-					<li><h:outputLink rendered="#{usersession.loggedIn}" action="#{login.logout}">Log Out</h:outputLink></li>
+					<li><h:form><h:commandButton class="logoutbtn" rendered="#{usersession.loggedIn}" action="#{login.logout}" value="Log Out" /></h:form></li>
 					<li><h:outputLink rendered="#{!usersession.loggedIn}" value="#login-box" class="login-window">Register</h:outputLink></li>
 					<li><h:outputLink rendered="#{!usersession.loggedIn}" value="#Signin-box" class="signin-window">Login</h:outputLink></li>
 					<li><a href="basket.xhtml"><img src="img/basket.png" style="width:50px;height:40px;" /></a></li>
@@ -67,15 +67,14 @@
 				<!-- creating fields with individual titles -->
 				<h:form class="reg" rendered="#{!user.register}">
 				<h1>Register</h1>
-			<fieldset>
 			<div class="form-group">
-			<label>First Name</label>
-				<h:inputText class="form-control" value="#{register.title}">
-					<f:passThroughAttribute name="type" value="title" />
-					<f:passThroughAttribute name="placeholder" value="Mr, Mrs, Ms, Miss..." />
-					<f:passThroughAttribute name="alt" value="Enter your title" />
-					<f:passThroughAttribute name="required" value="required" />
-				</h:inputText>
+			<label>Title</label>
+				<h:selectOneMenu value="#{register.title}">
+		   			<f:selectItem itemValue="Mr" itemLabel="Mr" />
+		  			<f:selectItem itemValue="Mrs" itemLabel="Mrs" />	
+		  			<f:selectItem itemValue="Ms" itemLabel="Ms" />
+		  			<f:selectItem itemValue="Miss" itemLabel="Miss" />   							
+				</h:selectOneMenu>	
 			<label>First Name</label>
 				<h:inputText class="form-control" value="#{register.firstname}">
 					<f:passThroughAttribute name="type" value="firstname" />
@@ -119,11 +118,10 @@
 				<f:passThroughAttribute name="required" value="required" />
 					<input type="range" min="31-12-1900" max="31-12-2002" />
 				</h:inputText>
-				<h:commandButton type="submit" class="btn btn-success" action="#{register.registerCustomer}" value="Register" />
+				<h:commandButton type="submit" class="regbtn" action="#{register.registerCustomer}" value="Register" />
 			</div>
 			<!-- Functionality added by Sophie -->
 		
-		</fieldset>
 		</h:form>
 			</div>
 
@@ -146,9 +144,7 @@
 					<f:passThroughAttribute name="alt" value="Enter Password" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
-				<h:commandButton class="btn btn-success" action="#{login.login}"
-					value="Login" />
-
+				<h:commandButton class="regbtn" action="#{login.login}" value="Login" />
 			</div>
 		</h:form>
 	</div>
