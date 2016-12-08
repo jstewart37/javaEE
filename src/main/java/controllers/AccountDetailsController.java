@@ -30,7 +30,7 @@ public class AccountDetailsController implements Serializable {
 	
 	
 	
-
+	private long id;
 	private String addressLine1 = "";
 	private String addressLine2 = "";
 	private String county = "";
@@ -42,7 +42,7 @@ public class AccountDetailsController implements Serializable {
 	
 	public String getAddressLine1() {
 		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
-		if (address.getAddressLine1() == null) return "NO";	
+		if (address == null) return "NO";	
 		return address.getAddressLine1();
 	}
 	
@@ -84,6 +84,10 @@ public class AccountDetailsController implements Serializable {
 	}
 
 
-	
+	public String addAddress(){
+		this.id = user.getCustomer().getIdCustomer();
+			addressManager.createNewAddress(new Address(id, addressLine1, addressLine2, postcode, county, city));
+			return "accountdetails";
+	}
 
 }
