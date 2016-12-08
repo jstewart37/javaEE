@@ -47,7 +47,7 @@ public class CurrentUser implements Serializable {
 
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
-		System.out.println("signed in Customer " + customer.getEmail());
+
 	}
 	
 	public boolean isloggedIn(){
