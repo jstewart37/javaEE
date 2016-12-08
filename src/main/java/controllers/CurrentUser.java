@@ -14,7 +14,7 @@ import Entitys.Customer;
  * @author Sophie
  *
  */
-@Named(value="currentUser")
+@Named(value="usersession")
 @SessionScoped
 public class CurrentUser implements Serializable {
 
@@ -34,9 +34,7 @@ public class CurrentUser implements Serializable {
 	}
 	
 	public boolean isloggedIn(){
-		if (customer == null) 
-			return false;
-		return true;
+		return (customer == null) ? false : true;
 	}
 	
 	
