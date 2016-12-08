@@ -69,13 +69,13 @@
 				<h1>Register</h1>
 			<fieldset>
 			<div class="form-group">
-			<label>First Name</label>
-				<h:inputText class="form-control" value="#{register.title}">
-					<f:passThroughAttribute name="type" value="title" />
-					<f:passThroughAttribute name="placeholder" value="Mr, Mrs, Ms, Miss..." />
-					<f:passThroughAttribute name="alt" value="Enter your title" />
-					<f:passThroughAttribute name="required" value="required" />
-				</h:inputText>
+			<label>Title</label>
+				<h:selectOneMenu value="#{register.title}">
+		   			<f:selectItem itemValue="Mr" itemLabel="Mr" />
+		  			<f:selectItem itemValue="Mrs" itemLabel="Mrs" />	
+		  			<f:selectItem itemValue="Ms" itemLabel="Ms" />
+		  			<f:selectItem itemValue="Miss" itemLabel="Miss" />   							
+				</h:selectOneMenu>	
 			<label>First Name</label>
 				<h:inputText class="form-control" value="#{register.firstname}">
 					<f:passThroughAttribute name="type" value="firstname" />
