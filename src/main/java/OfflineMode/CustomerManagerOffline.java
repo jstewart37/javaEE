@@ -22,9 +22,10 @@ public class CustomerManagerOffline implements CustomerManager {
 	@Author(author="Ben")
 	@Override
 	public Customer findByEmail(String email) {
-		for (Customer customer : testData.getCustomers())
+		for (Customer customer : testData.getCustomers()){
 			if (customer.getEmail().equalsIgnoreCase(email))
 				return customer;
+		}
 		return null;
 	}
 

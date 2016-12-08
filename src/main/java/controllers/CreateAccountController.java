@@ -83,20 +83,44 @@ public class CreateAccountController {
 	}
 
 	public String registerCustomer() {
-		if (!email.isEmpty()&&!password.isEmpty())
+		if (!email.isEmpty() && createAccountService.checkEmail(email)) {
+			System.out.println("account created");
 			customerManager.createNewCustomer(new Customer(title, firstname.concat(surname), email, password, phone, date));
 			
-		System.out.println(customerManager.findByEmail(email).getName());
-		
+			return "index";
+		}
+		System.out.println("get fucked");
 		return "index";
 	}
+			
+		//else { 
+			//if (!email.isEmpty()&&!password.isEmpty())
+				
+			// System.out.println(customerManager.findByEmail(email).getName());
+	
+		//return "index";
+	
+		//}
+	//}
 
-	public String checkEmail() {
-		if (!email.isEmpty()&&!password.isEmpty())
-			createAccountService.checkEmail(email);
+	//public String emailRegistered() {
+	//	if (!email.isEmpty()&&!password.isEmpty())
+	//		createAccountService.emailRegistered(email);
+	//
+	//	System.out.println("This email has been previously registered " + createAccountService.emailRegistered(email));
+	//
+	//	return "index";
+		
+		
+	//}
 	
-		System.out.println(createAccountService.checkEmail(email));
 	
-		return "index";
-	}
+	//public String checkEmail() {
+	//	if (!email.isEmpty()&&!password.isEmpty())
+	//		customerManager.createNewCustomer(new Customer(title, firstname.concat(surname), email, password, phone, date));
+	//		
+	//	System.out.println(customerManager.findByEmail(email).getName());
+		
+	//	return "index";
+	//} 
 }

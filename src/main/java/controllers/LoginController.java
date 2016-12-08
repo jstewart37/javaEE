@@ -51,8 +51,7 @@ public class LoginController {
 	}
 
 	public String logout() {
-		HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true);
-	    session.invalidate();
+		currentUser.setCustomer(null);
 		return "index";
 	}
 }

@@ -15,12 +15,18 @@ public class CreateAccountService {
 
 	public boolean checkEmail(String email) {
 		Customer customer = customerManager.findByEmail(email.toLowerCase());
-		if(customer==null)
-			return false;
-		return	true;
+		if (customer == null){
+			return true;
+		}
+		if(customer.getEmail().equals(email))
+			return false; // email already exists
+		return	true; // email doesnt exist
 	}
 
-	public Customer emailRegistered(String email) {
-		return customerManager.findByEmail(email.toLowerCase());
+	public boolean emailRegistered(String email) {
+		Customer customer = customerManager.findByEmail(email.toLowerCase());
+		if(customer==null) return false;
+		
+		return false;
 	}
 }
