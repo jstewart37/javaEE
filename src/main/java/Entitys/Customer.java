@@ -98,6 +98,15 @@ public class Customer {
 		this.date = date;
 	}
 
+	public Customer(String title, String name, String email, String password, String phone,
+			String date) {
+		this.title = title;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+		this.phone = phone;
+		this.date = date;
+	}
 	// getters and setters
 
 	public Customer() {
