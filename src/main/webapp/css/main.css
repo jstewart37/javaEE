@@ -327,7 +327,7 @@ header nav{
 
 header nav li{
 	float: left;
-	margin-left: 40px;
+	margin-left: 20px;
 }
 
 header nav li:first-child{
