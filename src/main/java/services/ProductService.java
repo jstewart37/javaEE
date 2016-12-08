@@ -75,9 +75,10 @@ public class ProductService implements Serializable {
 		stockManager.findByActive().forEach(stock -> {
 			items.add(getProduct(stock.getId(), stock));
 		});
-		}catch (Exception e) {
-			System.out.println("NONE FOUND");
+		}catch (Exception e){
+			System.out.println("test");
 		}
+
 		return items;
 	}
 
