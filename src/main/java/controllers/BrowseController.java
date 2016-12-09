@@ -18,6 +18,9 @@ public class BrowseController implements Serializable {
 
 	@Inject
 	private ProductService productService;
+
+	
+	
 	private PaginationHelper pagenationHelper;
 	private List<Product> product = null;
 

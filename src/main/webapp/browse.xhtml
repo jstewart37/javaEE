@@ -15,7 +15,7 @@
 					<div>
 						<ui:repeat var="product" value="#{browse.product}">
 							<section class="col-xs-12 col-md-4">
-								<h:commandLink action="#{products.select(product.findAllActive)}" value="#{product.name}"/>
+								<h:commandLink action="#{product.getName}" value="#{product.name}"/>
 								<p><h:outputText value="#{product.description}" /></p>
 								<h:commandButton class="btn btn-primary btn-block" action="#{wishlist.addToWishlist(product.id)}" value="Add to Wishlist" rendered="#{user.loggedIn}" />
 							</section>
