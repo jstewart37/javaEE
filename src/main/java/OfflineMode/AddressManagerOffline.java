@@ -12,6 +12,7 @@ import EntityManagers.AddressManager;
 import Entitys.Address;
 import Entitys.Author;
 import Entitys.Customer;
+import Entitys.Product;
 import Entitys.Supplier;
 import Entitys.TestData;
 
@@ -22,14 +23,12 @@ import Entitys.TestData;
 @Stateless
 @Default
 public class AddressManagerOffline implements AddressManager {
-	
-	
 
 	@Inject
 	private TestData testData;
-	@Author(author="Alex")
 
-	
+	@Author(author = "Alex")
+
 	@Override
 	public Address findAddressByPostcode(String postcode) {
 		// TODO Auto-generated method stub
@@ -47,11 +46,11 @@ public class AddressManagerOffline implements AddressManager {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+
 	@Override
 	public Address findAddressByID(long ID) {
-		for (Address address : testData.getAddresses()){
-			if (address.getIdAddress() == ID){
+		for (Address address : testData.getAddresses()) {
+			if (address.getIdAddress() == ID) {
 				return address;
 			}
 		}
@@ -62,9 +61,9 @@ public class AddressManagerOffline implements AddressManager {
 	public Address createNewAddress(Address address) {
 		List<Address> addresses = testData.getAddresses();
 		addresses.add(address);
-		testData.setAddresses(addresses);	
+		testData.setAddresses(addresses);
 		return address;
-		
+
 	}
 
 	@Override
@@ -76,12 +75,26 @@ public class AddressManagerOffline implements AddressManager {
 	@Override
 	public Address updateAddress(Address address) {
 		List<Address> addresses = testData.getAddresses();
-		for(Address a : addresses){
-			if(a.getCity() == "Manchester"){
+		for (Address a : addresses) {
+			if (a.getCity() == "Manchester") {
 				a.setCity("Swansea");
 			}
 		}
 		return address;
 	}
 
+	@Override
+	public List<Address> findAllAddressesByID(long id) {
+		List<Address> addresses = testData.getAddresses();
+		List<Address> usersAddresses = null;
+		for (Address address : addresses){
+			if (address.getIdAddress() == id){
+				usersAddresses.add(address);
+			}
+		
+		}
+		return usersAddresses;
+
 }
+}
+	

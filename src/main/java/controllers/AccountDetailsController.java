@@ -26,7 +26,7 @@ public class AccountDetailsController implements Serializable {
 	@Inject
 	private AddressManager addressManager;
 	
-	private Address address = null;
+	private List<Address> addresses = null;
 	
 	
 	
@@ -38,12 +38,15 @@ public class AccountDetailsController implements Serializable {
 	private String postcode = "";
 	
 	
-	
+	public List<Address> getAllAddresses(){
+		addresses = addressManager.findAllAddressesByID(user.getCustomer().getIdCustomer());
+		return addresses;
+	}
 	
 	public String getAddressLine1() {
-		address = addressManager.findAddressByID(user.getCustomer().getIdCustomer());
+		addresses.
 		if (address == null) return "NO";	
-		return address.getAddressLine1();
+		return addresses.getAddressLine1();
 	}
 	
 	public void setAddressLine1(String addressLine1) {
