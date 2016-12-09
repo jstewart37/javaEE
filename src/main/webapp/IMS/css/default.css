@@ -26,7 +26,7 @@ button.button   { margin: 0; padding: 0; height: 18px; border: none; text-decora
 input.submit    { width: 87px !important; height: 22px; overflow: visible; padding: 0 5px; color: #fff; font-weight: bold; border: none; cursor: pointer; }
 label           { cursor: pointer; padding-right: 5px; line-height: 20px; }
 
-h1	{ font-size: 2em; margin-bottom: .5em; }
+h1	{ font-size: 2em; }
 h2	{ font-size: 1.7em; }
 h3	{ font-size: 1.5em; }
 h4	{ font-size: 1.3em; }
@@ -80,9 +80,9 @@ fieldset    { border: 0 !important; }
 .formBox .button:focus  { border-color: #000; }
 
 /* -- Layout -- */
-#view         { width: 954px; margin: 0 auto; padding: 0 11px; background: url('../images/bg-shadow.png') 0 72px no-repeat; }
+#view         { width: 954px; margin: 0px 15px; padding: 0 11px; background: url('../images/bg-shadow.png') 0 72px no-repeat; }
 #head         { height: 167px; }
-#menu         { position: absolute; top: 83px; left: 11px; z-index: 100; width: 210px; height: 800px; overflow: hidden; background: #ada8a8 url('../images/bg-menu.gif') repeat-x; }
+#menu         { position: absolute, top: 83px; left: 11px; z-index: 100; width: 210px; height: 600px; overflow: hidden; background: #ada8a8 url('../images/bg-menu.gif') repeat-x; }
 #content      { padding: 25px 29px 40px 26px; margin-bottom: 3px; overflow: hidden; background-color: #fff; }
 #foot         { height: 51px; padding: 12px 25px 0; background: #0d0d0b url('../images/bg-footer.gif') repeat-x; clear: both; }
 
@@ -90,7 +90,7 @@ fieldset    { border: 0 !important; }
   #printPage { position: absolute; right: 25px; top: 25px; }
 
   /* Header */
-  #logotype     { float: left; display: block; padding: 18px 12px; font-size: 3em; font-weight: normal; font-family: Georgia, "New York CE", utopia, serif; }
+  #logotype     { float: left; display: block; padding: 20px 16px; font-size: 8em; font-weight: normal; font-family: Georgia, "New York CE", utopia, serif; }
   #logotype,
   #logotype *   { color: #5cd7e4; text-decoration: none !important; }
 
@@ -100,7 +100,7 @@ fieldset    { border: 0 !important; }
   #searchForm .submit { width: 87px !important; height: 29px; background: #8c0000 url('../images/bg-search-submit.gif') no-repeat; }
   
   /* Menus */
-  #mainMenu             { position: absolute; top: 42px; left: 0; height: 46px; padding: 0 28px; }
+  #mainMenu             { positions:absolute, top: 42px; left: 0; height: 46px; padding: 0 28px; }
   #mainMenu li          { font-size: 1.5em; float: left; }
   #mainMenu li a,
   #mainMenu li strong   { display: block; width: 150px; height: 44px; float: left; padding-top: 12px; text-align: center; color: #fff; text-decoration: none !important; font-family: Georgia, "New York CE", utopia, serif; background: url('../images/bg-menu-item.gif') 50% 0 no-repeat; }
@@ -175,3 +175,23 @@ fieldset    { border: 0 !important; }
   #foot .support .lt a          { position: relative; width: 14px; height: 14px; display: block; overflow: hidden; cursor: pointer; }
   #foot .support .lt a span     { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('../images/bg-lt.gif') 0 0 no-repeat; }
   #foot a:hover                 { color: #fff !important; }
+  
+  .addOrderContainer{
+  padding: 10px 10px;
+  }
+  
+  .form-control{
+    display: block;
+    font-size:11px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:70px;
+    margin:2px 0 20px 10px;
+  }
+  
+  .form-group textarea{
+  min-width: 50%;
+  min-height: 250px;
+  max-width: 100%;
+  }
+  

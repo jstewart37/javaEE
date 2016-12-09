@@ -17,9 +17,14 @@ public class SupplyOrder {
 	@Author(author="Ben")
 	// constructors
 	public SupplyOrder(long idSupplyOrder, String status, String dateTimePlaced, String dateTimeRecieved)
+	{};
+	
+	
+	//may need to alter below code at later date, added to work with add new order page. does not link with orderline
+	public SupplyOrder(long idSupplyOrder,String status,String Supplier, String dateTimePlaced,String OrderItems,int TotalPrice, String pottentialDeliveryDate)
 	{
 		
-	};
+	}
 	
 	// Foreign Keys
 	@ManyToOne
