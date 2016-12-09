@@ -18,6 +18,8 @@ public class BrowseController implements Serializable {
 
 	@Inject
 	private ProductService productService;
+	@Inject
+	private ProductController productController;
 
 	private PaginationHelper pagenationHelper;
 	private List<Product> products = null;
@@ -61,7 +63,7 @@ public class BrowseController implements Serializable {
 		return "browse";
 	}
 
-	public List<Product> getProduct() {
+	public List<Product> getProducts() {
 		products = productService.findAll();
 		return products;
 	}
@@ -70,5 +72,8 @@ public class BrowseController implements Serializable {
 	public List<Product> getDataModel() {
 		return (List<Product>) getPaginationHelper().createPageDataModel();
 	}
-
+	
+	public Product getProduct(){
+		return productController.getProduct();
+}
 }
