@@ -21,14 +21,16 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import Entitys.Product;
+import controllers.Session.SelectedProduct;
 import services.ProductService;
 
-@Named("product")
-@Path("/product")
+@Named("productCon")
+@Path("/productCon")
 @RequestScoped
 public class ProductController implements Serializable{
 
-	
+	@Inject
+	private SelectedProduct selectedProduct;
 	@Inject
 	private ProductService productService;
 	
@@ -100,5 +102,13 @@ public class ProductController implements Serializable{
 		return productService.findProductById(id);
 }
 	
+	public String select(long id) {
+		Product item = productService.getProduct(id);
+		if (item != null) {
+			selectedProduct.setProduct(item);
+			return "product";
+		}
+		return "browse";
+	}
 
 }
