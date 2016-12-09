@@ -23,8 +23,6 @@ public class TestData { //class was created by entire team, see comments/annotat
 	private List<Address> addresses;
 	private List<Product> products;
 
-
-
 	@PostConstruct
 	public void setupData() {
 		suppliers = new ArrayList<>();
@@ -33,6 +31,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		addresses = new ArrayList<Address>();
 		products = new ArrayList<>();
 		customerOrderLine = new ArrayList<CustomerOrderLine>();
+
 		
 		//bens data
 		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "password","12345678912", "1991-12-22"));

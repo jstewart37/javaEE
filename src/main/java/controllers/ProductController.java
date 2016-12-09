@@ -11,15 +11,21 @@ package controllers;
 
 import java.io.Serializable;
 
-import javax.enterprise.context.SessionScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 import Entitys.Product;
 import services.ProductService;
 
 @Named("product")
-@SessionScoped
+@Path("/product")
+@RequestScoped
 public class ProductController implements Serializable{
 
 	
@@ -88,6 +94,13 @@ public class ProductController implements Serializable{
 		Product product = productService.findProductById(PID);
 		return product.getImgPath();
 	}
+	
+	@GET
+	@Path("/{id}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Product select(@PathParam("id") String id) {
+		return productService.findProductById(id);
+}
 	
 
 }
