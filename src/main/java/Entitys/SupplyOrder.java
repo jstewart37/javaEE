@@ -12,7 +12,7 @@ public class SupplyOrder {
 	@Id	@Column (name="idSupplyOrder", nullable=false, unique=true) @GeneratedValue(strategy=GenerationType.IDENTITY) private long idSupplyOrder;
 	@Column(nullable=false, length=20)	@Size(min=5, max=225) @NotNull	private String status;
 	@Column(nullable=false, length=50)	@Size(min=8, max=225) @NotNull	private String dateTimePlaced;
-	@Column(nullable=false, length=50)	@Size(min=8, max=225) @NotNull	private String dateTimeRecieved;
+	@Column(nullable=false, length=50)	@Size(min=8, max=225) private String dateTimeRecieved;
 	
 	@Author(author="Ben")
 	// constructors

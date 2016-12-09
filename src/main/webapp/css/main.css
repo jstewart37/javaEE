@@ -982,4 +982,8 @@ footer .copyright a{
 	.sub_box #mc_submit{
 		margin-top: 20px;
 	}
+	
+	#add-address{
+	background-color: white;
+	}
 }
