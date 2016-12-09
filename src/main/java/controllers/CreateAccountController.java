@@ -89,7 +89,7 @@ public class CreateAccountController {
 			
 			return "index";
 		}
-		System.out.println("get fucked");
+		System.out.println("gg");
 		return "index";
 	}
 			
