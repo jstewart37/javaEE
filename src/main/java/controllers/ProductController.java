@@ -33,7 +33,7 @@ public class ProductController implements Serializable{
 	}
 	
 	public String getName() {
-		Product product = productService.findProductById(1);
+		Product product = productService.findProductById(`1);
 		return product.getName();
 	}
 	
