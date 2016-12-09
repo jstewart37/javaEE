@@ -5,8 +5,6 @@
  * 
  * **/
 
-
-
 package controllers;
 
 import java.io.Serializable;
@@ -41,10 +39,8 @@ public class ProductController implements Serializable{
 	}
 	
 	public String getName() {
-<<<<<<< HEAD
+
 		Product product = productService.findProductById(1);
-=======
->>>>>>> d0cacf55e3a05063f68d530b926f8825adc75b42
 		return product.getName();
 	}
 	

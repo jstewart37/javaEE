@@ -21,7 +21,7 @@
 	<h:form class="addorderform">
 			<div class="form-group">
 			<label>Supplier</label>
-				<h:inputText class="form-control" value="#{addorder.setsuppliername}">
+				<h:inputText class="form-control" value="#{addorder.suppliername}">
 					<f:passThroughAttribute name="type" value="suppliername" />
 					<f:passThroughAttribute name="placeholder" value="Supplier Name" />
 					<f:passThroughAttribute name="alt" value="Enter Supplier Name" />
@@ -43,9 +43,9 @@
 					<f:passThroughAttribute name="type" value="totalprice" />
 					<f:passThroughAttribute name="alt" value="Order Total Price" />
 				</h:inputText>
-				<h:commandButton type="submit" class="addorderbtn" action="#{addorder.addSupplierOrder}" value="Add Order" />
+				<h:commandButton type="submit" class="addorderbtn" action="#{addorder.addsupplierorder}" value="Add Order" />
 			</div>
-				
+				 
 		</h:form>
 	</div>	
 	</ui:define>
