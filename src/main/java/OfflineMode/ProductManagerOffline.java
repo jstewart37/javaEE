@@ -108,11 +108,6 @@ public class ProductManagerOffline implements ProductManager {
 		return null;
 	}
 
-	@Override
-	public Product findByID(long id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public List<Product> findAll() {

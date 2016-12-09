@@ -20,10 +20,10 @@ public class BrowseController implements Serializable {
 	private ProductService productService;
 
 	private PaginationHelper pagenationHelper;
-	private List<Product> product = null;
+	private List<Product> products = null;
 
 	private void recreateModel() {
-		product = null;
+		products = null;
 	}
 
 	public PaginationHelper getPaginationHelper() {
@@ -31,17 +31,17 @@ public class BrowseController implements Serializable {
 			pagenationHelper = new PaginationHelper(9) {
 				@Override
 				public int getItemsCount() {
-					return productService.findAllActive().size();
+					return productService.findAll().size();
 				}
 
 				@Override
 				public ListDataModel<Product> createPageDataModel() {
 					try {
-						return new ListDataModel<Product>(productService.findAllActive().subList(getPageFirstItem(),
+						return new ListDataModel<Product>(productService.findAll().subList(getPageFirstItem(),
 								getPageFirstItem() + getPageSize()));
 					} catch (Exception e) {
 						return new ListDataModel<Product>(
-								productService.findAllActive().subList(getPageFirstItem(), getItemsCount()));
+								productService.findAll().subList(getPageFirstItem(), getItemsCount()));
 					}
 				}
 			};
@@ -62,8 +62,8 @@ public class BrowseController implements Serializable {
 	}
 
 	public List<Product> getProduct() {
-		product = productService.findAll();
-		return product;
+		products = productService.findAll();
+		return products;
 	}
 
 	@SuppressWarnings("unchecked")

@@ -23,7 +23,7 @@
 							<div class="row">
 								<ui:repeat var="product" value="#{browse.product}">
 									<div class="col-sm-6 col-lg-4">
-										<h:commandLink action="#{products.view(product.id)}" value="#{product.name}" />
+										<h:commandLink action="#{browse.getProduct}" value="#{product.name}" />
 										<p><h:outputText value="#{product.description}" /></p>
 									</div>
 								</ui:repeat>

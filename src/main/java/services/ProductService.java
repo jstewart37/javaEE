@@ -38,7 +38,7 @@ public class ProductService implements Serializable {
 	public Product findProductById(long id) {
 		Product product = productManager.findByID((int) id);
 		if (product == null)
-			product = new Product(1, "something went wrong", "more went wrong", "invisible", 0, 0.0, 0.0, "available", "path", "yes");
+			product = new Product(1, "My name is wrong", "My description sucks", "invisible", 0, 0.0, 0.0, "available", "path", "yes");
 		return product;
 	}
 
