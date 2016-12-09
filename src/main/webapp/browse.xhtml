@@ -21,11 +21,11 @@
 					<h:outputText value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
 					<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.paginationHelper.hasNextPage}" />
 					<div>
-						<ui:repeat var="product" value="#{browse.products}">
-							<section class="col-xs-12 col-md-4">
-								<h:commandLink action="#{productslist.select(product.id)}" value="#{product.name}"/>
-								<p><h:outputText value="#{productlist.description}" /></p>
-							</section>
+						<ui:repeat var="productList" value="#{browse.products}">
+									<div class="col-sm-6 col-lg-4">
+										<h:commandLink action="#{product.select()}" value="#{productList.name}" />
+										<p><h:outputText value="#{productList.description}" /></p>
+									</div>
 						</ui:repeat>
 					</div>
 					<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.paginationHelper.hasPreviousPage}" />
