@@ -1,10 +1,9 @@
 <ui:composition xmlns="https://www.w3.org/1999/xhtml"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-	template="/IMStemplate/ImsTemplate.xhtml">
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 	<meta charset="utf-8" />
-	<ui:define name="pageTitle">NBGardens Home</ui:define>
+	<ui:define name="pageTitle">IMS Login</ui:define>
 	<head>
 
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -15,9 +14,6 @@
 
 	</head>
 
-<ui:define name = "maincontent">
-
-
 		<div class="login">
 			<div class="login-screen">
 				<div class="app-title">
@@ -25,7 +21,7 @@
 				</div>
 
 				<div class="login-form">
-
+					<form>
 					<div class="control-group">
 						<input type="text" class="login-field" value=""
 							placeholder="username" id="login-name"> </input><label
@@ -40,8 +36,8 @@
 
 					<a class="btn btn-primary btn-large btn-block" href="#">login</a> <a
 						class="login-link" href="#">Forgot your password?</a>
+					</form>
 				</div>
 			</div>
 		</div>
-</ui:define>
 </ui:composition>
