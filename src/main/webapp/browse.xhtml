@@ -21,18 +21,17 @@
 					<h:outputText value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
 					<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.paginationHelper.hasNextPage}" />
 					<div>
-						<ui:repeat var="productlist" value="#{browse.product}">
+						<ui:repeat var="product" value="#{browse.products}">
 							<section class="col-xs-12 col-md-4">
-								<h:commandLink action="#{products.select(product.id)}" value="#{productlist.name}"/>
+								<h:commandLink action="#{productslist.select(product.id)}" value="#{product.name}"/>
 								<p><h:outputText value="#{productlist.description}" /></p>
-								<h:commandButton class="btn btn-primary btn-block" action="#{wishlist.addToWishlist(product.id)}" value="Add to Wishlist" rendered="#{user.loggedIn}" />
 							</section>
 						</ui:repeat>
 					</div>
 					<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.paginationHelper.hasPreviousPage}" />
 					<h:outputText value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
 					<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.paginationHelper.hasNextPage}" />
-</h:form>
+				</h:form>
 				</div>
 			</div>
 			<div id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
