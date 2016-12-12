@@ -12,5 +12,5 @@ public interface LoginIMSManager {
 	public LoginIMS createNewLoginIMS(LoginIMS loginIMS);
 	public LoginIMS readLoginIMS(LoginIMS loginIMS);
 	public LoginIMS updatePassword(LoginIMS loginIMS);
-
+	public LoginIMS 
 }
