@@ -18,46 +18,105 @@ public class CreateOrderController {
 	private SupplyOrderManager supplyManager;
 	
 	private String status = "Placed";
-	private String SupplierName = "";
-	private String OrderPlacedDate = "";
+	private String suppliername = "";
+	private String placedon = "";
 	private String OrderItems = "";
-	private int TotalPrice = 0;
-	private String pottentialDeliveryDate = "";
+	public String getStatus() {
+		return status;
+	}
 
-	public String getSupplierName() {
-		return SupplierName;
+
+
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
-	public void setSupplierName(String supplierName) {
-		SupplierName = supplierName;
+
+
+
+
+	
+
+
+
+	public String getSuppliername() {
+		return suppliername;
 	}
-	public String getOrderPlacedDate() {
-		return OrderPlacedDate;
+
+
+
+
+	public void setSuppliername(String suppliername) {
+		this.suppliername = suppliername;
 	}
-	public void setOrderPlacedDate(String orderPlacedDate) {
-		OrderPlacedDate = orderPlacedDate;
+
+
+
+
+	public String getPlacedon() {
+		return placedon;
 	}
+
+
+
+
+	public void setPlacedon(String placedon) {
+		this.placedon = placedon;
+	}
+
+
+
+
 	public String getOrderItems() {
 		return OrderItems;
 	}
+
+
+
+
 	public void setOrderItems(String orderItems) {
 		OrderItems = orderItems;
 	}
+
+
+
+
 	public int getTotalPrice() {
 		return TotalPrice;
 	}
+
+
+
+
 	public void setTotalPrice(int totalPrice) {
 		TotalPrice = totalPrice;
 	}
+
+
+
+
 	public String getPottentialDeliveryDate() {
 		return pottentialDeliveryDate;
 	}
+
+
+
+
 	public void setPottentialDeliveryDate(String pottentialDeliveryDate) {
 		this.pottentialDeliveryDate = pottentialDeliveryDate;
 	}
 
+
+
+
+	private int TotalPrice = 0;
+	private String pottentialDeliveryDate = "";
+
 	
-	public void registerCustomer() {
-			SupplyOrder so = new SupplyOrder(1,status,SupplierName,OrderPlacedDate,OrderItems,TotalPrice,pottentialDeliveryDate);
+
+	
+	public void addsupplierorder() {
+			SupplyOrder so = new SupplyOrder(1,status,suppliername,placedon,OrderItems,TotalPrice,pottentialDeliveryDate);
 			System.out.println(so + "order created"); // for debugging
 	}
 	
