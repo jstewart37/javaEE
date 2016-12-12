@@ -178,6 +178,7 @@ fieldset    { border: 0 !important; }
   
   .addOrderContainer{
   padding: 10px 10px;
+  float:left;
   }
   
   .form-control{
@@ -194,5 +195,12 @@ fieldset    { border: 0 !important; }
   min-height: 250px;
   max-width: 100%;
   }
+
+  
+  .area1{
+  width:100%;}
+  
+
   .box {
   flaot: left;}
+
