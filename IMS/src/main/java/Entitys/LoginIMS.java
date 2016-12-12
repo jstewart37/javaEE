@@ -52,6 +52,11 @@ public class LoginIMS {
 		this.password = password;
 		
 	}
+
+	public static void add(LoginIMS loginIMS) {
+		// TODO Auto-generated method stub
+		
+	}
 	}
 	}
 	
