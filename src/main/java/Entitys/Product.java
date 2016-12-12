@@ -156,12 +156,6 @@ public class Product {
 	}
 
 
-
-	public Object getId() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	@Author(author = "alex")
 	public void addProductInfo(String vname, String vdescription, String vcolour, double vsellPrice,
 			String vstatus) {

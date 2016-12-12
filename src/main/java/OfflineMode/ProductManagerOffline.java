@@ -28,11 +28,11 @@ public class ProductManagerOffline implements ProductManager {
 
 	@Override
 	public Product findByID(int ID) {
-		List<Product> products = testData.getProducts();
-		for (Product products1 : products)
-			if(products1.getIdProduct()==ID)
-				return products1;
-		return null;
+		for (Product products : testData.getProducts())
+			if(products.getIdProduct()==ID)
+				return products;
+		
+		return new Product(1, "could not find this product", "My description sucks", "invisible", 0, 0.0, 0.0, "available", "path", "yes");
 	}
 
 	@Override

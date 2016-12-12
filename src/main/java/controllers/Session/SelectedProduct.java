@@ -14,5 +14,5 @@ public class SelectedProduct implements Serializable {
 	private Product product;
 
 	public Product getProduct() { return product; }
-	public void setProduct(Product product) { this.product = product; }
+	public void setProduct(Product product) { System.out.println("setting product value"); this.product = product; }
 }

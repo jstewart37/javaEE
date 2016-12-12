@@ -48,43 +48,20 @@ public class ProductService implements Serializable {
 	}
 
 	public Product getProduct(long id) {
-		return getProduct(productManager.findByID(id), stockManager.findById(id));
+		System.out.println(id);
+		return getProduct(productManager.findByID(id));
+
 	}
 
-	public Product getProduct(long id, Stock stock) {
-		return getProduct(productManager.findByID(id), stock);
-	}
-
-	public Product getProduct(Product product, long id) {
-		return getProduct(product, stockManager.findById(id));
-	}
-
-	public Product getProduct(Product product, Stock stock) {
-		Product Product = new Product(stock.getId());
+	public Product getProduct(Product product) {
+		System.out.println("STEP 3 - ISSUE?");
+		Product productItem = new Product(product.getIdProduct());
 		if (product != null)
-			Product.addProductInfo(product.getName(), product.getDescription(), product.getColour(), product.getSellPrice(), null);					
-		if (stock != null)
-			Product.addStockInfo(product.getName(), product.getDescription(), product.getColour(), product.getStockLevel(), product.getSellPrice(),
-					product.getBuyPrice(),product.getStatus(), null);	
-		return Product;
+			productItem.addProductInfo(product.getName(), product.getDescription(), product.getColour(), product.getSellPrice(), null);	
+		System.out.println("product found - not null");
+		return productItem;
 	}
 
-	public List<Product> findAllActive() {
-		List<Product> items = new ArrayList<Product>();
-		try{
-		stockManager.findByActive().forEach(stock -> {
-			items.add(getProduct(stock.getId(), stock));
-		});
-		}catch (Exception e){
-			System.out.println("test");
-		}
 
-		return items;
-	}
-
-	public Product getProduct(Product product, Object id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

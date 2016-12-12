@@ -29,8 +29,12 @@ import services.ProductService;
 @RequestScoped
 public class ProductController implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2203125956354526185L;
 	@Inject
-	private SelectedProduct selectedProduct;
+	private SelectedProduct selectProduct;
 	@Inject
 	private ProductService productService;
 	
@@ -95,20 +99,23 @@ public class ProductController implements Serializable{
 		return product.getImgPath();
 	}
 	
+
+	public String select(long id) {
+		System.out.println("Step 1 WORKING");
+		Product item = productService.getProduct(id);
+		if (item != null) {
+			selectProduct.setProduct(item);
+			System.out.println("Final Step");
+			return "product";
+		}
+		return "browse";
+	}
+	
 	@GET
 	@Path("/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Product select(@PathParam("id") String id) {
 		return productService.findProductById(id);
 }
-	
-	public String select(long id) {
-		Product item = productService.getProduct(id);
-		if (item != null) {
-			selectedProduct.setProduct(item);
-			return "product";
-		}
-		return "browse";
-	}
 
 }
