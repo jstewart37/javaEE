@@ -1,0 +1,68 @@
+/*author David Moore */
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+
+.reg {
+  width: 550px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 px 0;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="firstname"],
+input[type="surname"],
+input[type="title"],
+input[type="phone"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0 0 15px 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  border-radius: 5px;
+}
+
+.regbtn {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 5px;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}

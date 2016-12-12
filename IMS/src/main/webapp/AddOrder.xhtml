@@ -1,0 +1,52 @@
+<ui:composition xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="/IMStemplate/ImsTemplate.xhtml">
+	<meta charset="utf-8" />
+	<ui:define name="pageTitle">Add Order - IMS</ui:define>
+	<head>
+
+<!-- Author: Jake-->
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+	</head>
+	<ui:define name="maincontent">
+
+		<!-- Author: Jake -->
+	<div class="addOrderContainer">
+	<h:form class="addorderform">
+			<div class="form-group">
+			<label>Supplier</label>
+				<h:inputText class="form-control" value="#{addorder.suppliername}">
+					<f:passThroughAttribute name="type" value="suppliername" />
+					<f:passThroughAttribute name="placeholder" value="Supplier Name" />
+					<f:passThroughAttribute name="alt" value="Enter Supplier Name" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
+				<label>Order Placed on:</label>
+				<h:inputText class="form-control" value="#{addorder.placedon}">
+					<f:passThroughAttribute name="type" value="placedon" />
+					<f:passThroughAttribute name="required" value="required" />
+					<f:passThroughAttribute name="type" value="date" type="date" />
+				</h:inputText>
+				<label>Order Items (Needs Changing for full functionality)</label>
+				<h:inputTextarea id="orderitems" class="form-control" value="#{addorder.orderItems}">
+					<f:passThroughAttribute name="alt" value="Enter Order Items" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputTextarea>
+				<label>Total Price</label>
+				<h:inputText class="form-control" value="#{addorder.totalPrice}">
+					<f:passThroughAttribute name="type" value="totalprice" />
+					<f:passThroughAttribute name="alt" value="Order Total Price" />
+				</h:inputText>
+				<h:commandButton type="submit" class="addorderbtn" action="#{addorder.addsupplierorder}" value="Add Order" />
+			</div>
+				 
+		</h:form>
+	</div>	
+	</ui:define>
+</ui:composition>

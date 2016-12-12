@@ -1,0 +1,105 @@
+<!-- @Author(author="Jake_Stewart & Alex") -->
+
+
+<ui:composition xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="templates/NavTemplate.xhtml">
+
+	<meta charset="utf-8" />
+	<ui:define name="pageTitle">Catalogue</ui:define>
+	<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="Jake" content="" />
+
+
+
+	</head>
+	<ui:define name="maincontent">
+		<div class="container">
+			<h:outputText value="#{usersession.name}" />
+			<h:outputText value="#{usersession.email}" />
+			<div class="accountcontent">
+				<div class="accountdetails pull-left">
+					<ui:repeat var="AccountDetails"
+						value="#{AccountDetails.allAddresses}">
+						<ul>
+							<li><h:outputText value="#{AccountDetails.addressLine1}" /> </li>
+							<li><h:outputText value="#{AccountDetails.addressLine2}" /> </li>
+							<li><h:outputText value="#{AccountDetails.county}" /></li>
+							<li><h:outputText value="#{AccountDetails.city}" /></li>
+							<li><h:outputText value="#{AccountDetails.postcode}" /></li>
+							<li><h:outputText value="#{AccountDetails.addressLine1}" />	</li>
+						</ul>
+					</ui:repeat>
+				</div>
+
+				<h:outputLink rendered="#{usersession.loggedIn}"
+					value="#add-address" class="login-window">Add Address</h:outputLink>
+
+				<div id="add-address" class="login-popup">
+					<a href="#" class="close"><img src="img/close_pop.png"
+						class="btn_close" title="Close Window" alt="Close" /></a>
+
+					<h:form class="reg" rendered="#{usersession.loggedIn}">
+						<h1>Add address</h1>
+						<div class="form-group">
+							<label>Address Line 1</label>
+							<h:inputText class="form-control"
+								value="#{AccountDetails.addressLine1}">
+								<f:passThroughAttribute name="type" value="Address line 1" />
+								<f:passThroughAttribute name="placeholder"
+									value="Address line 1" />
+								<f:passThroughAttribute name="alt" value="Enter address line 1" />
+								<f:passThroughAttribute name="required" value="required" />
+							</h:inputText>
+							<label>Address Line 2</label>
+							<h:inputText class="form-control"
+								value="#{AccountDetails.addressLine2}">
+								<f:passThroughAttribute name="type" value="address line 2" />
+								<f:passThroughAttribute name="placeholder"
+									value="Address line 2" />
+								<f:passThroughAttribute name="alt" value="Enter address line 2" />
+								<f:passThroughAttribute name="required" value="required" />
+							</h:inputText>
+							<label>County</label>
+							<h:inputText class="form-control"
+								value="#{AccountDetails.county}">
+								<f:passThroughAttribute name="type" value="county" />
+								<f:passThroughAttribute name="placeholder" value="county" />
+								<f:passThroughAttribute name="alt" value="Enter county" />
+								<f:passThroughAttribute name="required" value="required" />
+							</h:inputText>
+							<label>city</label>
+							<h:inputText class="form-control" value="#{AccountDetails.city}">
+								<f:passThroughAttribute name="type" value="city" />
+								<f:passThroughAttribute name="placeholder" value="City" />
+								<f:passThroughAttribute name="alt" value="Enter City" />
+								<f:passThroughAttribute name="required" value="required" />
+							</h:inputText>
+							<label>Postcode</label>
+							<h:inputText class="form-control"
+								value="#{AccountDetails.postcode}">
+								<f:passThroughAttribute name="type" value="postcode" />
+								<f:passThroughAttribute name="placeholder" value="postcode" />
+								<f:passThroughAttribute name="alt" value="Enter your postcode" />
+								<f:passThroughAttribute name="required" value="required" />
+							</h:inputText>
+
+							<h:commandButton type="submit" class="regbtn"
+								action="#{AccountDetails.addAddress}" value="Add" />
+						</div>
+					</h:form>
+				</div>
+
+				<br /> <br />
+				<hr />
+			</div>
+		</div>
+
+	</ui:define>
+</ui:composition>
