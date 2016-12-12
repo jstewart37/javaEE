@@ -74,7 +74,9 @@ input[type=text]:focus {
 		margin: 0 0 50px 0;
 	    background-color: #41C27D;
 	    border-radius: 25px;
-	    height: 300px;
+	    position:relative;
+	    float:left;
+	    clear: both;
 	
 }
 

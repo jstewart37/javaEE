@@ -86,7 +86,7 @@
 							<h4>
 								<h:commandLink action="#{productCon.select(productList.idProduct)}" value="#{productList.name}" />
 							</h4>
-							<p><h:outputText value="#{productList.description}" /></p>
+							<p>Description:<h:outputText value="#{productList.description}" /></p>
 						</div>
 						<div class="ratings animated wow fadeInDown">
 							<p class="pull-right animated wow fadeInDown">15 reviews</p>
@@ -101,12 +101,13 @@
 					</div>
 				</div>
 				</ui:repeat>
-				</div>
 				<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.paginationHelper.hasPreviousPage}" />
 					<h:outputText value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
 					<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.paginationHelper.hasNextPage}" />
+				</div>
 				</h:form>
-			</div>
+				</div>
+
 
 		<!--  End Contact Section  -->
 	</ui:define>
