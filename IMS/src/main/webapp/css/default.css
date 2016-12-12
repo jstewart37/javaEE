@@ -181,6 +181,13 @@ fieldset    { border: 0 !important; }
   .addOrderContainer{
   padding: 10px 10px;
   float:left;
+  border-style: solid;
+  }
+  
+   .allorderscontainer{
+  padding: 10px 10px;
+  float:left;
+  border-style: solid;
   }
   
   .form-control{
