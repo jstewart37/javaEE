@@ -25,9 +25,19 @@
  
 			<div class="productName animated wow fadeInLeft">
 				<h:outputText value="#{selected.product.name}" style = ""/>
+				<h:outputText value="#{selected.product.idProduct}" style = ""/>
+	
+				<h:outputText value="#{selected.product.colour}" style = ""/>
+				<h:outputText value="#{selected.product.stockLevel}" style = ""/>
+				<h:outputText value="#{selected.product.sellPrice}" style = ""/>
+				<h:outputText value="#{selected.product.buyPrice}" style = ""/>
+				<h:outputText value="#{selected.product.status}" style = ""/>
+				<h:outputText value="#{selected.product.imgPath}" style = ""/>
+				<h:outputText value="#{selected.product.isPorousware}" style = ""/>
+
 			</div>
 			<div class="productPrice animated wow fadeInLeft">
-				<h:outputText value="#{selected.product.sellPrice}" />
+				<h:outputText value="#{selected.product.imgPath}" />
 			</div>
 
 			<div class="basketAdd animated wow fadeInLeft">
@@ -39,7 +49,7 @@
 		<div class="duo animated wow fadeInLeft">
 			<div class="row pull-left">
 				<div class="medium-6 columns">
-					<h:graphicImage class="thumbnail animated wow fadeInLeft" value="img/#{selected.product.imgPath}" style="width:650; height:350" />
+					<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{selected.product.imgPath}" style="width:650; height:350" />
 					<div class="row small-up-4">
 						<div class="column">
 							<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:250; height:200" />

@@ -59,7 +59,7 @@ public class ProductService implements Serializable {
 		System.out.println(productItem.getIdProduct());
 		if (product != null)
 			System.out.println("product found - not null");
-			productItem.addProductInfo(product.getName(), product.getDescription(), product.getColour(), product.getSellPrice(), null);	
+			productItem.addProductInfo(product.getName(), product.getDescription(), product.getColour(), product.getSellPrice(), product.getIsPorousware(), product.getImgPath());	
 		System.out.println("product found - not null");
 		return productItem;
 	}

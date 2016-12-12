@@ -32,7 +32,7 @@ public class ProductManagerOffline implements ProductManager {
 			if(products.getIdProduct()==ID)
 				return products;
 		
-		return new Product(1, "could not find this product", "My description sucks", "invisible", 0, 0.0, 0.0, "available", "path", "yes");
+		return new Product(1, "could not find this product", "My description sucks", "invisible", 12, 11.0, 10.0, "available", "path", "yes");
 	}
 
 	@Override
@@ -120,7 +120,7 @@ public class ProductManagerOffline implements ProductManager {
 			if(products.getIdProduct() == id)
 				return products;
 		
-		return new Product(1, "could not find this product", "My description sucks", "invisible", 0, 0.0, 0.0, "available", "path", "yes");
+		return new Product(1, "could not find this product", "My description sucks", "invisible",210, 220.0, 230.0, "available", "path", "yes");
 	}
-	
+
 }

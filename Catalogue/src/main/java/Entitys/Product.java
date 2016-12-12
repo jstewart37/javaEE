@@ -52,7 +52,7 @@ public class Product {
 
 	//constructors
 	@Author(author = "alex")
-	public Product(long vidProduct, String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice, double vbuyPrice,
+	public Product(long vidProduct, String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice, double vbuyPrice, // all variables
 			String vstatus, String path, String pw) {
 		
 		this.idProduct = vidProduct;
@@ -158,12 +158,13 @@ public class Product {
 
 	@Author(author = "alex")
 	public void addProductInfo(String vname, String vdescription, String vcolour, double vsellPrice,
-			String vstatus) {
+			String vstatus, String vimgPath) {
 		this.name = vname;
 		this.description = vdescription;
 		this.colour= vcolour;
 		this.sellPrice= vsellPrice;
 		this.status= vstatus;
+		this.imgPath= vimgPath;
 	}
 
 	@Author(author = "alex")
