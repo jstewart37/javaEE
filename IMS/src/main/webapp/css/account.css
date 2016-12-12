@@ -1,0 +1,47 @@
+.accountdetails {
+	max-width: 50%;
+    clear: both;
+    display:inline;
+     display: block;
+         border-style: solid;
+	}
+	
+.previousorders {
+	max-width: 50%;
+    clear: left;
+    display:inline;
+     display: block;
+         border-style: solid;
+         float:left
+	}
+	
+	.accountcontent {
+	width: 100%;
+	min-height: 50%;
+    clear: left;
+    display:inline-block;
+         border-style: solid;
+         float:left;
+         padding: 10px;
+    margin:10px;
+     
+	}
+	
+	.accountcontent div {
+	 width: 45%; 
+ 
+	 float: left; 
+	}
+	
+	#tableaccountdetails td{
+	padding-left: 5px;
+	
+	}
+	
+	
+	#tableaccountdetails tr,th{
+	word-wrap: break-word;
+	width: 25%;
+	padding:5px;
+	}
+	
