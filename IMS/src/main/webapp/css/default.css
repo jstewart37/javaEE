@@ -90,7 +90,7 @@ fieldset    { border: 0 !important; }
   #printPage { position: absolute; right: 25px; top: 25px; }
 
   /* Header */
-  #logotype     { float: left; display: block; padding: 20px 16px; font-size: 8em; font-weight: normal; font-family: Georgia, "New York CE", utopia, serif; }
+  #logotype     { float: left; display: block; padding: 20px 16px; font-size: 13em; font-weight: normal; font-family: Georgia, "New York CE", utopia, serif; }
   #logotype,
   #logotype *   { color: #5cd7e4; text-decoration: none !important; }
 
@@ -101,7 +101,7 @@ fieldset    { border: 0 !important; }
   
   /* Menus */
   #mainMenu             { positions:absolute, top: 42px; left: 0; height: 46px; padding: 0 28px; }
-  #mainMenu li          { font-size: 1.5em; float: left; }
+  #mainMenu li          { font-size: 2.5em; float: left; }
   #mainMenu li a,
   #mainMenu li strong   { display: block; width: 150px; height: 44px; float: left; padding-top: 12px; text-align: center; color: #fff; text-decoration: none !important; font-family: Georgia, "New York CE", utopia, serif; background: url('../images/bg-menu-item.gif') 50% 0 no-repeat; }
   #mainMenu li strong   { color: #212120; font-weight: normal; background: #fff url('../images/bg-menu-item.gif') 0 -46px no-repeat; }
