@@ -55,8 +55,10 @@ public class ProductService implements Serializable {
 
 	public Product getProduct(Product product) {
 		System.out.println("STEP 3 - ISSUE?");
-		Product productItem = new Product(product.getIdProduct());
+		Product productItem = new Product(product.getIdProduct()); // THIS LINE IS FUCKED
+		System.out.println(productItem.getIdProduct());
 		if (product != null)
+			System.out.println("product found - not null");
 			productItem.addProductInfo(product.getName(), product.getDescription(), product.getColour(), product.getSellPrice(), null);	
 		System.out.println("product found - not null");
 		return productItem;

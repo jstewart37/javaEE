@@ -116,7 +116,11 @@ public class ProductManagerOffline implements ProductManager {
 
 	@Override
 	public Product findByID(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		for (Product products : testData.getProducts())
+			if(products.getIdProduct() == id)
+				return products;
+		
+		return new Product(1, "could not find this product", "My description sucks", "invisible", 0, 0.0, 0.0, "available", "path", "yes");
 	}
+	
 }
