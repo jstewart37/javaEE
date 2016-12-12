@@ -1,0 +1,22 @@
+/*!
+* Alex
+
+ */
+ 
+ .cataloguerow{
+ position:relative;
+ float:left;
+ 
+ }
+ 
+ .description{
+  colour: white;
+  float:left;
+ }
+ 
+ .imageArea{
+ width:50%;
+ }
+ .desc{
+ width:50%;
+ }
