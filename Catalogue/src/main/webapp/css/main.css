@@ -1,3 +1,12 @@
+ .cataloguescale {
+ min-width:318px;
+ min-height:159px;
+ max-width:318px;
+ max-height:159px;
+ width: auto;
+ height: auto;
+ }
+
 .row {
     max-width: 75rem;
     margin-left: auto;
