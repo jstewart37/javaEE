@@ -75,7 +75,7 @@ fieldset    { border: 0 !important; }
   /* Header */
   #logotype     { float: left; display: block; padding: 20px 16px; font-size: 13em; font-weight: normal; font-family: Georgia, "New York CE", utopia, serif; }
   #logotype,
-  #logotype *   { color: #5cd7e4; text-decoration: none !important; }
+  #logotype *   { color: #3498DB; text-decoration: none !important; }
   /* Search Form */
   #searchForm         { position: absolute; top: 0; right: 0; width: 300px; text-align: right; padding: 28px 1px; font-size: 1.1em; }
   #searchForm .button { width: 180px; height: 17px; padding: 5px 10px; margin-right: 5px; }
