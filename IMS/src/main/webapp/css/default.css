@@ -170,7 +170,7 @@ fieldset    { border: 0 !important; }
   }
   #tasks     { margin: 0; display: block; font-size: 5em; font-weight: normal; font-family: Georgia, "New York CE", utopia, serif; }
   #tasks,
-  #tasks *   { color: #FFF; text-decoration: none !important; background: #ada8a8; }
+  #tasks *   { color: #FFF; text-decoration: none !important; background: #ada8a8; border: 1px #FFF solid; margin: 10px 0px 0px 10px; position: ; }
   
   .form-group textarea{
   min-width: 50%;
