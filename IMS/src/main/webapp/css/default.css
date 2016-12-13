@@ -201,3 +201,14 @@ fieldset    { border: 0 !important; }
   }
     input.addproductbtn{    font-family: serif;
   font-size: large;}
+  
+  #ReportButton {
+  background-color: #4CAF50; /*-- Green --*/
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 50px;
+  }
