@@ -17,7 +17,13 @@
 <!-- Author Sophie -->
 	<body>
 		<h1> List of all Products</h1>
-	<h:dataTable value="#{browse.products}" var="product">
+		<div id="productdatatable">
+		
+	<h:dataTable value="#{browse.products}" var="product" styleClass="people"
+    cellspacing="0" 
+    cellpadding="0" 
+    border="5">
+
 		<h:column>
 			<f:facet name="header">Product ID:</f:facet>
 			#{product.idProduct}
@@ -59,6 +65,7 @@
 			#{product.isPorousware}
 		</h:column>
 	</h:dataTable>
+	</div>
 	</body>
 	</ui:define>
 </ui:composition>
