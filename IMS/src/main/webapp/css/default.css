@@ -203,12 +203,19 @@ fieldset    { border: 0 !important; }
   font-size: large;}
   
   #ReportButton {
-  background-color: #4CAF50; /*-- Green --*/
-    border: none;
-    color: white;
+  background-color: white; /*-- Green --*/
+    border: 2px solid #61f3c4;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 50px;
+    font-size: 19px;
+    border-radius: 12px;
+    
+  }
+
+  #ReportButton:hover{
+  background-color: #61f3c4; /* Green */
+    color: white;
   }
