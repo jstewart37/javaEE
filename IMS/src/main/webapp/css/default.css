@@ -193,3 +193,11 @@ fieldset    { border: 0 !important; }
   
   input.addorderbtn{    font-family: serif;
   font-size: large;}
+  
+     .allproductcontainer{
+  padding: 10px 10px;
+  float:left;
+  border-style: solid;
+  }
+    input.addproductbtn{    font-family: serif;
+  font-size: large;}
