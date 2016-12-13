@@ -1,5 +1,6 @@
 package OfflineMode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -32,49 +33,47 @@ public class ProductManagerOffline implements ProductManager {
 			if(products.getIdProduct()==ID)
 				return products;
 		
-		return new Product(1, "could not find this product", "My description sucks", "invisible", 12, 11.0, 10.0, "available", "path", "yes");
+		return new Product(1, "could not find this product", "My description sucks", "invisible", 12, 11.0, 10.0, "available", "path", "yes" , "gnome");
 	}
 
 	@Override
 	public Product findByDescription(String Description) {
 		List<Product> products = testData.getProducts();
-		for (Product products2 : products)
-			if(products2.getDescription().equalsIgnoreCase(Description))
-				return products2;
+		for (Product product : products)
+			if(product.getDescription().equalsIgnoreCase(Description))
+				return product;
 		return null;
 	}
 
 	@Override
 	public Product findByStatus(String Status) {
 		List<Product> products = testData.getProducts();
-		for (Product products3 : products)
-			if(products3.getStatus().equalsIgnoreCase(Status))
-				return products3;
+		for (Product product : products)
+			if(product.getStatus().equalsIgnoreCase(Status))
+				return product;
 		return null;
 	}
 	@Override
 	public Product findByColour(String Colour) {
 		List<Product> products = testData.getProducts();
-		for (Product products4 : products)
-			if(products4.getColour().equalsIgnoreCase(Colour))
-				return products4;
+		for (Product product : products)
+			if(product.getColour().equalsIgnoreCase(Colour))
+				return product;
 		return null;
 	}
 
 	@Override
 	public Product findByPorouseware(String isPorous) {
 		List<Product> products = testData.getProducts();
-		for (Product products5 : products)
-			if(products5.getIsPorousware().equalsIgnoreCase(isPorous))
-				return products5;
+		for (Product product : products)
+			if(product.getIsPorousware().equalsIgnoreCase(isPorous))
+				return product;
 		return null;
 	}
 
 	@Override
 	public Product addProduct(Product Product) {
-		List<Product> products = testData.getProducts();
-		// for (Product products6 : products)
-		//	if(products6.geta)
+		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -98,14 +97,30 @@ public class ProductManagerOffline implements ProductManager {
 
 	@Override
 	public List<Product> findByNameLike(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Product> products = new ArrayList<>();
+		for(Product product : testData.getProducts())
+			if (product.getName().toLowerCase().contains(name.toLowerCase()))
+				products.add(product);
+		return products;
 	}
+	
 
 	@Override
 	public List<Product> findByDescriptionLike(String description) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Product> products = new ArrayList<>();
+		for(Product product : testData.getProducts())
+			if (product.getDescription().toLowerCase().contains(description.toLowerCase()))
+				products.add(product);
+		return products;
+	}
+	
+	@Override
+	public List<Product> findByCategory(String category) {
+		List<Product> products = new ArrayList<>();
+		for(Product product : testData.getProducts())
+			if (product.getCategory().toLowerCase().contains(category.toLowerCase()))
+				products.add(product);
+		return products;
 	}
 
 
@@ -120,7 +135,7 @@ public class ProductManagerOffline implements ProductManager {
 			if(products.getIdProduct() == id)
 				return products;
 		
-		return new Product(1, "could not find this product", "My description sucks", "invisible",210, 220.0, 230.0, "available", "path", "yes");
+		return new Product(1, "could not find this product", "My description sucks", "invisible",210, 220.0, 230.0, "available", "path", "yes" , "gnome");
 	}
 
 }

@@ -38,7 +38,7 @@ public class ProductService implements Serializable {
 	public Product findProductById(long id) {
 		Product product = productManager.findByID((int) id);
 		if (product == null)
-			product = new Product(1, "My name is wrong", "My description sucks", "invisible", 0, 0.0, 0.0, "available", "path", "yes");
+			product = new Product(1, "My name is wrong", "My description sucks", "invisible", 0, 0.0, 0.0, "available", "path", "yes" , "gnome");
 		return product;
 	}
 
@@ -59,7 +59,7 @@ public class ProductService implements Serializable {
 		System.out.println(productItem.getIdProduct());
 		if (product != null)
 			System.out.println("product found - not null");
-			productItem.addProductInfo(product.getName(), product.getDescription(), product.getColour(), product.getSellPrice(), product.getIsPorousware(), product.getImgPath());	
+			productItem.addProductInfo(product.getName(), product.getDescription(), product.getColour(), product.getSellPrice(), product.getIsPorousware(), product.getImgPath(), product.getCategory());	
 		System.out.println("product found - not null");
 		return productItem;
 	}

@@ -11,35 +11,37 @@ import javax.inject.*;
 import services.SearchService;
 
 import Entitys.*;
+import controllers.Session.SelectedProduct;
 
 @Named("search")
 @RequestScoped
 public class SearchController {
 	@Inject
 	private SearchService searchService;
-	@Inject
-	private ProductController selectedProduct;
+	@Inject 
+	private SelectedProduct selectedProduct;
 	@Inject
 	private SearchResultsController searchResults;
 	private String term;
 	
-	List<Product> results = new ArrayList<>();
-
-	public String search() {
-		results = searchService.findByKeyword(term);
-		if (results != null) { // added {
-				return "catalogue";
+	/**
+	 * Handles the searching of the catalogue using the term set via setTerm()
+	 * 
+	 * @return returns searchResults for the list of results or product if a single product was found. returns browse if none were found
+	 */
+	public String search(){
+		List<Product> results = searchService.searchBy(term);
+		if (results != null)
+			if (results.size() == 1) {	// only one product found in search, directs you to the product page instead of the browse page.
+				selectedProduct.setProduct(results.get(0));
+				return "product";
+			} else {
+				searchResults.setResults(results);	
+				return "searchResults";
 			}
-		return "catalogue";
-		}
-		
-	// end of 1st if
-
-	public String getTerm() {
-		return term;
+		return "browse"; // all prods
 	}
 
-	public void setTerm(String term) {
-		this.term = term;
-	}
+	public String getTerm() { return term; }
+	public void setTerm(String term) { this.term = term; }
 }
