@@ -24,6 +24,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 	private List<Supplier> suppliers;
 	private List<Address> addresses;
 	private List<Product> products;
+	private List<LoginIMS> loginIMS; 
 
 	@PostConstruct
 	public void setupData() {
@@ -33,6 +34,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		addresses = new ArrayList<Address>();
 		products = new ArrayList<>();
 		customerOrderLine = new ArrayList<CustomerOrderLine>();
+		loginIMS = new ArrayList<>();
 
 		
 		//bens data
@@ -65,7 +67,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 		
 		//Vera's data
-		loginIMS.add(new LoginIMS("topboss", "1amthebest!", "Eldrick", "Johnson", "ej999@hotmail.com"));
+	//	loginIMS.add(new LoginIMS("topboss", "1amthebest!", "Eldrick", "Johnson", "ej999@hotmail.com"));
 		
 	}
 

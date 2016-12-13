@@ -29,9 +29,6 @@ import services.ProductService;
 @RequestScoped
 public class ProductController implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -2203125956354526185L;
 	@Inject
 	private SelectedProduct selectProduct;
