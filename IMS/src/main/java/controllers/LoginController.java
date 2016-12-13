@@ -7,6 +7,7 @@ import javax.inject.Named;
 import services.LoginService;
 
 //@author Sophie
+//Vera was here too, stealing Sophie's Code
 
 @RequestScoped
 @Named(value = "login")

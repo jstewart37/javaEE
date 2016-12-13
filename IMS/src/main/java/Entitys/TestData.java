@@ -8,6 +8,8 @@ import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 
+import Entitys.LoginIMS.loginIMS;
+
 /**
  * @Author(author="All Team Members")
  */
@@ -62,6 +64,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 		products.add(new Product(11, "Gnome Gnome", "Gnome Gnome Gnome Gnome Gnome Gnome", "Gnome", 35, 9.99, 5.99, "available", "img/gnome.jpg", "no"));
 		
 		
+		//Vera's data
+		loginIMS.add(new LoginIMS("topboss", "1amthebest!", "Eldrick", "Johnson", "ej999@hotmail.com"));
 		
 	}
 

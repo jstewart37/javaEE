@@ -5,66 +5,61 @@
 	template="Templates/ImsTemplate.xhtml">
 	<meta charset="utf-8" />
 	<ui:define name="pageTitle">Product Page</ui:define>
-
+	
 	<head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="" />
 <meta name="Sophie" content="" />
-	</head>
-	<ui:define name="maincontent">
-		<body>
-
-				<table id="jsftags:producttable" class="list-background">
-					<thead>
-						<tr>
-							<th class="list-header" scope="col">Product ID</th>
-							<th class="list-header" scope="col">Product Name</th>
-							<th class="list-header" scope="col">Product Description</th>
-							<th class="list-header" scope="col">Colour</th>
-							<th class="list-header" scope="col">Stock Level</th>
-							<th class="list-header" scope="col">Sale Price</th>
-							<th class="list-header" scope="col">Buying Price</th>
-							<th class="list-header" scope="col">Status</th>
-							<th class="list-header" scope="col">Product Path</th>
-							<th class="list-header" scope="col">Porousware</th>
-						</tr>
-					</thead>
-					<tbody>
-					<h:dataTable id="producttable"
-					columnClasses="list-column-center,
-  list-column-right, list-column-center,
-list-column-right"
-					headerClass="list-header" rowClasses="list-row"
-					styleClass="list-
-background" value="#{BookStore.items}"
-					var="store">
-					<h:column>
-						<f:facet name="header">
-							<h:outputText value="#{Product.idProduct}" />
-						</f:facet>
-						<h:outputText value="#{Product.name}" />
-					</h:column>
-					<h:column>
-						<f:facet name="header">
-
-						</f:facet>
-						<h:outputText value="#{Product.description}" />
-					</h:column>
-					<h:column>
-						<f:facet name="header">
-							<h:outputText value="#{Product.colour}" />
-						</f:facet>
-						<h:outputText value="#{Product.stockLevel}" />
-					</h:column>
-
-				</h:dataTable>
-					</tbody>
-				</table>
-
-
-				
-		</body>
+</head>
+<ui:define name="maincontent">
+<!-- Author Sophie -->
+	<body>
+		<h1> List of all Products</h1>
+	<h:dataTable value="#{browse.products}" var="product">
+		<h:column>
+			<f:facet name="header">Product ID:</f:facet>
+			#{product.idProduct}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Name of Product:</f:facet>
+			#{product.name}
+		</h:column>
+			<h:column>
+			<f:facet name="header">Description of Product:</f:facet>
+			#{product.description}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Colour:</f:facet>
+			#{product.colour}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Stock Levels:</f:facet>
+			#{product.stockLevel}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Sale Price:</f:facet>
+			#{product.sellPrice}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Buying Price:</f:facet>
+			#{product.buyPrice}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Status:</f:facet>
+			#{product.status}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Product Path:</f:facet>
+			<h:graphicImage value="#{product.imgPath}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">Porouswared?</f:facet>
+			#{product.isPorousware}
+		</h:column>
+	</h:dataTable>
+	</body>
 	</ui:define>
 </ui:composition>
+
