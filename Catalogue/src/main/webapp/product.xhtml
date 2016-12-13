@@ -16,41 +16,33 @@
 	</head>
 	<ui:define name="maincontent">
 		<!-- Page Content -->
-		<div>
-			<hr></hr>
-		</div>
-		<div class="productTitle animated wow fadeInLeft">
-
-
- 
-			<div class="productName animated wow fadeInLeft">
+		<div class="productTitle">
+			<div class="productName">
 				<h:outputText value="#{selected.product.name}" style = ""/>
 			</div>
-			<div class="productPrice animated wow fadeInLeft">
-				<h:outputText value="#{selected.product.imgPath}" />
+			<div class="productPrice">
+				&#163;<h:outputText value="#{selected.product.sellPrice}" />
 			</div>
 
-			<div class="basketAdd animated wow fadeInLeft">
+			<div class="basketAdd">
 				<h:graphicImage alt="" value="/img/basketAdd.png" style="width: 80px; height: 72px;" />
 			</div>
-
 		</div>
 		<hr></hr>
 		<div class="duo animated wow fadeInLeft">
 			<div class="row pull-left">
 				<div class="medium-6 columns">
-					<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{selected.product.imgPath}" style="width:650px; height:350px" />
+					<h:graphicImage class="thumbnail" value="#{selected.product.imgPath}" style="width:650px; height:350px" />
 					<div class="row small-up-4">
 						<div class="column">
-							<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:250px; height:200px" />
+							<h:graphicImage class="thumbnail" value="#{product.image}" style = "width:250px; height:200px" />
 						</div>
 						<div class="column">
-							<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:250px; height:200px" />
+							<h:graphicImage class="thumbnail" value="#{product.image}" style = "width:250px; height:200px" />
 						</div>
 						<div class="column">
-							<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:250px; height:200px" />
+							<h:graphicImage class="thumbnail" value="#{product.image}" style = "width:250px; height:200px" />
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -71,7 +63,5 @@
 			</div>
 		</div>
 		<div class="clear"></div>
-
-		<hr></hr>
 	</ui:define>
 </ui:composition>
