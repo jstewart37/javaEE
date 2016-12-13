@@ -122,6 +122,15 @@ public class ProductManagerOffline implements ProductManager {
 				products.add(product);
 		return products;
 	}
+	
+	@Override
+	public List<Product> findByColourlike(String colour) {
+		List<Product> products = new ArrayList<>();
+		for(Product product : testData.getProducts())
+			if (product.getColour().toLowerCase().contains(colour.toLowerCase()))
+				products.add(product);
+		return products;
+	}
 
 
 	@Override

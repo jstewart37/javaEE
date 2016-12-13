@@ -58,7 +58,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		products.add(new Product(7, "Red Gnome", "Gnome with red hat and clothing", "Red", 27, 9.99, 5.99, "discontinued", "img/redgnome.jpg", "yes" , "gnome"));
 		products.add(new Product(8, "Green Gnome", "Gnome with green hat and clothing", "Green", 56, 9.99, 5.99, "available", "img/green.jpg", "yes" , "gnome"));
 		products.add(new Product(9, "Blue Gnome", "Gnome with blue hat and clothing", "Blue", 28, 9.99, 5.99, "available", "img/samuel.jpg", "yes" , "gnome"));
-		products.add(new Product(10, "Santa Gnome", "St nicholas themed gnome", "Red", 46, 9.99, 5.99, "available", "img/santa.jpg", "yes" , "gnome"));
+		products.add(new Product(10, "Santa", "St nicholas themed ", "Red", 46, 9.99, 5.99, "available", "img/santa.jpg", "yes" , ""));
 		products.add(new Product(11, "Gnome Gnome", "Gnome Gnome Gnome Gnome Gnome Gnome", "Gnome", 35, 9.99, 5.99, "available", "img/gnome.jpg", "no" , "gnome"));
 		
 	

@@ -39,6 +39,10 @@ public class SearchService {
 	private List<Product> searchByCategory(String category) { // no
 		return productRepository.findByCategory(category);
 	}
+	
+	private List<Product> searchByColour(String colour) { // no
+		return productRepository.findByColourlike(colour);
+	}
 
 	public List<Product> searchBy(String term) {
 		List<Product> results = new ArrayList<>();
@@ -50,6 +54,7 @@ public class SearchService {
 		results.addAll(searchByProductName(term));
 		results.addAll(searchByProductDescription(term));
 		results.addAll(searchByCategory(term));
+		results.addAll(searchByColour(term));
 		if(results.isEmpty())
 			return null;
 		List<Product> productItems = new ArrayList<>();
