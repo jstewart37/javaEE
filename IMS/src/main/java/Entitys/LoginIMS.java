@@ -53,7 +53,7 @@ public class LoginIMS {
 		
 	}
 
-	public static void add(LoginIMS loginIMS) {
+	public void add(LoginIMS loginIMS) {
 		// TODO Auto-generated method stub
 		
 	}

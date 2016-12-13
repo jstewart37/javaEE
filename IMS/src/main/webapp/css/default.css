@@ -168,6 +168,9 @@ fieldset    { border: 0 !important; }
     width:70px;
     margin:2px 0 20px 10px;
   }
+  #tasks     { margin: 0; display: block; font-size: 5em; font-weight: normal; font-family: Georgia, "New York CE", utopia, serif; }
+  #tasks,
+  #tasks *   { color: #FFF; text-decoration: none !important; background: #ada8a8; }
   
   .form-group textarea{
   min-width: 50%;

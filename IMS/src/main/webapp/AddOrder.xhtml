@@ -50,6 +50,13 @@
 	</div>
 	<div class="allorderscontainer">	
 	
+	<h:dataTable value="#{supplyOrderCon.supplyorderlist}" var="supplyOrder">
+		<h:column>
+			<f:facet name="header">Order Name</f:facet>
+				#{supplyOrder.idSupplyOrder}
+  		 </h:column>
+   
+	</h:dataTable>
 	
 	
 	

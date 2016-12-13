@@ -5,7 +5,6 @@
 
 package EntityManagers;
 
-import Entitys.Author;
 import Entitys.Supplier;
 
 public interface SupplierManager {
