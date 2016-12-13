@@ -172,6 +172,8 @@ fieldset    { border: 0 !important; }
   #tasks,
   #tasks *   { color: #FFF; text-decoration: none !important; background: #ada8a8; text-align: center; }
   
+  #taskmenu {text-align: center; font-size: 2em; font-family: Georgia, "New York CE", utopia, serif;}
+  
   .form-group textarea{
   min-width: 50%;
   min-height: 250px;
