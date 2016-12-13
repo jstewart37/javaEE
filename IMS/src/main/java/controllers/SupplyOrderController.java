@@ -1,6 +1,7 @@
 package controllers;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.enterprise.context.ConversationScoped;
@@ -18,7 +19,14 @@ public class SupplyOrderController implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 7590914591253360042L;
-
+	
+	/**
+	 * private static final SupplyOrder[] orderList = new SupplyOrder[] {
+	
+			
+			new SupplyOrder(1, "Arrived", "2002-02-13 14:37:12", "2008-06-11 11:27:38")
+		};
+	 */
 	@Inject
 	private SupplyOrderService SupplyOrderService;
 
@@ -29,6 +37,7 @@ public class SupplyOrderController implements Serializable {
 	
 	public List<SupplyOrder> getsupplyorderlist() {
 		supplyorderlist = SupplyOrderService.findAll();
+		System.out.println("there are " +supplyorderlist.size() + " supplier orders");
 		return supplyorderlist;
 	}
 

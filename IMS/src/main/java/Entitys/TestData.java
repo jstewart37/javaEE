@@ -43,7 +43,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 		customerOrderLine.add(new CustomerOrderLine(8, 10, 8, 24.89));
 		
-		supplyorderlist.add(new SupplyOrder(1, "Arrived", "2002-02-13 14:37:12", "2008-06-11 11:27:38"));
+		
 		
 		//Alex's data
 		suppliers.add(new Supplier(1, "Daves GGGGGGGGGGGGGGGGGGnomes", "07984682330", "dg@gnomies.com")); 
@@ -51,6 +51,15 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 		addresses.add(new Address(1, "65 Anchorage Quay", "eccles", "M27 641", "Greater Manchester", "Manchester"));
 		addresses.add(new Address(2, "1 Someplace", "M64 813", "Greater Manchester", "Manchester"));
+		
+		
+		//jakes data
+		supplyorderlist.add(new SupplyOrder(1, "Arrived", "2002-02-13 14:37:12", "2008-06-11 11:27:38", suppliers.get(0)));
+		supplyorderlist.add(new SupplyOrder(2, "Arrived", "1994-05-12 15:22:22", "2008-06-11 11:27:38", suppliers.get(1)));
+		supplyorderlist.add(new SupplyOrder(3, "Arrived", "2002-02-13 14:37:12", "2008-06-11 11:27:38", suppliers.get(0)));
+
+		
+		
 		
 		//Daves data
 		products.add(new Product(1, "Gandalf Gnome", "A Gandalf themed Gnome", "Grey", 25, 9.99, 5.99, "available", "img/gandalf.jpg" , "yes"));
@@ -74,6 +83,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 	}
 
 	public List<SupplyOrder> getSupplyorderlist() {
+		System.out.println("there are " +supplyorderlist.size() + " suppliers");
 		return supplyorderlist;
 	}
 

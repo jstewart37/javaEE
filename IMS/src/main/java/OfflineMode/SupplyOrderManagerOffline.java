@@ -40,8 +40,7 @@ public class SupplyOrderManagerOffline implements SupplyOrderManager {
 
 	@Override
 	public List<SupplyOrder> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return testData.getSupplyorderlist();
 	}
 	
 	

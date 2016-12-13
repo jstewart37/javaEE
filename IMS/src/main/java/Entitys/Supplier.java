@@ -36,15 +36,20 @@ public class Supplier {
 
 	
 	// constructors
-	public Supplier(long idSupplier,
-						String supplierName,
-						String supplierPhone,
-						String email){}
+	
 	
 	
 	// getters & setters
 	public long getIdSupplier() {
 		return idSupplier;
+	}
+
+
+	public Supplier(long idSupplier, String supplierName, String supplierPhone, String email) {
+		this.idSupplier = idSupplier;
+		this.supplierName = supplierName;
+		this.supplierPhone = supplierPhone;
+		this.email = email;
 	}
 
 
