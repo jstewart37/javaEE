@@ -18,35 +18,7 @@
 
 		<!-- Author: Jake -->
 	<div class="addOrderContainer">
-	<h:form class="addorderform">
-			<div class="form-group">
-			<label>Supplier</label>
-				<h:inputText class="form-control" value="#{addorder.suppliername}">
-					<f:passThroughAttribute name="type" value="suppliername" />
-					<f:passThroughAttribute name="placeholder" value="Supplier Name" />
-					<f:passThroughAttribute name="alt" value="Enter Supplier Name" />
-					<f:passThroughAttribute name="required" value="required" />
-				</h:inputText>
-				<label>Order Placed on:</label>
-				<h:inputText class="form-control" value="#{addorder.placedon}">
-					<f:passThroughAttribute name="type" value="placedon" />
-					<f:passThroughAttribute name="required" value="required" />
-					<f:passThroughAttribute name="type" value="date" type="date" />
-				</h:inputText>
-				<label>Order Items (Needs Changing for full functionality)</label>
-				<h:inputTextarea id="orderitems" class="form-control" value="#{addorder.orderItems}">
-					<f:passThroughAttribute name="alt" value="Enter Order Items" />
-					<f:passThroughAttribute name="required" value="required" />
-				</h:inputTextarea>
-				<label>Total Price</label>
-				<h:inputText class="form-control" value="#{addorder.totalPrice}">
-					<f:passThroughAttribute name="type" value="totalprice" />
-					<f:passThroughAttribute name="alt" value="Order Total Price" />
-				</h:inputText>
-				<h:commandButton type="submit" class="addorderbtn" action="#{addorder.addsupplierorder}" value="Add Order" />
-			</div>
-				 
-		</h:form>
+	
 	</div>
 	<div class="allorderscontainer">	
 	
