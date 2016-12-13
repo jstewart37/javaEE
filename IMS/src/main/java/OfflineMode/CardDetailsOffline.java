@@ -2,11 +2,8 @@ package OfflineMode;
 
 import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
-import javax.inject.Inject;
-
 import EntityManagers.CardDetailsManager;
 import Entitys.CardDetails;
-import Entitys.TestData;
 
 @Stateless
 @Default

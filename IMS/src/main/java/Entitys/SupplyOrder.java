@@ -26,6 +26,9 @@ public class SupplyOrder {
 		
 	}
 	
+	
+	
+	
 	// Foreign Keys
 	@ManyToOne
 	@JoinColumn(name="idSupplier", nullable=false)

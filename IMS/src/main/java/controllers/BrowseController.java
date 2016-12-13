@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.enterprise.context.ConversationScoped;
-import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.inject.Inject;
 import javax.inject.Named;

@@ -61,6 +61,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 		products.add(new Product(10, "Santa Gnome", "St nicholas themed gnome", "Red", 46, 9.99, 5.99, "available", "img/santa.jpg", "yes"));
 		products.add(new Product(11, "Gnome Gnome", "Gnome Gnome Gnome Gnome Gnome Gnome", "Gnome", 35, 9.99, 5.99, "available", "img/gnome.jpg", "no"));
 		
+		
+		
 	}
 
 	public List<SupplyOrder> getSupplyorderlist() {

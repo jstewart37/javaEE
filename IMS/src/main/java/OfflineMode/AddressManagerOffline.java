@@ -4,16 +4,12 @@ package OfflineMode;
 import java.util.List;
 
 import javax.ejb.Stateless;
-import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import EntityManagers.AddressManager;
 import Entitys.Address;
 import Entitys.Author;
-import Entitys.Customer;
-import Entitys.Product;
-import Entitys.Supplier;
 import Entitys.TestData;
 
 /**

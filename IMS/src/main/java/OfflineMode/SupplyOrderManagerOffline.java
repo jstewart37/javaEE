@@ -6,7 +6,9 @@ import javax.ejb.Stateless;
 import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 import EntityManagers.SupplyOrderManager;
-import Entitys.*;
+import Entitys.Author;
+import Entitys.SupplyOrder;
+import Entitys.TestData;
 
 @Stateless
 @Default
@@ -32,6 +34,12 @@ public class SupplyOrderManagerOffline implements SupplyOrderManager {
 
 	@Override
 	public SupplyOrder updateSupplyOrderr(SupplyOrder supplyorder) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<SupplyOrder> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

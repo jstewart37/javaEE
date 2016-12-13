@@ -9,7 +9,6 @@
 package services;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.enterprise.context.SessionScoped;
@@ -18,7 +17,6 @@ import javax.inject.Inject;
 import EntityManagers.ProductManager;
 import EntityManagers.StockManager;
 import Entitys.Product;
-import Entitys.Stock;
 
 @SessionScoped
 public class ProductService implements Serializable {
