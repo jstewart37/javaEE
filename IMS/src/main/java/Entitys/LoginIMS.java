@@ -44,13 +44,12 @@ public class LoginIMS {
 	
 	@Author(author = "Vera")
 	// constructors
-	public loginIMS (String username, String password, String fname, String sname, String email) {
+	public loginIMS(String username, String password, String fname, String sname, String email) {
 		this.username = username;
 		this.fname = fname;
 		this.sname = sname;
 		this.email = email;
 		this.password = password;
-		
 	}
 
 	public void add(LoginIMS loginIMS) {
