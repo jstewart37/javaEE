@@ -102,11 +102,9 @@ public class ProductController implements Serializable{
 	
 
 	public String select(long id) {
-		System.out.println("Step 1 WORKING");
 		Product item = productService.getProduct(id);
 		if (item != null) {
 			selectProduct.setProduct(item);
-			System.out.println("Final Step");
 			return "product";
 		}
 		return "browse";
