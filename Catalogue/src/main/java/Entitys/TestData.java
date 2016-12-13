@@ -56,7 +56,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		products.add(new Product(5, "Darth Vader Gnome", "Biggest, baddest sith lord", "Black", 15, 9.99, 5.99, "available", "img/darth.png", "yes" , "gnome"));
 		products.add(new Product(6, "Rick Sanchez Gnome", "Wubbalubba dubb dubb", "White", 21, 9.99, 5.99, "available", "img/rick.png", "yes" , "gnome"));
 		products.add(new Product(7, "Red Gnome", "Gnome with red hat and clothing", "Red", 27, 9.99, 5.99, "discontinued", "img/redgnome.jpg", "yes" , "gnome"));
-		products.add(new Product(8, "Green Gnome", "Gnome with green hat and clothing", "Green", 56, 9.99, 5.99, "available", "img/green.jpg", "yes" , "gnome"));
+		products.add(new Product(8, "Green Gnome", "Gnome green with hat and clothing", "Green", 56, 9.99, 5.99, "available", "img/green.jpg", "yes" , "gnome"));
 		products.add(new Product(9, "Blue Gnome", "Gnome with blue hat and clothing", "Blue", 28, 9.99, 5.99, "available", "img/samuel.jpg", "yes" , "gnome"));
 		products.add(new Product(10, "Santa Gnome", "St nicholas themed gnome", "Red", 46, 9.99, 5.99, "available", "img/santa.jpg", "yes" , "gnome"));
 		products.add(new Product(11, "Gnome Gnome", "Gnome Gnome Gnome Gnome Gnome Gnome", "Gnome", 35, 9.99, 5.99, "available", "img/gnome.jpg", "no" , "gnome"));
