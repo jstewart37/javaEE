@@ -5,6 +5,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import EntityManagers.ProductManager;
+import Entitys.Customer;
 import Entitys.Product;
 import Entitys.SupplyOrder;
 
@@ -17,13 +18,13 @@ public class CreateProductController {
 	@Inject
 	private ProductManager productManager;
 	
-	private long idProduct;
+	private long idProduct = 0;
 	private String name;
 	private String description;
 	private String colour;
-	private int stockLevel;
-	private double sellPrice;
-	private double buyPrice;
+	private int stockLevel = -1;
+	private double sellPrice = 0;
+	private double buyPrice = 0;
 	private String isPorousware;
 	private String status;
 	
@@ -87,11 +88,15 @@ public class CreateProductController {
 		this.status = status;
 	}
 
-	public void addnewProduct() {
+	public String addnewProduct() {
+		if (idProduct >0 && !name.isEmpty() && !description.isEmpty() && !colour.isEmpty() && stockLevel>-1 && sellPrice>0&& buyPrice>0 && !isPorousware.isEmpty()&& !status.isEmpty()) {
 		Product addProduct = new Product(1,name,description, colour, stockLevel, sellPrice, buyPrice, isPorousware, status, null);
 		System.out.println(addProduct + "product created"); // for debugging
-}
-
+			return "index";
+		}
+		System.out.println("wooooooooo");
+		return "index";
+	}
 
 	
 	

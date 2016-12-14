@@ -25,20 +25,18 @@
 				<div class="login-form">
 					<h:form>
 					<div class="control-group">
-						<h:input type="text" class="login-field" value="#{login.username}"
-							placeholder="username" id="login-name"> </h:input><label
+						<h:inputText type="text" class="login-field" value="#{login.username}"
+							placeholder="username" id="login-name" /><label
 							class="login-field-icon fui-user" for="login-name"></label>
 					</div>
 
 					<div class="control-group">
-						<h:input type="password" class="login-field" value="#{login.password}"
-							placeholder="password" id="login-pass"></h:input><label
+						<h:inputText type="password" class="login-field" value="#{login.password}"
+							placeholder="password" id="login-pass" /><label
 							class="login-field-icon fui-lock" for="login-pass"></label>
 					</div>
 
-					<h:commandButton class="regbtn" action="#{login.login}" value="Login" />
-					<a class="btn btn-primary btn-large btn-block" href="#">login</a> <a
-						class="login-link" href="#">Forgot your password?</a>
+					<h:commandButton class="btn btn-primary btn-large btn-block" action="#{login.loginIMS}" value="Login" />
 					</h:form>
 				</div>
 			</div>

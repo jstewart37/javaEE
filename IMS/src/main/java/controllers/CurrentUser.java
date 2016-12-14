@@ -12,8 +12,7 @@ import Entitys.Customer;
 import Entitys.Staff;
 
 /**
- * @author Sophie
- * Then Vera copies this code from OC into IMS
+ * @author Vera
  *
  */
 @Named(value="usersessionIMS")
