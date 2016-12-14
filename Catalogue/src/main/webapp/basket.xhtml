@@ -86,7 +86,7 @@
 					</thead>
 					<tbody>
 <h:form>
-							<ui:repeat var="product" value="#{basketList.basketList}">
+							<ui:repeat var="product" value="#{basketlist.basketList}">
 								<tr>
 									<th><h:commandLink action="#{product.selected(product.id)}"><h:outputText value="#{product.id}" /></h:commandLink></th>
 									<th><h:commandLink action="#{products.select(product.id)}"><h:outputText value="#{product.name}" /></h:commandLink></th>
