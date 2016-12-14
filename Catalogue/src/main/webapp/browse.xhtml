@@ -8,16 +8,14 @@
 	<ui:define name="maincontent">
 		<!-- Page Content -->
 		<div class="container animated wow fadeInDown">
-			<div class="search animated wow fadeInDown">
+			<div class="animated wow fadeInDown">
 				<h:form>
-						<h:inputText value="#{search.term}" class=" animated wow fadeInDown">
+						<h:inputText value="#{search.term}">
 						<f:passThroughAttribute name="type" value="text" />
 						<f:passThroughAttribute name="placeholder" value="Search..." />
 						<f:passThroughAttribute name="alt" value="Search" />
 					</h:inputText>
-					<h:commandButton action="#{search.search}" value="Seach" class="btn btn-success" >
-						
-					</h:commandButton>
+					<h:commandButton action="#{search.search}" value="Search" class="btn btn-success" />
 				</h:form>
 			</div>
 			<div class="refine">
