@@ -17,7 +17,7 @@ import OfflineMode.BasketManagerOffline;
 @Stateless
 public class BasketService {
 	@Inject
-	private BasketManager wishlistManager;
+	private BasketManager basketManager;
 	@Inject
 	private ProductManager productManager;
 	@Inject
@@ -26,17 +26,17 @@ public class BasketService {
 	private StockManager stockManager;
 
 	public List<Product> getWishlist(long id) {
-		List<Product> wishlist = new ArrayList<>();
+		List<Product> basketList = new ArrayList<>();
 		try{
-			BasketManagerOffline.findByCustomerId(id).forEach(stock->{
-				wishlist.add(productService.getProductItem(productManager.findById(stock.getId()), stock));	
+			basketManager.findByCustomerId(id).forEach(stock->{
+				basketList.add(productService.getProduct(productManager.findByID(stock.getId())));	
 			});
 		} finally {}
-		return wishlist;
+		return basketList;
 	}
 	
 	public void addToWishlist(long customerId, long productId) {
-		List<Stock> wishlist = BasketManagerOffline.findByCustomerId(customerId);
+		List<Stock> wishlist = basketManager.findByCustomerId(customerId);
 		if(wishlist == null) {
 			wishlist = new ArrayList<Stock>();
 		}
