@@ -60,6 +60,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 		products.add(new Product(9, "Blue Gnome", "Gnome with blue hat and clothing", "Blue", 28, 9.99, 5.99, "available", "img/samuel.jpg", "yes" , "gnome"));
 		products.add(new Product(10, "Santa", "St nicholas themed ", "Red", 46, 9.99, 5.99, "available", "img/santa.jpg", "yes" , ""));
 		products.add(new Product(11, "Gnome Gnome", "Gnome Gnome Gnome Gnome Gnome Gnome", "Gnome", 35, 9.99, 5.99, "available", "img/gnome.jpg", "no" , "gnome"));
+		products.add(new Product(12, "Weird Chair", "Wicker, but comfy", "brown", 10000, 159, 0.1, "available", "img/chair.jpg", "no", "garden furniture"));
+		
 		
 	
 		

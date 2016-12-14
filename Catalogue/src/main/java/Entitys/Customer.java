@@ -1,5 +1,7 @@
 package Entitys;
 
+import java.util.List;
+
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -85,6 +87,10 @@ public class Customer {
 	@Size(min = 3, max = 25)
 	@NotNull
 	private String PostCode;
+	
+	@ManyToMany
+	@JoinTable(name="BasketList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="stock_id", referencedColumnName="id"))
+	private List<Stock> basketList;
 
 	@Author(author = "Ben")
 	// constructors
@@ -110,6 +116,9 @@ public class Customer {
 	}
 	// getters and setters
 
+	public List<Stock> getBasketlist() { return basketList;}
+	public void setBasketlist(List<Stock> wishlist) { this.basketList = basketList; }
+	
 	public Customer() {
 			// TODO Auto-generated constructor stub
 	}

@@ -42,6 +42,10 @@ public class SearchController {
 		return "browse"; // all prods
 	}
 
-	public String getTerm() { return term; }
+	public String getTerm() { 
+		
+		
+		
+		return term; }
 	public void setTerm(String term) { this.term = term; }
 }
