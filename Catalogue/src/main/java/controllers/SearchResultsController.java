@@ -33,6 +33,9 @@ public class SearchResultsController implements Serializable {
 	 * 
 	 * @return
 	 */
+	
+	
+	
 	public PaginationHelper getPagination() {
 		if (pagination == null) {
 			pagination = new PaginationHelper(9) {
@@ -102,11 +105,10 @@ public class SearchResultsController implements Serializable {
 	 * @param searchResults
 	 */
 	public void setResults(List<Product> searchResults) {
-		System.out.println("DO I BLEND?!");
 		pagination = null;
-		System.out.println("DO I PAGINATION = NULL?!");
 		results = null;
-		System.out.println("DO I RESULTS = NULL?!");
+	
+		
 		this.searchResults = searchResults;
 	}
 }
