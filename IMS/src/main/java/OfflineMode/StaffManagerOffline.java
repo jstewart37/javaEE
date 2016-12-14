@@ -7,7 +7,6 @@ import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import EntityManagers.StaffManager;
-import Entitys.Product;
 import Entitys.Staff;
 import Entitys.TestData;
 

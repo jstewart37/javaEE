@@ -77,8 +77,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 		//Vera's data
 		
 		staffList.add(new Staff("topboss", "1amthebest!", "Eldrick", "Johnson", "ej999@hotmail.com"));
+		staffList.add(new Staff("trainee1", "1h8ej!", "Weston", "Astley", "wa@hotmail.com"));
 
-		//loginIMS.add(new Staff("topboss", "1amthebest!", "Eldrick", "Johnson", "ej999@hotmail.com")); //create constructor for this before uncommenting"
 
 		
 	}
