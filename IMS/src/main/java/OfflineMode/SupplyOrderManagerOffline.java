@@ -19,6 +19,7 @@ public class SupplyOrderManagerOffline implements SupplyOrderManager {
 	@Inject
 	private TestData testData;
 	
+	//@Author(author="Jake")
 	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	Date date = new Date();
 	

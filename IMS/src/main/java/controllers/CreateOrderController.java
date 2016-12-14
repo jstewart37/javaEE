@@ -33,8 +33,14 @@ public class CreateOrderController {
 		//needs work
 		if(supplier!=null) {
 			SupplyOrder so = new SupplyOrder(orderItems, supplier);
-			SupplyOrderService.createNewSupplyOrder(so);
+			so = SupplyOrderService.createNewSupplyOrder(so);
+			System.out.println(so.getIdSupplyOrder());
 			System.out.println(so + "order created"); // for debugging
+			
+			
+			
+			
+			
 			
 		}
 		System.out.println("No Supplier");

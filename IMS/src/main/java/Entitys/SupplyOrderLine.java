@@ -36,6 +36,17 @@ public class SupplyOrderLine {
 
 	}
 
+	public SupplyOrderLine(int quantity, SupplyOrder idSupplyOrder, Product idProduct) {
+		this.quantity = quantity;
+		this.idSupplyOrder = idSupplyOrder;
+		this.idProduct = idProduct;
+	}
+
+	public SupplyOrderLine(int quantity, Product idProduct) {
+		this.quantity = quantity;
+		this.idProduct = idProduct;
+	}
+
 	// getters and setters
 	public int getQuantity() {
 		return quantity;

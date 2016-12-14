@@ -24,6 +24,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 	private List<Address> addresses;
 	private List<Product> products;
 	private List<Staff> staffList; 
+	private List<SupplyOrderLine> supplyorderlinelist;
 
 	@PostConstruct
 	public void setupData() {
@@ -34,6 +35,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		products = new ArrayList<>();
 		customerOrderLine = new ArrayList<CustomerOrderLine>();
 		staffList = new ArrayList<>();
+		supplyorderlinelist = new ArrayList<>();
 
 		
 		//bens data
@@ -57,8 +59,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 		supplyorderlist.add(new SupplyOrder(2, "Arrived", "1994-05-12 15:22:22", "2008-06-11 11:27:38", suppliers.get(1)));
 		supplyorderlist.add(new SupplyOrder(3, "Arrived", "2002-02-13 14:37:12", "2008-06-11 11:27:38", suppliers.get(0)));
 
-		
-		
+		supplyorderlinelist.add(new SupplyOrderLine(13,supplyorderlist.get(0),products.get(0)));
+		supplyorderlinelist.add(new SupplyOrderLine(1,supplyorderlist.get(0),products.get(2)));
 		
 		//Daves data
 		products.add(new Product(1, "Gandalf Gnome", "A Gandalf themed Gnome", "Grey", 25, 9.99, 5.99, "available", "img/gandalf.jpg" , "yes"));
@@ -83,6 +85,14 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 	}
 	
+	public List<SupplyOrderLine> getSupplyorderlinelist() {
+		return supplyorderlinelist;
+	}
+
+	public void setSupplyorderlinelist(List<SupplyOrderLine> supplyorderlinelist) {
+		this.supplyorderlinelist = supplyorderlinelist;
+	}
+
 	public List<Staff> getStaffList() {
 		return staffList;
 	}
