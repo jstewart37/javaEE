@@ -69,8 +69,8 @@ public class BrowseController implements Serializable {
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Product> getDataModel() {
-		return (List<Product>) getPaginationHelper().createPageDataModel();
+	public DataModel<Product> getDataModel() {
+		return (DataModel<Product>) getPaginationHelper().createPageDataModel();
 	}
 	
 	public Product getProduct(){

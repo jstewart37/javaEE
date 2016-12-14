@@ -15,7 +15,7 @@
 						<f:passThroughAttribute name="placeholder" value="Search..." />
 						<f:passThroughAttribute name="alt" value="Search" />
 					</h:inputText>
-					<h:commandButton action="#{search.search}" value="Search" class="btn btn-success" />
+					<h:commandButton action="#{search.search}" value="Search" class="btn-search btn-success" />
 				</h:form>
 			</div>
 			<div class="refine">
@@ -39,8 +39,7 @@
 						<li><a href="#">Price: low to high</a></li>
 						<li><a href="#">Price: high to low</a></li>
 					</ul>
-				</div>
-				
+				</div>		
 				<div class="control-group">
 					<h1>Filter</h1>
 					<label class="control control--checkbox animated wow fadeInDown">£0
@@ -72,15 +71,12 @@
 						<input type="checkbox" />
 						<div class="control__indicator animated wow fadeInDown"></div>
 					</label>
-					
-
 				</div>
 			</div>
 			<hr />
 			<h:form>
-			
 			<div class="cataloguerow">
-			<ui:repeat var="productList" value="#{browse.products}">
+			<ui:repeat var="productList" value="#{browse.dataModel}">
 				<div class="col-sm-4 col-lg-4 col-md-4">
 					<div class="thumbnail animated wow fadeInDown">
 
@@ -90,7 +86,7 @@
 							<h4>
 								<h:commandLink action="#{productCon.select(productList.idProduct)}" value="#{productList.name}" />
 							</h4>
-							<p>Description:<h:outputText value="#{productList.description}" /></p>
+							<p><h:outputText value="#{productList.description}" /></p>
 						</div>
 						<div class="ratings animated wow fadeInDown">
 							<p class="pull-right animated wow fadeInDown">15 reviews</p>
@@ -106,13 +102,11 @@
 				</div>
 				</ui:repeat>
 				<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.paginationHelper.hasPreviousPage}" />
-					<h:outputText value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
-					<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.paginationHelper.hasNextPage}" />
+				<h:outputText value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
+				<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.paginationHelper.hasNextPage}" />
 				</div>
 				</h:form>
 				</div>
-
-
 		<!--  End Contact Section  -->
 	</ui:define>
 </ui:composition>
