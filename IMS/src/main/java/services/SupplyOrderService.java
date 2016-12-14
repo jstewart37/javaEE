@@ -24,12 +24,16 @@ public class SupplyOrderService {
 		return SupplyOrderManager.findAll();
 	}
 	
+	public List<SupplyOrderLine> findAllOL() {
+		return SupplyOrderManager.findAllOL();
+	}
+	
 	public SupplyOrder createNewSupplyOrder(SupplyOrder so){
 		return so = SupplyOrderManager.createNewSupplyOrder(so);
 	}
 	
-	public void createNewSupplyOrderLine(SupplyOrderLine sol){
-		SupplyOrderLineManager.createNewSupplyOrderLine(sol);
+	public SupplyOrderLine createNewSupplyOrderLine(SupplyOrderLine sol){
+		return SupplyOrderLineManager.createNewSupplyOrderLine(sol);
 	}
 	
 	

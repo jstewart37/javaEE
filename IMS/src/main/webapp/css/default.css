@@ -105,6 +105,8 @@ fieldset    { border: 0 !important; }
   width: 50%;
   }
   
+ 
+  
   .form-control{
     display: block;
     font-size:11px;
@@ -112,7 +114,13 @@ fieldset    { border: 0 !important; }
     border:solid 1px #aacfe4;
     width:70px;
     margin:2px 0 20px 10px;
+    
   }
+  
+  .addOrderContainer .form-control{
+  width:140px;}
+  
+  
   #tasks     { margin: 0; display: block; font-size: 5em; font-weight: normal; font-family: Georgia, "New York CE", utopia, serif; }
   #tasks,
   #tasks *   { color: #FFF; text-decoration: none !important; background: #ada8a8; text-align: center; }
@@ -134,6 +142,7 @@ fieldset    { border: 0 !important; }
   margin: 0px 0px 0px 50px;
   color: #FFF;
   background: #ada8a8;
+  padding: 10px;
   }
   
   input.addorderbtn{    font-family: serif;

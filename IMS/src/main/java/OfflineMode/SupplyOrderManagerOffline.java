@@ -11,6 +11,7 @@ import javax.inject.Inject;
 import EntityManagers.SupplyOrderManager;
 import Entitys.Author;
 import Entitys.SupplyOrder;
+import Entitys.SupplyOrderLine;
 import Entitys.TestData;
 
 @Stateless
@@ -23,7 +24,7 @@ public class SupplyOrderManagerOffline implements SupplyOrderManager {
 	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	Date date = new Date();
 	
-	@Author(author="Ben")
+	@Author(author="Ben & Jake")
 	@Override
 	public SupplyOrder createNewSupplyOrder(SupplyOrder supplyorder) {
 		List<SupplyOrder> supplyorderlist = testData.getSupplyorderlist();
@@ -52,6 +53,11 @@ public class SupplyOrderManagerOffline implements SupplyOrderManager {
 	public List<SupplyOrder> findAll() {
 		return testData.getSupplyorderlist();
 	}
+
+	@Override
+	public List<SupplyOrderLine> findAllOL() {
+		return testData.getSupplyorderlinelist();
+		}
 	
 	
 

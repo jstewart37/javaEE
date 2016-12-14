@@ -74,10 +74,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 		supplyorderlist.add(new SupplyOrder(2, "Arrived", "1994-05-12 15:22:22", "2008-06-11 11:27:38", suppliers.get(1)));
 		supplyorderlist.add(new SupplyOrder(3, "Arrived", "2002-02-13 14:37:12", "2008-06-11 11:27:38", suppliers.get(0)));
 
-		supplyorderlinelist.add(new SupplyOrderLine(13,
-						supplyorderlist.get(0),
-						products.get(1)));
-				supplyorderlinelist.add(new SupplyOrderLine(1,supplyorderlist.get(0),products.get(2)));
+		supplyorderlinelist.add(new SupplyOrderLine(13,supplyorderlist.get(0),products.get(1)));
+		supplyorderlinelist.add(new SupplyOrderLine(1,supplyorderlist.get(0),products.get(2)));
 		
 		//Vera's data
 		
@@ -88,6 +86,14 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 	}
 	
+	public List<CustomerOrderLine> getCustomerOrderLine() {
+		return customerOrderLine;
+	}
+
+	public void setCustomerOrderLine(List<CustomerOrderLine> customerOrderLine) {
+		this.customerOrderLine = customerOrderLine;
+	}
+
 	public List<SupplyOrderLine> getSupplyorderlinelist() {
 		return supplyorderlinelist;
 	}

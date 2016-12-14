@@ -78,6 +78,10 @@ public class Product {
 		this.name = name;
 	}
 
+	public Product() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public long getIdProduct() {
 		return idProduct;
 	}

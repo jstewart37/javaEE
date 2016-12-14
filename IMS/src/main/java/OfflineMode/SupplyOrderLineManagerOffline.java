@@ -22,8 +22,7 @@ public class SupplyOrderLineManagerOffline implements SupplyOrderLineManager {
 	@Override
 	public SupplyOrderLine createNewSupplyOrderLine(SupplyOrderLine supplyorderline) {
 		List<SupplyOrderLine> supplyorderlinelist = testData.getSupplyorderlinelist();
-		//supplyorderline.setIdSupplyOrderLine(supplyorderlinelist.size() + 1);
-				
+			
 		supplyorderlinelist.add(supplyorderline);
 		testData.setSupplyorderlinelist(supplyorderlinelist);
 		return supplyorderline;
@@ -59,6 +58,7 @@ public class SupplyOrderLineManagerOffline implements SupplyOrderLineManager {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 	
 	
 

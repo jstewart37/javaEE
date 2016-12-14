@@ -27,34 +27,23 @@
 					<f:passThroughAttribute name="alt" value="Enter Supplier Name" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
-				<!--
-				<label>Order Placed on:</label>
-				 
-				<h:inputText class="form-control" value="#{addorder.placedon}">
-					<f:passThroughAttribute name="type" value="placedon" />
+
+				<label>Order Items Quantity</label>
+				<h:inputText id="orderitemsQ" class="form-control" value="#{addorder.quantity}">
+					<f:passThroughAttribute name="alt" value="Enter quantity of product" />
 					<f:passThroughAttribute name="required" value="required" />
-					<f:passThroughAttribute name="type" value="date" type="date" />
-				</h:inputText> 
-				-->
-				<label>Order Items (Needs Changing for full functionality)</label>
-				<h:inputTextarea id="orderitems" class="form-control" value="#{addorder.orderItems}">
-					<f:passThroughAttribute name="alt" value="Enter Order Items" />
-					<f:passThroughAttribute name="required" value="required" />
-				</h:inputTextarea>
-				<!--
-				<label>Total Price</label>
-				<h:inputText class="form-control" value="#{addorder.totalPrice}">
-					<f:passThroughAttribute name="type" value="totalprice" />
-					<f:passThroughAttribute name="alt" value="Order Total Price" />
 				</h:inputText>
-				-->
-				<h:commandButton type="submit" class="addorderbtn" action="#{addorder.addsupplierorder}" value="Add Order" />
+				<label>Order Product</label>
+				<h:inputText id="orderitemsProduct" class="form-control" value="#{addorder.product.name}">
+					<f:passThroughAttribute name="alt" value="Enter Product" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
+				
+			<h:commandButton type="submit" class="addorderbtn" action="#{addorder.addsupplierorder}" value="Add Order" />
 			</div>
-				 
-		</h:form>
-	
+	</h:form>
+	</div>
 	<div class="allorderscontainer">	
-	
 	
 	<h:dataTable value="#{supplyOrderCon.supplyorderlist}" var="so">
 		<h:column>
@@ -79,6 +68,24 @@
 		</h:column>
 
 			</h:dataTable>
+	</div>		
+	<div class="allorderscontainer">	
+	
+	
+	<h:dataTable value="#{supplyOrderCon.supplyorderlinelist}" var="sol">
+		<h:column>
+			<f:facet name="header">POID</f:facet>
+				<h:outputText value="#{sol.idSupplyOrder.idSupplyOrder}"/>
+		</h:column>
+		 <h:column>
+			<f:facet name="header">Product</f:facet>
+				<h:outputText value="#{sol.product.name}"/>
+		</h:column>
+		<h:column>
+			<f:facet name="header">Quantity</f:facet>
+				<h:outputText value="#{sol.quantity}"/>
+		</h:column>
+	</h:dataTable>		
 	
 	
 	<!--  <h:dataTable value="#{browse.products}" var="product">
@@ -87,12 +94,7 @@
 			#{product.idProduct}
 		</h:column>-->
 	
+</div>
 	
-	
-	
-	
-	</div>
-	
-	</div>
 	</ui:define>
 </ui:composition>

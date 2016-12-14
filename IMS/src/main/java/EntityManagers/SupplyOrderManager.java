@@ -3,6 +3,7 @@ package EntityManagers;
 import java.util.List;
 
 import Entitys.SupplyOrder;
+import Entitys.SupplyOrderLine;
 
 public interface SupplyOrderManager {
 	
@@ -13,4 +14,5 @@ public interface SupplyOrderManager {
 
 	
 	public List<SupplyOrder> findAll();
+	public List<SupplyOrderLine> findAllOL();
 }
