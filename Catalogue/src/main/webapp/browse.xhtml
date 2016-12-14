@@ -24,11 +24,13 @@
 						type="button" data-toggle="dropdown">
 						Categories <span class="caret"></span>
 					</button>
+					<h:form>
 					<ul class="dropdown-menu">
-						<li><h:commandLink action="#{search.search}" value = "gnome" class="btn btn-success" /></li>
-						<li><a href="#">Garden Furniture</a></li>
-						<li><a href="#">Other</a></li>
+						<li><h:commandLink action="#{search.gnome}" value = "gnome" class="btn btn-success" /></li>
+						<li><h:commandLink action="#{search.furniture}" value = "garden furniture" class="btn btn-success" /></li>
+						<li><h:commandLink action="#{search.other}" value = "other" class="btn btn-success" /></li>
 					</ul>
+					</h:form>
 				</div>
 				<div class="dropdown pull-left">
 					<button class="dropbtn btn-primary dropdown-toggle wow animated"

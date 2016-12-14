@@ -63,4 +63,16 @@ public class SearchService {
 		});
 		return productItems;
 	}
+	
+	public List<Product> searchByCat(String term) {
+		List<Product> results = new ArrayList<>();
+		results.addAll(searchByCategory(term));
+		if(results.isEmpty())
+			return null;
+		List<Product> productItems = new ArrayList<>();
+		results.forEach(product->{
+			productItems.add(productService.getProduct(product.getIdProduct()));
+		});
+		return productItems;
+	}
 }
