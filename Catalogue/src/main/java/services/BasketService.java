@@ -25,7 +25,7 @@ public class BasketService {
 	@Inject
 	private StockManager stockManager;
 
-	public List<Product> getWishlist(long id) {
+	public List<Product> getBasketlist(long id) {
 		List<Product> basketList = new ArrayList<>();
 		try{
 			basketManager.findByCustomerId(id).forEach(stock->{
@@ -35,7 +35,7 @@ public class BasketService {
 		return basketList;
 	}
 	
-	public void addToWishlist(long customerId, long productId) {
+	public void addToBasketlist(long customerId, long productId) {
 		List<Stock> wishlist = basketManager.findByCustomerId(customerId);
 		if(wishlist == null) {
 			wishlist = new ArrayList<Stock>();
@@ -47,7 +47,7 @@ public class BasketService {
 		basketManager.updateWishList(customerId, wishlist);
 	}
 
-	public void removeFromWishlist(long customerId, long productId) {
+	public void removeFromBasketlist(long customerId, long productId) {
 		List<Stock> wishlist = new ArrayList<>();
 		for(Stock stock : basketManager.findByCustomerId(customerId))
 			if(stock.getId() != productId)

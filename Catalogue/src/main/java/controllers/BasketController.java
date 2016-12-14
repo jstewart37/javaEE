@@ -15,7 +15,7 @@ import services.BasketService;
  * @author James Thompson
  *
  */
-@Named("wishlist")
+@Named("basketlist")
 @RequestScoped
 public class BasketController {
 	@Inject
@@ -29,9 +29,9 @@ public class BasketController {
 	 * 
 	 * @param id the ID of the product to add to the wishlist.
 	 */
-	public void addToWishlist(long id) {
+	public void addToBasketlist(long id) {
 		if(user.isloggedIn())
-			basketService.addToWishlist(user.getCustomer().getIdCustomer(), id);
+			basketService.addToBasketlist(user.getCustomer().getIdCustomer(), id);
 	}
 	
 	/**
@@ -41,8 +41,8 @@ public class BasketController {
 	 * @return returns wishlist
 	 */
 	public String removeItem(long id) {
-		basketService.removeFromWishlist(user.getCustomer().getIdCustomer(), id);
-		return "wishlist";
+		basketService.removeFromBasketlist(user.getCustomer().getIdCustomer(), id);
+		return "basket";
 	}
 	
 	/**
@@ -52,7 +52,7 @@ public class BasketController {
 	 */
 	public List<Product> getWishlist() {
 		if(basketList==null)
-			basketList = basketService.getWishlist(user.getCustomer().getIdCustomer());
+			basketList = basketService.getBasketlist(user.getCustomer().getIdCustomer());
 		return basketList;
 	}
 }

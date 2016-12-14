@@ -47,7 +47,7 @@
 							<input type="quantity" id="middle-label"
 								placeholder="0" />
 						</div>
-						<h:commandButton type="submit" class="regbtn" value = "BUY YO SHIT" action="#{wishlist.addToWishlist(selected.product.id)}" rendered="#{usersession.loggedIn}" />
+						<h:commandButton type="submit" class="regbtn" value="BUY YO SHIT" action="#{basketlist.addTobasketlist(selected.product.idProduct)}" rendered="#{usersession.loggedIn}" />
 					</div>
 				</div>
 			</div>
