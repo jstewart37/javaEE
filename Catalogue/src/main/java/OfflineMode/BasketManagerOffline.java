@@ -8,6 +8,7 @@ import javax.inject.Inject;
 
 import EntityManagers.BasketManager;
 import Entitys.Customer;
+import Entitys.Product;
 import Entitys.Stock;
 import Entitys.TestData;
 
@@ -18,21 +19,26 @@ public class BasketManagerOffline implements BasketManager {
 	private TestData testData;
 
 	@Override
-	public List<Stock> findByCustomerId(long id) {
+	public List<Product> findByCustomerId(long id) {
+		System.out.println("finding the customers current basket list");
 		for (Customer customer : testData.getCustomers())
-			if (customer.getIdCustomer() == id)
+			if (customer.getIdCustomer() == id){
+				System.out.println("RETURNING CUSTOMERS BASKET LIST TO SERVICE");
 				return customer.getBasketlist();
+			}
+		System.out.println("returning to service with a null customer");
 		return null;
 	}
 
 	@Override
-	public void updateWishList(long customerId, List<Stock> wishlist) {
+	public void updateWishList(long customerId, List<Product> wishlist) {
 		List<Customer> customers = testData.getCustomers();
 		for (Customer customer : customers)
 			if (customer.getIdCustomer() == customerId)
 				customer.setBasketlist(wishlist);
 		testData.setCustomers(customers);
 	}
+
 
 	}
 

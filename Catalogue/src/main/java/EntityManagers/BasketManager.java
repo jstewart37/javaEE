@@ -2,6 +2,7 @@ package EntityManagers;
 
 import java.util.List;
 
+import Entitys.Product;
 import Entitys.Stock;
 
 public interface BasketManager {
@@ -12,7 +13,7 @@ public interface BasketManager {
 		 * @param id
 		 * @return
 		 */
-		List<Stock> findByCustomerId(long id);
+		List<Product> findByCustomerId(long id);
 		
 		/**
 		 * Updates a customers wishlist.
@@ -20,6 +21,6 @@ public interface BasketManager {
 		 * @param customerId
 		 * @param wishlist
 		 */
-		void updateWishList(long customerId, List<Stock> wishlist);
+		void updateWishList(long customerId, List<Product> wishlist);
 	}
 

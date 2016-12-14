@@ -15,23 +15,23 @@ import services.BasketService;
  * @author James Thompson
  *
  */
-@Named("basketlist")
+@Named("basketList")
 @RequestScoped
 public class BasketController {
 	@Inject
 	private BasketService basketService;
 	@Inject
 	private CurrentUser user;
-	private List<Product> basketList;
+	private List<Product> basketList = null;;
 
 	/**
 	 * Adds the specified product to the wishlist
 	 * 
 	 * @param id the ID of the product to add to the wishlist.
 	 */
-	public void addToBasketlist(long id) {
+	public void add(long id) {
 		if(user.isloggedIn())
-			basketService.addToBasketlist(user.getCustomer().getIdCustomer(), id);
+			basketService.add(user.getCustomer().getIdCustomer(), id);
 	}
 	
 	/**
@@ -50,8 +50,10 @@ public class BasketController {
 	 * 
 	 * @return the list of products in the wishlist.
 	 */
-	public List<Product> getWishlist() {
+	public List<Product> getbasketList() {
+		System.out.println("GETTING B ASKET LIST.");
 		if(basketList==null)
+			System.out.println("it's null");
 			basketList = basketService.getBasketlist(user.getCustomer().getIdCustomer());
 		return basketList;
 	}

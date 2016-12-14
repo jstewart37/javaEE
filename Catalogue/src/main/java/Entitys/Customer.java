@@ -90,7 +90,7 @@ public class Customer {
 	
 	@ManyToMany
 	@JoinTable(name="BasketList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="stock_id", referencedColumnName="id"))
-	private List<Stock> basketList;
+	private List<Product> basketList;
 
 	@Author(author = "Ben")
 	// constructors
@@ -116,8 +116,8 @@ public class Customer {
 	}
 	// getters and setters
 
-	public List<Stock> getBasketlist() { return basketList;}
-	public void setBasketlist(List<Stock> wishlist) { this.basketList = basketList; }
+	public List<Product> getBasketlist() { return basketList;}
+	public void setBasketlist(List<Product> wishlist) { this.basketList = wishlist; }
 	
 	public Customer() {
 			// TODO Auto-generated constructor stub

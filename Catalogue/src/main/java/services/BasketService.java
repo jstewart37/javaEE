@@ -26,32 +26,35 @@ public class BasketService {
 	private StockManager stockManager;
 
 	public List<Product> getBasketlist(long id) {
+		System.out.println("in basket service. getting list");
 		List<Product> basketList = new ArrayList<>();
 		try{
+			System.out.println("trying some shit, off to the manager");
 			basketManager.findByCustomerId(id).forEach(stock->{
-				basketList.add(productService.getProduct(productManager.findByID(stock.getId())));	
+				basketList.add(productService.getProduct(productManager.findByID(stock.getIdProduct())));	
+				System.out.println("ALL THIS SHIT DOESN'T WORK.");
 			});
 		} finally {}
 		return basketList;
 	}
 	
-	public void addToBasketlist(long customerId, long productId) {
-		List<Stock> wishlist = basketManager.findByCustomerId(customerId);
-		if(wishlist == null) {
-			wishlist = new ArrayList<Stock>();
+	public void add(long customerId, long productId) {
+		List<Product> itemList = basketManager.findByCustomerId(customerId); // gets the customers current basket
+		if(itemList == null) {
+			itemList = new ArrayList<Product>();
 		}
-		for(Stock stock : wishlist)
-			if(stock.getId() == productId)
+		for(Product product : itemList)
+			if(product.getIdProduct() == productId)	// product already exists in basket.
 				return;
-		wishlist.add(stockManager.findById(productId));
-		basketManager.updateWishList(customerId, wishlist);
+		itemList.add(productManager.findByID(productId));
+		basketManager.updateWishList(customerId, itemList);
 	}
 
 	public void removeFromBasketlist(long customerId, long productId) {
-		List<Stock> wishlist = new ArrayList<>();
-		for(Stock stock : basketManager.findByCustomerId(customerId))
-			if(stock.getId() != productId)
-				wishlist.add(stock);
+		List<Product> wishlist = new ArrayList<>();
+		for(Product product : basketManager.findByCustomerId(customerId))
+			if(product.getIdProduct() != productId)
+				wishlist.add(product);
 		basketManager.updateWishList(customerId, wishlist);
 	}
 }
