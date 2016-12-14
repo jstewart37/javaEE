@@ -1,7 +1,8 @@
 <ui:composition xmlns="https://www.w3.org/1999/xhtml"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 	<meta charset="utf-8" />
 	<ui:define name="pageTitle">IMS Login</ui:define>
 	<head>
@@ -27,15 +28,15 @@
 					<div class="control-group">
 						<h:inputText type="text" class="login-field" value="#{login.username}"
 						
-							placeholder="username" id="login-name" />
+							a:placeholder="username" id="login-name" />
 								<f:passThroughAttribute name="alt" value="Order Total Price" />
 								<label
 							class="login-field-icon fui-user" for="login-name"></label>
 					</div>
 
 					<div class="control-group">
-						<h:inputText type="password" class="login-field" value="#{login.password}"
-							placeholder="password" id="login-pass" /><label
+						<h:inputSecret type="password" class="login-field" value="#{login.password}"
+							a:placeholder="password" id="login-pass" /><label
 							class="login-field-icon fui-lock" for="login-pass"></label>
 					</div>
 
