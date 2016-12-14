@@ -8,8 +8,7 @@ import EntityManagers.StaffManager;
 import Entitys.Customer;
 import Entitys.Staff;
 
-//@author Sophie
-//Vera steals sohpie's code from the OC to use in the IMS
+//@author Vera
 @Stateless
 public class LoginService {
 	@Inject
