@@ -212,10 +212,16 @@ fieldset    { border: 0 !important; }
     display: inline-block;
     font-size: 19px;
     border-radius: 12px;
-    
+    position: none;
+    top: 15%;
   }
 
   #ReportButton:hover{
   background-color: #61f3c4; /* Green */
     color: white;
+  }
+  
+  .ReportButton{
+  margin-top: 15px;
+  margin-left: 220px;
   }

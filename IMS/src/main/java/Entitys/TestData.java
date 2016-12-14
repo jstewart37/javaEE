@@ -8,7 +8,6 @@ import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 
-import Entitys.LoginIMS.loginIMS;
 
 /**
  * @Author(author="All Team Members")
@@ -24,7 +23,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 	private List<Supplier> suppliers;
 	private List<Address> addresses;
 	private List<Product> products;
-	private List<LoginIMS> loginIMS; 
+	private List<Staff> staffList; 
 
 	@PostConstruct
 	public void setupData() {
@@ -34,7 +33,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		addresses = new ArrayList<Address>();
 		products = new ArrayList<>();
 		customerOrderLine = new ArrayList<CustomerOrderLine>();
-		loginIMS = new ArrayList<>();
+		staffList = new ArrayList<>();
 
 		
 		//bens data
@@ -67,11 +66,23 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 		
 		//Vera's data
+		
+		staffList.add(new Staff("topboss", "1amthebest!", "Eldrick", "Johnson", "ej999@hotmail.com"));
 
-		//loginIMS.add(new LoginIMS("topboss", "1amthebest!", "Eldrick", "Johnson", "ej999@hotmail.com")); "create constructor for this before uncommenting"
+		//loginIMS.add(new Staff("topboss", "1amthebest!", "Eldrick", "Johnson", "ej999@hotmail.com")); //create constructor for this before uncommenting"
 
 		
 	}
+	
+	public List<Staff> getStaffList() {
+		return staffList;
+	}
+
+	public void setStaffList(List<Staff> staffList) {
+		this.staffList = staffList;
+	}
+	
+	
 
 	public List<SupplyOrder> getSupplyorderlist() {
 		return supplyorderlist;

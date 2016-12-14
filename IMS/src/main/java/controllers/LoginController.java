@@ -17,19 +17,29 @@ public class LoginController {
 	private CurrentUser currentUser;
 	@Inject
 	private LoginService loginService;
-	private String email = "";
+	private String username = "";
 	private String password = "";
-
+	private String email = "";
+	
 	public String getEmail() {
 		return email;
+	}
+
+	public String setEmail() {
+		return email;
+	}
+	
+	
+	public String getusername() {
+		return username;
 	}
 
 	public String getPassword() {
 		return password;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setusername(String username) {
+		this.username = username;
 	}
 
 	public void setPassword(String password) {
@@ -37,9 +47,20 @@ public class LoginController {
 	}
 
 	public String login() {
-		if (!email.isEmpty() && !password.isEmpty()) {
-			if (loginService.validLogin(email, password)) {
+		if (!username.isEmpty() && !password.isEmpty()) {
+			if (loginService.validLogin(username, password)) {
 				currentUser.setCustomer(loginService.getEmail(email));
+				return "catalogue";
+			}
+		}
+		password = "";
+		return "index";
+		
+	}
+	public String loginIMS() {
+		if (!username.isEmpty() && !password.isEmpty()) {
+			if (loginService.validLoginIMS(username, password)) {
+				currentUser.setStaff(loginService.getUsername(username));
 				return "catalogue";
 			}
 		}

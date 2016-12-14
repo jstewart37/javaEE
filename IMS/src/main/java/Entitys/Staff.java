@@ -4,13 +4,9 @@ package Entitys;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
-
-public class LoginIMS {
-
-	
-	@Entity
-	@Table(name = "login")
-	public class loginIMS {
+@Entity
+@Table(name = "Staff")
+public class Staff {
 
 		// variables
 		
@@ -43,8 +39,11 @@ public class LoginIMS {
 	private String email;
 	
 	@Author(author = "Vera")
+	
+	
+	
 	// constructors
-	public loginIMS(String username, String password, String fname, String sname, String email) {
+	public Staff(String username, String password, String fname, String sname, String email) {
 		this.username = username;
 		this.fname = fname;
 		this.sname = sname;
@@ -52,14 +51,48 @@ public class LoginIMS {
 		this.password = password;
 	}
 
-	public void add(LoginIMS loginIMS) {
-		// TODO Auto-generated method stub
-		
+	public String getUsername() {
+		return username;
 	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getFname() {
+		return fname;
+	}
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+	public String getSname() {
+		return sname;
+	}
+
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	// getters and setters
 
 	
 
+}

@@ -9,35 +9,24 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
 import Entitys.Customer;
+import Entitys.Staff;
 
 /**
  * @author Sophie
  * Then Vera copies this code from OC into IMS
  *
  */
-@Named(value="usersession")
+@Named(value="usersessionIMS")
 @SessionScoped
 public class CurrentUser implements Serializable {
 
 	/**
 	 * 
 	 */
-	public String getName(){
-		if (customer == null)
-			return "";
-		return customer.getName();
-	}
-	
-	public String getEmail(){
-		if (customer == null)
-			return "";
-		return customer.getEmail();
-	}
-	
-	
-	
+
 	private static final long serialVersionUID = -2133248137329753396L;
 	private Customer customer = null;
+	private Staff staff = null;
 
 	public Customer getCustomer() {
 		if (customer == null)
@@ -54,6 +43,14 @@ public class CurrentUser implements Serializable {
 	public boolean isloggedIn(){
 		return (customer == null) ? false : true;
 	}
+	
+	
+	public void setStaff(Staff staff){
+		this.staff = staff;	
+	}
+	
+	
+	
 	
 	
 }
