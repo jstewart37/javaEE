@@ -53,6 +53,11 @@ public class Supplier {
 	}
 
 
+	public Supplier() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public void setIdSupplier(long idSupplier) {
 		this.idSupplier = idSupplier;
 	}

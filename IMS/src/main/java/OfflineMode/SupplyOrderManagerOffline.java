@@ -1,5 +1,8 @@
 package OfflineMode;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -16,11 +19,17 @@ public class SupplyOrderManagerOffline implements SupplyOrderManager {
 	@Inject
 	private TestData testData;
 	
+	DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	Date date = new Date();
+	
 	@Author(author="Ben")
 	@Override
 	public SupplyOrder createNewSupplyOrder(SupplyOrder supplyorder) {
 		List<SupplyOrder> supplyorderlist = testData.getSupplyorderlist();
 		supplyorder.setIdSupplyOrder(supplyorderlist.size() + 1);
+		supplyorder.setDateTimePlaced(String.format(dateFormat.format(date)));
+		supplyorder.setDateTimeRecieved("N/A");
+		supplyorder.setStatus("Placed");
 		supplyorderlist.add(supplyorder);
 		testData.setSupplyorderlist(supplyorderlist);
 		return supplyorder;

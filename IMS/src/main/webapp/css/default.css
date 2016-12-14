@@ -92,17 +92,17 @@ fieldset    { border: 0 !important; }
  
  
  
-  
-  .addOrderContainer{
-  padding: 10px 10px;
-  float:left;
-  border-style: solid;
-  }
-  
    .allorderscontainer{
   padding: 10px 10px;
   float:left;
   border-style: solid;
+  width: 45%;
+  margin: 10px;
+  font-size: small;
+  }
+  
+  .addorderform{
+  width: 50%;
   }
   
   .form-control{

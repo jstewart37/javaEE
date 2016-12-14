@@ -18,4 +18,9 @@ public class SupplyOrderService {
 	public List<SupplyOrder> findAll() {
 		return SupplyOrderManager.findAll();
 	}
+	
+	public void createNewSupplyOrder(SupplyOrder so){
+		SupplyOrderManager.createNewSupplyOrder(so);
+	}
+	
 }

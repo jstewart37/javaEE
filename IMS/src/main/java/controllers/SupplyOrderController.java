@@ -37,7 +37,7 @@ public class SupplyOrderController implements Serializable {
 	
 	public List<SupplyOrder> getsupplyorderlist() {
 		supplyorderlist = SupplyOrderService.findAll();
-		System.out.println("there are " +supplyorderlist.size() + " supplier orders");
+		//System.out.println("there are " +supplyorderlist.size() + " supplier orders");
 		return supplyorderlist;
 	}
 
