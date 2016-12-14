@@ -23,7 +23,6 @@ public class SearchController {
 	@Inject
 	private SearchResultsController searchResults;
 	private String term;
-	
 	/**
 	 * Handles the searching of the catalogue using the term set via setTerm()
 	 * 
@@ -42,10 +41,23 @@ public class SearchController {
 		return "browse"; // all prods
 	}
 
-	public String getTerm() { 
+	public String gnome(){
+		term = "gnome";
+		return search();
+	}
+	public String gardenAcc(){
+		term = "garden accessories";
+		return search();
+	}
+	public String other(){
+		term = "other";
+		return search();
+	}
+	
+	
+	
+	
+	public String getTerm() { return term; }	
 		
-		
-		
-		return term; }
 	public void setTerm(String term) { this.term = term; }
 }
