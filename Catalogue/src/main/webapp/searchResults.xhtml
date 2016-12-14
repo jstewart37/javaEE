@@ -8,9 +8,9 @@
 	<ui:define name="maincontent">
 		<!-- Page Content -->
 		<div class="container animated wow fadeInDown">
-			<div class="search animated wow fadeInDown">
+			<div class="animated wow fadeInDown">
 				<h:form>
-						<h:inputText value="#{search.term}" class=" animated wow fadeInDown">
+						<h:inputText value="#{search.term}">
 						<f:passThroughAttribute name="type" value="text" />
 						<f:passThroughAttribute name="placeholder" value="Search..." />
 						<f:passThroughAttribute name="alt" value="Search" />
@@ -24,11 +24,13 @@
 						type="button" data-toggle="dropdown">
 						Categories <span class="caret"></span>
 					</button>
+					<h:form>
 					<ul class="dropdown-menu">
-						<li><a href="#">Gnomes</a></li>
-						<li><a href="#">Garden Furniture</a></li>
-						<li><a href="#">Other</a></li>
+						<li><h:commandLink action="#{search.gnome}" value = "gnome" class="btn btn-success" /></li>
+						<li><h:commandLink action="#{search.furniture}" value = "garden furniture" class="btn btn-success" /></li>
+						<li><h:commandLink action="#{search.other}" value = "other" class="btn btn-success" /></li>
 					</ul>
+					</h:form>
 				</div>
 				<div class="dropdown pull-left">
 					<button class="dropbtn btn-primary dropdown-toggle wow animated"
@@ -106,8 +108,8 @@
 				</div>
 				</ui:repeat>
 				<h:commandLink value="Previous" action="#{searchResults.previous}" rendered="#{searchResults.pagination.hasPreviousPage}" />
-					<h:outputText value="#{searchResults.pagination.pageFirstItem + 1}..#{searchResults.pagination.pageLastItem + 1}/#{searchResults.pagination.itemsCount}" />
-					<h:commandLink value="Next" action="#{searchResults.next}" rendered="#{searchResults.pagination.hasNextPage}" />
+				<h:outputText value="#{searchResults.pagination.pageFirstItem + 1}..#{searchResults.pagination.pageLastItem + 1}/#{searchResults.pagination.itemsCount}" />
+				<h:commandLink value="Next" action="#{searchResults.next}" rendered="#{searchResults.pagination.hasNextPage}" />
 				</div>
 				</h:form>
 				</div>
