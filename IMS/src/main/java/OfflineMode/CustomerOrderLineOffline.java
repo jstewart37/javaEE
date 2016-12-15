@@ -18,8 +18,6 @@ import Entitys.TestData;
 @Default
 
 public class CustomerOrderLineOffline implements CustomerOrderLineManager {
-	@Inject
-	private TestData testData;
 
 	@Override
 	public CustomerOrderLine createNewCustomerOrderLine(CustomerOrderLine customerOrderLine) {

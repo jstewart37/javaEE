@@ -25,7 +25,7 @@ public class CurrentUser implements Serializable {
 
 	private static final long serialVersionUID = -2133248137329753396L;
 	private Customer customer = null;
-	private Staff staff = null;
+	private Staff staff;
 
 	public Customer getCustomer() {
 		if (customer == null)

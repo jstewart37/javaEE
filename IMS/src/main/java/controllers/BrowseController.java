@@ -15,6 +15,10 @@ import services.ProductService;
 @ConversationScoped
 public class BrowseController implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Inject
 	private ProductService productService;
 	@Inject

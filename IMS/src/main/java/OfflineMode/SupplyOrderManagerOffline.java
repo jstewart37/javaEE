@@ -28,15 +28,33 @@ public class SupplyOrderManagerOffline implements SupplyOrderManager {
 	@Override
 	public SupplyOrder createNewSupplyOrder(SupplyOrder supplyorder) {
 		List<SupplyOrder> supplyorderlist = testData.getSupplyorderlist();
-		supplyorder.setIdSupplyOrder(supplyorderlist.size() + 1);
-		supplyorder.setDateTimePlaced(String.format(dateFormat.format(date)));
-		supplyorder.setDateTimeRecieved("N/A");
-		supplyorder.setStatus("Placed");
+		supplyorder.setIdSupplyOrder(supplyorderlist.size() + 1); 				//gets the current size of the supply order list and adds one to ensure the ID's are incrementing
+		supplyorder.setDateTimePlaced(String.format(dateFormat.format(date)));	//sets the date placed as the current  timestamp
+		supplyorder.setDateTimeRecieved("N/A");									//sets the date recieved as "n/A"
+		supplyorder.setStatus("Placed");										//sets the default status to be "placed"
 		supplyorderlist.add(supplyorder);
 		testData.setSupplyorderlist(supplyorderlist);
 		return supplyorder;
 	}
 
+	
+	@Override
+	public List<SupplyOrder> findAll() {
+		return testData.getSupplyorderlist();
+	}
+
+	//the below methods gets fed in the user inputed ID then uses this to match it to a supply order
+	//then the matched order is returned.
+	public SupplyOrder findbyID(int POID){
+		List<SupplyOrder> allsupplyorders = testData.getSupplyorderlist();
+		
+		for(SupplyOrder so : allsupplyorders){
+			if (so.getIdSupplyOrder() == POID)
+					return so;
+		}
+		return null;
+		
+	}
 	@Override
 	public SupplyOrder readSupplyOrder(SupplyOrder supplyorder) {
 		// TODO Auto-generated method stub
@@ -50,26 +68,8 @@ public class SupplyOrderManagerOffline implements SupplyOrderManager {
 	}
 
 	@Override
-	public List<SupplyOrder> findAll() {
-		return testData.getSupplyorderlist();
-	}
-
-	@Override
 	public List<SupplyOrderLine> findAllOL() {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	public SupplyOrder findbyID(int POID){
-		List<SupplyOrder> allsupplyorders = testData.getSupplyorderlist();
-		
-		for(SupplyOrder so : allsupplyorders){
-			if (so.getIdSupplyOrder() == POID)
-					return so;
-		}
-		return null;
-		
-	}
-
-	
 }

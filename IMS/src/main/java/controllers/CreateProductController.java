@@ -13,9 +13,6 @@ import Entitys.Product;
 @Named(value = "addproduct")
 public class CreateProductController {
 	
-	@Inject
-	private ProductManager productManager;
-	
 	private long idProduct = 0;
 	private String name;
 	private String description;

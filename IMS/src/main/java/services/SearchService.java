@@ -13,8 +13,7 @@ import EntityManagers.ProductManager;
 public class SearchService {
 	@Inject
 	private ProductManager productRepository;
-	@Inject
-	private ProductService productService;
+
 	
 	
 	

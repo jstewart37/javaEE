@@ -17,10 +17,7 @@ import Entitys.*;
 public class SearchController {
 	@Inject
 	private SearchService searchService;
-	@Inject
-	private ProductController selectedProduct;
-	@Inject
-	private SearchResultsController searchResults;
+
 	private String term;
 	
 	List<Product> results = new ArrayList<>();

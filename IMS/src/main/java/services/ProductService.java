@@ -20,10 +20,12 @@ import Entitys.Product;
 
 @SessionScoped
 public class ProductService implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2915332035810651682L;
 	@Inject
 	private ProductManager productManager;
-	@Inject
-	private StockManager stockManager;
 
 	public Product findProductById(String id) {
 	try {

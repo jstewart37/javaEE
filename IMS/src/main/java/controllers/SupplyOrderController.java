@@ -29,9 +29,6 @@ public class SupplyOrderController implements Serializable {
 	@Inject
 	private SupplyOrderService SupplyOrderService;
 
-	@Inject
-	private EntityManagers.SupplyOrderManager SupplyOrderManager;
-	
 	private List<SupplyOrder> supplyorderlist = null;
 	
 	public List<SupplyOrder> getsupplyorderlist() {

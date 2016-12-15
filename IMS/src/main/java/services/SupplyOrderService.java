@@ -9,7 +9,7 @@ import EntityManagers.SupplyOrderLineManager;
 import EntityManagers.SupplyOrderManager;
 import Entitys.SupplyOrder;
 import Entitys.SupplyOrderLine;
-
+// Author: Jake
 @Stateless
 public class SupplyOrderService {
 	

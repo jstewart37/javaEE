@@ -10,6 +10,11 @@ import Entitys.Product;
 @SessionScoped
 public class SearchResultsController implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -978474692960218416L;
+
 	public void setResults(List<Product> results) {
 		// TODO Auto-generated method stub
 		

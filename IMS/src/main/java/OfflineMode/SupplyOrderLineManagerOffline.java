@@ -18,6 +18,10 @@ public class SupplyOrderLineManagerOffline implements SupplyOrderLineManager {
 	private TestData testData;
 	
 	@Author(author="Jake")
+	//the below method returns the list of the current orderliens in the test data then
+	//it adds the user provided order line to this list of the test data.
+	//the original test data is then reset to contain the new provided information
+	//finally the newly added orderline (not the full list) is sent back through methods to be used.
 	@Override
 	public SupplyOrderLine createNewSupplyOrderLine(SupplyOrderLine supplyorderline, SupplyOrder so) {
 		List<SupplyOrderLine> supplyorderlinelist = testData.getSupplyorderlinelist();
@@ -27,18 +31,7 @@ public class SupplyOrderLineManagerOffline implements SupplyOrderLineManager {
 		return supplyorderline;
 	}
 
-	@Override
-	public SupplyOrderLine readSupplyOrderline(SupplyOrderLine supplyorderline) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public SupplyOrderLine updateSupplyOrderLine(SupplyOrderLine supplyorderline) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	//below method returns all of the order lines stored in the test data
 	@Override
 	public List<SupplyOrderLine> findAllOL() {
 		return testData.getSupplyorderlinelist();
@@ -50,7 +43,17 @@ public class SupplyOrderLineManagerOffline implements SupplyOrderLineManager {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public SupplyOrderLine readSupplyOrderline(SupplyOrderLine supplyorderline) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
+	@Override
+	public SupplyOrderLine updateSupplyOrderLine(SupplyOrderLine supplyorderline) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	@Override
 	public SupplyOrderLine deleteSupplyOrderLine(SupplyOrderLine supplyOrderLine) {
