@@ -40,14 +40,18 @@ public class BasketService {
 	
 	public void add(long customerId, long productId) {
 		List<Product> itemList = basketManager.findByCustomerId(customerId); // gets the customers current basket
+		System.out.println("MY BASKET IS EMPTY");
 		if(itemList == null) {
+			System.out.println("made a new list for the customers products to go in");
 			itemList = new ArrayList<Product>();
 		}
 		for(Product product : itemList)
 			if(product.getIdProduct() == productId)	// product already exists in basket.
 				return;
+		System.out.println("off to the manager to add a product to the basket.");
 		itemList.add(productManager.findByID(productId));
-		basketManager.updateWishList(customerId, itemList);
+		basketManager.updateBasketList(customerId, itemList);
+		
 	}
 
 	public void removeFromBasketlist(long customerId, long productId) {
@@ -55,6 +59,6 @@ public class BasketService {
 		for(Product product : basketManager.findByCustomerId(customerId))
 			if(product.getIdProduct() != productId)
 				wishlist.add(product);
-		basketManager.updateWishList(customerId, wishlist);
+		basketManager.updateBasketList(customerId, wishlist);
 	}
 }

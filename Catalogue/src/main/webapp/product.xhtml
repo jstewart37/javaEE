@@ -4,7 +4,9 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	template="templates/NavTemplate.xhtml">
 	<meta charset="utf-8" />
-	<ui:define name="pageTitle"><h:outputText value="#{product.name}" /></ui:define>
+	<ui:define name="pageTitle">
+		<h:outputText value="#{product.name}" />
+	</ui:define>
 	<head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,35 +21,55 @@
 		<div class="duo animated wow fadeInLeft">
 			<div class="row pull-left">
 				<div class="medium-6 columns">
-					<h:graphicImage class="thumbnail" value="#{selected.product.imgPath}" style="width:650px; height:350px" />
+					<h:graphicImage class="thumbnail"
+						value="#{selected.product.imgPath}"
+						style="width:650px; height:350px" />
 					<div class="row small-up-4">
 						<div class="column">
-							<h:graphicImage class="thumbnail" value="#{selected.product.imgPath}" style = "width:250px; height:200px" />
+							<h:graphicImage class="thumbnail"
+								value="#{selected.product.imgPath}"
+								style="width:250px; height:200px" />
 						</div>
 						<div class="column">
-							<h:graphicImage class="thumbnail" value="#{selected.product.imgPath}" style = "width:250px; height:200px" />
+							<h:graphicImage class="thumbnail"
+								value="#{selected.product.imgPath}"
+								style="width:250px; height:200px" />
 						</div>
 						<div class="column">
-							<h:graphicImage class="thumbnail" value="#{selected.product.imgPath}" style = "width:250px; height:200px" />
+							<h:graphicImage class="thumbnail"
+								value="#{selected.product.imgPath}"
+								style="width:250px; height:200px" />
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row pull-left animated wow fadeInLeft">
 				<div class="medium-6 large-5 columns">
-				<p><strong>Name: </strong><h:outputText value="#{selected.product.name}" /></p>
-				<p><strong>Price: </strong>&#163;<h:outputText value="#{selected.product.sellPrice}" /></p>
-				<p><strong>Description: </strong><h:outputText value="#{selected.product.description}" /></p>
-				
+					<p>
+						<strong>Name: </strong>
+						<h:outputText value="#{selected.product.name}" />
+					</p>
+					<p>
+						<strong>Price: </strong>&#163;
+						<h:outputText value="#{selected.product.sellPrice}" />
+					</p>
+					<p>
+						<strong>Description: </strong>
+						<h:outputText value="#{selected.product.description}" />
+					</p>
+
 					<div class="row animated wow fadeInLeft">
 						<div class="small-3 columns animated wow fadeInLeft">
 							<label for="middle-label" class="middle">Quantity: </label>
 						</div>
 						<div class="small-9 columns animated wow fadeInLeft">
-							<input type="quantity" id="middle-label"
-								placeholder="0" />
+							<input type="quantity" id="middle-label" placeholder="0" />
 						</div>
-						<h:commandButton type="submit" class="regbtn" value="BUY YO SHIT" action="#{basketList.add(selected.product.idProduct)}" rendered="#{usersession.loggedIn}" />
+						<h:form>
+							<h:commandButton type="submit" class="regbtn" value="BUY YO SHIT"
+								action="#{basketList.add(selected.product.idProduct)}"
+								rendered="#{usersession.loggedIn}" />
+						</h:form>
 					</div>
 				</div>
 			</div>

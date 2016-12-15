@@ -22,17 +22,34 @@ public class BasketController {
 	private BasketService basketService;
 	@Inject
 	private CurrentUser user;
-	private List<Product> basketList = null;;
+	private List<Product> basket = null;;
 
 	/**
 	 * Adds the specified product to the wishlist
 	 * 
 	 * @param id the ID of the product to add to the wishlist.
 	 */
-	public void add(long id) {
+	public void add(long id) { // passes is ID of product
+		System.out.println("adding a product step one. I've pushed buy yo shit");
 		if(user.isloggedIn())
 			basketService.add(user.getCustomer().getIdCustomer(), id);
+		System.out.println("I've finished adding a product to the customers basket.");
+		checkCustList(id, user.getCustomer().getBasketlist());
+		
+		
 	}
+	
+	
+	public void checkCustList(long id, List<Product> basket){
+		System.out.println("I'm a customer my ID is " + id );
+		System.out.println("I have this in my basket");
+		for(Product product : basket)	System.out.println(product.getName());
+	}
+	
+	
+	
+	
+	
 	
 	/**
 	 * removes the specified product from the wishlist
@@ -50,11 +67,12 @@ public class BasketController {
 	 * 
 	 * @return the list of products in the wishlist.
 	 */
-	public List<Product> getbasketList() {
+	public List<Product> getbasket() {
 		System.out.println("GETTING B ASKET LIST.");
-		if(basketList==null)
+		if(basket==null){
 			System.out.println("it's null");
-			basketList = basketService.getBasketlist(user.getCustomer().getIdCustomer());
-		return basketList;
+			basket = basketService.getBasketlist(user.getCustomer().getIdCustomer());
+		}
+		return basket;
 	}
 }

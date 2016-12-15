@@ -41,7 +41,7 @@ public class CurrentUser implements Serializable {
 	public Customer getCustomer() {
 		if (customer == null)
 			return new Customer();
-		System.out.println(customer.getIdCustomer());
+	//	System.out.println(customer.getIdCustomer());
 		return customer;
 	}
 

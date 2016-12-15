@@ -31,14 +31,23 @@ public class BasketManagerOffline implements BasketManager {
 	}
 
 	@Override
-	public void updateWishList(long customerId, List<Product> wishlist) {
+	public void updateBasketList(long customerId, List<Product> basketList) {
+		System.out.println("updating customer " + customerId + "with the new basket of size  " + basketList.size());
 		List<Customer> customers = testData.getCustomers();
 		for (Customer customer : customers)
-			if (customer.getIdCustomer() == customerId)
-				customer.setBasketlist(wishlist);
+			if (customer.getIdCustomer() == customerId){
+			System.out.println("found customer number " + customerId +" THIS ID SHOULD BE THE SAME AS ABOVE.. time to set the their basket to the basket I have");
+				customer.setBasketlist(basketList);
+			}
+		System.out.println("updating the testdata with the customers List the basketmanager owns.");
 		testData.setCustomers(customers);
+		}
+		
+		
+		
+		
 	}
 
 
-	}
+	
 

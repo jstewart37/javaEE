@@ -21,6 +21,6 @@ public interface BasketManager {
 		 * @param customerId
 		 * @param wishlist
 		 */
-		void updateWishList(long customerId, List<Product> wishlist);
+		void updateBasketList(long customerId, List<Product> basketList);
 	}
 

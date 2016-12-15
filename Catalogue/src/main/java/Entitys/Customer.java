@@ -117,14 +117,14 @@ public class Customer {
 	// getters and setters
 
 	public List<Product> getBasketlist() { return basketList;}
-	public void setBasketlist(List<Product> wishlist) { this.basketList = wishlist; }
+	public void setBasketlist(List<Product> basketList) { this.basketList = basketList; }
 	
 	public Customer() {
 			// TODO Auto-generated constructor stub
 	}
 
 	public long getIdCustomer() {
-		System.out.println(idCustomer);
+	//	System.out.println("I am customer number - " + idCustomer);
 		return idCustomer;
 	}
 
