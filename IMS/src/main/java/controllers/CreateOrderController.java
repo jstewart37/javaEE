@@ -1,5 +1,9 @@
 package controllers;
 
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -33,7 +37,9 @@ public class CreateOrderController {
 		private SupplyOrder supplyorder;
 		private int id;
 		
-	//methods //	
+	
+			
+		//methods //	
 		
 		
 		//below method is used with the AddOrder.xhmtl page to add a order with only the supplier name beign given by the user.

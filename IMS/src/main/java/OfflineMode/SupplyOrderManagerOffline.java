@@ -31,7 +31,7 @@ public class SupplyOrderManagerOffline implements SupplyOrderManager {
 		supplyorder.setIdSupplyOrder(supplyorderlist.size() + 1); 				//gets the current size of the supply order list and adds one to ensure the ID's are incrementing
 		supplyorder.setDateTimePlaced(String.format(dateFormat.format(date)));	//sets the date placed as the current  timestamp
 		supplyorder.setDateTimeRecieved("N/A");									//sets the date recieved as "n/A"
-		supplyorder.setStatus("Placed");										//sets the default status to be "placed"
+		supplyorder.setStatus("Building Order");										//sets the default status to be "building order"
 		supplyorderlist.add(supplyorder);
 		testData.setSupplyorderlist(supplyorderlist);
 		return supplyorder;

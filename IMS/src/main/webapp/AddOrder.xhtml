@@ -39,7 +39,7 @@
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 			 -->	
-			<h:commandButton type="submit" class="addorderbtn" action="#{addorder.addsupplierorder}" value="Add Order" />
+			<h:commandButton type="submit" class="addorderbtn" action="#{addorder.addsupplierorder}" value="Add New Order" />
 			</div>
 	</h:form>
 	</div> 
@@ -48,6 +48,12 @@
 	<h:form class="addorderform">
 	<div class="form-group">
 				<label>Order ID</label>
+				
+				<!--  <h:selectOneMenu id="orderid" value="" style="width:150px">
+                   		<f:selectItem itemLabel="Select OrderID" itemValue="" noSelectionOption="true" />
+                		<f:selectItems value="#{supplyOrderCon.supplyorderlist}" />
+            	</h:selectOneMenu>-->
+					 
 				<h:inputText id="orderitemsID" class="form-control" value="#{addorder.id}">
 					<f:passThroughAttribute name="required" value="required" />
 					<f:passThroughAttribute name="value" value="#{addorder.id}" />
@@ -63,7 +69,7 @@
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				
-			<h:commandButton type="submit" class="addorderbtn" action="#{addorder.addsupplierorderline}" value="Add Order" />
+			<h:commandButton type="submit" class="addorderbtn" action="#{addorder.addsupplierorderline}" value="Add Item" />
 			</div>
 	</h:form>
 	</div>
