@@ -55,7 +55,8 @@ public class ProductService implements Serializable {
 	public Product getProduct(Product product) {
 		Product productItem = new Product(product.getIdProduct()); // THIS LINE IS FUCKED
 		if (product != null)
-			productItem.addProductInfo(product.getName(), product.getDescription(), product.getColour(), product.getSellPrice(), product.getIsPorousware(), product.getImgPath(), product.getCategory());	
+			productItem.addProductInfo(product.getIdProduct(), product.getName(), product.getDescription(), product.getColour(),product.getStockLevel(),
+						product.getSellPrice(), product.getBuyPrice(), product.getStatus(), product.getImgPath(), product.getIsPorousware(),  product.getCategory()	);	
 		return productItem;
 	}
 

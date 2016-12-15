@@ -71,6 +71,38 @@ public class Product {
 		this.isPorousware = pw;	
 		this.category = cat;
 	}
+	
+	@Author(author = "alex")
+	public void addProductInfo(long vidProduct, String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice, double vbuyPrice, // all variables
+			String vstatus, String path, String pw, String cat) {
+		
+		this.idProduct = vidProduct;
+		this.name = vname;
+		this.description = vdescription;
+		this.colour= vcolour;
+		this.stockLevel= vstockLevel;
+		this.sellPrice= vsellPrice;
+		this.buyPrice= vbuyPrice;
+		this.status= vstatus;
+		this.imgPath = path;
+		this.isPorousware = pw;	
+		this.category = cat;
+	}
+
+	/*@Author(author = "alex")
+	public void addStockInfo(String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice,
+			double vbuyPrice, String vstatus, String vimgPath, String cat) {
+		this.name = vname;
+		this.description = vdescription;
+		this.colour= vcolour;
+		this.stockLevel= vstockLevel;
+		this.sellPrice= vsellPrice;
+		this.buyPrice= vbuyPrice;
+		this.status= vstatus;
+		this.imgPath= vimgPath;
+		this.category = cat;
+		
+	}*/
 
 	//getters & setters
 
@@ -161,32 +193,7 @@ public class Product {
 	}
 
 
-	@Author(author = "alex")
-	public void addProductInfo(String vname, String vdescription, String vcolour, double vsellPrice,
-			String vstatus, String vimgPath, String cat) {
-		this.name = vname;
-		this.description = vdescription;
-		this.colour= vcolour;
-		this.sellPrice= vsellPrice;
-		this.status= vstatus;
-		this.imgPath= vimgPath;
-		this.category = cat;
-	}
 
-	@Author(author = "alex")
-	public void addStockInfo(String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice,
-			double vbuyPrice, String vstatus, String vimgPath, String cat) {
-		this.name = vname;
-		this.description = vdescription;
-		this.colour= vcolour;
-		this.stockLevel= vstockLevel;
-		this.sellPrice= vsellPrice;
-		this.buyPrice= vbuyPrice;
-		this.status= vstatus;
-		this.imgPath= vimgPath;
-		this.category = cat;
-		
-	}
 
 	public String getImgPath() {
 		
