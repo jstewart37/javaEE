@@ -57,7 +57,14 @@
 						<strong>Description: </strong>
 						<h:outputText value="#{selected.product.description}" />
 					</p>
-
+					<hr></hr>
+						<strong>Additional Information</strong>
+						<ul>
+						<li><strong>Stock Status: </strong><h:outputText value="#{selected.product.status}" /></li>
+						<li><strong>Stock Level: </strong><h:outputText value="#{selected.product.stockLevel}" /></li>
+						<li><strong>Porouseware: </strong><h:outputText value="#{selected.product.isPorousware}" /></li>
+						</ul>
+					<hr></hr>
 					<div class="row animated wow fadeInLeft">
 						<div class="small-3 columns animated wow fadeInLeft">
 							<label for="middle-label" class="middle">Quantity: </label>
