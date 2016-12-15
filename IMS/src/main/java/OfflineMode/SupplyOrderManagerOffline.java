@@ -56,9 +56,20 @@ public class SupplyOrderManagerOffline implements SupplyOrderManager {
 
 	@Override
 	public List<SupplyOrderLine> findAllOL() {
-		return testData.getSupplyorderlinelist();
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public SupplyOrder findbyID(int POID){
+		List<SupplyOrder> allsupplyorders = testData.getSupplyorderlist();
+		
+		for(SupplyOrder so : allsupplyorders){
+			if (so.getIdSupplyOrder() == POID)
+					return so;
 		}
-	
-	
+		return null;
+		
+	}
 
+	
 }

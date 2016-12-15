@@ -5,9 +5,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import EntityManagers.ProductManager;
-import Entitys.Customer;
 import Entitys.Product;
-import Entitys.SupplyOrder;
 
 //@Author Sophie
 

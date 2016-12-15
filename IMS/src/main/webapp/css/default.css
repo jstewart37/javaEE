@@ -101,6 +101,14 @@ fieldset    { border: 0 !important; }
   font-size: small;
   }
   
+   .allorderscontainer table{
+   width:100%;
+   }
+   
+    .allorderscontainer th, td{
+   padding: 5px;;
+   }
+  
   .addorderform{
   width: 50%;
   }
@@ -113,9 +121,13 @@ fieldset    { border: 0 !important; }
     padding:4px 2px;
     border:solid 1px #aacfe4;
     width:70px;
-    margin:2px 0 20px 10px;
+    margin:2px 0 20px 0px;
     
   }
+  
+    .addOrderContainer{
+    width:auto;
+    margin-left: 10px;}
   
   .addOrderContainer .form-control{
   width:140px;}

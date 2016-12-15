@@ -3,10 +3,6 @@
  */
 
 package Entitys;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import javax.persistence.*;
 import javax.validation.constraints.*;
 

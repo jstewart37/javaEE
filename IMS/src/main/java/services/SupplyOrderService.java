@@ -25,7 +25,7 @@ public class SupplyOrderService {
 	}
 	
 	public List<SupplyOrderLine> findAllOL() {
-		return SupplyOrderManager.findAllOL();
+		return SupplyOrderLineManager.findAllOL();
 	}
 	
 	public SupplyOrder createNewSupplyOrder(SupplyOrder so){

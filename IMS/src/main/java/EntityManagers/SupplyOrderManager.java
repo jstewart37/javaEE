@@ -15,4 +15,6 @@ public interface SupplyOrderManager {
 	
 	public List<SupplyOrder> findAll();
 	public List<SupplyOrderLine> findAllOL();
+	
+	public SupplyOrder findbyID(int POID);
 }

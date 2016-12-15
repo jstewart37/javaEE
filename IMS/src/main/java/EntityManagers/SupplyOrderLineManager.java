@@ -13,7 +13,7 @@ public interface SupplyOrderLineManager {
 	public SupplyOrderLine readSupplyOrderLine(SupplyOrderLine supplyOrderLine);
 	public SupplyOrderLine updateSupplyOrderLine(SupplyOrderLine supplyOrderLine);
 	public SupplyOrderLine deleteSupplyOrderLine(SupplyOrderLine supplyOrderLine);
-	public List<SupplyOrderLine> findAll();
 	public SupplyOrderLine readSupplyOrderline(SupplyOrderLine supplyorderline);
 	public SupplyOrderLine createNewSupplyOrderLine(SupplyOrderLine sol, SupplyOrder so);
+	List<SupplyOrderLine> findAllOL();
 }

@@ -6,7 +6,6 @@ import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import EntityManagers.SupplyOrderLineManager;
-import EntityManagers.SupplyOrderManager;
 import Entitys.Author;
 import Entitys.SupplyOrder;
 import Entitys.SupplyOrderLine;
@@ -22,7 +21,7 @@ public class SupplyOrderLineManagerOffline implements SupplyOrderLineManager {
 	@Override
 	public SupplyOrderLine createNewSupplyOrderLine(SupplyOrderLine supplyorderline, SupplyOrder so) {
 		List<SupplyOrderLine> supplyorderlinelist = testData.getSupplyorderlinelist();
-		supplyorderline.setSupplyOrder(so);
+		//supplyorderline.setSupplyOrder(so);
 		supplyorderlinelist.add(supplyorderline);
 		testData.setSupplyorderlinelist(supplyorderlinelist);
 		return supplyorderline;
@@ -41,7 +40,7 @@ public class SupplyOrderLineManagerOffline implements SupplyOrderLineManager {
 	}
 
 	@Override
-	public List<SupplyOrderLine> findAll() {
+	public List<SupplyOrderLine> findAllOL() {
 		return testData.getSupplyorderlinelist();
 	}
 

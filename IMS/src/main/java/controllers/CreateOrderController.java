@@ -10,7 +10,6 @@ import Entitys.Product;
 import Entitys.SupplyOrder;
 import Entitys.SupplyOrderLine;
 import services.SupplyOrderService;
-import OfflineMode.SupplyOrderManagerOffline;
 
 //@Author Jake
 @RequestScoped
@@ -31,33 +30,50 @@ public class CreateOrderController {
 	
 	private int quantity = 0;
 	private Product product;
-	public SupplyOrder so;
+	private SupplyOrder supplyorder;
+	private int id;
 	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public SupplyOrder getSupplyorder() {
+		return supplyorder;
+	}
+
+	public void setSupplyorder() {
+		this.supplyorder = supplyOrderManager.findbyID(id);
+	}
 
 	public void addsupplierorder() {
 		//needs work
 		if(supplier!=null) {
-			so = new SupplyOrder(orderItems, supplier);
-			so = SupplyOrderService.createNewSupplyOrder(so);
-			System.out.println("order ID:" + so.getIdSupplyOrder()+ " created");
-			long orderID = so.getIdSupplyOrder();
+			supplyorder = new SupplyOrder(orderItems, supplier);
+			supplyorder = SupplyOrderService.createNewSupplyOrder(supplyorder);
+			System.out.println("order ID:" + supplyorder.getIdSupplyOrder()+ " created");
 	
-			System.out.println(so + "order created"); // for debugging
+			System.out.println(supplyorder + "order created"); // for debugging
 			
-			if(orderItems!=null){
-				SupplyOrderLine sol = new SupplyOrderLine(quantity,so, product);
+		/**	if(orderItems!=null){
+				SupplyOrderLine sol = new SupplyOrderLine(quantity,, product);
 				sol = SupplyOrderService.createNewSupplyOrderLine(sol);
-				System.out.println("PID: " +sol.getIdProduct() + " Quantity: " +sol.getQuantity() );	
-			}
+				//System.out.println("PID: " +sol.getProduct() + " Quantity: " +sol.getQuantity() );	
+			}**/
 		}
 		System.out.println("No Supplier Stated");
 	}
 	
 	public void addsupplierorderline(){
+	
 		if(orderItems!=null){
-			SupplyOrderLine sol = new SupplyOrderLine(quantity, product);
-			sol = SupplyOrderService.createNewSupplyOrderLine(sol,so);
-			System.out.println("PID: " +sol.getIdProduct() + " Quantity: " +sol.getQuantity() );	
+			SupplyOrderLine sol = new SupplyOrderLine(quantity,supplyOrderManager.findbyID(id), product);
+			sol = SupplyOrderService.createNewSupplyOrderLine(sol,supplyorder);
+			System.out.println("PID: " +sol.getProduct() + " Quantity: " +sol.getQuantity() );	
 		}
 	}
 	

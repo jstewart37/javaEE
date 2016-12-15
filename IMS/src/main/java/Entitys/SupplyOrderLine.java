@@ -22,9 +22,9 @@ public class SupplyOrderLine {
 
 	// foreign keys
 	@ManyToOne
-	@JoinColumn(name = "Supply Order", nullable = false)
+	@JoinColumn(name = "SupplyOrder", nullable = false)
 	@NotNull
-	private SupplyOrder SupplyOrder;
+	private SupplyOrder supplyOrder;
 
 	@ManyToOne
 	@JoinColumn(name = "Product", nullable = false)
@@ -36,9 +36,9 @@ public class SupplyOrderLine {
 
 	}
 
-	public SupplyOrderLine(int quantity, SupplyOrder idSupplyOrder, Product product) {
+	public SupplyOrderLine(int quantity, SupplyOrder SupplyOrder, Product product) {
 		this.quantity = quantity;
-		this.SupplyOrder = idSupplyOrder;
+		this.supplyOrder = SupplyOrder;
 		this.product = product;
 	}
 	
@@ -47,8 +47,6 @@ public class SupplyOrderLine {
 		this.product = product;
 	}
 
-
-	// getters and setters
 	public int getQuantity() {
 		return quantity;
 	}
@@ -61,14 +59,16 @@ public class SupplyOrderLine {
 		return supplyOrderLinePrice;
 	}
 
-	
+	public void setSupplyOrderLinePrice(Double supplyOrderLinePrice) {
+		this.supplyOrderLinePrice = supplyOrderLinePrice;
+	}
 
 	public SupplyOrder getSupplyOrder() {
-		return SupplyOrder;
+		return supplyOrder;
 	}
 
 	public void setSupplyOrder(SupplyOrder supplyOrder) {
-		SupplyOrder = supplyOrder;
+		this.supplyOrder = supplyOrder;
 	}
 
 	public Product getProduct() {
@@ -79,12 +79,7 @@ public class SupplyOrderLine {
 		this.product = product;
 	}
 
-	public void setSupplyOrderLinePrice(Double supplyOrderLinePrice) {
-		this.supplyOrderLinePrice = supplyOrderLinePrice;
-	}
 
-	public long getIdProduct() {
-		return product.getIdProduct();
-
-	}
+	// getters and setters
+	
 }
