@@ -22,14 +22,12 @@ import Entitys.*;
 @Stateless
 
 public class AccountDetailsService {
-	
-	private CustomerManager customerManager;
+	@Inject
+	private AddressManager addressManager;
 
-	public  Customer findByemail(String Email) {
-		
-		Customer customer = customerManager.findByEmail(Email.toLowerCase());
-			
-		return customer;
-		
+	public  List<Address> findAll(long id) {
+		System.out.println("in accountService. going to address manager to find all addresses with this ID" + id);
+		return addressManager.findAllAddressesByID(id);
 	}	
+	
 }

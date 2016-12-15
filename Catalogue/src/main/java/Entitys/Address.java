@@ -63,6 +63,9 @@ public class Address {
 	}
 
 	// getters & setters
+	public Address getAddress(){
+		return this;
+	}
 	public long getIdAddress() {
 		return idAddress;
 	}
