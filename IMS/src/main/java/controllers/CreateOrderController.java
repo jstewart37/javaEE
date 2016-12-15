@@ -31,13 +31,13 @@ public class CreateOrderController {
 	
 	private int quantity = 0;
 	private Product product;
-
+	public SupplyOrder so;
 	
 
 	public void addsupplierorder() {
 		//needs work
 		if(supplier!=null) {
-			SupplyOrder so = new SupplyOrder(orderItems, supplier);
+			so = new SupplyOrder(orderItems, supplier);
 			so = SupplyOrderService.createNewSupplyOrder(so);
 			System.out.println("order ID:" + so.getIdSupplyOrder()+ " created");
 			long orderID = so.getIdSupplyOrder();
@@ -49,11 +49,18 @@ public class CreateOrderController {
 				sol = SupplyOrderService.createNewSupplyOrderLine(sol);
 				System.out.println("PID: " +sol.getIdProduct() + " Quantity: " +sol.getQuantity() );	
 			}
-
 		}
 		System.out.println("No Supplier Stated");
 	}
-
+	
+	public void addsupplierorderline(){
+		if(orderItems!=null){
+			SupplyOrderLine sol = new SupplyOrderLine(quantity, product);
+			sol = SupplyOrderService.createNewSupplyOrderLine(sol,so);
+			System.out.println("PID: " +sol.getIdProduct() + " Quantity: " +sol.getQuantity() );	
+		}
+	}
+	
 	public int getQuantity() {
 		return quantity;
 	}

@@ -3,6 +3,7 @@ package EntityManagers;
 
 import java.util.List;
 
+import Entitys.SupplyOrder;
 import Entitys.SupplyOrderLine;
 
 public interface SupplyOrderLineManager {
@@ -14,4 +15,5 @@ public interface SupplyOrderLineManager {
 	public SupplyOrderLine deleteSupplyOrderLine(SupplyOrderLine supplyOrderLine);
 	public List<SupplyOrderLine> findAll();
 	public SupplyOrderLine readSupplyOrderline(SupplyOrderLine supplyorderline);
+	public SupplyOrderLine createNewSupplyOrderLine(SupplyOrderLine sol, SupplyOrder so);
 }

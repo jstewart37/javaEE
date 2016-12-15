@@ -43,6 +43,35 @@
 			</div>
 	</h:form>
 	</div>
+	
+	<div class="addOrderContainer">
+	<h:form class="addorderform">
+	<div class="form-group">
+				<label>Order Items Quantity</label>
+				<h:inputText id="orderitemsQ" class="form-control" value="#{addorder.quantity}">
+					<f:passThroughAttribute name="alt" value="Enter quantity of product" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
+				<label>Order Product</label>
+				<h:inputText id="orderitemsProduct" class="form-control" value="#{addorder.product.name}">
+					<f:passThroughAttribute name="alt" value="Enter Product" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>
+				
+			<h:commandButton type="submit" class="addorderbtn" action="#{addorder.addsupplierorderline}" value="Add Order" />
+			</div>
+	</h:form>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<div class="allorderscontainer">	
 	
 	<h:dataTable value="#{supplyOrderCon.supplyorderlist}" var="so">

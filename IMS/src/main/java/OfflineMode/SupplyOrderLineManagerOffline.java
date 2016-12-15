@@ -20,9 +20,9 @@ public class SupplyOrderLineManagerOffline implements SupplyOrderLineManager {
 	
 	@Author(author="Jake")
 	@Override
-	public SupplyOrderLine createNewSupplyOrderLine(SupplyOrderLine supplyorderline) {
+	public SupplyOrderLine createNewSupplyOrderLine(SupplyOrderLine supplyorderline, SupplyOrder so) {
 		List<SupplyOrderLine> supplyorderlinelist = testData.getSupplyorderlinelist();
-			
+		supplyorderline.setSupplyOrder(so);
 		supplyorderlinelist.add(supplyorderline);
 		testData.setSupplyorderlinelist(supplyorderlinelist);
 		return supplyorderline;
@@ -55,6 +55,12 @@ public class SupplyOrderLineManagerOffline implements SupplyOrderLineManager {
 
 	@Override
 	public SupplyOrderLine deleteSupplyOrderLine(SupplyOrderLine supplyOrderLine) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public SupplyOrderLine createNewSupplyOrderLine(SupplyOrderLine supplyOrderLine) {
 		// TODO Auto-generated method stub
 		return null;
 	}

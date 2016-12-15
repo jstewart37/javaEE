@@ -35,6 +35,9 @@ public class SupplyOrderService {
 	public SupplyOrderLine createNewSupplyOrderLine(SupplyOrderLine sol){
 		return SupplyOrderLineManager.createNewSupplyOrderLine(sol);
 	}
-	
-	
+
+	public SupplyOrderLine createNewSupplyOrderLine(SupplyOrderLine sol, SupplyOrder so) {
+		return SupplyOrderLineManager.createNewSupplyOrderLine(sol,so);
+		}
+		
 }
