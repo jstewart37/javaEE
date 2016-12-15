@@ -27,6 +27,7 @@
 					</button>
 					<h:form>
 					<ul class="dropdown-menu">
+						<li><h:commandLink action="#{search.all}" value = "all" class="btn btn-success" /></li>
 						<li><h:commandLink action="#{search.gnome}" value = "gnome" class="btn btn-success" /></li>
 						<li><h:commandLink action="#{search.furniture}" value = "garden furniture" class="btn btn-success" /></li>
 						<li><h:commandLink action="#{search.other}" value = "other" class="btn btn-success" /></li>
@@ -38,10 +39,6 @@
 						style="width: 150px;" type="button" data-toggle="dropdown">
 						Sort by <span class="caret"></span>
 					</button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Price: low to high</a></li>
-						<li><a href="#">Price: high to low</a></li>
-					</ul>
 				</div>		
 				<div class="control-group">
 					<h1>Filter</h1>

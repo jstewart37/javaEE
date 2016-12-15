@@ -67,8 +67,11 @@ public class SearchController {
 		return searchByCat();
 	}
 	
+	public String all(){
+		return "browse";		
+	}
 	
-	
+		
 	
 	public String getTerm() { return term; }	
 		
