@@ -81,7 +81,7 @@
 							<th style="width:10%">Price</th>
 							<th style="width:8%">Quantity</th>
 							<th style="width:22%" class="text-center">Subtotal</th>
-							<th style="width:10%"></th>
+							<h:form><th style="width:10%"><h:commandLink class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></h:commandLink></th></h:form>
 						</tr>
 					</thead>
 					<tbody>
@@ -98,15 +98,13 @@
 </h:form>
 					</tbody>
 					<tfoot>
-						<tr class="visible-xs">
-							<td class="text-center"><strong>Total 1.99</strong></td>
-						</tr>
 						<tr>
-							<td><a href="catalogue.xhtml" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
-							<td colspan="2" class="hidden-xs"></td>
+							<td><h:form><h:commandLink action="browse.xhtml" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</h:commandLink></h:form></td>
+							<td colspan="2" class="hidden-xs"><h:inputText class="form-control text-center" value="aaa" /></td>
 							<td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
-							<td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+							<td><h:form><h:commandLink class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></h:commandLink></h:form></td>
 						</tr>
+						
 					</tfoot>
 				</table>
 				
