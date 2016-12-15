@@ -53,7 +53,13 @@
 					<li><h:form><h:commandLink class="logoutbtn" rendered="#{usersession.loggedIn}" action="#{login.logout}" value="Log Out" /></h:form></li>
 					<li><h:outputLink rendered="#{!usersession.loggedIn}" value="#login-box" class="login-window">Register</h:outputLink></li>
 					<li><h:outputLink rendered="#{!usersession.loggedIn}" value="#Signin-box" class="signin-window">Login</h:outputLink></li>
-					<li><a href="basket.xhtml"><img src="img/basket.png" style="width:50px;height:40px;" /></a></li>
+					<li><h:form><h:commandLink rendered="#{usersession.loggedIn}" action="basket.xhtml"><h:graphicImage style="width:50px;height:40px;" value="#{product.imgPath}" url="img/basket.png" /></h:commandLink></h:form></li>
+					
+					
+					
+					
+					
+					
 				</ul>
 			</nav>
 			<span class="burger_icon">menu</span>
