@@ -53,6 +53,76 @@ public class AccountDetailsController implements Serializable {
 	}
 
 
+	public CurrentUser getUser() {
+		return user;
+	}
+
+
+	public void setUser(CurrentUser user) {
+		this.user = user;
+	}
+
+
+	public AddressManager getAddressManager() {
+		return addressManager;
+	}
+
+
+	public void setAddressManager(AddressManager addressManager) {
+		this.addressManager = addressManager;
+	}
+
+
+	public AccountDetailsService getAccountService() {
+		return accountService;
+	}
+
+
+	public void setAccountService(AccountDetailsService accountService) {
+		this.accountService = accountService;
+	}
+
+
+	public void setAddresses(List<Address> addresses) {
+		this.addresses = addresses;
+	}
+
+
+	public void setPagination(PaginationHelper pagination) {
+		this.pagination = pagination;
+	}
+
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+	public void setAddressLine1(String addressLine1) {
+		this.addressLine1 = addressLine1;
+	}
+
+
+	public void setAddressLine2(String addressLine2) {
+		this.addressLine2 = addressLine2;
+	}
+
+
+	public void setCounty(String county) {
+		this.county = county;
+	}
+
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
+	}
+
+
 	public String getCounty() {
 		return county;
 	}

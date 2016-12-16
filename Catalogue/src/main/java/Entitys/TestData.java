@@ -34,8 +34,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 
 		
 		//bens data
-		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "password","12345678912", "1991-12-22"));
-		customers.add(new Customer(2, "mr", "Andy", "Mr.Andy@M/vie.com", "twat","1912", "1991-12-22"));
+		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "password","12345678912", "1991-12-22", setEmptyAddress(1)));
+		customers.add(new Customer(2, "mr", "Andy", "Mr.Andy@M/vie.com", "twat","1912", "1991-12-22", setEmptyAddress(2)));
 		
 		customerOrderLine.add(new CustomerOrderLine(8, 10, 8, 24.89));
 		
@@ -97,8 +97,10 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 	}
 	
-	public Address setEmptyAddress(long id){
-		return new Address(id, "", "", "", "", "");
+	public List<Address> setEmptyAddress(long id){
+		List<Address> a = new ArrayList<>();
+		a.add(new Address(id, "", "","", "",""));
+		return a;
 	
 	}
 

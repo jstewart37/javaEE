@@ -35,10 +35,9 @@
 						</ul>
 					</ui:repeat>
 				</div>
-			<h:form>
-				<h:commandLink rendered="#{usersession.loggedIn}"
-					value="#add-address" class="login-window"></h:commandLink>
-			</h:form>
+			
+				<h:outputLink value="#add-address" class="login-window"> Add address</h:outputLink>
+			
 				<div id="add-address" class="login-popup">
 					<a href="#" class="close"><img src="img/close_pop.png"
 						class="btn_close" title="Close Window" alt="Close" /></a>

@@ -42,8 +42,7 @@ public class CustomerManagerOffline implements CustomerManager {
 		List<Customer> customers = testData.getCustomers();
 		
 		customer.setIdCustomer(customers.size() + 1);
-		List<Address> address = new ArrayList<>();
-		address.add(setAddress(customers.size() + 1));
+		List<Address> address = setAddress(customer.getIdCustomer());
 		customer.setAddressList(address);
 		customers.add(customer);
 		testData.setCustomers(customers);
@@ -68,11 +67,12 @@ public class CustomerManagerOffline implements CustomerManager {
 	}
 
 	@Override
-	public Address setAddress(long id) {
-		Address a = testData.setEmptyAddress(id);
+	public List<Address> setAddress(long id) {
+		List<Address> a = new ArrayList<>();
+		a = testData.setEmptyAddress(id);
 		return a;
 	}
-
+	
 	
 
 }

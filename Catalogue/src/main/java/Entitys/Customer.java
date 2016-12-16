@@ -74,7 +74,7 @@ public class Customer {
 	@Author(author = "Ben")
 	// constructors
 	public Customer(long idCustomer, String title, String name, String email, String password, String phone,
-			String date) {
+			String date, List<Address> address) {
 		this.idCustomer = idCustomer;
 		this.title = title;
 		this.name = name;
@@ -82,6 +82,7 @@ public class Customer {
 		this.password = password;
 		this.phone = phone;
 		this.date = date;
+		this.addressList = address;
 	}
 
 	public Customer(String title, String name, String email, String password, String phone,
