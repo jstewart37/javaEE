@@ -83,13 +83,15 @@ public class AddressManagerOffline implements AddressManager {
 		return address;
 	}
 
+	@SuppressWarnings("null")
 	@Override
 	public List<Address> findAllAddressesByID(long id) {
+		System.out.println("in address manager. time to get this users addresses");
 		List<Address> addresses = testData.getAddresses();
 		List<Address> usersAddresses = null;
 		for (Address address : addresses){
 			if (address.getIdAddress() == id){
-				usersAddresses.add(address);
+				usersAddresses.add(address.getAddress());
 			}
 		
 		}

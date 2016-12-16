@@ -90,7 +90,7 @@ public class Customer {
 	
 	@ManyToMany
 	@JoinTable(name="BasketList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="stock_id", referencedColumnName="id"))
-	private List<Product> basketList;
+	private List<Product> basketList = null;
 
 	@Author(author = "Ben")
 	// constructors

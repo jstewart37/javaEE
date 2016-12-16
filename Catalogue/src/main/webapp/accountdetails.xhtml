@@ -25,15 +25,13 @@
 			<h:outputText value="#{usersession.email}" />
 			<div class="accountcontent">
 				<div class="accountdetails pull-left">
-					<ui:repeat var="AccountDetails"
-						value="#{AccountDetails.allAddresses}">
+					<ui:repeat var="address" value="#{AccountDetails.dataModel}">
 						<ul>
-							<li><h:outputText value="#{AccountDetails.addressLine1}" /> </li>
-							<li><h:outputText value="#{AccountDetails.addressLine2}" /> </li>
-							<li><h:outputText value="#{AccountDetails.county}" /></li>
-							<li><h:outputText value="#{AccountDetails.city}" /></li>
-							<li><h:outputText value="#{AccountDetails.postcode}" /></li>
-							<li><h:outputText value="#{AccountDetails.addressLine1}" />	</li>
+							<li><h:outputText value="#{address.addressLine1}" /> </li>
+							<li><h:outputText value="#{address.addressLine2}" /> </li>
+							<li><h:outputText value="#{address.county}" /></li>
+							<li><h:outputText value="#{address.city}" /></li>
+							<li><h:outputText value="#{address.postcode}" /></li>
 						</ul>
 					</ui:repeat>
 				</div>
