@@ -48,18 +48,18 @@
 									</div>
 									</th>
 									<th>&#163;<h:outputText value="#{product.sellPrice}" /></th>
-									<th><h:inputText class="form-control text-center basketqty" value="" /></th>
-									<th><h:outputText value="#{product.status}" /></th>
-									<th><h:form><h:commandLink class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></h:commandLink></h:form></th>
+									<th><h:inputText class="form-control text-center basketqty" /></th>
+									<th>&#163;<h:outputText value="#{product.sellPrice}" /></th>
+									<th><h:form><h:commandButton action="#{basketList.removeItem(product.idProduct)}" class="fa fa-trash-o btn btn-danger btn-sm" /></h:form></th>
 								</tr>
 							</ui:repeat>
-						</h:form>
+						</h:form>	
 					</tbody>
 					<tfoot>
 						<tr>
 							<td><h:form><h:commandLink action="browse.xhtml" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</h:commandLink></h:form></td>
 							<td colspan="2" class="hidden-xs"></td>
-							<td class="hidden-xs text-center"><strong>Total $1.99</strong></td>
+							<td class="hidden-xs text-center"><strong>Total &#163;<h:outputText value="#{product.totalPrice}" /></strong></td>
 							<td><h:form><h:commandLink class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></h:commandLink></h:form></td>
 						</tr>
 						
