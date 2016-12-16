@@ -63,34 +63,13 @@ public class Customer {
 	@NotNull
 	private String search;
 
-	@Column(nullable = false, length = 100)
-	@Size(min = 3, max = 25)
-	@NotNull
-	private String AddressLine1;
-
-	@Column(nullable = false, length = 100)
-	@Size(min = 3, max = 25)
-	@NotNull
-	private String AddressLine2;
-
-	@Column(nullable = false, length = 100)
-	@Size(min = 3, max = 25)
-	@NotNull
-	private String county;
-
-	@Column(nullable = false, length = 100)
-	@Size(min = 3, max = 25)
-	@NotNull
-	private String City;
-
-	@Column(nullable = false, length = 100)
-	@Size(min = 3, max = 25)
-	@NotNull
-	private String PostCode;
+	@ManyToMany
+	@JoinTable(name="BasketList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="product_id", referencedColumnName="id"))
+	private List<Product> basketList = null;
 	
 	@ManyToMany
-	@JoinTable(name="BasketList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="stock_id", referencedColumnName="id"))
-	private List<Product> basketList = null;
+	@JoinTable(name="AddressList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="address_id", referencedColumnName="id"))
+	private List<Address> addressList = null;
 
 	@Author(author = "Ben")
 	// constructors
@@ -118,6 +97,9 @@ public class Customer {
 
 	public List<Product> getBasketlist() { return basketList;}
 	public void setBasketlist(List<Product> basketList) { this.basketList = basketList; }
+	
+	public List<Address> getAddressList() { return addressList;}
+	public void setAddressList(List<Address> addressList) { this.addressList = addressList; }
 	
 	public Customer() {
 			// TODO Auto-generated constructor stub

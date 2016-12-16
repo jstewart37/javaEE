@@ -31,14 +31,14 @@
 							<li><h:outputText value="#{address.addressLine2}" /> </li>
 							<li><h:outputText value="#{address.county}" /></li>
 							<li><h:outputText value="#{address.city}" /></li>
-							<li><h:outputText value="#{address.postcode}" /></li>
+							<li><h:outputText value="#{address.postCode}" /></li>
 						</ul>
 					</ui:repeat>
 				</div>
-
-				<h:outputLink rendered="#{usersession.loggedIn}"
-					value="#add-address" class="login-window">Add Address</h:outputLink>
-
+			<h:form>
+				<h:commandLink rendered="#{usersession.loggedIn}"
+					value="#add-address" class="login-window"></h:commandLink>
+			</h:form>
 				<div id="add-address" class="login-popup">
 					<a href="#" class="close"><img src="img/close_pop.png"
 						class="btn_close" title="Close Window" alt="Close" /></a>
@@ -89,7 +89,7 @@
 							</h:inputText>
 
 							<h:commandButton type="submit" class="regbtn"
-								action="#{AccountDetails.addAddress}" value="Add" />
+								action="#{AccountDetails.add}" value="Add" />
 						</div>
 					</h:form>
 				</div>

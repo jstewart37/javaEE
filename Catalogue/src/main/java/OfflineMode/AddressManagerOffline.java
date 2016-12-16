@@ -56,6 +56,14 @@ public class AddressManagerOffline implements AddressManager {
 		}
 		return null;
 	}
+	@Override
+	public List<Address> findByCustomerId(long id){
+		for(Customer customer : testData.getCustomers())
+			if(customer.getIdCustomer() == id)
+				return customer.getAddressList();
+		return null;
+	}
+		
 
 	@Override
 	public Address createNewAddress(Address address) {
@@ -72,16 +80,6 @@ public class AddressManagerOffline implements AddressManager {
 		return address;
 	}
 
-	@Override
-	public Address updateAddress(Address address) {
-		List<Address> addresses = testData.getAddresses();
-		for (Address a : addresses) {
-			if (a.getCity() == "Manchester") {
-				a.setCity("Swansea");
-			}
-		}
-		return address;
-	}
 
 	@SuppressWarnings("null")
 	@Override
@@ -98,5 +96,15 @@ public class AddressManagerOffline implements AddressManager {
 		return usersAddresses;
 
 }
+
+	@Override
+	public void updateAddressList(long id, List<Address> addresses) {
+		List<Customer> customers = testData.getCustomers();
+		for(Customer customer : customers)
+			if(customer.getIdCustomer() == id)
+				customer.setAddressList(addresses);
+		testData.setCustomers(customers);
+		
+	}
 }
 	

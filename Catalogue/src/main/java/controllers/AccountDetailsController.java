@@ -38,6 +38,35 @@ public class AccountDetailsController implements Serializable {
 	private String addressLine1 = "";
 	private String addressLine2 = "";
 	private String county = "";
+	public long getId() {
+		return id;
+	}
+
+
+	public String getAddressLine1() {
+		return addressLine1;
+	}
+
+
+	public String getAddressLine2() {
+		return addressLine2;
+	}
+
+
+	public String getCounty() {
+		return county;
+	}
+
+
+	public String getCity() {
+		return city;
+	}
+
+
+	public String getPostcode() {
+		return postcode;
+	}
+
 	private String city = "";
 	private String postcode = "";
 	
@@ -61,18 +90,19 @@ public class AccountDetailsController implements Serializable {
 				@Override
 				public int getItemsCount() {
 					System.out.println("off to accountService to find all the addresses associated with this account.");
-					return accountService.findAll(user.getCustomer().getIdCustomer()).size();
+	
+					return accountService.getAddressList(user.getCustomer().getIdCustomer()).size();
 				}
 				
 				@Override
 				public ListDataModel<Address> createPageDataModel() {
 					try {
 						System.out.println("trying to return a new datamodel");
-						return new ListDataModel<Address>(accountService.findAll(user.getCustomer().getIdCustomer()).subList(getPageFirstItem(),
+						return new ListDataModel<Address>(accountService.getAddressList(user.getCustomer().getIdCustomer()).subList(getPageFirstItem(),
 								getPageFirstItem() + getPageSize()));
 					} catch (Exception e) {
 						return new ListDataModel<Address>(
-								accountService.findAll(user.getCustomer().getIdCustomer()).subList(getPageFirstItem(), getItemsCount()));
+								accountService.getAddressList(user.getCustomer().getIdCustomer()).subList(getPageFirstItem(), getItemsCount()));
 					}
 				}
 			};
@@ -93,7 +123,7 @@ public class AccountDetailsController implements Serializable {
 	}
 
 	public List<Address> getAddresses() {
-		addresses = accountService.findAll(user.getCustomer().getIdCustomer());
+		addresses = accountService.getAddressList(user.getCustomer().getIdCustomer());
 		return addresses;
 	}
 	
@@ -104,14 +134,13 @@ public class AccountDetailsController implements Serializable {
 		return (DataModel<Address>) getPagination().createPageDataModel();
 	}
 	
-	public String addAddress(){
-		this.id = user.getCustomer().getIdCustomer();
-			addressManager.createNewAddress(new Address(id, addressLine1, addressLine2, postcode, county, city));
-			return "accountdetails";
+	public String add(){
+		if(user.isloggedIn())
+			accountService.add(user.getCustomer().getIdCustomer(), addressLine1, addressLine2, county, city, postcode);
+		return "accountdetails";
 	}
 	
-	public  Address getAddress(){
-		return addressManager.findAddressByID(user.getCustomer().getIdCustomer());
-}
+
+
 
 }

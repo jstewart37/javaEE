@@ -96,6 +96,11 @@ public class TestData { //class was created by entire team, see comments/annotat
 		this.suppliers = suppliers2;
 		
 	}
+	
+	public Address setEmptyAddress(long id){
+		return new Address(id, "", "", "", "", "");
+	
+	}
 
 	public List<Product> getProducts() {
 		return products;
