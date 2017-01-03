@@ -1,6 +1,5 @@
 package OfflineMode;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -8,7 +7,6 @@ import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 import EntityManagers.CustomerManager;
-import Entitys.Address;
 import Entitys.Author;
 import Entitys.Customer;
 import Entitys.TestData;
@@ -40,10 +38,7 @@ public class CustomerManagerOffline implements CustomerManager {
 	@Override
 	public Customer createNewCustomer(Customer customer) {
 		List<Customer> customers = testData.getCustomers();
-		
 		customer.setIdCustomer(customers.size() + 1);
-		List<Address> address = setAddress(customer.getIdCustomer());
-		customer.setAddressList(address);
 		customers.add(customer);
 		testData.setCustomers(customers);
 		return findByEmail(customer.getEmail());
@@ -65,14 +60,5 @@ public class CustomerManagerOffline implements CustomerManager {
 		}
 		return customer;
 	}
-
-	@Override
-	public List<Address> setAddress(long id) {
-		List<Address> a = new ArrayList<>();
-		a = testData.setEmptyAddress(id);
-		return a;
-	}
-	
-	
 
 }

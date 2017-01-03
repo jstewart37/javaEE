@@ -9,8 +9,6 @@ import javax.inject.Inject;
 import Entitys.Product;
 import EntityManagers.ProductManager;
 
-
-
 @Stateless
 public class SearchService {
 	@Inject
@@ -18,7 +16,8 @@ public class SearchService {
 	@Inject
 	private ProductService productService;
 	
-	@Deprecated
+	
+	
 	public List<Product> findByKeyword(String term) {
 		List<Product> results = new ArrayList<>();
 		results.addAll(searchByProductName(term));
@@ -28,53 +27,28 @@ public class SearchService {
 		return results;
 	}
 
-	private List<Product> searchByProductName(String name) { // aye
+	private List<Product> searchByProductName(String name) {
 		return productRepository.findByNameLike(name);
 	}
 		
-	private List<Product> searchByProductDescription(String description) { // no
+	private List<Product> searchByProductDescription(String description) {
 		return productRepository.findByDescriptionLike(description);
 	}
-	
-	private List<Product> searchByCategory(String category) { // no
-		return productRepository.findByCategory(category);
-	}
-	
-	private List<Product> searchByColour(String colour) { // no
-		return productRepository.findByColourlike(colour);
-	}
 
-	public List<Product> searchBy(String term) {
+	/*public List<Product> searchBy(String term) {
 		List<Product> results = new ArrayList<>();
 		if(term.matches("[0-9]")) {
-			Product result = productService.findProductById(term);	// finds a product based on id
+			Product result = productService.findProductById(term);
 			if(result != null)
-				results.add(result); // adds that product to the arraylist
+				results.add(result);
 		}		
 		results.addAll(searchByProductName(term));
 		results.addAll(searchByProductDescription(term));
-		results.addAll(searchByCategory(term));
-		results.addAll(searchByColour(term));
 		if(results.isEmpty())
 			return null;
 		List<Product> productItems = new ArrayList<>();
 		results.forEach(product->{
-			productItems.add(productService.getProduct(product.getIdProduct()));
+			productItems.add(productService.getProduct(product, product.getId()));
 		});
-		return productItems;
+		return productItems;*/
 	}
-	
-	public List<Product> searchByCat(String term) {
-		List<Product> results = new ArrayList<>();
-		results.addAll(searchByCategory(term));
-		if(results.isEmpty())
-			return null;
-		List<Product> productItems = new ArrayList<>();
-		results.forEach(product->{
-			productItems.add(productService.getProduct(product.getIdProduct()));
-		});
-		return productItems;
-	}
-	
-
-}

@@ -3509,8 +3509,7 @@ select[multiple].form-group-lg .form-control, textarea.form-group-lg .form-contr
 .btn-danger {
 	color: #fff;
 	background-color: #d9534f;
-	border-color: #d43f3a;
-	float: right;
+	border-color: #d43f3a
 }
 
 .btn-danger.active, .btn-danger.focus, .btn-danger:active, .btn-danger:focus,

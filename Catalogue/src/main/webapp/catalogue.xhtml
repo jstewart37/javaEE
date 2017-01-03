@@ -83,20 +83,16 @@
 				</div>
 			</div>
 			<hr />
-			<h:form>
-			
 			<div class="cataloguerow">
-			<ui:repeat var="productList" value="#{browse.products}">
 				<div class="col-sm-4 col-lg-4 col-md-4 animated wow fadeInDown">
 					<div class="thumbnail animated wow fadeInDown" href="product.xhtml">
 
-						<a href="product.xhtml"><h:graphicImage value="#{productList.imgPath}" style="width: 318px; height: 159px;" /></a>
+						<a href="product.xhtml"> <img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" /></a>
 						<div class="captionprice animated wow fadeInDown">
 							<h4 class="pull-right animated wow fadeInDown">$24.99</h4>
-							<h4>
-								<h:commandLink action="#{productCon.select(productList.idProduct)}" value="#{productList.name}" />
-							</h4>
-							<p><h:outputText value="#{productList.description}" /></p>
+							<p>Description -</p>
 						</div>
 						<div class="ratings animated wow fadeInDown">
 							<p class="pull-right animated wow fadeInDown">15 reviews</p>
@@ -110,13 +106,143 @@
 						</div>
 					</div>
 				</div>
-				</ui:repeat>
+				<div class="col-sm-4 col-lg-4 col-md-4 animated wow fadeInDown">
+					<div class="thumbnail animated wow fadeInDown" href="product.xhtml">
+						<a href="product.xhtml"> <img 
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" />
+						</a>
+						<div class="captionprice animated wow fadeInDown">
+							<h4 class="pull-right animated wow fadeInDown">$64.99</h4>
+							<h4>
+								<a href="#">Second Product</a>
+							</h4>
+							<p>description</p>
+						</div>
+						<div class="ratings animated wow fadeInDown">
+							<p class="pull-right animated wow fadeInDown">12 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span
+									class="glyphicon glyphicon-star-empty animated wow fadeInDown"></span>
+							</p>
+						</div>
+					</div>
 				</div>
-				<h:commandLink value="Previous" action="#{browse.previous}" rendered="#{browse.paginationHelper.hasPreviousPage}" />
-					<h:outputText value="#{browse.paginationHelper.pageFirstItem + 1}..#{browse.paginationHelper.pageLastItem + 1}/#{browse.paginationHelper.itemsCount}" />
-					<h:commandLink value="Next" action="#{browse.next}" rendered="#{browse.paginationHelper.hasNextPage}" />
-				</h:form>
+				<div class="col-sm-4 col-lg-4 col-md-4 animated wow fadeInDown">
+					<div class="thumbnail animated wow fadeInDown" href="product.xhtml">
+						<a href="product.xhtml"> <img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" />
+						</a>
+						<div class="captionprice animated wow fadeInDown">
+							<h4 class="pull-right animated wow fadeInDown">$74.99</h4>
+							<h4>
+								<a href="#">Third Product</a>
+							</h4>
+							<p>description</p>
+						</div>
+						<div class="ratings">
+							<p class="pull-right">31 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span
+									class="glyphicon glyphicon-star-empty animated wow fadeInDown"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-lg-4 col-md-4 animated wow fadeInDown">
+					<div class="thumbnail animated wow fadeInDown" href="product.xhtml">
+						<a href="product.xhtml"> <img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" /></a>
+						<div class="captionprice animated wow fadeInDown">
+							<h4 class="pull-right animated wow fadeInDown">$84.99</h4>
+							<h4>
+								<a href="#">Fourth Product</a>
+							</h4>
+							<p>description</p>
+						</div>
+						<div class="ratings animated wow fadeInDown">
+							<p class="pull-right animated wow fadeInDown">6 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span
+									class="glyphicon glyphicon-star-empty animated wow fadeInDown"></span>
+								<span
+									class="glyphicon glyphicon-star-empty animated wow fadeInDown"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-lg-4 col-md-4 animated wow fadeInDown">
+					<div class="thumbnail animated wow fadeInDown" href="product.xhtml">
+						<a href="product.xhtml"> <img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" />
+						</a>
+						<div class="captionprice animated wow fadeInDown">
+							<h4 class="pull-right animated wow fadeInDown">$94.99</h4>
+							<h4>
+								<a href="#">Fifth Product</a>
+							</h4>
+							<p>description</p>
+						</div>
+						<div class="ratings animated wow fadeInDown">
+							<p class="pull-right animated wow fadeInDown">18 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span
+									class="glyphicon glyphicon-star-empty animated wow fadeInDown"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-lg-4 col-md-4 animated wow fadeInDown">
+					<div class="thumbnail animated wow fadeInDown" href="product.xhtml">
+						<a href="product.xhtml"> <img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/72/German_garden_gnome.jpg"
+							alt="" /></a>
+						<div class="captionprice animated wow fadeInDown">
+							<h4 class="pull-right animated wow fadeInDown">$94.99</h4>
+							<h4>
+								<a href="#">Fifth Product</a>
+							</h4>
+							<p>description</p>
+						</div>
+						<div class="ratings animated wow fadeInDown">
+							<p class="pull-right animated wow fadeInDown">18 reviews</p>
+							<p>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span class="glyphicon glyphicon-star animated wow fadeInDown"></span>
+								<span
+									class="glyphicon glyphicon-star-empty animated wow fadeInDown"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="Prevpage">
+					<p>previous page</p>
+				</div>
+				<div class="Nextpage">
+					<p>next page</p>
+				</div>
 			</div>
+		</div>
 
 		<!--  End Contact Section  -->
 	</ui:define>

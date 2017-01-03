@@ -1,114 +1,18 @@
 package controllers;
 
-
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
-import javax.faces.model.DataModel;
-import javax.faces.model.ListDataModel;
-import javax.inject.*;
 
-import services.SearchService;
+import Entitys.Product;
 
-
-import Entitys.*;
-import controllers.Session.SelectedProduct;
-
-@Named("searchResults")
 @SessionScoped
-public class SearchResultsController implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 2173863615045324385L;
-	private PaginationHelper pagination = null;
-	private List<Product> searchResults;
-	private DataModel<Product> results = null;
-	
-	/**
-	 * This method creates the Pagination Helper should none exist and then returns it for use throughout the class.
-	 * 
-	 * @return
-	 */
-	
-	
-	
-	public PaginationHelper getPagination() {
-		if (pagination == null) {
-			pagination = new PaginationHelper(9) {
-				
-				@Override
-				public int getItemsCount() {
-					return searchResults.size();
-				}
-				
-				@Override
-				public DataModel<Product> createPageDataModel() {
-					try {
-						return new ListDataModel<Product>(searchResults.subList(getPageFirstItem(), getPageFirstItem() + getPageSize()));
-					} catch (Exception e) {
-						return new ListDataModel<Product>(searchResults.subList(getPageFirstItem(), getItemsCount()));
-					}
-				}
-			};
-		}
-		return pagination;
-	}
+public class SearchResultsController implements Serializable{
 
-	/**
-	 * Resets the DataModel to null in order for it to be re-populated
-	 */
-	private void recreateModel() {
-		results = null;
-	}
-	
-	/**
-	 * Moves the Paginator to the next page of results
-	 * 
-	 * @return "browse", Loads the browse page.
-	 */
-	public String next() {
-		getPagination().nextPage();
-		recreateModel();
-		return "results";
-	}
-	
-	/**
-	 * Moves the Paginator to the previous page of results
-	 * 
-	 * @return "browse", Loads the browse page.
-	 */
-	public String previous() {
-		getPagination().previousPage();
-		recreateModel();
-		return "results";
-	}
-	
-	/**
-	 * Instructs the Paginator to the fetch next page of results
-	 * 
-	 * @return The next set of results.
-	 */
-	@SuppressWarnings("unchecked")
-	public DataModel<Product> getResults() {
-		if (results == null)
-			results = (DataModel<Product>) getPagination().createPageDataModel();
-		return results;
-	}
-
-	/**
-	 * Used to set the set of products to paginate.
-	 * 
-	 * @param searchResults
-	 */
-	public void setResults(List<Product> searchResults) {
-		pagination = null;
-		results = null;
-	
+	public void setResults(List<Product> results) {
+		// TODO Auto-generated method stub
 		
-		this.searchResults = searchResults;
 	}
+
 }

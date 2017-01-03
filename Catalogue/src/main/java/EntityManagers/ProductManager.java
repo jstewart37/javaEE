@@ -14,8 +14,6 @@ public interface ProductManager {
 	public Product findByStatus (String Status);
 	public Product findByColour (String Colour);
 	public Product findByPorouseware (String isPorous);
-	public List<Product> findByCategory(String category);
-	public List<Product> findByColourlike(String colour);
 	
 ///////////////////////////////CRUD///////////////////////////////////
 	
@@ -39,9 +37,7 @@ public interface ProductManager {
 	public List<Product> findByNameLike(String name);
 	public List<Product> findByDescriptionLike(String description);
 	public List<Product> findAll();
-	public Product findByID(int ID);
-
-
+	Product findByID(int ID);
 	
 
 }

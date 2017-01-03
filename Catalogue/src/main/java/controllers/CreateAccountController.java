@@ -1,13 +1,10 @@
 package controllers;
 
-import java.util.List;
-
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import EntityManagers.CustomerManager;
-import Entitys.Address;
 import Entitys.Customer;
 import services.CreateAccountService;
 
@@ -88,7 +85,6 @@ public class CreateAccountController {
 	public String registerCustomer() {
 		if (!email.isEmpty() && createAccountService.checkEmail(email)) {
 			System.out.println("account created");
-			List<Address> address;
 			customerManager.createNewCustomer(new Customer(title, firstname.concat(surname), email, password, phone, date));
 			
 			return "index";

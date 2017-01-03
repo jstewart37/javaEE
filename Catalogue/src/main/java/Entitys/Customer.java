@@ -1,7 +1,5 @@
 package Entitys;
 
-import java.util.List;
-
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -63,18 +61,35 @@ public class Customer {
 	@NotNull
 	private String search;
 
-	@ManyToMany
-	@JoinTable(name="BasketList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="product_id", referencedColumnName="id"))
-	private List<Product> basketList = null;
-	
-	@ManyToMany
-	@JoinTable(name="AddressList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="address_id", referencedColumnName="id"))
-	private List<Address> addressList = null;
+	@Column(nullable = false, length = 100)
+	@Size(min = 3, max = 25)
+	@NotNull
+	private String AddressLine1;
+
+	@Column(nullable = false, length = 100)
+	@Size(min = 3, max = 25)
+	@NotNull
+	private String AddressLine2;
+
+	@Column(nullable = false, length = 100)
+	@Size(min = 3, max = 25)
+	@NotNull
+	private String county;
+
+	@Column(nullable = false, length = 100)
+	@Size(min = 3, max = 25)
+	@NotNull
+	private String City;
+
+	@Column(nullable = false, length = 100)
+	@Size(min = 3, max = 25)
+	@NotNull
+	private String PostCode;
 
 	@Author(author = "Ben")
 	// constructors
 	public Customer(long idCustomer, String title, String name, String email, String password, String phone,
-			String date, List<Address> address) {
+			String date) {
 		this.idCustomer = idCustomer;
 		this.title = title;
 		this.name = name;
@@ -82,7 +97,6 @@ public class Customer {
 		this.password = password;
 		this.phone = phone;
 		this.date = date;
-		this.addressList = address;
 	}
 
 	public Customer(String title, String name, String email, String password, String phone,
@@ -96,18 +110,12 @@ public class Customer {
 	}
 	// getters and setters
 
-	public List<Product> getBasketlist() { return basketList;}
-	public void setBasketlist(List<Product> basketList) { this.basketList = basketList; }
-	
-	public List<Address> getAddressList() { return addressList;}
-	public void setAddressList(List<Address> addressList) { this.addressList = addressList; }
-	
 	public Customer() {
 			// TODO Auto-generated constructor stub
 	}
 
 	public long getIdCustomer() {
-	//	System.out.println("I am customer number - " + idCustomer);
+		System.out.println(idCustomer);
 		return idCustomer;
 	}
 

@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.enterprise.context.ConversationScoped;
-import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -21,22 +20,21 @@ public class BrowseController implements Serializable {
 	@Inject
 	private ProductController productController;
 
-	private PaginationHelper pagination = null;
+	private PaginationHelper pagenationHelper;
 	private List<Product> products = null;
 
 	private void recreateModel() {
 		products = null;
 	}
-	
-	public PaginationHelper getPagination() {
-		if (pagination == null) {
-			pagination = new PaginationHelper(9) {
-				
+
+	public PaginationHelper getPaginationHelper() {
+		if (pagenationHelper == null) {
+			pagenationHelper = new PaginationHelper(9) {
 				@Override
 				public int getItemsCount() {
 					return productService.findAll().size();
 				}
-				
+
 				@Override
 				public ListDataModel<Product> createPageDataModel() {
 					try {
@@ -49,17 +47,17 @@ public class BrowseController implements Serializable {
 				}
 			};
 		}
-		return pagination;
+		return pagenationHelper;
 	}
 
 	public String next() {
-		getPagination().nextPage();
+		getPaginationHelper().nextPage();
 		recreateModel();
 		return "browse";
 	}
 
 	public String previous() {
-		getPagination().previousPage();
+		getPaginationHelper().previousPage();
 		recreateModel();
 		return "browse";
 	}
@@ -70,8 +68,8 @@ public class BrowseController implements Serializable {
 	}
 
 	@SuppressWarnings("unchecked")
-	public DataModel<Product> getDataModel() {
-		return (DataModel<Product>) getPagination().createPageDataModel();
+	public List<Product> getDataModel() {
+		return (List<Product>) getPaginationHelper().createPageDataModel();
 	}
 	
 	public Product getProduct(){

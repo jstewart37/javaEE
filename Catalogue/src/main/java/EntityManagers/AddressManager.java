@@ -18,12 +18,12 @@ public interface AddressManager {
 	public Address findAddressByPostcodeAndNumber(String postcode, String number);
 	public Address findAddressByID(long id);
 	public List<Address> findAllAddressesByID(long id);
-	public List<Address> findByCustomerId(long id);
+	
 	
 	
 	//CRUD based stubs
 	public Address createNewAddress(Address address);
 	public Address readAddress(Address address);
-	public void updateAddressList(long id, List<Address> addresses);
+	public Address updateAddress(Address address);
 	
 }
