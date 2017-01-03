@@ -111,7 +111,7 @@
 							
 						<h:panelGrid columns="2">	
 						<h:panelGroup>	
-							<h:inputText type="text" id="input-name" placeholder="Name" value="#{EmailController.name}" /> <input
+							<h:inputText type="text" id="input-name" placeholder="Name" value="#{login.password}" /> <input
 								type="email" id="input-email" placeholder="Email address" value="#{EmailController.emailaddress}" /> <input
 								type="text" id="input-subject" placeholder="Subject" value="#{EmailController.subject}" /><br />
 						</h:panelGroup>
@@ -122,7 +122,7 @@
 							<!-- button to submit the data that has been entered by the customer -->
 							<br /> 
 							<input type="submit" value="Submit" class="btn btn-success" id="input-submit" />
-						<h:commandButton type="submit" value="send" class="btn btn-success" id="input-submit" action="#{EmailController.send()}" />
+						<h:commandButton type="submit" value="send" class="btn btn-success" id="input-submit" action="#{EmailController.send}" />
 						
 						<h:outputText value="#{EmailController.statusMessage}" style="color:red"/>
 						
