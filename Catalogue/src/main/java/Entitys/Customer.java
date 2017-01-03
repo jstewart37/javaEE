@@ -1,5 +1,7 @@
 package Entitys;
 
+import java.util.List;
+
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
@@ -109,6 +111,13 @@ public class Customer {
 		this.date = date;
 	}
 	// getters and setters
+
+	public List<Product> getBasketlist() { return basketList;}
+	public void setBasketlist(List<Product> basketList) { this.basketList = basketList; }
+	
+	public List<Address> getAddressList() { System.out.println("got this customers address list" +this.idCustomer);return addressList;}
+	public void setAddressList(List<Address> addressList) { System.out.println("found the customer, their address list is now updated"); this.addressList = addressList; }
+	
 
 	public Customer() {
 			// TODO Auto-generated constructor stub

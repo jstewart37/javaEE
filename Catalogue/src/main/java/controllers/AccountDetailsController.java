@@ -92,5 +92,13 @@ public class AccountDetailsController implements Serializable {
 			addressManager.createNewAddress(new Address(id, addressLine1, addressLine2, postcode, county, city));
 			return "accountdetails";
 	}
+
 */
+
+	public String add(){
+			accountService.add(user.getCustomer().getIdCustomer(), addressLine1, addressLine2, county, city, postcode);
+		return "accountdetails";
+	}
+	
+
 }

@@ -96,5 +96,20 @@ public class AddressManagerOffline implements AddressManager {
 		return usersAddresses;
 
 }
+
+
+	@Override
+	public void updateAddressList(long id, List<Address> addresses) {
+		List<Customer> customers = testData.getCustomers();
+		for(Customer customer : customers)
+			if(customer.getIdCustomer() == id){
+				System.out.println("find the customer so I can update their addresslist");
+				customer.setAddressList(addresses);
+			}
+		System.out.println("updating the testdata with the new list of customers");
+		testData.setCustomers(customers);
+		
+	}
+
 }
 	

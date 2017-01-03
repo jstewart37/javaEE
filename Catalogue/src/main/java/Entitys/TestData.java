@@ -43,11 +43,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 		//Alex's data
 		suppliers.add(new Supplier(1, "Daves GGGGGGGGGGGGGGGGGGnomes", "07984682330", "dg@gnomies.com")); 
-		suppliers.add(new Supplier(2, "Sophies Rude Ass Garden Supplies", "07984643", "sg@rudegardensupplies.com"));
-		
-		addresses.add(new Address(1, "65 Anchorage Quay", "eccles", "M27 641", "Greater Manchester", "Manchester"));
-		addresses.add(new Address(2, "1 Someplace", "M64 813", "Greater Manchester", "Manchester"));
-		
+		suppliers.add(new Supplier(2, "gnomie gnomie", "07984643", "gg@gg.com"));
+	
 		//Daves data
 		products.add(new Product(1, "Gandalf Gnome", "A Gandalf themed Gnome", "Grey", 25, 9.99, 5.99, "available", "img/gandalf.jpg" , "yes"));
 		products.add(new Product(2, "Goku Gnome", "A gnome from the Saiyan race", "multi", 50, 9.99, 5.99, "available", "img/goku.png", "yes"));
@@ -87,6 +84,15 @@ public class TestData { //class was created by entire team, see comments/annotat
 		this.suppliers = suppliers2;
 		
 	}
+
+	
+	public List<Address> setEmptyAddress(long id){
+		List<Address> a = new ArrayList<>();
+		a.add(new Address(id, "default addressline 1", "default address line 2","default postcode", "default county ","default city"));
+		return a;
+	
+	}
+
 
 	public List<Product> getProducts() {
 		return products;

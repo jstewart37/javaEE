@@ -54,6 +54,7 @@ public class Address {
 
 	public Address(long idAddress, String addressLine1, String addressLine2, String postCode, String county,
 			String city) {
+		System.out.println("Made a new address");
 		this.idAddress = idAddress;
 		this.addressLine1 = addressLine1;
 		this.addressLine2 = addressLine2;
