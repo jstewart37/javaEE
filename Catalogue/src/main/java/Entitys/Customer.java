@@ -99,8 +99,8 @@ public class Customer {
 	public List<Product> getBasketlist() { return basketList;}
 	public void setBasketlist(List<Product> basketList) { this.basketList = basketList; }
 	
-	public List<Address> getAddressList() { return addressList;}
-	public void setAddressList(List<Address> addressList) { this.addressList = addressList; }
+	public List<Address> getAddressList() { System.out.println("got this customers address list" +this.idCustomer);return addressList;}
+	public void setAddressList(List<Address> addressList) { System.out.println("found the customer, their address list is now updated"); this.addressList = addressList; }
 	
 	public Customer() {
 			// TODO Auto-generated constructor stub
