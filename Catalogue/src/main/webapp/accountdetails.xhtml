@@ -14,7 +14,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="description" content="" />
-<meta name="Jake" content="" />
+<meta name="Alex" content="" />
 
 <script type="text/javascript" src="js/addressform.js" />
 
@@ -33,7 +33,21 @@
 							<li><h:outputText value="#{address.city}" /></li>
 							<li><h:outputText value="#{address.postCode}" /></li>
 						</ul>
+						<h:outputLink value = "#address-box" class="address-window" > edit	</h:outputLink>
 					</ui:repeat>
+				</div>
+				
+				<div class="accountdetails pull-left">
+				
+						<ul>
+							<li><h:outputText value = "card stuffs" /></li>
+							<li><h:outputText value="#{address.addressLine2}" /></li>
+							<li><h:outputText value="#{address.county}" /></li>
+							<li><h:outputText value="#{address.city}" /></li>
+							<li><h:outputText value="#{address.postCode}" /></li>
+						</ul>
+						<h:outputLink value = "#address-box" class="address-window" > edit	</h:outputLink>
+			
 				</div>
 
 				<h:outputLink value="#address-box" class="address-window"> Add address</h:outputLink>

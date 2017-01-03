@@ -206,7 +206,7 @@ public class AccountDetailsController implements Serializable {
 	
 	public String add(){
 			accountService.add(user.getCustomer().getIdCustomer(), addressLine1, addressLine2, county, city, postcode);
-		return "browse";
+		return "accountdetails";
 	}
 	
 
