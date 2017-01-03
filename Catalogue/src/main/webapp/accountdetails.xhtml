@@ -16,7 +16,7 @@
 <meta name="description" content="" />
 <meta name="Jake" content="" />
 
-<script type = "text/javascript" src="js/addressform.js"/>
+<script type="text/javascript" src="js/addressform.js" />
 
 	</head>
 	<ui:define name="maincontent">
@@ -27,17 +27,17 @@
 				<div class="accountdetails pull-left">
 					<ui:repeat var="address" value="#{AccountDetails.dataModel}">
 						<ul>
-							<li><h:outputText value="#{address.addressLine1}" /> </li>
-							<li><h:outputText value="#{address.addressLine2}" /> </li>
+							<li><h:outputText value="#{address.addressLine1}" /></li>
+							<li><h:outputText value="#{address.addressLine2}" /></li>
 							<li><h:outputText value="#{address.county}" /></li>
 							<li><h:outputText value="#{address.city}" /></li>
 							<li><h:outputText value="#{address.postCode}" /></li>
 						</ul>
 					</ui:repeat>
 				</div>
-			
+
 				<h:outputLink value="#address-box" class="address-window"> Add address</h:outputLink>
-			
+
 				<div id="address-box" class="address-popup">
 					<a href="#" class="close"><img src="img/close_pop.png"
 						class="btn_close" title="Close Window" alt="Close" /></a>
