@@ -48,9 +48,9 @@
 									</div>
 									</th>
 									<th>&#163;<h:outputText value="#{product.sellPrice}" /></th>
-									<th><h:inputText class="form-control text-center basketqty" /></th>
+									<th><h:outputText action="#{product.stockLevel}" /></th>
 									<th>&#163;<h:outputText value="#{product.sellPrice}" /></th>
-									<th><h:form><h:commandButton action="#{basketList.removeItem(product.idProduct)}" class="fa fa-trash-o btn btn-danger btn-sm" /></h:form></th>
+									<th><h:form><h:commandButton action="#{basketList.removeItem(product.idProduct)}" class="fa fa-trash-o btn btn-danger btn-sm"/></h:form></th>
 								</tr>
 							</ui:repeat>
 						</h:form>	
@@ -59,7 +59,7 @@
 						<tr>
 							<td><h:form><h:commandLink action="browse.xhtml" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</h:commandLink></h:form></td>
 							<td colspan="2" class="hidden-xs"></td>
-							<td class="hidden-xs text-center"><strong>Total &#163;<h:outputText value="#{product.totalPrice}" /></strong></td>
+							<td class="hidden-xs text-center"><strong>Total &#163;</strong></td>
 							<td><h:form><h:commandLink class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></h:commandLink></h:form></td>
 						</tr>
 						
