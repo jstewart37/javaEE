@@ -4,7 +4,9 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	template="templates/NavTemplate.xhtml">
 	<meta charset="utf-8" />
-	<ui:define name="pageTitle"><h:outputText value="#{product.name}" /></ui:define>
+	<ui:define name="pageTitle">
+		<h:outputText value="#{product.name}" />
+	</ui:define>
 	<head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,63 +18,69 @@
 	</head>
 	<ui:define name="maincontent">
 		<!-- Page Content -->
-		<div>
-			<hr></hr>
-		</div>
-		<div class="productTitle animated wow fadeInLeft">
-
-
- 
-			<div class="productName animated wow fadeInLeft">
-				<h:outputText value="#{product.name}" style = ""/>
-			</div>
-			<div class="productPrice animated wow fadeInLeft">
-				<h:outputText value="#{product.price}" />
-			</div>
-
-			<div class="basketAdd animated wow fadeInLeft">
-				<img alt="" src="img/basketAdd.png"
-					style="width: 80px; height: 72px;" />
-			</div>
-
-		</div>
-		<hr></hr>
 		<div class="duo animated wow fadeInLeft">
 			<div class="row pull-left">
 				<div class="medium-6 columns">
-					<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:650; height:350" />
+					<h:graphicImage class="thumbnail"
+						value="#{selected.product.imgPath}"
+						style="width:650px; height:350px" />
 					<div class="row small-up-4">
 						<div class="column">
-							<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:250; height:200" />
+							<h:graphicImage class="thumbnail"
+								value="#{selected.product.imgPath}"
+								style="width:250px; height:200px" />
 						</div>
 						<div class="column">
-							<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:250; height:200" />
+							<h:graphicImage class="thumbnail"
+								value="#{selected.product.imgPath}"
+								style="width:250px; height:200px" />
 						</div>
 						<div class="column">
-							<h:graphicImage class="thumbnail animated wow fadeInLeft" value="#{product.image}" style = "width:250; height:200" />
+							<h:graphicImage class="thumbnail"
+								value="#{selected.product.imgPath}"
+								style="width:250px; height:200px" />
 						</div>
-
 					</div>
 				</div>
 			</div>
 			<div class="row pull-left animated wow fadeInLeft">
 				<div class="medium-6 large-5 columns">
-					<h:outputText value="#{product.description}" />
-
+					<p>
+						<strong>Name: </strong>
+						<h:outputText value="#{selected.product.name}" />
+					</p>
+					<p>
+						<strong>Price: </strong>&#163;
+						<h:outputText value="#{selected.product.sellPrice}" />
+					</p>
+					<p>
+						<strong>Description: </strong>
+						<h:outputText value="#{selected.product.description}" />
+					</p>
+					<hr></hr>
+						<strong>Additional Information</strong>
+						<ul>
+						<li><strong>Stock Status: </strong><h:outputText value="#{selected.product.status}" /></li>
+						<li><strong>Stock Level: </strong><h:outputText value="#{selected.product.stockLevel}" /></li>
+						<li><strong>Porouseware: </strong><h:outputText value="#{selected.product.isPorousware}" /></li>
+						</ul>
+					<hr></hr>
 					<div class="row animated wow fadeInLeft">
 						<div class="small-3 columns animated wow fadeInLeft">
-							<label for="middle-label" class="middle">Quantity</label>
+							<label for="middle-label" class="middle">Quantity: </label>
 						</div>
 						<div class="small-9 columns animated wow fadeInLeft">
-							<input type="text" id="middle-label"
-								placeholder="0" />
+							<input type="quantity" id="middle-label" placeholder="0" />
 						</div>
+						<h:form>
+							<h:commandButton type="submit" class="regbtn" value="BUY YO SHIT"
+								action="#{basketList.add(selected.product.idProduct)}"
+								rendered="#{usersession.loggedIn}" />
+						</h:form>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="clear"></div>
-
-		<hr></hr>
 	</ui:define>
 </ui:composition>
