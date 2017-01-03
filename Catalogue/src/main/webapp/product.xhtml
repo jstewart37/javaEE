@@ -70,7 +70,7 @@
 							<label for="middle-label" class="middle">Quantity: </label>
 						</div>						
 						<h:form>
-						<h:inputText action="#{basketList.add(selected.product.idProduct)}" rendered="#{usersession.loggedIn}" required="true" requiredMessage="test message" />
+						<h:inputText action="#" rendered="#{usersession.loggedIn}" required="true" />
 							<h:commandButton type="submit" class="regbtn" value="BUY YO SHIT"
 								action="#{basketList.add(selected.product.idProduct)}"
 								rendered="#{usersession.loggedIn}" />
