@@ -1,0 +1,171 @@
+<ui:composition xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="templates/NavTemplate.xhtml">
+	<meta charset="utf-8" />
+	<ui:define name="pageTitle">NBGardens Home</ui:define>
+	<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+	</head>
+	<ui:define name="maincontent">
+
+
+
+		<!--  Hero Section  -->
+		<!-- Author: Ben-->
+		<!-- NB Gardens online catalogue branding -->
+		<!-- The idea was to put a search bar here to save the user having to go to the catalogue but there were issues with the XHTML that I did not have time to fix -->
+		<section class="hero" id="hero">
+			<div class="container">
+				<div class="captiongnome">
+					
+					<h1 class="text-uppercase  animated wow fadeInLeft">NB Gardens
+						Online Catalogue</h1>
+					<p class="text-lowercase  animated wow fadeInLeft">So tell me what you want, what you really really want, ill tell you what I want what I really really want
+					I wanna wanna wanna, really really really want a garden full of gnomes</p>
+
+				</div>
+			</div>
+		</section>
+		<!--  End Hero Section  -->
+
+		<!--  App Features Section  -->
+		<!-- Author: Ben -->
+		<!-- About the company section, splits into 6 'boxes' to allow for better responsive styling -->
+		<section class="app_features" id="about">
+			<div class="container">
+
+				<div class="row text-center">
+					<div class="col-sm-4 col-md-4 details animated wow fadeInDown"
+						data-wow-delay="0s">
+						<img src="img/f_icon1.png" alt="" title="" />
+						<h1 class="text-uppercase">Pioneers on the forefront of gnome
+							technology</h1>
+						<p class="text-lowercase">We specialise in state of the art
+							gnome technology and bring you the latest must have products</p>
+					</div>
+					<div class="col-sm-4 col-md-4 details animated wow fadeInDown"
+						data-wow-delay=".1s">
+						<img src="img/f_icon2.png" alt="" title="" />
+						<h1 class="text-uppercase">Give our gnomes a home</h1>
+						<p class="text-lowercase">Will you give a gnome a home in your
+							garden......and your hearts</p>
+					</div>
+					<div class="col-sm-4 col-md-4 details animated wow fadeInDown"
+						data-wow-delay=".2s">
+						<img src="img/f_icon3.png" alt="" title="" />
+						<h1 class="text-uppercase">Buy now pay never.......jokes you
+							pay</h1>
+						<p class="text-lowercase">Buy today and pay when you are
+							satisfied with your products</p>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-sm-4 col-md-4 details animated wow fadeInDown"
+						data-wow-delay="0s">
+						<img src="img/f_icon4.png" alt="" title="" />
+						<h1 class="text-uppercase">Become a gnome overlord</h1>
+						<p class="text-lowercase">Build a loyal army of gnomes and
+							vanquish all those who wrong you</p>
+					</div>
+					<div class="col-sm-4 col-md-4 details animated wow fadeInDown"
+						data-wow-delay=".1s">
+						<img src="img/f_icon5.png" alt="" title="" />
+						<h1 class="text-uppercase">Don't feed your gnome after
+							midnight</h1>
+						<p class="text-lowercase">Don't ever feed your gnome, they're
+							inanimate objects you imbecile</p>
+					</div>
+					<div class="col-sm-4 col-md-4 details animated wow fadeInDown"
+						data-wow-delay=".2s">
+						<img src="img/f_icon6.png" alt="" title="" />
+						<h1 class="text-uppercase">Gnomes are directly linked to
+							increased labido</h1>
+						<p class="text-lowercase">Having trouble with the fairer sex?
+							give up on love and buy a bunch of gnomes</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+
+		<!--  Contact Section  -->
+		<!-- Author - Sophie -->
+		<!-- Applying a google map api, setting the size, zoom, location and marker tag to the map. -->
+		<!-- Creating input fields so the user can leave feedback through the website. -->
+		<section class="testimonials animated wow fadeIn" id="contact"
+			data-wow-duration="2s">
+			<div class="container">
+				<div class="caption">
+					<h1 class="text-uppercase animated wow fadeInLeft">Contact NB
+						Gardens</h1>
+					<div class="frmcontact">
+						<h:form>
+						<!-- Set input field id's and placeholders(what appears by default in the empty field) -->
+							
+						<h:panelGrid columns="2">	
+						<h:panelGroup>	
+							<h:inputText type="text" id="input-name" placeholder="Name" value="#{EmailController.name}" /> <input
+								type="email" id="input-email" placeholder="Email address" value="#{EmailController.emailaddress}" /> <input
+								type="text" id="input-subject" placeholder="Subject" value="#{EmailController.subject}" /><br />
+						</h:panelGroup>
+							
+						<h:panelGroup>	
+							<h:inputTextArea name="message" id="input-message" placeholder="Message" value="#{EmailController.message}" />
+						</h:panelGroup>
+							<!-- button to submit the data that has been entered by the customer -->
+							<br /> 
+							<input type="submit" value="Submit" class="btn btn-success" id="input-submit" />
+						<h:commandButton type="submit" value="send" class="btn btn-success" id="input-submit" action="#{EmailController.send()}" />
+						
+						<h:outputText value="#{EmailController.statusMessage}" style="color:red"/>
+						
+						</h:panelGrid>
+						</h:form>
+					</div>
+					<div class="frmcontactmap">
+					<!-- setting the dimensions of the map that api displays on the page in the contact us section -->
+						<div id="map" style="width: 350px; height: 350px"></div>
+
+						<script>
+							function initMap() {
+								var uluru = {
+								
+									lat : 53.4744,
+									lng : -2.2865
+								};
+								var map = new google.maps.Map(document
+										.getElementById('map'), {
+									zoom : 17,
+									center : uluru
+								});
+								var marker = new google.maps.Marker({
+									position : uluru,
+									map : map
+								});
+							}
+						</script>
+
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClpYc16nhcJvL-Wb4C_JElCGt_gu2OMQo&amp;callback=initMap"></script>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		
+		
+
+
+
+		
+		<!--  End Contact Section  -->
+		
+	</ui:define>
+</ui:composition>
