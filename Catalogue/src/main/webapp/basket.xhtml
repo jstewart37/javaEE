@@ -48,8 +48,8 @@
 									</div>
 									</th>
 									<th>&#163;<h:outputText value="#{product.sellPrice}" /></th>
-									<th><h:outputText action="#{product.stockLevel}" /></th>
-									<th>&#163;<h:outputText value="#{product.sellPrice}" /></th>
+									<th><h:outputText value="#{product.stockLevel}" /></th>
+									<th>&#163;<h:outputText value="#{product.sellPrice*product.stockLevel}" /></th>
 									<th><h:form><h:commandButton action="#{basketList.removeItem(product.idProduct)}" class="fa fa-trash-o btn btn-danger btn-sm"/></h:form></th>
 								</tr>
 							</ui:repeat>

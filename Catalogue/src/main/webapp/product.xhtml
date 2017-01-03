@@ -68,11 +68,9 @@
 					<div class="row animated wow fadeInLeft">
 						<div class="small-3 columns animated wow fadeInLeft">
 							<label for="middle-label" class="middle">Quantity: </label>
-						</div>
-						<div class="small-9 columns animated wow fadeInLeft">
-							<input type="quantity" id="middle-label" placeholder="0" />
-						</div>
+						</div>						
 						<h:form>
+						<h:inputText action="#{basketList.add(selected.product.idProduct)}" rendered="#{usersession.loggedIn}" required="true" requiredMessage="test message" />
 							<h:commandButton type="submit" class="regbtn" value="BUY YO SHIT"
 								action="#{basketList.add(selected.product.idProduct)}"
 								rendered="#{usersession.loggedIn}" />
