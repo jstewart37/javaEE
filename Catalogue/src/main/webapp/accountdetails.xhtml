@@ -19,8 +19,6 @@
 
 <script type = "text/javascript" src="js/addressform.js"/>
 
-<script type = "text/javascript" src="js/addressform.js"/>
-
 
 	</head>
 	<ui:define name="maincontent">
@@ -32,8 +30,6 @@
 					<ui:repeat var="AccountDetails"
 						value="#{AccountDetails.allAddresses}">
 						<ul>
-
-
 							<li><h:outputText value="#{AccountDetails.addressLine1}" /> </li>
 							<li><h:outputText value="#{AccountDetails.addressLine2}" /> </li>
 							<li><h:outputText value="#{AccountDetails.county}" /></li>
@@ -46,8 +42,6 @@
 
 							<li><h:outputText value="#{address.addressLine1}" /> </li>
 							<li><h:outputText value="#{address.addressLine2}" /> </li>
-				<li><h:outputText value="#{address.addressLine1}" /> </li>
-							<li><h:outputText value="#{address.addressLine2}" /> </li>
 
 							<li><h:outputText value="#{address.county}" /></li>
 							<li><h:outputText value="#{address.city}" /></li>
@@ -57,6 +51,7 @@
 						<h:outputLink value = "#address-box" class="address-window" > edit	</h:outputLink>
 					</ui:repeat>
 				</div>
+
 
 
 
@@ -78,13 +73,8 @@
 						<h:outputLink value = "#address-box" class="address-window" > edit	</h:outputLink>
 			
 				</div>
+	
 
-=======
-			
->>>>>>> parent of 4d4f98b... acc det
-=======
-			
->>>>>>> parent of 4d4f98b... acc det
 				<h:outputLink value="#address-box" class="address-window"> Add address</h:outputLink>
 			
 				<div id="address-box" class="address-popup">
