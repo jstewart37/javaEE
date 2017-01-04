@@ -24,17 +24,7 @@
 			<h:outputText value="#{usersession.name}" />
 			<h:outputText value="#{usersession.email}" />
 			<div class="accountcontent">
-				<div class="accountdetails pull-left">
-					<ui:repeat var="address" value="#{AccountDetails.dataModel}">
-						<ul>
-							<li><h:outputText value="#{address.addressLine1}" /></li>
-							<li><h:outputText value="#{address.addressLine2}" /></li>
-							<li><h:outputText value="#{address.county}" /></li>
-							<li><h:outputText value="#{address.city}" /></li>
-							<li><h:outputText value="#{address.postCode}" /></li>
-						</ul>
-					</ui:repeat>
-				</div>
+			
 				<div class="accountdetails pull-left">
 					<ui:repeat var="card" value="#{AccountDetails.cardModel}">
 						<ul>

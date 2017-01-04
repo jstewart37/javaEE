@@ -38,6 +38,7 @@ public class CardDetailsOffline implements CardDetailsManager {
 
 	@Override
 	public List<CardDetails> findByCustomerId(long idCustomer) {
+		System.out.println("step 4");
 		for(Customer customer : testData.getCustomers())
 			if(customer.getIdCustomer() == idCustomer)
 				return customer.getCardList();

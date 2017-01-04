@@ -66,8 +66,9 @@ public class AccountDetailsService {
 
 	public List<CardDetails> getCardList(long idCustomer) {
 		List<CardDetails> cards = new ArrayList<>();
+		System.out.println("step 3");
 		try{
-
+			
 			cardManager.findByCustomerId(idCustomer).forEach(card->{				
 				cards.add(accountService.getCard(card));		
 				});

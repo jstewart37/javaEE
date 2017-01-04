@@ -122,15 +122,17 @@ public class AccountDetailsController implements Serializable {
 				
 				@Override
 				public int getItemsCount() {
+					System.out.println("step 2");
 					return accountService.getCardList(user.getCustomer().getIdCustomer()).size();
 				}
 				
 				@Override
 				public ListDataModel<CardDetails> createPageDataModel() {
 					try {
-						return new ListDataModel<CardDetails>();
+						return new ListDataModel<CardDetails>(accountService.getCardList(user.getCustomer().getIdCustomer()).subList(getPageFirstItem(),
+								getPageFirstItem() + getPageSize()));
 					} catch (Exception e) {
-						return new ListDataModel<CardDetails>();
+						return new ListDataModel<CardDetails>(accountService.getCardList(user.getCustomer().getIdCustomer()).subList(getPageFirstItem(), getItemsCount()));
 					}
 				}
 			};
