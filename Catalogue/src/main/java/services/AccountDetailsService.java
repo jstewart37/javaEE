@@ -1,6 +1,5 @@
 package services;
 
-
 import java.util.ArrayList;
 
 /**
@@ -18,11 +17,9 @@ import javax.inject.Named;
 import EntityManagers.*;
 import Entitys.*;
 
-
 @Stateless
 
 public class AccountDetailsService {
-
 	@Inject
 	private AddressManager addressManager;
 	@Inject
@@ -60,13 +57,11 @@ public class AccountDetailsService {
 		addressManager.updateAddressList(id, updatedAddresses);
 	}
 	
-	private CustomerManager customerManager;
+	public Address getAddress(Address a) {
+		Address address = new Address();
+		if (a!=null)
+			address.addAddressInfo(a.getId(),a.getAddressLine1(),a.getAddressLine2(), a.getPostCode(),a.getCounty(), a.getCity());
+		return address;
+	}
 
-	public  Customer findByemail(String Email) {
-		
-		Customer customer = customerManager.findByEmail(Email.toLowerCase());
-			
-		return customer;
-		
-	}	
 }

@@ -64,6 +64,9 @@ public class Address {
 	}
 
 	// getters & setters
+	public Address getAddress(){
+		return this;
+	}
 	public long getIdAddress() {
 		return idAddress;
 	}
@@ -111,5 +114,22 @@ public class Address {
 	public void setCity(String city) {
 		this.city = city;
 	}
+
+	public long getId() {
+		return this.idAddress;
+	}
+	
+	
+	@Author(author = "alex")
+	public void addAddressInfo(long custID, String addressLine1, String addressLine2, String postCode, String county,
+			String city) {
+		this.idAddress = custID;
+		this.addressLine1 = addressLine1;
+		this.addressLine2 = addressLine2;
+		this.postCode = postCode;
+		this.county = county;
+		this.city = city;
+	}
+
 	
 }

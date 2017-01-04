@@ -43,7 +43,7 @@ public class AccountDetailsController implements Serializable {
 		return addresses;
 	}
 	
-/**	public String getAddressLine1() {
+	public String getAddressLine1() {
 		addresses.
 		if (address == null) return "NO";	
 		return addresses.getAddressLine1();
@@ -92,5 +92,5 @@ public class AccountDetailsController implements Serializable {
 			addressManager.createNewAddress(new Address(id, addressLine1, addressLine2, postcode, county, city));
 			return "accountdetails";
 	}
-**/
+
 }

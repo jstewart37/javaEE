@@ -22,32 +22,52 @@ body {
 	 colour: white;
 }
 
-
-
-
-input[type=text] {
-    width: 130px;
-    margin-top: 14px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 20px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    border-radius: 25px;
+.btn-search {
+  padding: 5px 39px 5px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 25%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 5px;
 }
 
-input[type=text]:focus {
-    width: 100%;
-      transition: width 0.4s ease-in-out;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+input[type="text"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 10px 10px 15px 0;
+  outline: 0;
+  padding: 10px;
+  width: 70%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  border-radius: 5px;
 }
 
+input[type="basketqty"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 10px 10px 15px 0;
+  outline: 0;
+  padding: 10px;
+  width: 40%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  border-radius: 5px;
+}
 
 
 .login{
@@ -74,6 +94,9 @@ input[type=text]:focus {
 		margin: 0 0 50px 0;
 	    background-color: #41C27D;
 	    border-radius: 25px;
+	    position:relative;
+	    float:left;
+	    clear: both;
 	
 }
 
