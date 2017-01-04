@@ -35,6 +35,16 @@
 						</ul>
 					</ui:repeat>
 				</div>
+				<div class="accountdetails pull-left">
+					<ui:repeat var="card" value="#{AccountDetails.cardModel}">
+						<ul>
+							<li><h:outputText value="#{card.accountNo}" /></li>
+							<li><h:outputText value="#{card.sortCode}" /></li>
+							<li><h:outputText value="#{card.cardNumber}" /></li>
+							<li><h:outputText value="#{card.name}" /></li>
+						</ul>
+					</ui:repeat>
+				</div>
 
 				<h:outputLink value="#address-box" class="address-window"> Add address</h:outputLink>
 

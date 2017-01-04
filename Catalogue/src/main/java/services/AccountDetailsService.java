@@ -24,6 +24,8 @@ public class AccountDetailsService {
 	private AddressManager addressManager;
 	@Inject
 	private AccountDetailsService accountService;
+	@Inject
+	private CardDetailsManager cardManager;
 
 	public List<Address> getAddressList(long id) {
 		List<Address> addresses = new ArrayList<>();
@@ -44,12 +46,9 @@ public class AccountDetailsService {
 		List<Address> addresses = addressManager.findByCustomerId(id); // finds all addresses associated with the customer
 		List<Address> updatedAddresses = new ArrayList<Address>();
 		if (addresses == null) {
-			System.out.println("address list for this customer is empty");
 			addresses = new ArrayList<Address>();
 		}
 		for (Address a : addresses){
-			
-			System.out.println("printing out addresses for this customer" + a.getAddressLine1());
 			if(a.getAddressLine1().equalsIgnoreCase("default addressline 1"))	break;
 			updatedAddresses.add(a);
 			}
@@ -62,6 +61,27 @@ public class AccountDetailsService {
 		if (a!=null)
 			address.addAddressInfo(a.getId(),a.getAddressLine1(),a.getAddressLine2(), a.getPostCode(),a.getCounty(), a.getCity());
 		return address;
+	}
+
+
+	public List<CardDetails> getCardList(long idCustomer) {
+		List<CardDetails> cards = new ArrayList<>();
+		try{
+
+			cardManager.findByCustomerId(idCustomer).forEach(card->{				
+				cards.add(accountService.getCard(card));		
+				});
+		} catch(Exception e) {
+			System.out.println("something went wrong in accountDetailsService to do with banking information");
+		}
+		return cards;
+	}
+	
+	public CardDetails getCard(CardDetails c) {
+		CardDetails card = new CardDetails();
+		if (c!=null)
+			card.addCardInfo(c.getCustomerID(),c.getAccountNumber()	,c.getCardNumber(), c.getNameOnCard(), c.getSortCode());
+		return card;
 	}
 
 }

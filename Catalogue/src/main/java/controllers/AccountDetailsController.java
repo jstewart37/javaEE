@@ -9,14 +9,24 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import EntityManagers.AddressManager;
+import EntityManagers.CardDetailsManager;
 import Entitys.*;
 import OfflineMode.AddressManagerOffline;
 import services.AccountDetailsService;
 
 /**
- * @author Jake_Stewart
+ * @author Jake_Stewart & Alex
  *
  */
 
@@ -29,8 +39,12 @@ public class AccountDetailsController implements Serializable {
 	private AddressManager addressManager;
 	@Inject
 	private AccountDetailsService accountService;
+	@Inject
+	private CardDetailsManager cardManager;
 	
 	private List<Address> addresses = null;
+	private List<CardDetails> cards = null;
+	
 	
 	private PaginationHelper pagination = null;
 	
@@ -38,6 +52,97 @@ public class AccountDetailsController implements Serializable {
 	private String addressLine1 = "";
 	private String addressLine2 = "";
 	private String county = "";
+	
+	private String sortCode;
+	private String accountNumber;
+	private String nameOnCard;
+	private String cardNumber;
+
+
+	public List<CardDetails> getCards() {
+		cards = accountService.getCardList(user.getCustomer().getIdCustomer());
+		return cards;
+	}
+
+
+	public void setCards(List<CardDetails> cards) {
+		this.cards = cards;
+	}
+
+
+	public String getSortCode() {
+		return sortCode;
+	}
+
+
+	public void setSortCode(String sortCode) {
+		this.sortCode = sortCode;
+	}
+
+
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+
+	public String getNameOnCard() {
+		return nameOnCard;
+	}
+
+
+	public void setNameOnCard(String nameOnCard) {
+		this.nameOnCard = nameOnCard;
+	}
+
+
+	public String getCardNumber() {
+		return cardNumber;
+	}
+
+
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+
+	@SuppressWarnings("unchecked")
+	public DataModel<CardDetails> getCardModel() {
+		return (DataModel<CardDetails>) getCardPage().createPageDataModel();
+	}
+	
+	
+	public PaginationHelper getCardPage() {
+		if (pagination == null) {
+			pagination = new PaginationHelper(9) {
+				
+				@Override
+				public int getItemsCount() {
+					return accountService.getCardList(user.getCustomer().getIdCustomer()).size();
+				}
+				
+				@Override
+				public ListDataModel<CardDetails> createPageDataModel() {
+					try {
+						return new ListDataModel<CardDetails>();
+					} catch (Exception e) {
+						return new ListDataModel<CardDetails>();
+					}
+				}
+			};
+		}
+		return pagination;
+	}
+	
+	// ADDRESS RELATED
+	
+	
+	
+	
 	public long getId() {
 		return id;
 	}
@@ -154,20 +259,16 @@ public class AccountDetailsController implements Serializable {
 	
 	public PaginationHelper getPagination() {
 		if (pagination == null) {
-			System.out.println("pagination is null");
 			pagination = new PaginationHelper(9) {
 				
 				@Override
 				public int getItemsCount() {
-					System.out.println("off to accountService to find all the addresses associated with this account.");
-	
 					return accountService.getAddressList(user.getCustomer().getIdCustomer()).size();
 				}
 				
 				@Override
 				public ListDataModel<Address> createPageDataModel() {
 					try {
-						System.out.println("trying to return a new datamodel");
 						return new ListDataModel<Address>(accountService.getAddressList(user.getCustomer().getIdCustomer()).subList(getPageFirstItem(),
 								getPageFirstItem() + getPageSize()));
 					} catch (Exception e) {
@@ -200,7 +301,6 @@ public class AccountDetailsController implements Serializable {
 	
 	@SuppressWarnings("unchecked")
 	public DataModel<Address> getDataModel() {
-		System.out.println("getting a datamodel. lets go to the pagination");
 		return (DataModel<Address>) getPagination().createPageDataModel();
 	}
 	

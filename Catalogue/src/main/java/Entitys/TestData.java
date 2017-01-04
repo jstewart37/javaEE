@@ -34,8 +34,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 
 		
 		//bens data
-		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "password","12345678912", "1991-12-22", setEmptyAddress(1)));
-		customers.add(new Customer(2, "mr", "Andy", "Mr.Andy@M/vie.com", "twat","1912", "1991-12-22", setEmptyAddress(2)));
+		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "password","12345678912", "1991-12-22", setEmptyAddress(1), setEmtpyCard("default")));
+		customers.add(new Customer(2, "mr", "Andy", "Mr.Andy@M/vie.com", "twat","1912", "1991-12-22", setEmptyAddress(2), setEmtpyCard("default")));
 		
 		customerOrderLine.add(new CustomerOrderLine(8, 10, 8, 24.89));
 		
@@ -112,6 +112,12 @@ public class TestData { //class was created by entire team, see comments/annotat
 	public void setAddresses(List<Address> address) {
 		this.addresses = address;
 		
+	}
+
+	public List<CardDetails> setEmtpyCard(String name) {
+		List<CardDetails> a = new ArrayList<>();
+		a.add(new CardDetails("default sort", "default card number", "default name", "default something", 1, 1));
+		return a;
 	}
 
 }

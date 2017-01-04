@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import EntityManagers.CustomerManager;
 import Entitys.Address;
 import Entitys.Author;
+import Entitys.CardDetails;
 import Entitys.Customer;
 import Entitys.TestData;
 
@@ -71,6 +72,13 @@ public class CustomerManagerOffline implements CustomerManager {
 		List<Address> a = new ArrayList<>();
 		a = testData.setEmptyAddress(id);
 		return a;
+	}
+
+	@Override
+	public List<CardDetails> setCard(String name) {
+		List<CardDetails> c = new ArrayList<>();
+		c = testData.setEmtpyCard(name);
+		return c;
 	}
 	
 	

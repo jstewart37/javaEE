@@ -42,7 +42,7 @@ public class CardDetails {
 	@NotNull
 	private Address billingAddress;
 
-	public void cardDetails() {
+	public CardDetails() {
 	}
 
 	public CardDetails(String sortCode, String accountNumber, String nameOnCard, String cardNumber, int billingAddress,
@@ -50,6 +50,7 @@ public class CardDetails {
 
 	}
 
+	
 	public String getCustomerID() {
 		return customerID;
 	}
@@ -96,6 +97,20 @@ public class CardDetails {
 
 	public void setBillingAddress(Address billingAddress) {
 		this.billingAddress = billingAddress;
+	}
+
+	public void addCardInfo(String id, String accNumber, String card, String name,
+			String sortCode) {
+		this.customerID = id;
+		this.accountNumber = accNumber;
+		this.cardNumber = card;
+		this.nameOnCard = name;
+		this.sortCode = sortCode;
+		
+		
+		
+		// TODO Auto-generated method stub
+		
 	}
 
 }
