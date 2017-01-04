@@ -19,6 +19,8 @@
 
 <script type = "text/javascript" src="js/addressform.js"/>
 
+<script type = "text/javascript" src="js/addressform.js"/>
+
 
 	</head>
 	<ui:define name="maincontent">
@@ -30,7 +32,7 @@
 					<ui:repeat var="AccountDetails"
 						value="#{AccountDetails.allAddresses}">
 						<ul>
-<<<<<<< HEAD
+
 
 							<li><h:outputText value="#{AccountDetails.addressLine1}" /> </li>
 							<li><h:outputText value="#{AccountDetails.addressLine2}" /> </li>
@@ -41,10 +43,12 @@
 
 							<li><h:outputText value="#{address.addressLine1}" /></li>
 							<li><h:outputText value="#{address.addressLine2}" /></li>
-=======
+
 							<li><h:outputText value="#{address.addressLine1}" /> </li>
 							<li><h:outputText value="#{address.addressLine2}" /> </li>
->>>>>>> parent of 4d4f98b... acc det
+				<li><h:outputText value="#{address.addressLine1}" /> </li>
+							<li><h:outputText value="#{address.addressLine2}" /> </li>
+
 							<li><h:outputText value="#{address.county}" /></li>
 							<li><h:outputText value="#{address.city}" /></li>
 							<li><h:outputText value="#{address.postCode}" /></li>
@@ -53,7 +57,7 @@
 						<h:outputLink value = "#address-box" class="address-window" > edit	</h:outputLink>
 					</ui:repeat>
 				</div>
-<<<<<<< HEAD
+
 
 
 				<h:outputLink rendered="#{usersession.loggedIn}"
@@ -75,6 +79,9 @@
 			
 				</div>
 
+=======
+			
+>>>>>>> parent of 4d4f98b... acc det
 =======
 			
 >>>>>>> parent of 4d4f98b... acc det
