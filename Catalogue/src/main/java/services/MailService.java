@@ -1,6 +1,8 @@
 package services;
 
 import java.util.Properties;
+
+import javax.ejb.Stateless;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
@@ -12,6 +14,7 @@ import javax.mail.internet.MimeMessage;
  * A singleton class for sending mail messages.
  * @author tcolburn
  */
+@Stateless
 public class MailService {
 
     /**
