@@ -12,6 +12,7 @@ import javax.mail.internet.MimeMessage;
  * A singleton class for sending mail messages.
  * @author tcolburn
  */
+@Stateless
 public class MailService {
 
     /**
