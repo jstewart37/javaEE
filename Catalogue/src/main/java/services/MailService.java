@@ -2,7 +2,11 @@ package services;
 
 import java.util.Properties;
 
+import javax.ejb.Singleton;
 import javax.ejb.Stateless;
+import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
+import javax.enterprise.inject.Default;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
@@ -14,7 +18,7 @@ import javax.mail.internet.MimeMessage;
  * A singleton class for sending mail messages.
  * @author tcolburn
  */
-@Stateless
+@RequestScoped
 public class MailService {
 
     /**
@@ -47,7 +51,7 @@ public class MailService {
  
     }
 
-    private MailService() {
+    public MailService() {
         Properties props = new Properties();
 
         props.put("mail.transport.protocol", "smtps");
