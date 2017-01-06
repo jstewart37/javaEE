@@ -26,8 +26,7 @@ public class AccountDetailsService {
 	private AccountDetailsService accountService;
 	@Inject
 	private CardDetailsManager cardManager;
-	
-	
+
 
 	public List<Address> getAddressList(long id) {
 		List<Address> addresses = new ArrayList<>();
@@ -88,7 +87,7 @@ public class AccountDetailsService {
 				cards.add(accountService.getCard(card));		
 				});
 		} catch(Exception e) {
-			System.out.println("THIS IS THE PROBLEM BIT");
+
 		}
 		return cards;
 	}
@@ -100,10 +99,4 @@ public class AccountDetailsService {
 		return card;
 	}
 	
-	
-	
-	
-	
-	
-
 }

@@ -70,7 +70,7 @@ public class Customer {
 	@ManyToMany
 	@JoinTable(name="AddressList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="address_id", referencedColumnName="id"))
 	private List<Address> addressList = null;
-
+	
 	@ManyToMany
 	@JoinTable(name="CardList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="name", referencedColumnName="id"))
 	private List<CardDetails> cardList = null;
@@ -109,7 +109,7 @@ public class Customer {
 	
 	public List<CardDetails> getCardList() {return cardList;}
 	public void setCardList(List<CardDetails> cardList) { this.cardList = cardList; }
-	
+
 	public Customer() {
 			// TODO Auto-generated constructor stub
 	}

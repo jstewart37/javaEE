@@ -12,9 +12,11 @@ public interface CardDetailsManager {
 	public CardDetails createNewCardDetails(CardDetails cardDetails);
 	public CardDetails updateCardDetails(CardDetails cardDetails);
 	public CardDetails removeCardDetails(CardDetails cardDetails);
+
 	
 	
 	public List<CardDetails> findByCustomerId(long idCustomer);
-	
 	public void updateCardList(long id, List<CardDetails> cards);
+
+
 }

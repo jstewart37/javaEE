@@ -33,6 +33,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		customerOrderLine = new ArrayList<CustomerOrderLine>();
 
 		
+
 		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "password","12345678912", "1991-12-22", setEmptyAddress(1), setEmtpyCard(1)));
 		customers.add(new Customer(2, "mr", "Andy", "Mr.Andy@M/vie.com", "twat","1912", "1991-12-22", setEmptyAddress(2), setEmtpyCard(2)));
 		
@@ -118,5 +119,6 @@ public class TestData { //class was created by entire team, see comments/annotat
 		this.addresses = address;
 		
 	}
+
 
 }

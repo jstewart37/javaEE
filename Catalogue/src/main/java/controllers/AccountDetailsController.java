@@ -9,6 +9,15 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import EntityManagers.AddressManager;
 import EntityManagers.CardDetailsManager;
@@ -17,7 +26,7 @@ import OfflineMode.AddressManagerOffline;
 import services.AccountDetailsService;
 
 /**
- * @author Jake_Stewart
+ * @author Jake_Stewart & Alex
  *
  */
 
@@ -39,6 +48,7 @@ public class AccountDetailsController implements Serializable {
 	
 	private List<Address> addresses = null;
 	private List<CardDetails> cards = null;
+
 	
 	private PaginationHelper pagination = null;
 	
@@ -48,6 +58,7 @@ public class AccountDetailsController implements Serializable {
 	private String county = "";
 	private String city = "";
 	private String postcode = "";
+
 	
 	private String sortCode;
 	private String accountNumber;
@@ -55,6 +66,12 @@ public class AccountDetailsController implements Serializable {
 	private String cardNumber;
 	private boolean onAddress;
 
+
+
+	public List<CardDetails> getCards() {
+		cards = accountService.getCardList(user.getCustomer().getIdCustomer());
+		return cards;
+	}
 
 
 	public void setCards(List<CardDetails> cards) {
@@ -105,6 +122,7 @@ public class AccountDetailsController implements Serializable {
 	@SuppressWarnings("unchecked")
 	public DataModel<CardDetails> getCardModel() {
 		return (DataModel<CardDetails>) getCardPage().createCardModel();
+
 	}
 	
 	
@@ -152,12 +170,14 @@ public class AccountDetailsController implements Serializable {
 								accountService.getAddressList(user.getCustomer().getIdCustomer()).subList(getPageFirstItem(), getItemsCount()));
 					}
 				}
+
 			};
 		}
 		return pagination;
 	}
 	
 	// ADDRESS RELATED
+
 	public long getId() {
 		return id;
 	}
@@ -353,6 +373,7 @@ public class AccountDetailsController implements Serializable {
 	
 	
 	@SuppressWarnings("unchecked")
+
 	public DataModel<Address> getAddressModel() {
 		return (DataModel<Address>) getAddressPage().createAddressModel();
 	}

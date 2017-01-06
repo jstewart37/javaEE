@@ -46,12 +46,7 @@ public class CardDetails {
 	public CardDetails() {
 	}
 
-	public CardDetails(String sortCode, String accountNumber, String nameOnCard, String cardNumber, int billingAddress,
-			int customerID) {
 
-	}
-
-	
 	public CardDetails(long id, String name, String cardNumber2, String sortCode2) {
 		this.customerID = Long.toString(id);
 		this.nameOnCard = name;
@@ -59,6 +54,7 @@ public class CardDetails {
 		this.sortCode = sortCode2;
 		
 	}
+
 
 	public String getCustomerID() {
 		return customerID;
@@ -115,10 +111,6 @@ public class CardDetails {
 		this.cardNumber = card;
 		this.nameOnCard = name;
 		this.sortCode = sortCode;
-		
-		
-		
-		// TODO Auto-generated method stub
-		
-	}
+		}
+
 }

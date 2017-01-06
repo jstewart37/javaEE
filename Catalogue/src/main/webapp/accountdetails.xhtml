@@ -25,10 +25,12 @@
 			<h:outputText value="Welcome #{usersession.name}" />
 
 			<div class="accountcontent">
+
 						<ul>
 							<li><h:outputText value="#{usersession.name}" /></li>
 							<li><h:outputText value="#{usersession.email}" /></li>
 							<li><h:outputText value="#{usersession.phone}" /></li>
+
 						</ul>
 			<h:form><h:commandLink class="logoutbtn pull-left"  action="addressdetails.xhtml" value="Address Details" /></h:form>
 			<h:form><h:commandLink class="logoutbtn pull-right"  action="carddetails.xhtml" value="Card Details" /></h:form>

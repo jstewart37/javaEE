@@ -56,6 +56,6 @@ public class CardDetailsOffline implements CardDetailsManager {
 		return null;
 	}
 
-	
+
 
 }
