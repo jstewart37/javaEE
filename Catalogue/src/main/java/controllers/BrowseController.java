@@ -47,6 +47,18 @@ public class BrowseController implements Serializable {
 								productService.findAll().subList(getPageFirstItem(), getItemsCount()));
 					}
 				}
+
+				@Override
+				public DataModel<?> createCardModel() {
+					// TODO Auto-generated method stub
+					return null;
+				}
+
+				@Override
+				public DataModel<?> createAddressModel() {
+					// TODO Auto-generated method stub
+					return null;
+				}
 			};
 		}
 		return pagination;

@@ -53,6 +53,18 @@ public class SearchResultsController implements Serializable {
 						return new ListDataModel<Product>(searchResults.subList(getPageFirstItem(), getItemsCount()));
 					}
 				}
+
+				@Override
+				public DataModel<?> createCardModel() {
+					// TODO Auto-generated method stub
+					return null;
+				}
+
+				@Override
+				public DataModel<?> createAddressModel() {
+					// TODO Auto-generated method stub
+					return null;
+				}
 			};
 		}
 		return pagination;

@@ -1,0 +1,81 @@
+<!-- @Author(author="Jake_Stewart & Alex") -->
+
+<ui:composition xmlns="https://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="templates/NavTemplate.xhtml">
+
+	<meta charset="utf-8" />
+	<ui:define name="pageTitle">Catalogue</ui:define>
+	<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="Jake" content="" />
+
+
+<script type="text/javascript" src="js/addressform.js" />
+
+
+	</head>
+	<ui:define name="maincontent">
+		<div class="container">
+			<div class="accountcontent">
+				<div class="accountdetails pull-left">
+					<ui:repeat var="cards" value="#{AccountDetails.cardModel}">
+						<ul>
+							<li><h:outputText value="#{cards.nameOnCard}" /></li>
+							<li><h:outputText value="#{cards.cardNumber}" /></li>
+							<li><h:outputText value="#{cards.sortCode}" /></li>
+						</ul>
+						<hr/>
+					</ui:repeat>
+				</div>
+
+				<h:outputLink value="#card-box" class="card-window"> Add Card</h:outputLink>
+				<div id="card-box" class="card-popup">
+					<a href="#" class="close"> <img src="img/close_pop.png"
+						class="btn_close" title="Close Window" alt="Close" />
+					</a>
+					<h:form class="reg" rendered="#{usersession.loggedIn}">
+						<h1>Add Card</h1>
+						<div class="form-group">
+							<label>Name on card</label>
+							<h:inputText class="form-control"
+								value="#{AccountDetails.nameOnCard}">
+								<f:passThroughAttribute name="type" value="name on card" />
+								<f:passThroughAttribute name="placeholder"
+									value="name on card" />
+								<f:passThroughAttribute name="alt" value="enter name on card" />
+								<f:passThroughAttribute name="required" value="required" />
+							</h:inputText>
+							<label>Card Number</label>
+							<h:inputText class="form-control"
+								value="#{AccountDetails.cardNumber}">
+								<f:passThroughAttribute name="type" value="card number" />
+								<f:passThroughAttribute name="placeholder"
+									value="card number" />
+								<f:passThroughAttribute name="alt" value="Enter card number" />
+								<f:passThroughAttribute name="required" value="required" />
+							</h:inputText>
+							<label>Sort Code</label>
+							<h:inputText class="form-control"
+								value="#{AccountDetails.sortCode}">
+								<f:passThroughAttribute name="type" value="sort code" />
+								<f:passThroughAttribute name="placeholder" value="sort code" />
+								<f:passThroughAttribute name="alt" value="Enter Sort code" />
+								<f:passThroughAttribute name="required" value="required" />
+							</h:inputText>
+							<h:commandButton type="submit" class="regbtn"
+								action="#{AccountDetails.addCard}" value="Add" />
+						</div>
+					</h:form>
+				</div>
+				<br /> <br />
+				<hr />
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>

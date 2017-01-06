@@ -71,10 +71,14 @@ public class Customer {
 	@JoinTable(name="AddressList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="address_id", referencedColumnName="id"))
 	private List<Address> addressList = null;
 
+	@ManyToMany
+	@JoinTable(name="CardList", joinColumns=@JoinColumn(name="customers_id", referencedColumnName="id"), inverseJoinColumns=@JoinColumn(name="name", referencedColumnName="id"))
+	private List<CardDetails> cardList = null;
+
 	@Author(author = "Ben")
 	// constructors
 	public Customer(long idCustomer, String title, String name, String email, String password, String phone,
-			String date, List<Address> address) {
+			String date, List<Address> address, List<CardDetails> cardList) {
 		this.idCustomer = idCustomer;
 		this.title = title;
 		this.name = name;
@@ -83,6 +87,7 @@ public class Customer {
 		this.phone = phone;
 		this.date = date;
 		this.addressList = address;
+		this.cardList = cardList;
 	}
 
 	public Customer(String title, String name, String email, String password, String phone,
@@ -99,8 +104,11 @@ public class Customer {
 	public List<Product> getBasketlist() { return basketList;}
 	public void setBasketlist(List<Product> basketList) { this.basketList = basketList; }
 	
-	public List<Address> getAddressList() { System.out.println("got this customers address list" +this.idCustomer);return addressList;}
-	public void setAddressList(List<Address> addressList) { System.out.println("found the customer, their address list is now updated"); this.addressList = addressList; }
+	public List<Address> getAddressList() {return addressList;}
+	public void setAddressList(List<Address> addressList) { this.addressList = addressList; }
+	
+	public List<CardDetails> getCardList() {return cardList;}
+	public void setCardList(List<CardDetails> cardList) { this.cardList = cardList; }
 	
 	public Customer() {
 			// TODO Auto-generated constructor stub
