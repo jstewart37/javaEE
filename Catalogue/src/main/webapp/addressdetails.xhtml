@@ -15,8 +15,7 @@
 <meta name="description" content="" />
 <meta name="Jake" content="" />
 
-
-<script type="text/javascript" src="js/addressform.js" />
+<link rel="stylesheet" type="text/css" href="css/register.css" />
 
 
 	</head>
@@ -32,16 +31,18 @@
 							<li><h:outputText value="#{addresses.city}" /></li>
 							<li><h:outputText value="#{addresses.postcode}" /></li>
 						</ul>
-						<hr/>
+						<hr />
 					</ui:repeat>
 				</div>
 
-				<h:outputLink value="#address-box" class="address-window"> Add address</h:outputLink>
-				<div id="address-box" class="address-popup">
-					<a href="#" class="close"> <img src="img/close_pop.png"
-						class="btn_close" title="Close Window" alt="Close" />
-					</a>
-					<h:form class="reg" rendered="#{usersession.loggedIn}">
+
+				<h:outputLink value="#login-box" class="login-window">Add address</h:outputLink>
+
+				<div id="login-box" class="login-popup">
+					<a href="#" class="close"><img src="img/close_pop.png"
+						class="btn_close" title="Close Window" alt="Close" /></a>
+
+					<h:form class="reg">
 						<h1>Add address</h1>
 						<div class="form-group">
 							<label>Address Line 1</label>

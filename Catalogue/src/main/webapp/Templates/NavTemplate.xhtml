@@ -14,7 +14,9 @@
 <!--  Site Title  -->
 <title><ui:insert name="pageTitle" /></title>
 
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+<link
+	href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+	rel="stylesheet" />
 <a href="javascript:" id="return-to-top"><i class="icon-chevron-up" /></a>
 
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -25,10 +27,11 @@
 
 <script type="text/javascript" src="js/jquery.js" />
 <script type="text/javascript" src="js/main.js" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" />
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" />
 <script type="text/javascript" src="js/loginform.js" />
 <script type="text/javascript" src="js/signinform.js" />
-<script type="text/javascript" src="js/addressform.js"/>
+<script type="text/javascript" src="js/addressform.js" />
 <script type="text/javascript" src="js/top.js" />
 
 
@@ -41,7 +44,8 @@
 	<header>
 		<div class="container">
 			<div class="logo pull-left">
-				<a href="index.xhtml"><img src="img/logo.png" class="logosizing" title="NB Gardens" alt="Company Logo" /></a>
+				<a href="index.xhtml"><img src="img/logo.png" class="logosizing"
+					title="NB Gardens" alt="Company Logo" /></a>
 			</div>
 
 
@@ -51,95 +55,117 @@
 					<li><a href="index.xhtml#about">About Us</a></li>
 					<li><a href="browse.xhtml">Catalogue</a></li>
 					<li><a href="index.xhtml#contact">Contact Us</a></li>
-					<li><h:form><h:commandLink class="logoutbtn" rendered="#{usersession.loggedIn}" action="accountdetails.xhtml" value="My Account" /></h:form></li>
-					<li><h:form><h:commandLink class="logoutbtn" rendered="#{usersession.loggedIn}" action="#{login.logout}" value="Log Out" /></h:form></li>
-					<li><h:outputLink rendered="#{!usersession.loggedIn}" value="#login-box" class="login-window">Register</h:outputLink></li>
-					<li><h:outputLink rendered="#{!usersession.loggedIn}" value="#Signin-box" class="signin-window">Login</h:outputLink></li>
-					<li><h:form><h:commandLink rendered="#{usersession.loggedIn}" action="basket.xhtml"><h:graphicImage style="width:50px;height:40px;" value="#{product.imgPath}" url="img/basket.png" /></h:commandLink></h:form></li>
-					
-					
-					
-					
-					
-					
+					<li><h:form>
+							<h:commandLink class="logoutbtn"
+								rendered="#{usersession.loggedIn}" action="accountdetails.xhtml"
+								value="My Account" />
+						</h:form></li>
+					<li><h:form>
+							<h:commandLink class="logoutbtn"
+								rendered="#{usersession.loggedIn}" action="#{login.logout}"
+								value="Log Out" />
+						</h:form></li>
+					<li><h:outputLink rendered="#{!usersession.loggedIn}"
+							value="#login-box" class="login-window">Register</h:outputLink></li>
+					<li><h:outputLink rendered="#{!usersession.loggedIn}"
+							value="#Signin-box" class="signin-window">Login</h:outputLink></li>
+					<li><h:form>
+							<h:commandLink rendered="#{usersession.loggedIn}"
+								action="basket.xhtml">
+								<h:graphicImage style="width:50px;height:40px;"
+									value="#{product.imgPath}" url="img/basket.png" />
+							</h:commandLink>
+						</h:form></li>
+
+
+
+
+
+
 				</ul>
 			</nav>
 			<span class="burger_icon">menu</span>
 		</div>
 	</header>
-	
+
 	<ui:insert name="maincontent" />
 
 	<div id="login-box" class="login-popup">
-		<a href="#" class="close"><img src="img/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
-		<!-- Author: Dave -->
-				<!-- creating fields with individual titles -->
-				<h:form class="reg" rendered="#{!user.register}">
-				<h1>Register</h1>
+		<a href="#" class="close"><img src="img/close_pop.png"
+			class="btn_close" title="Close Window" alt="Close" /></a>
+		
+		<h:form class="reg" rendered="#{!user.register}">
+			<h1>Register</h1>
 			<div class="form-group">
-			<label>Title</label>
+				<label>Title</label>
 				<h:selectOneMenu value="#{register.title}">
-		   			<f:selectItem itemValue="Mr" itemLabel="Mr" />
-		  			<f:selectItem itemValue="Mrs" itemLabel="Mrs" />	
-		  			<f:selectItem itemValue="Ms" itemLabel="Ms" />
-		  			<f:selectItem itemValue="Miss" itemLabel="Miss" />   							
-				</h:selectOneMenu>	
-			<label>First Name</label>
+					<f:selectItem itemValue="Mr" itemLabel="Mr" />
+					<f:selectItem itemValue="Mrs" itemLabel="Mrs" />
+					<f:selectItem itemValue="Ms" itemLabel="Ms" />
+					<f:selectItem itemValue="Miss" itemLabel="Miss" />
+				</h:selectOneMenu>
+				<label>First Name</label>
 				<h:inputText class="form-control" value="#{register.firstname}">
 					<f:passThroughAttribute name="type" value="firstname" />
-					<f:passThroughAttribute name="placeholder" value="What's your first name?" />
+					<f:passThroughAttribute name="placeholder"
+						value="What's your first name?" />
 					<f:passThroughAttribute name="alt" value="Enter firstname" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				<label>Surname</label>
 				<h:inputText class="form-control" value="#{register.surname}">
 					<f:passThroughAttribute name="type" value="surname" />
-					<f:passThroughAttribute name="placeholder" value="What's your surname?" />
+					<f:passThroughAttribute name="placeholder"
+						value="What's your surname?" />
 					<f:passThroughAttribute name="alt" value="Enter surname" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				<label>Email</label>
 				<h:inputText class="form-control" value="#{register.email}">
 					<f:passThroughAttribute name="type" value="email" />
-					<f:passThroughAttribute name="placeholder" value="What's your email address?" />
+					<f:passThroughAttribute name="placeholder"
+						value="What's your email address?" />
 					<f:passThroughAttribute name="alt" value="Enter Email" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				<label>Phone Number</label>
 				<h:inputText class="form-control" value="#{register.phone}">
 					<f:passThroughAttribute name="type" value="phone" />
-					<f:passThroughAttribute name="placeholder" value="What's your phone number?" />
+					<f:passThroughAttribute name="placeholder"
+						value="What's your phone number?" />
 					<f:passThroughAttribute name="alt" value="Enter Phone Number" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				<label>Password</label>
 				<h:inputText class="form-control" value="#{register.password}">
 					<f:passThroughAttribute name="type" value="password" />
-					<f:passThroughAttribute name="placeholder" value="Choose a password" />
+					<f:passThroughAttribute name="placeholder"
+						value="Choose a password" />
 					<f:passThroughAttribute name="alt" value="Enter Password" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				<label>Date of Birth</label>
 				<h:inputText class="form-control" value="#{register.date}">
-				<f:passThroughAttribute name="type" value="date" />
-				<f:passThroughAttribute name="placeholder" value="yyyy-mm-dd" />
-				<f:passThroughAttribute name="alt" value="Enter DOB" />
-				<f:passThroughAttribute name="required" value="required" />
+					<f:passThroughAttribute name="type" value="date" />
+					<f:passThroughAttribute name="placeholder" value="yyyy-mm-dd" />
+					<f:passThroughAttribute name="alt" value="Enter DOB" />
+					<f:passThroughAttribute name="required" value="required" />
 					<input type="range" min="31-12-1900" max="31-12-2002" />
 				</h:inputText>
-				<h:commandButton type="submit" class="regbtn" action="#{register.registerCustomer}" value="Register" />
+				<h:commandButton type="submit" class="regbtn"
+					action="#{register.registerCustomer}" value="Register" />
 			</div>
 			<!-- Functionality added by Sophie -->
-		
+
 		</h:form>
-			</div>
+	</div>
 
 	<div id="Signin-box" class="login-popup">
 		<a href="#" class="close"><img src="img/close_pop.png"
 			class="btn_close" title="Close Window" alt="Close" /></a>
 		<!-- Author: Dave -->
 		<h:form class="reg" rendered="#{!usersession.loggedIn}">
-		<h1>Login</h1>
+			<h1>Login</h1>
 			<div class="form-group">
 				<h:inputText class="form-control" value="#{login.email}">
 					<f:passThroughAttribute name="type" value="email" />
@@ -153,16 +179,20 @@
 					<f:passThroughAttribute name="alt" value="Enter Password" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
-				<h:commandButton class="regbtn" action="#{login.login}" value="Login" />
+				<h:commandButton class="regbtn" action="#{login.login}"
+					value="Login" />
 			</div>
 		</h:form>
 	</div>
-			<!-- Functionality added by Sophie -->
+
+
+	<!-- Functionality added by Sophie -->
 
 	<!--  Footer Section  -->
 
 	<footer class="sub_box">
-		<p class="copyright" data-wow-duration="2s">&#169; 2015 - All Rights Reserved</p>
+		<p class="copyright" data-wow-duration="2s">&#169; 2015 - All
+			Rights Reserved</p>
 	</footer>
 </body>
 </html>

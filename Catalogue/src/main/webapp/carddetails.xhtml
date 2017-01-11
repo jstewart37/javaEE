@@ -30,24 +30,24 @@
 							<li><h:outputText value="#{cards.cardNumber}" /></li>
 							<li><h:outputText value="#{cards.sortCode}" /></li>
 						</ul>
-						<hr/>
+						<hr />
 					</ui:repeat>
 				</div>
 
-				<h:outputLink value="#card-box" class="card-window"> Add Card</h:outputLink>
-				<div id="card-box" class="card-popup">
-					<a href="#" class="close"> <img src="img/close_pop.png"
-						class="btn_close" title="Close Window" alt="Close" />
-					</a>
-					<h:form class="reg" rendered="#{usersession.loggedIn}">
+					<h:outputLink value="#login-box" class="login-window">Add card</h:outputLink>
+							
+				<div id="login-box" class="login-popup">
+					<a href="#" class="close"><img src="img/close_pop.png"
+						class="btn_close" title="Close Window" alt="Close" /></a>
+
+					<h:form class="reg" rendered="#{!user.register}">
 						<h1>Add Card</h1>
 						<div class="form-group">
 							<label>Name on card</label>
 							<h:inputText class="form-control"
 								value="#{AccountDetails.nameOnCard}">
 								<f:passThroughAttribute name="type" value="name on card" />
-								<f:passThroughAttribute name="placeholder"
-									value="name on card" />
+								<f:passThroughAttribute name="placeholder" value="name on card" />
 								<f:passThroughAttribute name="alt" value="enter name on card" />
 								<f:passThroughAttribute name="required" value="required" />
 							</h:inputText>
@@ -55,8 +55,7 @@
 							<h:inputText class="form-control"
 								value="#{AccountDetails.cardNumber}">
 								<f:passThroughAttribute name="type" value="card number" />
-								<f:passThroughAttribute name="placeholder"
-									value="card number" />
+								<f:passThroughAttribute name="placeholder" value="card number" />
 								<f:passThroughAttribute name="alt" value="Enter card number" />
 								<f:passThroughAttribute name="required" value="required" />
 							</h:inputText>
