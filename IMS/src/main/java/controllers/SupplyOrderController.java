@@ -51,6 +51,7 @@ public class SupplyOrderController implements Serializable {
 		return supplyorderlinelist;
 	}	
 	
+	@SuppressWarnings("null")
 	public List<Long> getSupplyorderlistid(){
 		supplyorderlist = SupplyOrderService.findAll();
 		List<Long> Supplyorderlistid = null;
