@@ -66,7 +66,7 @@ fieldset    { border: 0 !important; }
 /* -- Layout -- */
 #view         { width: 100%; margin: 0px 15px; padding: 0 11px; background: url('../images/bg-shadow.png') 0 72px no-repeat; }
 #head         { height: 167px; }
-#menu         { position: absolute, top: 83px; left: 11px; z-index: 100; width: 210px; height: 600px; overflow: hidden; background: #ada8a8 url('../images/bg-menu.gif') repeat-x; }
+#menu         { position: absolute, top: 83px; left: 11px; z-index: 100; width: 210px; height: 200px; overflow: hidden; background: #ada8a8 url('../images/bg-menu.gif') repeat-x; }
 #content      { padding: 25px 29px 40px 26px; margin-bottom: 3px; overflow: hidden; background-color: #fff; }
 #foot         { height: 51px; padding: 12px 25px 0; background: #0d0d0b url('../images/bg-footer.gif') repeat-x; clear: both; }
   .subheader { margin-bottom: 24px; padding-left: 5px; font-weight: normal; font-family: Georgia, "New York CE", utopia, serif; }
