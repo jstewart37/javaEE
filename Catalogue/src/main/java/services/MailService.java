@@ -15,8 +15,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 /**
- * A singleton class for sending mail messages.
- * @author tcolburn
+ * A class for sending mail messages.
+ * @author Jake Stewart
  */
 @RequestScoped
 public class MailService {
@@ -36,17 +36,20 @@ public class MailService {
 
         MimeMessage mimeMessage = new MimeMessage(mailSession);
 
-	mimeMessage.setFrom(new InternetAddress(FROM));
-	mimeMessage.setSender(new InternetAddress(FROM));
-	mimeMessage.setSubject(subject + "from " + name);
+        mimeMessage.setFrom(new InternetAddress(FROM));
+		mimeMessage.setSender(new InternetAddress(FROM));
+		mimeMessage.setSubject(subject + " - " + email);
         mimeMessage.setContent(message, "text/plain");
 
-        mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(FROM));
+        mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(TO));
+        mimeMessage.addRecipient(Message.RecipientType.BCC, new InternetAddress(email));
 
         Transport transport = mailSession.getTransport("smtps");
         transport.connect(HOST, PORT, USER, PASSWORD);
 
-        transport.sendMessage(mimeMessage, mimeMessage.getRecipients(Message.RecipientType.TO));
+        transport.sendMessage(mimeMessage, mimeMessage.getAllRecipients());
+       // transport.sendMessage(mimeMessage, mimeMessage.getRecipients(Message.RecipientType.BCC));
+
         transport.close();
  
     }
@@ -69,8 +72,9 @@ public class MailService {
     private static Session mailSession;
 
     private static final String HOST = "smtp.gmail.com";
-    private static final int PORT = 587;
-    private static final String USER = "jkae947@gmail.com";     // Must be valid user in d.umn.edu domain, e.g. "smit0012"
-    private static final String PASSWORD = "deadair7"; 
-    private static final String FROM = "jkae947@gmail.com";     // Full info for user, e.g. "Fred Smith <smit0012@d.umn.edu>"
+    private static final int PORT = 465;
+    private static final String USER = "alstock957@gmail.com";     // alstock957@gmail.com, password nbgardens
+    private static final String PASSWORD = "nbgardens"; 
+    private static final String FROM = "alstock957@gmail.com"; // Full info for user, e.g. "Fred Smith <smit0012@d.umn.edu>"
+    private static final String TO = "alstock957@gmail.com"; 	// TO User"
 }
