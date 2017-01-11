@@ -22,87 +22,24 @@
 	</head>
 	<ui:define name="maincontent">
 		<div class="container">
-			<h:outputText value="#{usersession.name}" />
-			<h:outputText value="#{usersession.email}" />
+			<h:outputText value="Welcome #{usersession.name}" />
+
 			<div class="accountcontent">
 
-				<ui:repeat var="card" value="#{AccountDetails.cardModel}">
-					<ul>
-						<li><h:outputText value="#{address.addressLine1}" /></li>
-						<li><h:outputText value="#{address.addressLine2}" /></li>
-						<li><h:outputText value="#{address.county}" /></li>
-						<li><h:outputText value="#{address.city}" /></li>
-						<li><h:outputText value="#{address.postCode}" /></li>
-					</ul>
-				</ui:repeat>
-
-				<div class="accountdetails pull-left">
-					<ui:repeat var="card" value="#{AccountDetails.cardModel}">
 						<ul>
-							<li><h:outputText value="#{card.accountNo}" /></li>
-							<li><h:outputText value="#{card.sortCode}" /></li>
-							<li><h:outputText value="#{card.cardNumber}" /></li>
-							<li><h:outputText value="#{card.name}" /></li>
+							<li><h:outputText value="#{usersession.name}" /></li>
+							<li><h:outputText value="#{usersession.email}" /></li>
+							<li><h:outputText value="#{usersession.phone}" /></li>
+
 						</ul>
-					</ui:repeat>
-				</div>
-				<h:outputLink value="#address-box" class="address-window"> Add address</h:outputLink>
-				<div id="address-box" class="address-popup">
-					<a href="#" class="close"> <img src="img/close_pop.png"
-						class="btn_close" title="Close Window" alt="Close" />
-					</a>
-					<h:form class="reg" rendered="#{usersession.loggedIn}">
-						<h1>Add address</h1>
-						<div class="form-group">
-							<label>Address Line 1</label>
-							<h:inputText class="form-control"
-								value="#{AccountDetails.addressLine1}">
-								<f:passThroughAttribute name="type" value="Address line 1" />
-								<f:passThroughAttribute name="placeholder"
-									value="Address line 1" />
-								<f:passThroughAttribute name="alt" value="Enter address line 1" />
-								<f:passThroughAttribute name="required" value="required" />
-							</h:inputText>
-							<label>Address Line 2</label>
-							<h:inputText class="form-control"
-								value="#{AccountDetails.addressLine2}">
-								<f:passThroughAttribute name="type" value="address line 2" />
-								<f:passThroughAttribute name="placeholder"
-									value="Address line 2" />
-								<f:passThroughAttribute name="alt" value="Enter address line 2" />
-								<f:passThroughAttribute name="required" value="required" />
-							</h:inputText>
-							<label>County</label>
-							<h:inputText class="form-control"
-								value="#{AccountDetails.county}">
-								<f:passThroughAttribute name="type" value="county" />
-								<f:passThroughAttribute name="placeholder" value="county" />
-								<f:passThroughAttribute name="alt" value="Enter county" />
-								<f:passThroughAttribute name="required" value="required" />
-							</h:inputText>
-							<label>city</label>
-							<h:inputText class="form-control" value="#{AccountDetails.city}">
-								<f:passThroughAttribute name="type" value="city" />
-								<f:passThroughAttribute name="placeholder" value="City" />
-								<f:passThroughAttribute name="alt" value="Enter City" />
-								<f:passThroughAttribute name="required" value="required" />
-							</h:inputText>
-							<label>Postcode</label>
-							<h:inputText class="form-control"
-								value="#{AccountDetails.postcode}">
-								<f:passThroughAttribute name="type" value="postcode" />
-								<f:passThroughAttribute name="placeholder" value="postcode" />
-								<f:passThroughAttribute name="alt" value="Enter your postcode" />
-								<f:passThroughAttribute name="required" value="required" />
-							</h:inputText>
-							<h:commandButton type="submit" class="regbtn"
-								action="#{AccountDetails.add}" value="Add" />
-						</div>
-					</h:form>
+			<h:form><h:commandLink class="logoutbtn pull-left"  action="addressdetails.xhtml" value="Address Details" /></h:form>
+			<h:form><h:commandLink class="logoutbtn pull-right"  action="carddetails.xhtml" value="Card Details" /></h:form>
+			
+			
 				</div>
 				<br /> <br />
 				<hr />
 			</div>
-		</div>
+	
 	</ui:define>
 </ui:composition>

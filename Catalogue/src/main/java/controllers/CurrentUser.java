@@ -33,6 +33,17 @@ public class CurrentUser implements Serializable {
 		return customer.getEmail();
 	}
 	
+	public String getPhone(){
+		if (customer == null)
+			return "";
+		return customer.getPhone();
+	}
+	public String getTitle(){
+		if (customer == null)
+			return "";
+		return customer.getTitle();
+	}
+
 	
 	
 	private static final long serialVersionUID = -2133248137329753396L;

@@ -9,6 +9,7 @@ import javax.validation.constraints.Size;
 @NamedQuery(name="customerCardDetails", query="SELECT * FROM CardDetails WHERE nameOnCard=:nameOnCard")
 public class CardDetails {
 
+
 	@OneToMany
 	@JoinColumn(name = "Customer ID", nullable = false, unique = true)
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,13 +43,18 @@ public class CardDetails {
 	@NotNull
 	private Address billingAddress;
 
-	public void cardDetails() {
+	public CardDetails() {
 	}
 
-	public CardDetails(String sortCode, String accountNumber, String nameOnCard, String cardNumber, int billingAddress,
-			int customerID) {
 
+	public CardDetails(long id, String name, String cardNumber2, String sortCode2) {
+		this.customerID = Long.toString(id);
+		this.nameOnCard = name;
+		this.cardNumber = cardNumber2;
+		this.sortCode = sortCode2;
+		
 	}
+
 
 	public String getCustomerID() {
 		return customerID;
@@ -97,5 +103,14 @@ public class CardDetails {
 	public void setBillingAddress(Address billingAddress) {
 		this.billingAddress = billingAddress;
 	}
+
+	public void addCardInfo(String id, String accNumber, String card, String name,
+			String sortCode) {
+		this.customerID = id;
+		this.accountNumber = accNumber;
+		this.cardNumber = card;
+		this.nameOnCard = name;
+		this.sortCode = sortCode;
+		}
 
 }

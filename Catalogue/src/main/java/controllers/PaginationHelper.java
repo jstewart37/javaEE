@@ -35,6 +35,20 @@ public abstract class PaginationHelper {
 	public abstract DataModel<?> createPageDataModel();
 	
 	/**
+	 * Creates the Data Model to be used by the Paginator
+	 * 
+	 * @return
+	 */
+	public abstract DataModel<?> createCardModel();
+	
+	/**
+	 * Creates the Data Model to be used by the Paginator
+	 * 
+	 * @return
+	 */
+	public abstract DataModel<?> createAddressModel();
+	
+	/**
 	 * Gets the Index of the first item to display
 	 * 
 	 * @return

@@ -23,7 +23,7 @@ public class Address {
 	@Id @Column(name ="id_Address", nullable = false, unique = true) @GeneratedValue(strategy = GenerationType.IDENTITY)private long idAddress;
 	@Column(name ="address_line_1", nullable = false, length = 100)@Size(max=100) @NotNull private String addressLine1;
 	@Column(name ="address_line_2", length = 100) @Size(max=100) private String addressLine2;
-	@Column(name ="postcode", nullable = false, length = 10) @Size(max=10) @NotNull private String postCode;
+	@Column(name ="postcode", nullable = false, length = 10) @Size(max=10) @NotNull private String postcode;
 	@Column(name ="county", nullable = false, length = 100) @Size(max=100) @NotNull private String county;
 	@Column(name ="city", nullable = false, length = 100) @Size(max=100) @NotNull private String city;
 	
@@ -47,7 +47,7 @@ public class Address {
 			String city) {
 		this.idAddress = idAddress;
 		this.addressLine1 = addressLine1;
-		this.postCode = postCode;
+		this.postcode = postCode;
 		this.county = county;
 		this.city = city;
 	}
@@ -58,7 +58,7 @@ public class Address {
 		this.idAddress = idAddress;
 		this.addressLine1 = addressLine1;
 		this.addressLine2 = addressLine2;
-		this.postCode = postCode;
+		this.postcode = postCode;
 		this.county = county;
 		this.city = city;
 	}
@@ -91,12 +91,12 @@ public class Address {
 		this.addressLine2 = addressLine2;
 	}
 
-	public String getPostCode() {
-		return postCode;
+	public String getPostcode() {
+		return postcode;
 	}
 
-	public void setPostCode(String postCode) {
-		this.postCode = postCode;
+	public void setPostcode(String postCode) {
+		this.postcode = postCode;
 	}
 
 	public String getCounty() {
@@ -126,10 +126,12 @@ public class Address {
 		this.idAddress = custID;
 		this.addressLine1 = addressLine1;
 		this.addressLine2 = addressLine2;
-		this.postCode = postCode;
+		this.postcode = postCode;
 		this.county = county;
 		this.city = city;
 	}
+
+	
 
 	
 }

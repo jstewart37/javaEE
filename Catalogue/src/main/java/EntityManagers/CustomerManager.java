@@ -3,6 +3,7 @@ package EntityManagers;
 import java.util.List;
 
 import Entitys.Address;
+import Entitys.CardDetails;
 import Entitys.Customer;
 
 public interface CustomerManager {
@@ -16,4 +17,5 @@ public interface CustomerManager {
 	public Customer readCustomer(Customer customer);
 	public Customer updateCustomer(Customer customer);
 	public List<Address> setAddress(long id);
+	public List<CardDetails> setCard(long id);
 }
