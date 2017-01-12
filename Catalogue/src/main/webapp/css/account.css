@@ -24,13 +24,15 @@
          float:left;
          padding: 10px;
     margin:10px;
+    
      
 	}
 	
 	.accountcontent div {
 	 width: 45%; 
- 
+ 	background-color: WHITESMOKE;
 	 float: left; 
+	 
 	}
 	
 	#tableaccountdetails td{
@@ -44,4 +46,9 @@
 	width: 25%;
 	padding:5px;
 	}
+	
+	.login-popup{
+	background-color: whitesmoke;
+	}
+	
 	
