@@ -50,6 +50,7 @@ public class BasketService {
 	
 	public void add(long customerId, long productId, int quantity) {
 		List<Product> itemList = basketManager.findByCustomerId(customerId); // gets the customers current basket
+		//List<Integer> currentquantity = basketManager.findByCustomerId(customerId);
 		if(itemList == null) {
 			itemList = new ArrayList<Product>();
 		}
@@ -77,4 +78,9 @@ public class BasketService {
 		return 0;
 		
 	}
+	
+	//public List<Integer> getQuantityList(){
+	//List<Integer> currentQuantityList = basketManager.findBasketByCustomerId(CurrentBasket.getBasket().getCustomerID()).getQuantityList();
+	//	return currentQuantityList;
+	//}
 }
