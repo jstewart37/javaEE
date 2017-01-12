@@ -18,9 +18,13 @@ var colorIndices = [0,1,2,3];
 //transition speed
 var gradientSpeed = 0.003;
 
+var color = true;
+var interval;
+
 function updateGradient()
 {
   
+		
   if ( $===undefined ) return;
   
 var c0_0 = colors[colorIndices[0]];
@@ -54,8 +58,23 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
     //do not pick the same as the current one
     colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
     colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-    
+	
   }
 }
 
-setInterval(updateGradient,10);
+function toggle() {
+	
+	if(color) {
+		setInterval(updateGradient,10);
+		color = false;
+		console.log(color)
+		$("div").removeClass("otherclass");
+	}else {
+		$("div").addClass("otherclass");
+		color = true;
+		console.log(color);
+		
+	}
+}
+
+
