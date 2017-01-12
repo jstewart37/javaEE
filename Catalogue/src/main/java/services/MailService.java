@@ -32,6 +32,9 @@ public class MailService {
 	mimeMessage.setFrom(new InternetAddress(FROM));
 	mimeMessage.setSender(new InternetAddress(FROM));
 	mimeMessage.setSubject(subject + "from " + name);
+	
+	
+	
         mimeMessage.setContent(message, "text/plain");
 
         mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(FROM));
