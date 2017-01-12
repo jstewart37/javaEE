@@ -8,7 +8,7 @@ import Entitys.Stock;
 public interface BasketManager {
 
 		/**
-		 * Finds a customers wishlist
+		 * Finds a customers basket
 		 * 
 		 * @param id
 		 * @return
@@ -16,11 +16,12 @@ public interface BasketManager {
 		List<Product> findByCustomerId(long id);
 		
 		/**
-		 * Updates a customers wishlist.
+		 * Updates a customers basket.
 		 * 
 		 * @param customerId
 		 * @param wishlist
 		 */
 		void updateBasketList(long customerId, List<Product> basketList);
+
 	}
 

@@ -47,6 +47,20 @@ public class BasketService {
 		basketManager.updateBasketList(customerId, itemList);
 		
 	}
+	
+	public void add(long customerId, long productId, int quantity) {
+		List<Product> itemList = basketManager.findByCustomerId(customerId); // gets the customers current basket
+		if(itemList == null) {
+			itemList = new ArrayList<Product>();
+		}
+		for(Product product : itemList)
+			if(product.getIdProduct() == productId){	// product already exists in basket.
+				return;}
+		itemList.add(productManager.findByID(productId));
+		basketManager.updateBasketList(customerId, itemList);
+		
+	}
+	
 
 	public void removeFromBasketlist(long customerId, long productId) {
 		List<Product> wishlist = new ArrayList<>();
@@ -54,5 +68,13 @@ public class BasketService {
 			if(product.getIdProduct() != productId)
 				wishlist.add(product);
 		basketManager.updateBasketList(customerId, wishlist);
+	}
+
+	public static int calculatetotalprice() {
+		
+		//needs implementation
+		
+		return 0;
+		
 	}
 }

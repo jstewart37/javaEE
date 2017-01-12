@@ -48,8 +48,8 @@
 									</div>
 									</th>
 									<th>&#163;<h:outputText value="#{product.sellPrice}" /></th>
-									<th><h:outputText value="#{product.stockLevel}" /></th>
-									<th>&#163;<h:outputText value="#{product.sellPrice*product.stockLevel}" /></th>
+									<th><h:outputText value="1" /></th> <!-- "#{product.stockLevel}" / should be the real quantity -->
+									<th>&#163;<h:outputText value="#{product.sellPrice*1}" /></th> <!-- should be the real quantity -->
 									<th><h:form><h:commandButton action="#{basketList.removeItem(product.idProduct)}" class="fa fa-trash-o btn btn-danger btn-sm"/></h:form></th>
 								</tr>
 							</ui:repeat>
@@ -59,7 +59,13 @@
 						<tr>
 							<td><h:form><h:commandLink action="browse.xhtml" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</h:commandLink></h:form></td>
 							<td colspan="2" class="hidden-xs"></td>
-							<td class="hidden-xs text-center"><strong>Total &#163;</strong></td>
+							<td class="hidden-xs text-center">
+								<strong>
+									Total &#163;
+									<h:outputText value="#{basketList.totalprice}" />
+								</strong></td>			
+								
+								
 							<td><h:form><h:commandLink class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></h:commandLink></h:form></td>
 						</tr>
 						

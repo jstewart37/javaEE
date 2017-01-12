@@ -17,8 +17,27 @@ public class BasketController {
 	@Inject
 	private CurrentUser user;
 	private List<Product> basket = null;;
+	int totalprice = 33; //33 is default
+
+	public void setTotalprice() {
+		this.totalprice = BasketService.calculatetotalprice();
+		
+	}
+	
+
+	public int getTotalprice() {
+		System.out.println(totalprice);
+		return totalprice;
+	}
 
 	public void add(long id) { // passes is ID of product
+		if(user.isloggedIn())
+			basketService.add(user.getCustomer().getIdCustomer(), id);
+	}
+	
+	
+	//add id and quantity -- Jake
+	public void add(long id,int quantity) { // passes is ID & quantity of product
 		if(user.isloggedIn())
 			basketService.add(user.getCustomer().getIdCustomer(), id);
 	}
@@ -34,4 +53,10 @@ public class BasketController {
 		}
 		return basket;
 	}
+	
+
+	
+	
+	
+	
 }

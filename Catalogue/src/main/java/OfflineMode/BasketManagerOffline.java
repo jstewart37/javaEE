@@ -29,6 +29,8 @@ public class BasketManagerOffline implements BasketManager {
 		System.out.println("returning to service with a null customer");
 		return null;
 	}
+	
+	
 
 	@Override
 	public void updateBasketList(long customerId, List<Product> basketList) {
