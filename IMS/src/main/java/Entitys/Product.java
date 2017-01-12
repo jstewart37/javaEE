@@ -50,6 +50,10 @@ public class Product {
 	@NotNull
 	private String imgPath;
 
+	public void setImgPath(String imgPath) {
+		this.imgPath = imgPath;
+	}
+
 	//constructors
 	@Author(author = "alex")
 	public Product(long vidProduct, String vname, String vdescription, String vcolour, int vstockLevel, double vsellPrice, double vbuyPrice,
