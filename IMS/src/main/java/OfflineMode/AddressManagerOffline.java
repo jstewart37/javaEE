@@ -79,6 +79,7 @@ public class AddressManagerOffline implements AddressManager {
 		return address;
 	}
 
+	@SuppressWarnings("null")
 	@Override
 	public List<Address> findAllAddressesByID(long id) {
 		List<Address> addresses = testData.getAddresses();
