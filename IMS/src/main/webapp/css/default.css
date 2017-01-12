@@ -915,3 +915,20 @@ body {
 			100%{bottom: 0px;}
 		}
 
+
+/*funky background */
+
+	body{
+	 background-color: #000000;
+   padding: 0px;
+   margin: 0px;
+ }
+
+#gradient
+{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  padding: 0px;
+  margin: 0px;
+}
