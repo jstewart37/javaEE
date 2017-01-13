@@ -61,7 +61,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 
 
 
-		products.add(new Product(13, "Gnome protein", "picture is what you will be able to lift. contains tren", "white", 10000, 159, 0.1, "available", "img/weightliftingGnome.jpg", "no", "other"));
+		products.add(new Product(13, "Gnome weightlifter", "can do 100 dips", "white", 10000, 159, 0.1, "available", "img/weightliftingGnome.jpg", "no", "other"));
 
 		
 		
