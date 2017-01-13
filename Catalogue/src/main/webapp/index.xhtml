@@ -123,13 +123,9 @@
 							<h:inputText type="text" id="input-subject" placeholder="Subject" value="#{EmailController.subject}" >
 								<f:passThroughAttribute name="placeholder" value="Subject" />
 							</h:inputText> 
-						</h:panelGroup>
-							
-						<h:panelGroup>	
 							<h:inputTextarea name="message" id="input-message" placeholder="Message" value="#{EmailController.message}" />
 						</h:panelGroup>
 							<!-- button to submit the data that has been entered by the customer -->
-							<br /> 
 						<h:commandButton type="submit" value="send" class="btn btn-success" id="input-submit" action="#{EmailController.send}" />
 						
 						<h:outputText value="#{EmailController.statusMessage}" style="color:red"/>
@@ -165,13 +161,6 @@
 				</div>
 			</div>
 		</section>
-		
-		
-		
-		
-
-
-
 		
 		<!--  End Contact Section  -->
 		
