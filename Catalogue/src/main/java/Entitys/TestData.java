@@ -33,9 +33,9 @@ public class TestData { //class was created by entire team, see comments/annotat
 		customerOrderLine = new ArrayList<CustomerOrderLine>();
 
 		
-		//bens data
-		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "password","12345678912", "1991-12-22", setEmptyAddress(1)));
-		customers.add(new Customer(2, "mr", "Andy", "Mr.Andy@M/vie.com", "twat","1912", "1991-12-22", setEmptyAddress(2)));
+
+		customers.add(new Customer(1, "mr", "Tom", "Mr.Tom@Movie.com", "password","12345678912", "1991-12-22", setEmptyAddress(1), setEmtpyCard(1)));
+		customers.add(new Customer(2, "mr", "Andy", "Mr.Andy@M/vie.com", "twig","1912", "1991-12-22", setEmptyAddress(2), setEmtpyCard(2)));
 		
 		customerOrderLine.add(new CustomerOrderLine(8, 10, 8, 24.89));
 		
@@ -43,11 +43,8 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 		//Alex's data
 		suppliers.add(new Supplier(1, "Daves GGGGGGGGGGGGGGGGGGnomes", "07984682330", "dg@gnomies.com")); 
-		suppliers.add(new Supplier(2, "Sophies Rude Ass Garden Supplies", "07984643", "sg@rudegardensupplies.com"));
-		
-		addresses.add(new Address(1, "65 Anchorage Quay", "eccles", "M27 641", "Greater Manchester", "Manchester"));
-		addresses.add(new Address(2, "1 Someplace", "M64 813", "Greater Manchester", "Manchester"));
-		
+		suppliers.add(new Supplier(2, "gnomie gnomie", "07984643", "gg@gg.com"));
+	
 		//Daves data
 		products.add(new Product(1, "Gandalf Gnome", "A Gandalf themed Gnome", "Grey", 25, 9.99, 5.99, "available", "img/gandalf.jpg" , "yes", "gnome"));
 		products.add(new Product(2, "Goku Gnome", "A gnome from the Saiyan race", "multi", 50, 9.99, 5.99, "available", "img/goku.png", "yes" , "gnome"));
@@ -62,14 +59,18 @@ public class TestData { //class was created by entire team, see comments/annotat
 		products.add(new Product(11, "Gnome Gnome", "Gnome Gnome Gnome Gnome Gnome Gnome", "Gnome", 35, 9.99, 5.99, "available", "img/gnome.jpg", "no" , "gnome"));
 		products.add(new Product(12, "Weird Chair", "Wicker, but comfy", "brown", 10000, 159, 0.1, "available", "img/chair.jpg", "no", "furniture"));
 
-
-
 		products.add(new Product(13, "Gnome protein", "picture is what you will be able to lift. contains tren", "white", 10000, 159, 0.1, "available", "img/weightliftingGnome.jpg", "no", "other"));
 
 		
 		
 	
 		
+	}
+	
+	public List<CardDetails> setEmtpyCard(long id) {
+		List<CardDetails> a = new ArrayList<>();
+		a.add(new CardDetails(id, "Please add card", "Please add card", "Please add card"));
+		return a;
 	}
 
 	public List<SupplyOrder> getSupplyorderlist() {
@@ -99,7 +100,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 	
 	public List<Address> setEmptyAddress(long id){
 		List<Address> a = new ArrayList<>();
-		a.add(new Address(id, "", "","", "",""));
+		a.add(new Address(id, "Please add address", "Please add address","Please add address", "Please add address ","Please add address"));
 		return a;
 	
 	}
@@ -116,5 +117,6 @@ public class TestData { //class was created by entire team, see comments/annotat
 		this.addresses = address;
 		
 	}
+
 
 }
