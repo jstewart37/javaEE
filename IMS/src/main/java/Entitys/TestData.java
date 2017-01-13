@@ -141,6 +141,10 @@ public class TestData { //class was created by entire team, see comments/annotat
 	public List<Product> getProducts() {
 		return products;
 	}
+	
+	public void setProducts(Product updatedProduct) {
+		products.add(updatedProduct);
+	}
 	@Author(author="Alex")
 	public List<Address> getAddresses() {
 		return addresses;
@@ -151,4 +155,18 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 	}
 
+	
+
+	public long addEmptyProduct() {
+		long id = products.size()+1; // the next slot in the array
+
+		return id;
+	}
+	
+	public Product addProduct(Product p) {
+		
+		products.add(p);
+		System.out.println(p.getName() + "YOU FUCKING WORK");
+		return p;
+	}
 }

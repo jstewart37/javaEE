@@ -18,8 +18,8 @@ public interface ProductManager {
 ///////////////////////////////CRUD///////////////////////////////////
 	
 //Create Methods 
-	public Product addProduct(Product Product);
-	
+
+	public void addProduct(Product Product);
 	
 //Read Methods 
 	public Product displayProductInformation(Product Product);
@@ -38,6 +38,8 @@ public interface ProductManager {
 	public List<Product> findByDescriptionLike(String description);
 	public List<Product> findAll();
 	Product findByID(int ID);
+	public long getNext();
+	public Product addProduct(List<Product> Products);
 	
 
 }

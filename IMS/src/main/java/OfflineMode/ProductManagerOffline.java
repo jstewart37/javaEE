@@ -1,5 +1,6 @@
 package OfflineMode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -70,13 +71,7 @@ public class ProductManagerOffline implements ProductManager {
 		return null;
 	}
 
-	@Override
-	public Product addProduct(Product Product) {
-		List<Product> products = testData.getProducts();
-		// for (Product products6 : products)
-		//	if(products6.geta)
-		return null;
-	}
+	
 
 	@Override
 	public Product displayProductInformation(Product Product) {
@@ -119,4 +114,22 @@ public class ProductManagerOffline implements ProductManager {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public long getNext() {
+		return testData.addEmptyProduct();	
+	}
+
+	@Override
+	public void addProduct(Product product) {
+		testData.addProduct(product);	
+		}
+
+	@Override
+	public Product addProduct(List<Product> Products) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 }
