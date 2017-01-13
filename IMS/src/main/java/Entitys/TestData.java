@@ -48,7 +48,7 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 		//Alex's data
 		suppliers.add(new Supplier(1, "Daves GGGGGGGGGGGGGGGGGGnomes", "07984682330", "dg@gnomies.com")); 
-		suppliers.add(new Supplier(2, "Sophies Rude Ass Garden Supplies", "07984643", "sg@rudegardensupplies.com"));
+		suppliers.add(new Supplier(2, "Gnomie gnomies", "07984643", "gg@gg.com"));
 		
 		addresses.add(new Address(1, "65 Anchorage Quay", "eccles", "M27 641", "Greater Manchester", "Manchester"));
 		addresses.add(new Address(2, "1 Someplace", "M64 813", "Greater Manchester", "Manchester"));
@@ -141,6 +141,10 @@ public class TestData { //class was created by entire team, see comments/annotat
 	public List<Product> getProducts() {
 		return products;
 	}
+	
+	public void setProducts(Product updatedProduct) {
+		products.add(updatedProduct);
+	}
 	@Author(author="Alex")
 	public List<Address> getAddresses() {
 		return addresses;
@@ -151,4 +155,18 @@ public class TestData { //class was created by entire team, see comments/annotat
 		
 	}
 
+	
+
+	public long addEmptyProduct() {
+		long id = products.size()+1; // the next slot in the array
+
+		return id;
+	}
+	
+	public Product addProduct(Product p) {
+		
+		products.add(p);
+		System.out.println(p.getName() + "YOU FUCKING WORK");
+		return p;
+	}
 }

@@ -21,67 +21,73 @@
 	<h:form class="addorderform">
 			<div class="form-group">
 			<label>Product ID </label>
-				<h:inputText class="form-control" value="#{addproduct.idProduct}" style="width: 300px;">
+				<h:inputText class="form-control" value="#{productCon.ID}" style="width: 300px;"/>
 					<f:passThroughAttribute name="type" value="productID" />
-					<f:passThroughAttribute name="placeholder" value="Product ID" />
-					<f:passThroughAttribute name="alt" value="Enter the new Product ID" />
-					<f:passThroughAttribute name="required" value="required" />
-				</h:inputText>
+
+							
 				<label>Product Name:</label>
-				<h:inputText class="form-control" value="#{addproduct.name}" style="width: 300px;">
+				<h:inputText class="form-control" value="#{productCon.name}" style="width: 300px;">
 					<f:passThroughAttribute name="type" value="pName" />
 					<f:passThroughAttribute name="placeholder" value="productName" />
 					<f:passThroughAttribute name="alt" value="Enter the name of the product" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				<label>Product Description</label>
-				<h:inputTextarea class="form-control" value="#{addproduct.description}" style="width: 300px;">
+				<h:inputTextarea class="form-control" value="#{productCon.description}" style="width: 300px;">
 					<f:passThroughAttribute name="alt" value="productDescription" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputTextarea>
 				<label>Product Colour</label>
-				<h:inputText class="form-control" value="#{addproduct.colour}" style="width: 300px;">
+				<h:inputText class="form-control" value="#{productCon.colour}" style="width: 300px;">
 					<f:passThroughAttribute name="type" value="pColour" />
 					<f:passThroughAttribute name="placeholder" value="Product Colour" />
 					<f:passThroughAttribute name="alt" value="Enter the main colour of the product" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				<label>Stock Level</label>
-				<h:inputText class="form-control" value="#{addproduct.stockLevel}" style="width: 300px;">
+				<h:inputText class="form-control" value="#{productCon.stockLevel}" style="width: 300px;">
 					<f:passThroughAttribute name="type" value="productStockLevel" />
 					<f:passThroughAttribute name="placeholder" value="stock Level" />
 					<f:passThroughAttribute name="alt" value="Enter the stock level of product" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				<label>Sale Price</label>
-					<h:inputText class="form-control" value="#{addproduct.sellPrice}" style="width: 300px;">
+					<h:inputText class="form-control" value="#{productCon.sellPrice}" style="width: 300px;">
 					<f:passThroughAttribute name="type" value="productSellPrice" />
 					<f:passThroughAttribute name="placeholder" value="salePrice" />
 					<f:passThroughAttribute name="alt" value="Enter the sale price" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				<label>Buy Price</label>
-					<h:inputText class="form-control" value="#{addproduct.buyPrice}" style="width: 300px;">
+					<h:inputText class="form-control" value="#{productCon.buyPrice}" style="width: 300px;">
 					<f:passThroughAttribute name="type" value="productBuyPrice" />
 					<f:passThroughAttribute name="placeholder" value="Buy Price" />
 					<f:passThroughAttribute name="alt" value="Enter the price NB bought individual product for" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				<label>Porousware?</label>
-					<h:inputText class="form-control" value="#{addproduct.isPorousware}" style="width: 300px;">
+					<h:inputText class="form-control" value="#{productCon.pw}" style="width: 300px;">
 					<f:passThroughAttribute name="type" value="pWare" />
 					<f:passThroughAttribute name="placeholder" value="Porousware" />
 					<f:passThroughAttribute name="alt" value="Are these products porouswared?" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
 				<label>Status</label>
-					<h:inputText class="form-control" value="#{addproduct.status}" style="width: 300px;">
+					<h:inputText class="form-control" value="#{productCon.status}" style="width: 300px;">
 					<f:passThroughAttribute name="type" value="productStatus" />
 					<f:passThroughAttribute name="placeholder" value="Status" />
 					<f:passThroughAttribute name="alt" value="Enter the status of product" />
 					<f:passThroughAttribute name="required" value="required" />
 				</h:inputText>
-				<h:commandButton type="submit" class="addproductbtn" action="#{addproduct.addnewProduct}" value="Add Product" />
+				<label>Image Path</label>
+					<h:inputText class="form-control" value="#{productCon.path}" style="width: 300px;">
+					<f:passThroughAttribute name="type" value="productPath" />
+					<f:passThroughAttribute name="placeholder" value="image path" />
+					<f:passThroughAttribute name="alt" value="enter name of saved image file" />
+					<f:passThroughAttribute name="required" value="required" />
+				</h:inputText>		
+	
+				<h:commandButton type="submit" class="addproductbtn" action="#{productCon.addProduct}" value="Add Product" />
 			</div>
 				 
 		</h:form>

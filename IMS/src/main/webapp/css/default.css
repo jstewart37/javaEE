@@ -92,46 +92,7 @@ fieldset    { border: 0 !important; }
  
  
  
-   .allorderscontainer{
-  padding: 10px 10px;
-  float:left;
-  border-style: solid;
-  width: 45%;
-  margin: 10px;
-  font-size: small;
-  }
-  
-   .allorderscontainer table{
-   width:100%;
-   }
-   
-    .allorderscontainer th, td{
-   padding: 5px;;
-   }
-  
-  .addorderform{
-  width: 50%;
-  }
-  
  
-  
-  .form-control{
-    display: block;
-    font-size:11px;
-    padding:4px 2px;
-    border:solid 1px #aacfe4;
-    width:70px;
-    margin:2px 0 20px 0px;
-    
-  }
-  
-    .addOrderContainer{
-    width:auto;
-    margin-left: 10px;}
-  
-  .addOrderContainer .form-control{
-  width:140px;}
-  
   
   #tasks     { margin: 0; display: block; font-size: 5em; font-weight: normal; font-family: Georgia, "New York CE", utopia, serif; }
   #tasks,
@@ -152,8 +113,7 @@ fieldset    { border: 0 !important; }
   flaot: left;
   width: 75%;
   margin: 0px 0px 0px 50px;
-  color: #FFF;
-  background: #ada8a8;
+  background-color: #ada8a8;
   padding: 10px;
   }
   
@@ -272,7 +232,7 @@ html, body {
   transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
   box-shadow: inset 0 0 0 2px rgba(0,0,0,.05);
   border-radius: 40px;
-}
+} 
 
 /* funky balls */
 body {
@@ -914,4 +874,72 @@ body {
 			85%{bottom: 0px;}
 			100%{bottom: 0px;}
 		}
+
+
+/*funky background */
+
+	body{
+   padding: 0px;
+   margin: 0px;
+   overflow-x:hidden;
+ }
+
+#gradient
+{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  padding: 0px;
+  margin: 0px;
+}
+.thisclass{
+	width: 100%;
+  	height: 100%;
+}
+
+
+.otherclass {
+	background:white;
+}
+
+
+  .allorderscontainer{
+  padding: 10px 10px;
+  float:left;
+  border-style: solid;
+  width: 45%;
+  margin: 10px;
+  font-size: small;
+  }
+  
+   .allorderscontainer table{
+   width:100%;
+   }
+   
+    .allorderscontainer th, td{
+   padding: 5px;;
+   }
+  
+  .addorderform{
+  width: 50%;
+  }
+  
+ 
+  
+  .form-control{
+    display: block;
+    font-size:11px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:70px;
+    margin:2px 0 20px 0px;
+    
+  }
+  
+    .addOrderContainer{
+    width:auto;
+    margin-left: 10px;}
+  
+  .addOrderContainer .form-control{
+  width:140px;}
 

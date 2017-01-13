@@ -16,8 +16,19 @@
 <link rel="stylesheet" type="text/css" href="./css/print.css" media="print" />
 <link rel="shortcut icon" href="" />
 
+<!--funky background  -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+ <script src="css/templatestuff.js"/>
+
+
 </head>
 <body>
+
+<!-- funky background -->
+<div id="gradient">
+<div class="thisclass otherclass">
+
+
 	<!-- Accessibility items - do not remove !!! -->
 	<div class="content">
 	<ul class="noscreen">
@@ -28,12 +39,14 @@
 	<!-- View -  -->
 	<div id="view">
 		<div id="head">
-		<!-- toggle -->
+	 	<!-- toggle -->
 			<div class="toggle">
-  <input type="checkbox" class="check"/>
+  <input type="checkbox" class="check" onclick="toggle()"/>
   <b class="b switch"></b>
   <b class="b track"></b>
-</div>
+</div> 
+ 
+
 	
 
 			<h1 id="logotype">IMS</h1>
@@ -59,9 +72,9 @@
 	
 	<div class="box">
 	<ui:insert name="maincontent" />
-	</div>
+	
 				<!-- awesomness -->
-<body>
+
 	<div class="wrapper">
 		<div class="line line1">
 			<span class="circle circle-top"></span>
@@ -175,7 +188,7 @@
 		</div>
 	</div>
 	
-</body>
+
 	</div>
 	</div>
 
@@ -194,6 +207,8 @@
 </div>
 
 
-
+</div>
+</div>
+</div>
 </body>
 </html>
