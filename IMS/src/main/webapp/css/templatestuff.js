@@ -66,14 +66,11 @@ function toggle() {
 	
 	if(color) {
 		setInterval(updateGradient,10);
-		color = false;
-		console.log(color)
+		color = false;		
 		$("div").removeClass("otherclass");
 	}else {
 		$("div").addClass("otherclass");
-		color = true;
-		console.log(color);
-		
+		color = true;		
 	}
 }
 
